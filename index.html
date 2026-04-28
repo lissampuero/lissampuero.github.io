@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Liss Ampuero — Digital Artist & Illustrator | Children's Books, Character Design & Editorial</title>
+  <meta name="description" content="Liss Ampuero is a digital artist and illustrator based in Belgium, specializing in children's book illustration, character design, narrative worlds, fashion illustration, editorial art, and custom commissions worldwide." />
+  <meta name="keywords" content="children's book illustrator, character design, digital illustrator Belgium, editorial illustration, fashion illustration, custom art commission, narrative world illustration, picture book artist, illustradora digital, libros infantiles ilustración" />
+  <meta name="author" content="Liss Ampuero" />
+  <link rel="canonical" href="https://www.lissampuero.com/" />
+  <meta property="og:title" content="Liss Ampuero — Digital Artist & Illustrator" />
+  <meta property="og:description" content="Whimsical characters, illustrated worlds, and editorial art. Available for children's books, commissions, fashion, and brand illustration." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.lissampuero.com/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white:    #fdfcff;
+      --lav0:     #f5f3fc;
+      --lav1:     #ece8f8;
+      --lav2:     #d4cdf0;
+      --lav3:     #b0a6d8;
+      --lav4:     #7b6faa;
+      --ink:      #2e2840;
+      --ink2:     #5c5275;
+      --muted:    #9b94b5;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--ink); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.1rem 3rem;
+      background: rgba(253,252,255,0.93); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--lav1);
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 300; letter-spacing: 0.1em; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.76rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink2); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--lav4); }
+    .nav-cta { background: var(--lav2) !important; color: var(--ink) !important; padding: 0.45rem 1.1rem !important; border-radius: 2px; }
+    .nav-cta:hover { background: var(--lav3) !important; }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; padding: 7rem 3rem 4rem; gap: 3rem;
+      background: var(--lav0); position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: ''; position: absolute; width: 550px; height: 550px; border-radius: 50%;
+      background: radial-gradient(circle, var(--lav1) 0%, transparent 70%);
+      top: -120px; right: -120px; pointer-events: none;
+    }
+    .hero-text { position: relative; z-index: 2; }
+    .hero-eyebrow { font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--lav4); margin-bottom: 1rem; animation: fadeUp 0.7s ease both; }
+    .hero-logo { margin-bottom: 1.4rem; animation: fadeUp 0.7s 0.1s ease both; }
+    /* 
+      LOGO IMAGE: once you have logo.jpg next to index.html,
+      the <img> below will show. Until then the fallback text shows.
+    */
+    .hero-logo img { max-width: 320px; height: auto; display: block; }
+    .hero-logo-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 300; line-height: 1.05; color: var(--ink); }
+    .hero-logo-text em { font-style: italic; color: var(--lav4); }
+    .hero-desc { font-size: 0.97rem; line-height: 1.9; color: var(--ink2); max-width: 430px; margin-bottom: 2rem; animation: fadeUp 0.7s 0.2s ease both; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 2rem; animation: fadeUp 0.7s 0.3s ease both; }
+    .tag { font-size: 0.71rem; letter-spacing: 0.07em; padding: 0.38rem 0.85rem; border-radius: 20px; background: var(--lav1); color: var(--lav4); border: 1px solid var(--lav2); }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.4s ease both; }
+
+    .btn { display: inline-block; padding: 0.82rem 1.9rem; font-family: 'DM Sans', sans-serif; font-size: 0.76rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: all 0.25s; }
+    .btn-primary { background: var(--lav4); color: var(--white); }
+    .btn-primary:hover { background: var(--lav3); transform: translateY(-2px); }
+    .btn-outline { border: 1px solid var(--lav2); color: var(--lav4); }
+    .btn-outline:hover { background: var(--lav1); transform: translateY(-2px); }
+
+    /* hero mosaic */
+    .hero-mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 0.7rem; animation: fadeUp 0.7s 0.2s ease both; }
+    .mosaic-cell { border-radius: 4px; overflow: hidden; background: var(--lav1); }
+    .mosaic-cell:first-child { grid-row: span 2; }
+    .mosaic-cell img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .mosaic-ph { width: 100%; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.4rem; color: var(--muted); font-size: 0.73rem; text-align: center; }
+    .mosaic-ph .ico { font-size: 1.6rem; opacity: 0.35; }
+    .mosaic-cell:not(:first-child) .mosaic-ph { aspect-ratio: 1/1; }
+
+    /* SECTIONS */
+    section { padding: 5.5rem 3rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--lav4); margin-bottom: 0.5rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 2.9rem); font-weight: 300; color: var(--ink); line-height: 1.15; margin-bottom: 2.8rem; }
+    .section-title em { font-style: italic; color: var(--lav4); }
+
+    /* PORTFOLIO */
+    .portfolio-intro { max-width: 600px; font-size: 0.93rem; line-height: 1.85; color: var(--ink2); margin-bottom: 2.5rem; margin-top: -1.5rem; }
+    .filter-tabs { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+    .filter-tab { font-size: 0.73rem; letter-spacing: 0.09em; text-transform: uppercase; padding: 0.42rem 1rem; border-radius: 20px; cursor: pointer; background: transparent; border: 1px solid var(--lav2); color: var(--ink2); transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+    .filter-tab.active, .filter-tab:hover { background: var(--lav4); color: var(--white); border-color: var(--lav4); }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.9rem; }
+    .portfolio-item { border-radius: 4px; overflow: hidden; position: relative; cursor: pointer; background: var(--lav0); }
+    .portfolio-item img { width: 100%; display: block; aspect-ratio: 4/5; object-fit: cover; transition: transform 0.5s ease; }
+    .portfolio-item:hover img { transform: scale(1.04); }
+    .portfolio-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(46,40,64,0.62) 0%, transparent 55%); display: flex; align-items: flex-end; padding: 1.1rem; opacity: 0; transition: opacity 0.3s; }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+    .portfolio-overlay span { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: white; }
+    .port-ph { aspect-ratio: 4/5; background: linear-gradient(135deg, var(--lav0), var(--lav1)); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0.4rem; color: var(--muted); font-size: 0.73rem; text-align: center; }
+    .port-ph .ico { font-size: 1.5rem; opacity: 0.3; }
+
+    /* SERVICES */
+    .services-bg { background: var(--lav0); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.1rem; }
+    .service-card { background: var(--white); padding: 2rem 1.7rem; border-radius: 6px; border: 1px solid var(--lav1); transition: transform 0.3s, box-shadow 0.3s; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(123,111,170,0.12); }
+    .service-icon { font-size: 1.7rem; margin-bottom: 0.9rem; }
+    .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink); margin-bottom: 0.55rem; }
+    .service-card p { font-size: 0.86rem; line-height: 1.8; color: var(--ink2); }
+    .service-kw { margin-top: 0.8rem; font-size: 0.69rem; color: var(--muted); letter-spacing: 0.06em; }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 360px 1fr; gap: 5rem; align-items: center; }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img { width: 100%; border-radius: 4px; display: block; }
+    .about-img-ph { aspect-ratio: 3/4; background: var(--lav1); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 0.78rem; letter-spacing: 0.1em; }
+    .about-deco { position: absolute; inset: -12px -12px auto auto; width: 60%; height: 60%; border: 1px solid var(--lav2); border-radius: 4px; z-index: -1; }
+    .about-text p { font-size: 0.92rem; line-height: 1.95; color: var(--ink2); margin-bottom: 0.95rem; }
+    .about-text p strong { color: var(--ink); font-weight: 500; }
+    .about-contact { margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--lav1); font-size: 0.83rem; color: var(--muted); line-height: 2; }
+    .about-contact a { color: var(--lav4); text-decoration: none; }
+
+    /* CONTACT */
+    .contact-bg { background: var(--lav4); }
+    .contact-bg .section-label { color: var(--lav2); }
+    .contact-bg .section-title { color: var(--white); }
+    .contact-wrap { max-width: 560px; }
+    .contact-wrap p { font-size: 0.92rem; line-height: 1.9; color: rgba(255,255,255,0.75); margin-bottom: 2.4rem; }
+    .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-cw { background: var(--white); color: var(--lav4); }
+    .btn-cw:hover { background: var(--lav1); }
+    .btn-co { border: 1px solid rgba(255,255,255,0.4); color: white; }
+    .btn-co:hover { background: rgba(255,255,255,0.1); }
+
+    /* FOOTER */
+    footer { background: var(--ink); padding: 1.8rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    footer p { font-size: 0.72rem; color: rgba(255,255,255,0.32); letter-spacing: 0.07em; }
+    .social-links { display: flex; gap: 1.4rem; }
+    .social-links a { font-size: 0.72rem; letter-spacing: 0.11em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.3s; }
+    .social-links a:hover { color: var(--lav2); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 860px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 3rem; }
+      .hero-mosaic { display: none; }
+      section { padding: 4rem 1.5rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      footer { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <!--
+    LOGO IN NAV: Replace the text span with your image:
+    <img src="logo.jpg" alt="Liss Ampuero" style="height:34px;width:auto;" />
+  -->
+  <a href="#" class="nav-logo">Liss Ampuero</a>
+  <ul class="nav-links">
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Commission</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" aria-label="Liss Ampuero — Digital Artist and Illustrator based in Belgium">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Digital Artist &amp; Illustrator · Belgium · Worldwide</p>
+
+    <div class="hero-logo">
+      <!--
+        ══ YOUR LOGO NAME IMAGE ══
+        1. Upload your name jpeg next to index.html, rename it: logo.jpg
+        2. Delete the <div class="hero-logo-text"> block below
+        3. Uncomment this line:
+        <img src="logo.jpg" alt="Liss Ampuero — Digital Artist and Illustrator" />
+      -->
+      <div class="hero-logo-text">Liss<br/><em>Ampuero</em></div>
+    </div>
+
+    <p class="hero-desc">
+      Creating whimsical characters, illustrated worlds, and visual stories — for children's books, editorial projects, fashion, branding, and bespoke commissions worldwide.
+    </p>
+
+    <div class="hero-tags">
+      <span class="tag">Children's Books</span>
+      <span class="tag">Character Design</span>
+      <span class="tag">Narrative Worlds</span>
+      <span class="tag">Fashion Illustration</span>
+      <span class="tag">Custom Commissions</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+      <a href="#contact" class="btn btn-outline">Commission a Piece</a>
+    </div>
+  </div>
+
+  <div class="hero-mosaic" aria-hidden="true">
+    <div class="mosaic-cell">
+      <!-- <img src="images/hero1.jpg" alt="Children's book illustration by Liss Ampuero" /> -->
+      <div class="mosaic-ph"><span class="ico">🖼️</span><span>Your illustration</span></div>
+    </div>
+    <div class="mosaic-cell">
+      <!-- <img src="images/hero2.jpg" alt="Character design by Liss Ampuero" /> -->
+      <div class="mosaic-ph"><span class="ico">🖼️</span></div>
+    </div>
+    <div class="mosaic-cell">
+      <!-- <img src="images/hero3.jpg" alt="Fashion illustration by Liss Ampuero" /> -->
+      <div class="mosaic-ph"><span class="ico">🖼️</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="container">
+    <p class="section-label reveal">Selected works</p>
+    <h2 class="section-title reveal">Portfolio</h2>
+    <p class="portfolio-intro reveal">
+      A selection of original illustrations spanning children's books, editorial art, character design, fashion illustration, and personal projects. Each piece is created with color, texture, and intention — always with a touch of magic.
+    </p>
+
+    <div class="filter-tabs reveal">
+      <button class="filter-tab active">All</button>
+      <button class="filter-tab">Children's Books</button>
+      <button class="filter-tab">Character Design</button>
+      <button class="filter-tab">Editorial</button>
+      <button class="filter-tab">Fashion</button>
+      <button class="filter-tab">Commissions</button>
+    </div>
+
+    <!--
+      ══ HOW TO ADD YOUR ILLUSTRATIONS ══
+
+      1. Create a folder called "images" next to index.html
+      2. Copy your illustration files into it
+      3. Replace each placeholder block below with:
+
+         <div class="portfolio-item">
+           <img src="images/filename.jpg"
+                alt="Children's book illustration of a pirate by Liss Ampuero, digital art Belgium" />
+           <div class="portfolio-overlay"><span>El Pirata</span></div>
+         </div>
+
+      GOOD ALT TEXT for Google (use real descriptions like yours from Wix):
+      - "Illustration of a woman in a bath surrounded by plants, relaxation scene"
+      - "Character design of a yellow monkey with bananas, whimsical digital art"
+      - "Fashion illustration of girl in strawberry dress balancing a cake"
+      - "Children's book illustration of chickens flying, colorful stationary print"
+    -->
+
+    <div class="portfolio-grid reveal">
+      <div class="portfolio-item"><div class="port-ph"><span class="ico">🖼️</span><span>Your illustration</span></div></div>
+      <div class="portfolio-item"><div class="port-ph"><span class="ico">🖼️</span><span>Your illustration</span></div></div>
+      <div class="portfolio-item"><div class="port-ph"><span class="ico">🖼️</span><span>Your illustration</span></div></div>
+      <div class="portfolio-item"><div class="port-ph"><span class="ico">🖼️</span><span>Your illustration</span></div></div>
+      <div class="portfolio-item"><div class="port-ph"><span class="ico">🖼️</span><span>Your illustration</span></div></div>
+      <div class="portfolio-item"><div class="port-ph"><span class="ico">🖼️</span><span>Your illustration</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="container">
+    <p class="section-label reveal">What I offer</p>
+    <h2 class="section-title reveal">Illustration <em>Services</em></h2>
+    <div class="services-grid">
+
+      <article class="service-card reveal">
+        <div class="service-icon">📚</div>
+        <h3>Children's Book Illustration</h3>
+        <p>Full illustration for picture books and early readers — from initial character sketches to final spreads, ready for print and digital publishing. Warm, expressive visuals that children and parents love.</p>
+        <p class="service-kw">Picture book · Publisher-ready files · Print &amp; digital</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">🧸</div>
+        <h3>Character Design</h3>
+        <p>Bringing unique characters to life with personality, emotion, and visual consistency. Heroes, creatures, and companions crafted to carry a story across every page and medium — with a touch of magic.</p>
+        <p class="service-kw">Expressive characters · Sequential storytelling · Concept art</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">🌿</div>
+        <h3>Narrative Worlds</h3>
+        <p>Building immersive environments and visual settings that give your story atmosphere, depth, and a distinct identity. From cozy cottages to fantastical kingdoms — every world deserves to be seen.</p>
+        <p class="service-kw">World-building · Environment design · Story development</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">👗</div>
+        <h3>Fashion Illustration</h3>
+        <p>Editorial and fashion illustration with a distinctive artistic sensibility. Croquis, moodboards, collection art, and campaign visuals — for designers, brands, and publications worldwide.</p>
+        <p class="service-kw">Editorial · Lookbooks · Campaign art · Croquis</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">🎨</div>
+        <h3>Editorial & Brand Illustration</h3>
+        <p>Conceptual illustration for magazines, newspapers, packaging, and branded content. Bold visuals that communicate complex ideas in a single striking image — always on brief and on deadline.</p>
+        <p class="service-kw">Magazine covers · Packaging · Brand identity · Print &amp; web</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon">✉️</div>
+        <h3>Custom Commissions</h3>
+        <p>Personal and corporate bespoke artwork — portraits, gifts, greeting cards, stationery, and one-of-a-kind digital pieces. Every commission is crafted with care, color, and intention.</p>
+        <p class="service-kw">Personal gifts · Corporate art · Stationery · Digital &amp; print</p>
+      </article>
+
+    </div>
+    <div style="margin-top:2.8rem;" class="reveal">
+      <p style="font-size:0.88rem;color:var(--ink2);margin-bottom:1.1rem;">All projects include source files, print-ready exports, and web-optimized assets. Worldwide commissions welcome. Slots book fast.</p>
+      <a href="#contact" class="btn btn-primary">Request a quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <!--
+          YOUR PHOTO: Upload photo as "photo.jpg" next to index.html, then replace below with:
+          <img src="photo.jpg" alt="Liss Ampuero, digital artist and illustrator based in Belgium" />
+        -->
+        <div class="about-img-ph">YOUR PHOTO HERE</div>
+        <div class="about-deco"></div>
+      </div>
+      <div class="about-text reveal">
+        <p class="section-label">About me</p>
+        <h2 class="section-title">Hello, I'm <em>Liss</em></h2>
+        <p>I'm a <strong>digital artist and illustrator based in Belgium</strong>, working with clients and publishers around the world. I'm passionate about creating cozy, whimsical characters and sharing creative storylines that spark emotions — and give soul to the things we see.</p>
+        <p>From children's books and brand identities to characters and packaging, I bring ideas to life with <strong>color, texture, and intention</strong>. My work is playful but precise, intuitive but thoughtful — always with a touch of magic.</p>
+        <p>Versatility is my superpower: I shape my style to match each project's heart, whether it needs elegance, boldness, softness, or a little rebellion. I believe illustration isn't just decoration — it's communication, identity, and connection.</p>
+        <p>If you're here, it's probably because you're dreaming up something special.<br/><strong>Good — I'm here to help you make it real.</strong></p>
+        <div class="about-contact">
+          📍 Herentals, Belgium &nbsp;·&nbsp;
+          ✉ <a href="mailto:lissampuero@outlook.com">lissampuero@outlook.com</a><br/>
+          📞 <a href="tel:+32472120550">+32 472 12 05 50</a>
+        </div>
+        <a href="#contact" class="btn btn-primary" style="margin-top:1.7rem;">Let's create something beautiful</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-bg" id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <p class="section-label reveal">Get in touch</p>
+      <h2 class="section-title reveal">Let's create<br/><em>something beautiful</em></h2>
+      <p class="reveal">Have a project in mind? I'm available for children's book illustration, character design, editorial work, fashion illustration, brand art, and custom commissions worldwide. I'd love to hear about your idea.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:lissampuero@outlook.com" class="btn btn-cw">✉ Send an email</a>
+        <a href="https://instagram.com/lissampuero_art" target="_blank" rel="noopener" class="btn btn-co">Instagram</a>
+        <a href="https://www.facebook.com/lissampueroart" target="_blank" rel="noopener" class="btn btn-co">Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Liss Ampuero · Digital Artist &amp; Illustrator · Belgium · All rights reserved.</p>
+  <div class="social-links">
+    <a href="https://instagram.com/lissampuero_art" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/lissampueroart" target="_blank" rel="noopener">Facebook</a>
+    <a href="mailto:lissampuero@outlook.com">Email</a>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 70);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => io.observe(el));
+
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
