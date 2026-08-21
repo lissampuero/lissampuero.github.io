@@ -30,3 +30,6 @@ index copia.html
 .cache/
 node_modules/
 .npm/
+
+# Local full-resolution backups (not deployed)
+_originals/
