@@ -388,6 +388,11 @@
   background: transparent;
 }
 
+/* Author display:block must not resurrect the book-spread pair after magazine opens */
+.ed-lightbox__image--pair[hidden] {
+  display: none !important;
+}
+
 .ed-lightbox__close {
   position: fixed;
   top: clamp(0.75rem, 2vw, 1.5rem);
