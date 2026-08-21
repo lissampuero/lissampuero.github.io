@@ -1,0 +1,15 @@
+CARPETA: assets/portfolio/narrative/lolo/
+Universo de personaje: LoLo & Fuzzle
+
+Arrastra aquí y renombra exactamente así:
+
+1. illustration-lolo-fuzzle-portrait.webp
+   → Retrato hero de LoLo con Fuzzle (el pájaro peluche)
+
+2. illustration-lolo-fuzzle-scene-01.webp
+   → LoLo pintando un arcoíris
+
+3. illustration-lolo-fuzzle-scene-02.webp
+   → LoLo con disfraces (pájaro / robot / dinosaurio)
+
+Total: 3 archivos

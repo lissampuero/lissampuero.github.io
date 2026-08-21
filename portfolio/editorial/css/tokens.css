@@ -1,0 +1,45 @@
+:root {
+  --citrus-fuchsia: #F23C9E;
+  --citrus-yellow: #FFE800;
+  --citrus-lime: #C4E600;
+  --citrus-cream: #FFFDF7;
+  --ink-black: #111111;
+  --ink-white: #FFFFFF;
+
+  /* Editorial typography & print */
+  --ed-paper: #f7f3eb;
+  --ed-ink: #1a1a1a;
+  --ed-accent: #6b3fa0;
+  --ed-rule: #d4cfc4;
+
+  /* Pastel — Children's Books ONLY (spec Section 15.3) */
+  --pastel-fuchsia: #F8C4DE;
+  --pastel-yellow: #FBF3A0;
+  --pastel-lime: #E2F0B8;
+  --pastel-cream: #FFFCF5;
+
+  /* ===== NIGHT THEME — Editorial page identity (mockup reference) ===== */
+  --ed-night-bg-top: #5518D4;
+  --ed-night-bg-mid: #1A0A48;
+  --ed-night-bg-low: #070512;
+  --ed-night-bg-bottom: #05070A;
+  --ed-night-horizon: #1C4F9A;
+  --ed-night-text: #FFFFFF;
+  --ed-night-text-muted: #C9D4FF;
+  --ed-sans: 'Inter', system-ui, sans-serif;
+  --ed-display: 'Playfair Display', Georgia, serif;
+  --ed-zine-block: 'Bangers', 'Poppins', sans-serif;
+  --ed-zine-script: 'Caveat Brush', 'Poppins', cursive;
+  --ed-zine-red: #E32636;
+  --ed-zine-yellow: #FFE14A;
+  --ed-zine-blue: #4EC3F0;
+  --ed-zine-cream: #FFF8EC;
+  --ed-zine-ink: #1A1A1A;
+  --ed-lilac-flour: #E6D0F4;
+  --ed-lilac-flour-deep: #C9A0DE;
+  --ed-night-accent: #3EFFF6;
+  --ed-night-accent-deep: #2F7BFF;
+  --ed-night-line: rgb(255 255 255 / 0.16);
+  --ed-night-card: rgb(8 4 28 / 0.55);
+  --ed-night-card-border: rgb(62 255 246 / 0.28);
+}

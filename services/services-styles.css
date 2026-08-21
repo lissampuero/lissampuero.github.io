@@ -1,0 +1,733 @@
+/* ============================================================
+   SERVICES.HTML — ESTILOS COMPLETOS
+   ============================================================ */
+
+:root {
+  --svc-yellow: #FFF875;
+  --svc-turquoise: #00E0C6;
+  --svc-cream: #FFFDF7;
+  --svc-charcoal: #111111;
+  --svc-coral: #e85d4a;
+  --svc-purple: #6b3fa0;
+  --svc-citrus-lime: #C4E600;
+  --svc-citrus-fuchsia: #F23C9E;
+  --svc-citrus-lime-light: #D3EC40;
+  --svc-citrus-fuchsia-light: #F56DB6;
+}
+
+.services-page {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: var(--ab-sans, 'Inter', system-ui, sans-serif);
+  background-color: var(--svc-cream);
+  background-image:
+    radial-gradient(circle at 15% 15%, rgb(242 60 158 / 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 45%, rgb(196 230 0 / 0.09) 0%, transparent 42%),
+    radial-gradient(circle at 25% 90%, rgb(242 60 158 / 0.06) 0%, transparent 40%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* ============================================
+   FRANJA BASE — full-width
+   ============================================ */
+.svc-band {
+  width: 100%;
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+}
+
+.svc-band--yellow     { background-color: var(--svc-yellow); }
+.svc-band--turquoise  { background-color: var(--svc-turquoise); }
+.svc-band--cream      { background-color: var(--svc-cream); }
+
+.svc-band-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+}
+
+/* ============================================
+   ILUSTRACIÓN — Liss en su estudio, flotando justo debajo del hero
+   ============================================ */
+.svc-hero-illustration {
+  width: 100%;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.svc-illustration {
+  margin: 0;
+}
+
+.svc-illustration__trigger {
+  all: unset;
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: min(96vw, 1240px);
+  margin: 0 auto;
+  cursor: zoom-in;
+}
+
+.svc-illustration__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.18));
+  transition: transform 0.35s ease;
+}
+
+.svc-illustration__trigger:hover .svc-illustration__img,
+.svc-illustration__trigger:focus-visible .svc-illustration__img {
+  transform: scale(1.035);
+}
+
+.svc-illustration__hint {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  padding: 0.35rem 0.7rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgb(26 26 26 / 0.62);
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.svc-illustration__trigger:hover .svc-illustration__hint,
+.svc-illustration__trigger:focus-visible .svc-illustration__hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.svc-illustration__trigger:focus-visible {
+  outline: 2px solid var(--svc-coral);
+  outline-offset: 4px;
+}
+
+.svc-process-illustration .svc-illustration__trigger {
+  max-width: 620px;
+}
+
+.svc-process-illustration .svc-illustration__img {
+  max-width: none;
+  margin: 0 auto;
+  display: block;
+}
+
+.svc-process-illustration .svc-illustration__trigger:hover .svc-illustration__img,
+.svc-process-illustration .svc-illustration__trigger:focus-visible .svc-illustration__img {
+  transform: scale(1.08);
+}
+
+/* ============================================
+   LIGHTBOX — vista ampliada de la ilustración
+   ============================================ */
+.svc-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.svc-lightbox[hidden] { display: none; }
+
+.svc-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(255 255 255 / 0.97);
+  border: none;
+  padding: 0;
+  cursor: zoom-out;
+}
+
+.svc-lightbox__panel {
+  position: relative;
+  z-index: 1;
+  max-width: 94vw;
+  max-height: 90vh;
+  line-height: 0;
+}
+
+.svc-lightbox__image {
+  display: block;
+  max-width: 94vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+}
+
+.svc-lightbox__close {
+  position: fixed;
+  top: clamp(0.75rem, 2vw, 1.5rem);
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(0 0 0 / 0.25);
+  border-radius: 50%;
+  background: #ffffff;
+  color: #111111;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.svc-lightbox__close:hover,
+.svc-lightbox__close:focus-visible {
+  background: #f5f5f5;
+}
+
+/* ============================================
+   FRANJA DE CATEGORÍAS — verde limón + fucsia difuminados en diagonal
+   ============================================ */
+.svc-categories-band {
+  background: linear-gradient(
+    135deg,
+    var(--svc-citrus-lime-light) 0%,
+    var(--svc-citrus-lime-light) 32%,
+    var(--svc-citrus-fuchsia-light) 68%,
+    var(--svc-citrus-fuchsia-light) 100%
+  );
+}
+
+.svc-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.75rem, 3.5vw, 2.5rem);
+  text-align: left;
+}
+
+.svc-category {
+  background: transparent;
+}
+
+.svc-category__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: var(--svc-charcoal);
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+.svc-category__desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  color: var(--svc-charcoal);
+  line-height: 1.45;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .svc-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .svc-categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   FRANJA 1 — SOLO TÍTULO (misma tipografía manuscrita que "My History")
+   ============================================ */
+.svc-kicker {
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--svc-charcoal);
+  opacity: 0.7;
+  margin: 0 0 0.75rem;
+}
+
+.svc-title {
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(2.35rem, 6vw, 4.25rem);
+  letter-spacing: -0.03em;
+  color: var(--svc-charcoal);
+  margin-bottom: 0;
+  line-height: 0.98;
+}
+
+/* ============================================
+   FRANJA 2 — TARJETA GLASSMORPHISM DE SERVICIOS
+   ============================================ */
+.svc-glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  text-align: left;
+}
+
+/* Variante con 6 categorías — 3 columnas × 2 filas en desktop */
+.svc-glass-card--six {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+.svc-group-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  color: var(--svc-charcoal);
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--svc-charcoal);
+}
+
+.svc-group-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--svc-charcoal);
+  opacity: 0.8;
+  margin-bottom: 0.85rem;
+}
+
+.svc-deliverables {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  line-height: 1.6;
+  color: var(--svc-charcoal);
+  text-align: center;
+  max-width: 760px;
+  margin: clamp(2rem, 4vw, 2.75rem) auto 0;
+  opacity: 0.85;
+}
+
+.svc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.svc-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.92rem, 1.1vw, 1rem);
+  color: var(--svc-charcoal);
+  line-height: 1.4;
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.svc-list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+  color: var(--svc-coral);
+}
+
+/* ============================================
+   FRANJA 3 — PROCESO CREATIVO (buzón → libro)
+   ============================================ */
+.svc-process-wrap {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+}
+
+.svc-process-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Lettering cursivo — junto a la flecha superior (mensaje entrante) */
+.svc-script-label {
+  position: absolute;
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  color: var(--svc-purple);
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.8);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.svc-script-label--drop {
+  top: 4%;
+  left: 4%;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  transform: rotate(-6deg);
+}
+
+.svc-script-label--universe {
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  color: var(--svc-coral);
+}
+
+/* ============================================
+   FRANJA 4 — CTA Y BOTONES DE INTENCIÓN
+   ============================================ */
+.svc-cta-section {
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 3rem) clamp(5rem, 9vw, 7rem);
+  text-align: center;
+}
+
+.svc-cta-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.svc-cta-kicker {
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--svc-coral);
+  margin-bottom: 0.6rem;
+}
+
+.svc-cta-title {
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 4.8vw, 3.25rem);
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  color: var(--svc-charcoal);
+  margin-bottom: 0.85rem;
+}
+
+.svc-cta-line {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.55;
+  color: var(--svc-charcoal);
+  opacity: 0.85;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.svc-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.svc-cta-button-wrap {
+  position: relative;
+}
+
+.svc-cta-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.svc-cta-btn--book {
+  background-color: var(--svc-purple);
+  color: #FFFFFF;
+}
+
+.svc-cta-btn--studio {
+  background-color: var(--svc-coral);
+  color: #FFFFFF;
+}
+
+.svc-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* ============================================
+   MENÚ DE CONTACTO — dropdown limpio bajo el botón
+   ============================================ */
+.svc-contact-menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  z-index: 20;
+}
+
+.svc-contact-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.svc-contact-option {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--svc-charcoal);
+  text-decoration: none;
+  padding: 0.7rem 0.9rem;
+  border-radius: 6px;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+
+.svc-contact-option:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================
+   RESPONSIVE — TABLET
+   ============================================ */
+@media (max-width: 860px) {
+  .svc-glass-card {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-script-label--drop {
+    top: 2%;
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+  }
+
+  .svc-script-label--universe {
+    bottom: 10%;
+    font-size: clamp(1.3rem, 4.5vw, 2rem);
+  }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
+@media (max-width: 600px) {
+  .svc-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .svc-cta-btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .svc-script-label--drop {
+    position: static;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+    transform: none;
+  }
+
+  .svc-script-label--universe {
+    position: static;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    transform: none;
+  }
+
+  .svc-process-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .svc-contact-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   CONTACT — formulario (spec v4, Section 5.9)
+   ============================================ */
+.svc-contact {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: clamp(3rem, 6vw, 5rem) 1.5rem clamp(4rem, 8vw, 6rem);
+  background-color: var(--svc-cream);
+}
+
+.svc-contact-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  color: var(--svc-charcoal);
+  margin-bottom: 0.85rem;
+}
+
+.svc-contact-intro {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--svc-charcoal);
+  opacity: 0.85;
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+}
+
+.svc-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  text-align: left;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.svc-contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.svc-contact-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.svc-contact-form-field label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--svc-charcoal);
+}
+
+.svc-contact-form-field input,
+.svc-contact-form-field textarea {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.75rem 0.9rem;
+  border: 1.5px solid rgba(17, 17, 17, 0.25);
+  border-radius: 6px;
+  background-color: #fff;
+  color: var(--svc-charcoal);
+  transition: border-color 0.2s ease;
+}
+
+.svc-contact-form-field input:focus,
+.svc-contact-form-field textarea:focus {
+  outline: none;
+  border-color: #F23C9E;
+}
+
+.svc-contact-form-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.svc-contact-submit-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #F23C9E;
+  border: none;
+  border-radius: 100px;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.svc-contact-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(242, 60, 158, 0.3);
+}
+
+.svc-contact-direct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  border-top: 1px solid rgba(17, 17, 17, 0.12);
+}
+
+.svc-contact-email {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  color: #F23C9E;
+  text-decoration: none;
+}
+
+.svc-contact-address,
+.svc-contact-phone {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: var(--svc-charcoal);
+  opacity: 0.75;
+  margin: 0;
+}
+
+.svc-contact-social-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--svc-charcoal);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border: 1.5px solid var(--svc-charcoal);
+  border-radius: 100px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.svc-contact-social-link:hover {
+  background-color: var(--svc-charcoal);
+  color: #fff;
+}
+
+@media (max-width: 40rem) {
+  .svc-lightbox {
+    padding: 3.75rem 0.7rem 1.1rem;
+  }
+
+  .svc-lightbox__image {
+    max-height: 78vh;
+  }
+}

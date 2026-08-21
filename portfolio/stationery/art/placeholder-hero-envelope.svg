@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Illustrated stationery hero  open envelope with citrus palette">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF7"/>
+      <stop offset="100%" stop-color="#FBF3A0"/>
+    </linearGradient>
+    <linearGradient id="env" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE800"/>
+      <stop offset="100%" stop-color="#F23C9E"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <circle cx="320" cy="80" r="45" fill="#C4E600" opacity="0.5"/>
+  <circle cx="60" cy="420" r="55" fill="#F23C9E" opacity="0.25"/>
+  <!-- Open envelope -->
+  <path d="M80 220 L200 140 L320 220 L320 380 L80 380 Z" fill="url(#env)" stroke="#111" stroke-width="3"/>
+  <path d="M80 220 L200 300 L320 220" fill="none" stroke="#111" stroke-width="3"/>
+  <path d="M80 220 L200 140 L320 220 L200 300 Z" fill="#FFE800" opacity="0.6"/>
+  <!-- Letter peeking out -->
+  <rect x="130" y="250" width="140" height="100" rx="4" fill="#FFFDF7" stroke="#111" stroke-width="2"/>
+  <path d="M150 280 H250 M150 300 H220 M150 320 H240" stroke="#F23C9E" stroke-width="2" stroke-linecap="round"/>
+  <!-- Decorative hearts -->
+  <path d="M200 420 C200 420 170 400 170 380 C170 370 178 365 188 365 C194 365 198 370 200 375 C202 370 206 365 212 365 C222 365 230 370 230 380 C230 400 200 420 200 420Z" fill="#F23C9E" stroke="#111" stroke-width="1.5"/>
+  <!-- Stamp -->
+  <rect x="280" y="300" width="50" height="60" rx="3" fill="#C4E600" stroke="#111" stroke-width="2"/>
+  <circle cx="305" cy="330" r="12" fill="none" stroke="#111" stroke-width="2"/>
+</svg>

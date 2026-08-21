@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Greeting card illustration placeholder">
+  <rect width="400" height="400" fill="#FFFDF7"/>
+  <rect x="80" y="60" width="240" height="280" rx="6" fill="#FFE800" stroke="#111" stroke-width="3"/>
+  <path d="M140 180 Q200 120 260 180" fill="#F23C9E" opacity="0.5" stroke="#111" stroke-width="2"/>
+  <text x="200" y="260" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#111" font-style="italic">Hello!</text>
+</svg>

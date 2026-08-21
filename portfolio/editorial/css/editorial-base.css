@@ -1,0 +1,236 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: 'Inter', system-ui, sans-serif; background: #05070A; }
+
+/* ===== EDITORIAL PAGE — night-sky identity, shared across every section ===== */
+.editorial-page {
+  font-family: var(--ed-sans);
+  position: relative;
+  overflow-x: hidden;
+  background-color: #05070A;
+  background-image:
+    radial-gradient(ellipse 120% 70% at 50% -8%, rgb(85 24 212 / 0.95) 0%, transparent 52%),
+    radial-gradient(ellipse 80% 45% at 78% 12%, rgb(47 123 255 / 0.38) 0%, transparent 58%),
+    radial-gradient(ellipse 70% 40% at 22% 8%, rgb(62 255 246 / 0.16) 0%, transparent 50%),
+    radial-gradient(ellipse 110% 55% at 50% 108%, rgb(28 79 154 / 0.95) 0%, rgb(47 123 255 / 0.35) 32%, transparent 68%),
+    linear-gradient(
+      180deg,
+      rgb(85 24 212 / 0.55) 0%,
+      rgb(26 10 72 / 0.7) 16%,
+      #05070A 38%,
+      rgb(8 12 22 / 0.95) 54%,
+      rgb(12 24 52 / 0.82) 70%,
+      rgb(18 32 72 / 0.7) 84%,
+      rgb(28 79 154 / 0.55) 93%,
+      rgb(58 120 196 / 0.7) 100%
+    );
+  color: var(--ed-night-text);
+}
+
+.editorial-page::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: min(78vh, 46rem);
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 130% 95% at 50% 100%, rgb(72 150 228 / 0.42) 0%, rgb(28 79 154 / 0.28) 42%, transparent 80%),
+    linear-gradient(180deg, transparent 0%, rgb(12 28 64 / 0.06) 28%, rgb(18 40 88 / 0.18) 58%, rgb(28 79 154 / 0.38) 100%);
+}
+
+/* Starfield + moon — fixed decorative layer, sits behind every section */
+.ed-night-sky {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ed-night-sky__stars,
+.ed-night-sky__stars-2 {
+  position: absolute; inset: 0;
+  background-repeat: repeat;
+}
+
+.ed-night-sky__stars {
+  background-image:
+    radial-gradient(1.5px 1.5px at 4% 8%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 12% 18%, rgb(255 255 255 / 0.85), transparent 100%),
+    radial-gradient(1.8px 1.8px at 19% 6%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 27% 22%, rgb(255 255 255 / 0.7), transparent 100%),
+    radial-gradient(1.3px 1.3px at 35% 11%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 42% 28%, rgb(255 255 255 / 0.65), transparent 100%),
+    radial-gradient(2px 2px at 51% 7%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 58% 19%, rgb(255 255 255 / 0.8), transparent 100%),
+    radial-gradient(1.4px 1.4px at 66% 13%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 73% 25%, rgb(255 255 255 / 0.7), transparent 100%),
+    radial-gradient(1.6px 1.6px at 81% 9%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 88% 21%, rgb(255 255 255 / 0.75), transparent 100%),
+    radial-gradient(1.2px 1.2px at 94% 15%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 8% 38%, rgb(255 255 255 / 0.6), transparent 100%),
+    radial-gradient(1.5px 1.5px at 24% 44%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 46% 41%, rgb(255 255 255 / 0.7), transparent 100%),
+    radial-gradient(1.3px 1.3px at 62% 48%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 77% 39%, rgb(255 255 255 / 0.65), transparent 100%),
+    radial-gradient(1.7px 1.7px at 91% 46%, #fff, transparent 100%);
+  background-size: 100% 52vh;
+  opacity: 0.95;
+}
+
+.ed-night-sky__stars-2 {
+  background-image:
+    radial-gradient(1px 1px at 6% 55%, rgb(62 255 246 / 0.9), transparent 100%),
+    radial-gradient(1.4px 1.4px at 16% 62%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 29% 58%, rgb(255 255 255 / 0.7), transparent 100%),
+    radial-gradient(1.6px 1.6px at 38% 70%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 49% 64%, rgb(62 255 246 / 0.8), transparent 100%),
+    radial-gradient(1.2px 1.2px at 57% 75%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 68% 61%, rgb(255 255 255 / 0.75), transparent 100%),
+    radial-gradient(1.5px 1.5px at 79% 72%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 87% 66%, rgb(47 123 255 / 0.9), transparent 100%),
+    radial-gradient(1.3px 1.3px at 95% 78%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 11% 84%, rgb(255 255 255 / 0.6), transparent 100%),
+    radial-gradient(1.4px 1.4px at 33% 88%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 54% 91%, rgb(255 255 255 / 0.7), transparent 100%),
+    radial-gradient(1.2px 1.2px at 72% 86%, #fff, transparent 100%),
+    radial-gradient(1px 1px at 90% 93%, rgb(62 255 246 / 0.75), transparent 100%);
+  background-size: 110% 70vh;
+  opacity: 0.9;
+}
+
+.ed-night-sky__glow {
+  position: absolute; top: -8%; left: 50%;
+  width: 70rem; height: 70rem;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(circle, rgb(62 255 246 / 0.22) 0%, transparent 42%),
+    radial-gradient(circle, rgb(107 47 224 / 0.35) 18%, transparent 62%);
+  pointer-events: none;
+}
+
+.ed-night-sky__core {
+  position: absolute;
+  inset: 18% 0 14%;
+  background: radial-gradient(ellipse 95% 75% at 50% 50%, rgb(0 0 0 / 0.42) 0%, rgb(0 0 0 / 0.18) 48%, transparent 80%);
+  filter: blur(80px);
+}
+
+.ed-night-sky__shooting-star {
+  position: absolute; top: 16%; left: 10%;
+  width: 8.5rem; height: 1.5px;
+  background: linear-gradient(90deg, #fff, rgb(62 255 246 / 0.4), transparent);
+  transform: rotate(18deg);
+  opacity: 0.85;
+  box-shadow: 0 0 8px rgb(62 255 246 / 0.6);
+}
+
+.ed-night-sky__shooting-star--2 {
+  top: 32%; left: 62%;
+  width: 5.5rem;
+  transform: rotate(-12deg);
+  opacity: 0.6;
+}
+
+/* Soft night veil between Book and Magazine — no hard edge */
+.ed-night-cut {
+  position: relative;
+  z-index: 1;
+  height: clamp(18rem, 40vw, 32rem);
+  margin: -8rem 0 -12rem;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 140% 90% at 50% 35%,
+    rgb(0 0 0 / 0.45) 0%,
+    rgb(5 7 10 / 0.22) 42%,
+    transparent 78%
+  );
+  filter: blur(56px);
+}
+
+.ed-magazine {
+  padding-top: clamp(4rem, 10vw, 7rem);
+  padding-bottom: clamp(4rem, 9vw, 7rem);
+  background:
+    radial-gradient(ellipse 70% 45% at 18% 22%, rgb(242 60 158 / 0.16) 0%, transparent 62%),
+    radial-gradient(ellipse 55% 40% at 88% 58%, rgb(255 232 0 / 0.07) 0%, transparent 58%),
+    linear-gradient(180deg, transparent 0%, transparent 38%, rgb(12 28 64 / 0.1) 68%, rgb(28 79 154 / 0.22) 100%);
+}
+
+.ed-smart-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Glass card — night theme (Book Illustration + Magazine) */
+.ed-night-card {
+  background: var(--ed-night-card);
+  border: 1px solid var(--ed-night-card-border);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+/* Primary CTA — glowing citrus-blue pill, night theme */
+.ed-btn-night {
+  display: inline-block;
+  background: linear-gradient(180deg, #B8E2FF 0%, var(--ed-night-accent) 45%, var(--ed-night-accent-deep) 100%);
+  color: #0B0A22;
+  font-family: var(--ed-sans); font-size: 0.8125rem; font-weight: 700;
+  letter-spacing: 0.04em; text-decoration: none;
+  padding: 0.8rem 1.75rem; border-radius: 999px;
+  box-shadow: 0 10px 28px rgb(91 127 242 / 0.35), inset 0 1px 0 rgb(255 255 255 / 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ed-btn-night:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgb(91 127 242 / 0.45), inset 0 1px 0 rgb(255 255 255 / 0.6); }
+
+.ed-site-header {
+  position: sticky; top: 0; z-index: 100;
+  border-bottom: 1px solid rgb(0 0 0 / 0.06);
+  background: rgb(255 255 255 / 0.88);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+.ed-site-header__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 80rem; margin: 0 auto;
+  padding: 1rem clamp(1.25rem, 4vw, 3rem);
+}
+.ed-site-header__logo {
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #111; text-decoration: none;
+}
+.ed-site-header__logo:hover { opacity: 0.65; }
+.ed-site-header__nav { display: flex; align-items: center; gap: 1.5rem; }
+.ed-site-header__links { display: none; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+@media (min-width: 768px) { .ed-site-header__links { display: flex; } }
+.ed-site-header__links a {
+  font-size: 0.8rem; font-weight: 600; color: #525252;
+  text-decoration: none; letter-spacing: 0.04em;
+}
+.ed-site-header__links a:hover { color: #111; }
+.ed-lang-switch { display: flex; gap: 0.5rem; list-style: none; margin: 0; padding: 0; font-size: 0.8rem; font-weight: 700; }
+.ed-lang-switch a { color: #a3a3a3; text-decoration: none; }
+.ed-lang-switch a:hover { color: #111; }
+.ed-lang-switch [aria-current="page"] { color: #111; }
+.ed-lang-switch li:not(:last-child)::after { content: '|'; margin-left: 0.5rem; color: #d4d4d4; font-weight: 400; }
+
+.ed-contact-form input, .ed-contact-form textarea {
+  width: 100%; border: 1px solid #d4d4d4; border-radius: 4px;
+  padding: 0.625rem 0.75rem; font-family: inherit; font-size: 0.9375rem;
+  color: #111; background: #fff; transition: border-color 0.15s, box-shadow 0.15s;
+}
+.ed-contact-form input:focus, .ed-contact-form textarea:focus {
+  outline: none; border-color: #111; box-shadow: 0 0 0 1px #111;
+}
+.ed-contact-form label { display: block; font-size: 0.8125rem; font-weight: 600; color: #111; margin-bottom: 0.35rem; }
+.ed-btn-primary {
+  display: inline-block; background: #111; color: #fff;
+  font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; text-decoration: none;
+  padding: 0.875rem 1.75rem; border: none; border-radius: 2px; cursor: pointer;
+  transition: background 0.15s;
+}
+.ed-btn-primary:hover { background: #262626; }
+.ed-site-footer {
+  border-top: 1px solid #e5e5e5; background: #fff;
+  padding: 1.5rem; text-align: center; font-size: 0.8125rem; color: #737373;
+}

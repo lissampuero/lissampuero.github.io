@@ -1,0 +1,21 @@
+CARPETA: assets/portfolio/fashion/
+Las 5 piezas confirmadas del tab Fashion (layout "magazine total")
+
+Arrastra aquí y renombra exactamente así:
+
+1. illustration-fashion-tropical-call.webp
+   → Mujer con chaqueta tropical y loros, fondo lila
+
+2. illustration-fashion-gilded-hour.webp
+   → Figura pantalón dorado estampado, chaqueta morada
+
+3. illustration-fashion-palazzo-bloom.webp
+   → Hombre traje rosa palazzo, sombrero naranja
+
+4. illustration-fashion-flamenco-noir.webp
+   → Bailarina flamenca, máscara dorada, fondo fucsia
+
+5. illustration-fashion-commissions-portrait.webp
+   → Tú en el closet con ropa (cierre "Open for Commissions")
+
+Total: 5 archivos

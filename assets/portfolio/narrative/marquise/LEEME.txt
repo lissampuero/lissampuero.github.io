@@ -1,0 +1,17 @@
+CARPETA: assets/portfolio/narrative/marquise/
+Universo de personaje: The Marquise de Croac (rana aristócrata)
+
+Arrastra aquí y renombra exactamente así:
+
+1. illustration-marquise-portrait.webp
+   → Retrato hero — Marquise recostada en nenúfar
+
+2. illustration-marquise-editorial-spread.webp
+   → Página editorial con texto integrado (doble página morada)
+
+3. illustration-marquise-memoirs-layout.webp
+   → Página "Memoirs" con pergamino y citas
+
+Total: 3 archivos
+
+RECORDATORIO: la Marquise SIEMPRE es una rana, nunca humana.

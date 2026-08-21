@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Cursor / editor
+.cursor/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Secrets & env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+
+# Local junk / duplicates
+index copia.html
+*.af~lock~
+.Trash/
+
+# Logs & caches
+*.log
+.cache/
+node_modules/
+.npm/

@@ -1,0 +1,195 @@
+/**
+ * Art-book house system
+ * Display: Playfair Display italic
+ * Body / UI: Inter
+ * Slogans: Caveat
+ * Life: sheen sweep + star glints
+ */
+
+:root {
+  --ab-display: 'Playfair Display', Georgia, serif;
+  --ab-sans: 'Inter', system-ui, sans-serif;
+  --ab-script: 'Caveat', cursive;
+}
+
+.ab-kicker {
+  margin: 0 0 0.65rem;
+  font-family: var(--ab-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.ab-masthead {
+  margin: 0;
+  font-family: var(--ab-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 7vw, 4.75rem);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-transform: none;
+}
+
+.ab-deck {
+  margin: 1rem auto 0;
+  max-width: 34rem;
+  font-family: var(--ab-sans);
+  font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
+  line-height: 1.65;
+}
+
+/* —— Life: sheen on plates —— */
+.hm-selected-gallery__item::after,
+.hm-look__frame::after,
+.nar-art-trigger::after,
+.nar-plate__art::after,
+.svc-illustration__trigger::after,
+.hm-contact-illustration__trigger::after,
+.storytelling-illustration__trigger::after,
+.portrait-photo::after,
+.ed-feature-art__trigger::after,
+.ed-book-3d__cover .ed-img-trigger::after,
+.ed-book-spread .ed-img-trigger::after,
+.stn-sku__frame::after,
+.lolo-book__page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgb(255 255 255 / 0) 38%,
+    rgb(255 255 255 / 0.28) 50%,
+    rgb(255 232 0 / 0.14) 54%,
+    rgb(255 255 255 / 0) 62%,
+    transparent 100%
+  );
+  transform: translateX(-140%) skewX(-18deg);
+  opacity: 0;
+}
+
+.hm-selected-gallery__item:hover::after,
+.hm-look__frame:hover::after,
+.nar-art-trigger:hover::after,
+.nar-art-trigger:focus-visible::after,
+.nar-plate__art:hover::after,
+.nar-plate__art:focus-visible::after,
+.svc-illustration__trigger:hover::after,
+.svc-illustration__trigger:focus-visible::after,
+.hm-contact-illustration__trigger:hover::after,
+.hm-contact-illustration__trigger:focus-visible::after,
+.storytelling-illustration__trigger:hover::after,
+.storytelling-illustration__trigger:focus-visible::after,
+.portrait-photo:hover::after,
+.ed-feature-art__trigger:hover::after,
+.ed-feature-art__trigger:focus-visible::after,
+.ed-book-3d__cover .ed-img-trigger:hover::after,
+.ed-book-spread .ed-img-trigger:hover::after,
+.stn-sku__frame:hover::after,
+.stn-sku__trigger:focus-visible::after,
+.lolo-book__page:hover::after,
+.lolo-book__page:focus-visible::after {
+  animation: ab-sheen-sweep 1.15s ease;
+}
+
+@keyframes ab-sheen-sweep {
+  0% { opacity: 0; transform: translateX(-140%) skewX(-18deg); }
+  18% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(280%) skewX(-18deg); }
+}
+
+/* —— Life: twinkling glints —— */
+.hm-selected-gallery__item::before,
+.hm-look__frame::before,
+.nar-art-trigger::before,
+.svc-illustration__trigger::before,
+.hm-contact-illustration__trigger::before,
+.ed-feature-art__trigger::before,
+.hm-hero__logo-wrap::before,
+.hero-arch-portal::before,
+.stn-sku__frame::before {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  top: 11%;
+  right: 12%;
+  width: 0.7rem;
+  height: 0.7rem;
+  pointer-events: none;
+  background: #fff;
+  clip-path: polygon(50% 0%, 57% 43%, 100% 50%, 57% 57%, 50% 100%, 43% 57%, 0% 50%, 43% 43%);
+  filter:
+    drop-shadow(0 0 4px #fff)
+    drop-shadow(0 0 10px rgb(255 232 0 / 0.85));
+  animation: ab-twinkle 2.7s ease-in-out infinite;
+  box-shadow:
+    -4.5rem 6.5rem 0 -2px #fff,
+    2.25rem 9rem 0 -3px #fff;
+}
+
+.nar-art-trigger::before,
+.svc-illustration__trigger::before {
+  top: 16%;
+  right: 18%;
+}
+
+.hm-hero__logo-wrap::before {
+  top: 28%;
+  right: 22%;
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.hero-arch-portal::before {
+  top: 18%;
+  right: 8%;
+}
+
+.hm-selected-gallery__item:nth-child(even)::before {
+  top: auto;
+  bottom: 22%;
+  right: auto;
+  left: 14%;
+  animation-delay: 0.7s;
+}
+
+.hm-selected-gallery__item:nth-child(3n)::before {
+  animation-delay: 1.2s;
+}
+
+@keyframes ab-twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.7) rotate(0deg); }
+  40% { opacity: 1; transform: scale(1.18) rotate(14deg); }
+  70% { opacity: 0.4; transform: scale(0.85) rotate(-8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-selected-gallery__item::before,
+  .hm-selected-gallery__item::after,
+  .hm-look__frame::before,
+  .hm-look__frame::after,
+  .nar-art-trigger::before,
+  .nar-art-trigger::after,
+  .nar-plate__art::after,
+  .svc-illustration__trigger::before,
+  .svc-illustration__trigger::after,
+  .hm-contact-illustration__trigger::before,
+  .hm-contact-illustration__trigger::after,
+  .storytelling-illustration__trigger::after,
+  .portrait-photo::after,
+  .ed-feature-art__trigger::before,
+  .ed-feature-art__trigger::after,
+  .ed-book-3d__cover .ed-img-trigger::after,
+  .ed-book-spread .ed-img-trigger::after,
+  .hm-hero__logo-wrap::before,
+  .hero-arch-portal::before,
+  .stn-sku__frame::before,
+  .stn-sku__frame::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}

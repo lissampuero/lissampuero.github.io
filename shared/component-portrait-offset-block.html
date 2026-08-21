@@ -1,0 +1,139 @@
+<!-- ============================================
+     ABOUT ME — IMAGE OFFSET BLOCK
+     Integra esto dentro de tu about.html existente,
+     dentro de la sección que contiene la foto + bio.
+     ============================================ -->
+
+<section class="about-hero">
+  <div class="about-portrait-wrap">
+    <!-- Bloque de color offset, detrás de la foto -->
+    <div class="about-portrait-bg"></div>
+    <img
+      src="images/liss-ampuero-about.jpg"
+      alt="Liss Ampuero, digital artist and illustrator based in Herentals, Belgium"
+      class="about-portrait-img"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="about-text">
+    <p class="eyebrow">About Me</p>
+    <p class="about-bio">
+      Liss Ampuero — Digital artist &amp; illustrator, based in Herentals, Belgium —
+      working with clients worldwide. I give soul to the things we see: cozy characters,
+      narrative worlds, and brands that need a little magic. Playful but precise,
+      intuitive but thoughtful — always with a touch of wonder. Let's create something beautiful.
+    </p>
+  </div>
+</section>
+
+<style>
+/* ============================================
+   ABOUT HERO — LAYOUT BASE
+   ============================================ */
+.about-hero {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+/* ============================================
+   PORTRAIT + OFFSET BLOCK
+   ============================================ */
+.about-portrait-wrap {
+  position: relative;
+  width: 100%;
+  /* deja espacio extra arriba/izquierda para que el bloque
+     de color se vea sin cortarse */
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* El bloque de color sólido — SIEMPRE detrás (z-index menor) */
+.about-portrait-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 88%;
+  height: 92%;
+  background-color: #1a1a1a; /* charcoal oscuro — cambia por #6b3fa0 si prefieres morado marca */
+  z-index: 1;
+
+  /* el offset: el bloque queda desplazado arriba-izquierda
+     respecto a la imagen, que se posiciona abajo-derecha del wrap */
+}
+
+.about-portrait-img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;   /* empuja la imagen hacia la derecha del wrap */
+  margin-top: 1.5rem;  /* empuja la imagen hacia abajo del wrap */
+  width: 88%;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;  /* ajusta según el crop que prefieras de tu foto */
+}
+
+/* ============================================
+   TEXTO
+   ============================================ */
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  color: #6b3fa0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.about-bio {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .about-portrait-wrap {
+    /* en mobile, reducimos el offset para que no se vea exagerado
+       en pantallas estrechas, pero se mantiene el efecto */
+    padding-top: 1rem;
+    padding-left: 1rem;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .about-portrait-bg {
+    width: 90%;
+    height: 94%;
+  }
+
+  .about-portrait-img {
+    width: 90%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-portrait-wrap {
+    padding-top: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+</style>

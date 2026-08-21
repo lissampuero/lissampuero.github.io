@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Collection illustration placeholder">
+  <rect width="640" height="480" fill="#100E30"/>
+  <circle cx="220" cy="240" r="120" fill="#8FCBFF" opacity="0.25"/>
+  <circle cx="420" cy="240" r="90" fill="#F23C9E" opacity="0.22"/>
+  <text x="320" y="250" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#F5F3FF" letter-spacing="3">COLLECTION</text>
+</svg>

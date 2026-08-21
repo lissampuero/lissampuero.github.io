@@ -1,0 +1,38 @@
+# lissampuero.com — crawl policy
+User-agent: *
+Allow: /
+
+# Incomplete fragment, not a public landing page
+Disallow: /fashion/
+
+# Authoring notes and unused block mocks
+Disallow: /LEEME-PRIMERO.txt
+Disallow: /home/blocks/
+Disallow: /portfolio/editorial/blocks/
+Disallow: /portfolio/narrative/blocks/
+Disallow: /portfolio/stationery/blocks/
+Disallow: /shared/components/
+Disallow: /children-books/
+
+# Keep CSS, JS, and artwork crawlable for rendering and image search
+Allow: /shared/*.css
+Allow: /shared/js/
+Allow: /assets/
+Allow: /home/
+Allow: /portfolio/
+Allow: /about/
+Allow: /services/
+Allow: /contact/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /portfolio/
+Allow: /home/
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://lissampuero.com/sitemap.xml

@@ -1,0 +1,157 @@
+<!-- ============================================
+     FULL-WIDTH BANNER STRIP — 3 CAPAS
+     Background sólido + Ilustración flotante + Tipografía
+     Integra esto entre dos secciones existentes de tu página
+     ============================================ -->
+
+<section class="banner-strip">
+  <!-- CAPA 1: Fondo sólido full-width -->
+  <div class="banner-bg"></div>
+
+  <!-- CAPA 2: Ilustración flotante (botánica/horizontal) -->
+  <div class="banner-illustration">
+    <img
+      src="images/decorativo-vertical-botanico.jpg"
+      alt="Decorative botanical illustration by Liss Ampuero"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- CAPA 3: Tipografía, siempre encima -->
+  <div class="banner-content">
+    <p class="banner-eyebrow">Magic is real</p>
+    <h2 class="banner-headline">
+      and it lives<br />within you.
+    </h2>
+  </div>
+</section>
+
+<style>
+/* ============================================
+   BANNER STRIP — CONTENEDOR FULL-WIDTH
+   ============================================ */
+.banner-strip {
+  position: relative;
+  width: 100%;
+  min-height: clamp(420px, 60vh, 640px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================
+   CAPA 1 — FONDO SÓLIDO
+   ============================================ */
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  background-color: #1a1a1a; /* charcoal oscuro — alterna con #6b3fa0 según sección */
+  z-index: 1;
+}
+
+/* ============================================
+   CAPA 2 — ILUSTRACIÓN FLOTANTE
+   ============================================ */
+.banner-illustration {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none; /* nunca interfiere con el texto/clicks */
+}
+
+.banner-illustration img {
+  width: 48%;
+  max-width: 620px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.92;
+  /* leve "float" — flota un poco fuera del borde derecho para dar profundidad */
+  transform: translateX(8%);
+}
+
+/* ============================================
+   CAPA 3 — TIPOGRAFÍA (siempre arriba, máximo contraste)
+   ============================================ */
+.banner-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 6vw, 4rem);
+}
+
+.banner-eyebrow {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: clamp(0.8rem, 1vw, 0.95rem);
+  font-weight: 600;
+  color: #e85d4a; /* coral marca — alto contraste sobre charcoal */
+  margin-bottom: 1rem;
+}
+
+.banner-headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.15;
+  color: #FFFFFF;
+  max-width: 60%;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET
+   ============================================ */
+@media (max-width: 1024px) {
+  .banner-headline {
+    max-width: 75%;
+  }
+
+  .banner-illustration img {
+    width: 55%;
+    opacity: 0.7;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   La ilustración pasa a fondo sutil detrás del texto,
+   nunca compite con la legibilidad.
+   ============================================ */
+@media (max-width: 768px) {
+  .banner-strip {
+    min-height: clamp(380px, 70vh, 560px);
+    padding: 3rem 0;
+  }
+
+  .banner-illustration {
+    justify-content: center;
+    opacity: 0.35; /* se convierte en textura de fondo, no en elemento competidor */
+  }
+
+  .banner-illustration img {
+    width: 90%;
+    max-width: 480px;
+    transform: translateX(0);
+  }
+
+  .banner-content {
+    text-align: left;
+  }
+
+  .banner-headline {
+    max-width: 100%;
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-eyebrow {
+    letter-spacing: 0.15em;
+  }
+}
+</style>

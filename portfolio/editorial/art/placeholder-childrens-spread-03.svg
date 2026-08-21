@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-label="Children's book spread pastel scene 3">
+  <rect width="500" height="400" fill="#FFFCF5"/>
+  <rect x="60" y="60" width="380" height="280" rx="12" fill="#fff" stroke="#111" stroke-width="2"/>
+  <circle cx="250" cy="180" r="55" fill="#F8C4DE" opacity="0.35"/>
+  <text x="250" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#111" font-style="italic">Once upon a color...</text>
+  <path d="M150 140 L200 100 L250 150 L300 90 L350 140" fill="none" stroke="#E2F0B8" stroke-width="3"/>
+</svg>

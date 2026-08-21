@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 1050" role="img" aria-labelledby="postBackTitle">
+  <title id="postBackTitle">Postcard writing side with a rose-to-baby-blue wash, sparkles, stamp box, and address lines</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6c9d6"/>
+      <stop offset="38%" stop-color="#e6d4ec"/>
+      <stop offset="100%" stop-color="#b4def0"/>
+    </linearGradient>
+    <g id="star" fill="#fffdf8">
+      <path d="M12 0l2.4 9.1L24 12l-9.6 2.9L12 24l-2.4-9.1L0 12l9.6-2.9Z"/>
+    </g>
+    <g id="star-sm" fill="#fff4d6">
+      <path d="M8 0l1.5 5.8L16 8l-6.5 2.2L8 16 6.5 10.2 0 8l6.5-2.2Z"/>
+    </g>
+    <g id="glint" fill="none" stroke="#fffefb" stroke-width="2.6" stroke-linecap="round">
+      <path d="M9 0v18M0 9h18"/>
+      <path d="M3.2 3.2l11.6 11.6M14.8 3.2 3.2 14.8" stroke-width="1.7" opacity="0.7"/>
+    </g>
+  </defs>
+
+  <rect width="1480" height="1050" fill="url(#sky)"/>
+  <rect x="28" y="26" width="1424" height="998" fill="none" stroke="#c7a0b8" stroke-width="2.4" opacity="0.4"/>
+
+  <g opacity="0.95">
+    <use href="#star" transform="translate(52 56) rotate(-12) scale(1.15)"/>
+    <use href="#glint" transform="translate(108 128) rotate(8) scale(1.05)"/>
+    <use href="#star-sm" transform="translate(44 198)"/>
+    <use href="#star" transform="translate(96 268) rotate(18) scale(0.82)"/>
+    <use href="#glint" transform="translate(38 348) rotate(-14)"/>
+    <use href="#star-sm" transform="translate(118 418) rotate(10)"/>
+    <use href="#star" transform="translate(52 498) rotate(-6)"/>
+    <use href="#glint" transform="translate(102 578) scale(0.9)"/>
+    <use href="#star-sm" transform="translate(36 648)"/>
+    <use href="#star" transform="translate(88 718) rotate(14) scale(0.88)"/>
+    <use href="#glint" transform="translate(48 798) rotate(20)"/>
+    <use href="#star-sm" transform="translate(124 868) rotate(-8)"/>
+    <use href="#star" transform="translate(58 938) scale(0.7)"/>
+  </g>
+
+  <g>
+    <use href="#star-sm" transform="translate(168 48) rotate(12)"/>
+    <use href="#glint" transform="translate(236 36) scale(0.75)"/>
+    <use href="#star" transform="translate(318 42) rotate(-10) scale(0.78)"/>
+    <use href="#star-sm" transform="translate(402 52)"/>
+    <use href="#glint" transform="translate(478 38) rotate(16) scale(0.82)"/>
+    <use href="#star" transform="translate(558 46) rotate(8) scale(0.7)"/>
+    <use href="#star-sm" transform="translate(638 40) rotate(-18)"/>
+  </g>
+
+  <g>
+    <use href="#star" transform="translate(708 92) rotate(-8)"/>
+    <use href="#glint" transform="translate(736 168) scale(0.92)"/>
+    <use href="#star-sm" transform="translate(704 248) rotate(14)"/>
+    <use href="#star" transform="translate(742 318) rotate(10) scale(0.8)"/>
+    <use href="#glint" transform="translate(708 398) rotate(-12)"/>
+    <use href="#star-sm" transform="translate(748 478)"/>
+    <use href="#star" transform="translate(712 548) rotate(16) scale(0.86)"/>
+    <use href="#glint" transform="translate(740 628) scale(0.78)"/>
+    <use href="#star-sm" transform="translate(700 698) rotate(-6)"/>
+    <use href="#star" transform="translate(736 768) rotate(8) scale(0.74)"/>
+    <use href="#glint" transform="translate(708 848) rotate(18)"/>
+  </g>
+
+  <g transform="translate(980 28) scale(2)">
+    <path fill="#fff8fb" stroke="#c48aa8" stroke-width="1.55" stroke-linejoin="round" d="
+      M28,8
+      a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0 a6,6 0 0 1 12,0
+      a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12 a6,6 0 0 1 0,12
+      a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0 a6,6 0 0 1 -12,0
+      a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12 a6,6 0 0 1 0,-12
+      z"/>
+  </g>
+
+  <g>
+    <use href="#star-sm" transform="translate(868 458) rotate(12)"/>
+    <use href="#glint" transform="translate(928 472) scale(0.72)"/>
+    <use href="#star" transform="translate(990 464) rotate(-14) scale(0.68)"/>
+  </g>
+
+  <g fill="none" stroke="#b48aaa" stroke-width="3.8" stroke-linecap="round">
+    <path d="M812 568c90-10 180 12 272 2 92-10 176 8 268-4"/>
+    <path d="M812 648c86 12 174-10 264 2 90 10 184-12 276 4"/>
+    <path d="M812 728c94-8 188 14 278-2 86-12 170 10 270 2"/>
+    <path d="M812 808c88 10 176-8 266 4 94 8 180-12 252-2"/>
+  </g>
+  <use href="#star-sm" transform="translate(1392 796) rotate(18)"/>
+</svg>

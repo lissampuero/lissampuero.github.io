@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" role="img" aria-label="Children's book spread pastel scene 2">
+  <rect width="500" height="400" fill="#FFFCF5"/>
+  <rect x="0" y="280" width="500" height="120" fill="#E2F0B8" opacity="0.45"/>
+  <ellipse cx="250" cy="200" rx="100" ry="60" fill="#a8d8ff" opacity="0.35"/>
+  <circle cx="200" cy="190" r="35" fill="#ffe0bd" stroke="#111" stroke-width="2"/>
+  <circle cx="300" cy="200" r="30" fill="#F8C4DE" opacity="0.6" stroke="#111" stroke-width="1.5"/>
+  <path d="M180 280 L250 220 L320 280" fill="#FBF3A0" stroke="#111" stroke-width="1.5"/>
+</svg>

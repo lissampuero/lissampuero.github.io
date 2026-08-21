@@ -1,0 +1,163 @@
+/**
+ * Block 2 — Product mockup strip
+ */
+
+.stn-mockups {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft pattern texture on yellow band */
+.stn-mockups::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23111111' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='20' cy='20' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.stn-mockups > .stn-container {
+  position: relative;
+  z-index: 1;
+}
+
+.stn-mockups__intro {
+  max-width: 40rem;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.stn-mockups__grid {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+@media (min-width: 640px) {
+  .stn-mockups__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1100px) {
+  .stn-mockups__grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.stn-mockup-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.25s ease;
+}
+
+.stn-mockup-card:hover {
+  transform: translateY(-4px);
+}
+
+.stn-mockup-card__frame {
+  position: relative;
+  margin-bottom: 1.125rem;
+  padding: 0.75rem;
+  background: rgb(255 255 255 / 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.5);
+  border-radius: 2px;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.1);
+}
+
+.stn-mockup-card__image-wrap {
+  overflow: hidden;
+  border-radius: 2px;
+  background: #fff;
+  aspect-ratio: 4 / 5;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.04);
+}
+
+.stn-mockup-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.stn-mockup-card:hover .stn-mockup-card__image {
+  transform: scale(1.02);
+}
+
+.stn-mockup-card__badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: #111;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.55rem;
+  border-radius: 2px;
+}
+
+.stn-mockup-card__body {
+  padding: 0 0.25rem;
+}
+
+.stn-mockup-card__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #111;
+  margin: 0 0 0.35rem;
+}
+
+.stn-mockup-card__desc {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #404040;
+}
+
+.stn-mockups__services {
+  max-width: 32rem;
+  margin: clamp(2.5rem, 5vw, 3.5rem) auto 0;
+}
+
+.stn-mockups__services-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #111;
+  margin: 0 0 1rem;
+}
+
+.stn-product-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stn-product-list li {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: #262626;
+  margin-bottom: 0.625rem;
+  line-height: 1.45;
+}
+
+.stn-product-list li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: 0.5rem;
+  border-radius: 50%;
+  background: var(--citrus-fuchsia);
+}

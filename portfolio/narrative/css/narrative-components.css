@@ -1,0 +1,155 @@
+/**
+ * Narrative — reusable components (spec Section 15.3)
+ */
+
+.nar-band {
+  width: 100%;
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
+  position: relative;
+}
+
+.nar-band--cream { background-color: var(--citrus-cream); }
+.nar-band--yellow { background-color: var(--citrus-yellow); }
+.nar-band--lime { background-color: var(--citrus-lime); }
+.nar-band--fuchsia { background-color: var(--citrus-fuchsia); }
+.nar-band--swamp { background-color: var(--swamp-deep); color: #fff; }
+
+.nar-container {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+.nar-container--wide { max-width: 80rem; }
+
+.nar-kicker {
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: inherit;
+  margin-bottom: 0.65rem;
+  opacity: 0.85;
+}
+
+.nar-page-title {
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6.5vw, 4.35rem);
+  letter-spacing: -0.03em;
+  text-transform: none;
+  line-height: 0.98;
+  margin-bottom: 0.75rem;
+}
+
+.nar-slogan {
+  font-family: var(--ab-script, 'Caveat', cursive);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  margin-bottom: 1rem;
+}
+
+.nar-section-title {
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.nar-universe-title {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  line-height: 1.05;
+  margin: 0 0 0.5rem;
+}
+
+.nar-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 38rem;
+}
+
+.nar-body--light { color: rgb(255 255 255 / 0.88); }
+
+/* Clean card — Editorial default (spec 15.3) */
+.nar-clean-card {
+  background: rgb(255 255 255 / 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 4px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.1);
+}
+
+/* Ink card — Marquise dramatic (spec 15.3) */
+.nar-ink-card {
+  background: rgb(23 23 23 / 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 4px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 16px 40px rgb(0 0 0 / 0.35);
+  color: #fff;
+}
+
+.nar-ink-card .nar-body { color: rgb(255 255 255 / 0.85); }
+
+/* Citrus-tint card — LoLo warm sections */
+.nar-citrus-card {
+  background: color-mix(in srgb, var(--citrus-cream) 90%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 10px 28px rgb(0 0 0 / 0.08);
+}
+
+.nar-project-tag {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.nar-project-tag--marquise {
+  background: var(--marquise-gold);
+  color: var(--swamp-deep);
+}
+
+.nar-project-tag--lolo {
+  background: var(--citrus-fuchsia);
+  color: #fff;
+}
+
+.nar-framed-art {
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 20px 50px -15px rgb(0 0 0 / 0.25);
+}
+
+.nar-framed-art--dark {
+  box-shadow: 0 24px 60px -15px rgb(0 0 0 / 0.55);
+  border: 1px solid rgb(255 255 255 / 0.06);
+}
+
+.nar-divider {
+  width: 3rem;
+  height: 3px;
+  border-radius: 2px;
+  margin: 1rem 0 1.25rem;
+}
+
+.nar-divider--fuchsia { background: var(--citrus-fuchsia); }
+.nar-divider--gold { background: var(--marquise-gold); }

@@ -1,0 +1,49 @@
+.ed-page-hero {
+  position: relative; overflow: hidden;
+  padding: clamp(4.5rem, 11vw, 8rem) 0 clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+}
+
+.ed-page-hero > .ed-container { position: relative; z-index: 1; }
+.ed-page-hero__intro { max-width: 46rem; margin: 0 auto 1.75rem; }
+.ed-page-hero__nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; }
+
+/* Feature illustration — between section pills and the hardcover */
+.ed-feature-art {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: clamp(3rem, 8vw, 6rem) 0 clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.ed-feature-art__frame {
+  max-width: min(72rem, 92vw);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 2.25rem);
+}
+
+.ed-feature-art__trigger {
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+.ed-feature-art .ed-img-trigger:hover,
+.ed-feature-art .ed-img-trigger:focus-visible {
+  transform: scale(1.03);
+}
+
+.ed-feature-art .ed-img-trigger img,
+.ed-feature-art .ed-img-trigger:hover img,
+.ed-feature-art .ed-img-trigger:focus-visible img {
+  transform: none;
+}
+
+.ed-feature-art__img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: auto;
+}

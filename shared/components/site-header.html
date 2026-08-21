@@ -1,0 +1,31 @@
+<!--
+  GLOBAL SITE HEADER — copy into each page with paths adjusted.
+  See shared/NAV-PATHS.md for relative URL matrix.
+
+  Replace: {HOME} {ABOUT} {SERVICES} {EDITORIAL} {NARRATIVE} {STATIONERY}
+           {CONTACT} {NL} {ES}
+  Set aria-current="page" on the active nav link only.
+-->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="{HOME}" class="site-header__logo">Liss Ampuero</a>
+    <button type="button" class="site-header__menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-header__nav" id="site-nav" aria-label="Main navigation">
+      <ul class="site-header__links">
+        <li><a href="{ABOUT}">About</a></li>
+        <li><a href="{SERVICES}">Services</a></li>
+        <li><a href="{EDITORIAL}">Editorial</a></li>
+        <li><a href="{NARRATIVE}">Narrative</a></li>
+        <li><a href="{STATIONERY}">Stationery</a></li>
+      </ul>
+      <div class="site-header__actions">
+        <a href="{CONTACT}" class="site-header__cta">Contact</a>
+        <ul class="site-lang-switch" aria-label="Language switcher">
+          <li><span aria-current="page">EN</span></li>
+          <li><a href="{NL}" hreflang="nl">NL</a></li>
+          <li><a href="{ES}" hreflang="es">ES</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

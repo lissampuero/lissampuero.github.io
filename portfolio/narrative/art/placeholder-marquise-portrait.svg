@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 620" role="img" aria-label="The Marquise de Croac  aristocratic frog on lily pad">
+  <defs>
+    <linearGradient id="swamp" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d2a5c"/>
+      <stop offset="100%" stop-color="#1a1428"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="50%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#d4a853" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a1428" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="620" fill="url(#swamp)"/>
+  <rect width="500" height="620" fill="url(#moon)"/>
+  <!-- Lily pad -->
+  <ellipse cx="250" cy="480" rx="180" ry="55" fill="#2d6a4f" stroke="#1a1428" stroke-width="3"/>
+  <path d="M250 425 Q280 460 320 475 Q250 490 180 475 Q220 460 250 425" fill="#3d8b66" opacity="0.6"/>
+  <!-- Frog body -->
+  <ellipse cx="250" cy="400" rx="95" ry="75" fill="#5a8f5a" stroke="#111" stroke-width="2.5"/>
+  <!-- Aristocratic ruff -->
+  <ellipse cx="250" cy="355" rx="70" ry="25" fill="#6b3fa0" stroke="#d4a853" stroke-width="2"/>
+  <circle cx="210" cy="350" r="12" fill="#d4a853" stroke="#111" stroke-width="1.5"/>
+  <circle cx="250" cy="340" r="14" fill="#d4a853" stroke="#111" stroke-width="1.5"/>
+  <circle cx="290" cy="350" r="12" fill="#d4a853" stroke="#111" stroke-width="1.5"/>
+  <!-- Eyes -->
+  <circle cx="215" cy="385" r="22" fill="#fff" stroke="#111" stroke-width="2"/>
+  <circle cx="285" cy="385" r="22" fill="#fff" stroke="#111" stroke-width="2"/>
+  <circle cx="218" cy="388" r="10" fill="#111"/>
+  <circle cx="288" cy="388" r="10" fill="#111"/>
+  <circle cx="222" cy="384" r="3" fill="#fff"/>
+  <!-- Crown -->
+  <path d="M195 320 L210 290 L225 315 L250 275 L275 315 L290 290 L305 320 Z" fill="#d4a853" stroke="#111" stroke-width="2"/>
+  <!-- Smile -->
+  <path d="M225 420 Q250 440 275 420" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Scepter -->
+  <line x1="340" y1="380" x2="340" y2="300" stroke="#d4a853" stroke-width="4"/>
+  <circle cx="340" cy="290" r="12" fill="#F23C9E" stroke="#111" stroke-width="2"/>
+</svg>

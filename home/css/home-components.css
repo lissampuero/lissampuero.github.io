@@ -1,0 +1,48 @@
+.hm-band { width: 100%; padding: clamp(4rem, 8vw, 7rem) 0; position: relative; }
+.hm-band--cream { background: var(--citrus-cream); }
+.hm-band--yellow { background: var(--citrus-yellow); }
+.hm-band--fuchsia { background: var(--citrus-fuchsia); color: #fff; }
+.hm-band--lime { background: var(--citrus-lime); }
+
+.hm-container { width: 100%; max-width: 72rem; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
+.hm-container--wide { max-width: 80rem; }
+
+.hm-kicker {
+  font-family: var(--ab-sans, 'Inter', sans-serif); text-transform: uppercase;
+  letter-spacing: 0.32em; font-size: 0.6875rem; font-weight: 700; margin-bottom: 0.5rem;
+}
+.hm-section-title {
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic; font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 3.25rem); letter-spacing: -0.03em;
+  text-transform: none; line-height: 0.98; margin-bottom: 0.85rem;
+}
+.hm-slogan {
+  font-family: 'Caveat', cursive; font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.1; margin-bottom: 1rem;
+}
+.hm-body {
+  font-family: 'Inter', sans-serif; font-size: 1rem;
+  line-height: 1.7; color: #404040; max-width: 38rem;
+  letter-spacing: 0.005em;
+}
+.hm-body--light { color: rgb(255 255 255 / 0.9); max-width: none; }
+
+/* Editorial card: layered, tinted shadow instead of a flat panel; lifts on hover */
+.hm-clean-card {
+  background: rgb(255 255 255 / 0.92);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-radius: 6px; padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  box-shadow: var(--shadow-lifted, 0 24px 48px -12px rgb(17 17 17 / 0.18));
+  transition: transform 0.5s var(--ease-organic, ease), box-shadow 0.5s var(--ease-organic, ease);
+}
+.hm-clean-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-deep, 0 32px 64px -16px rgb(17 17 17 / 0.22));
+}
+
+/* Divider: fine gradient hairline rather than a solid block — quieter, more editorial */
+.hm-divider {
+  width: 2.75rem; height: 2px; border-radius: 2px; margin: 1.1rem auto 1.5rem;
+  background: linear-gradient(90deg, transparent, var(--citrus-fuchsia), transparent);
+}

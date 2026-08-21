@@ -1,0 +1,106 @@
+<!-- ============================================================
+     CHILDREN'S BOOKS — TRANSICIÓN "NUBE DIAGONAL" ENTRE FRANJAS
+     Técnica: SVG con path orgánico tipo nube, rotado en diagonal,
+     en vez de border-radius simple o corte recto.
+     ============================================================ -->
+
+<!-- EJEMPLO: transición de franja FUCSIA PASTEL → AMARILLO PASTEL -->
+<div class="kids-band kids-band--fuchsia">
+  <div class="kids-band-content">
+    <!-- contenido de esta franja -->
+  </div>
+
+  <!-- La nube de transición, al final de esta franja -->
+  <div class="kids-cloud-transition kids-cloud-transition--to-yellow">
+    <svg viewBox="0 0 1440 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 
+               C120,20 240,100 360,70 
+               C480,40 600,130 720,90 
+               C840,50 960,140 1080,80 
+               C1200,30 1320,110 1440,60 
+               L1440,180 L0,180 Z" />
+    </svg>
+  </div>
+</div>
+
+<div class="kids-band kids-band--yellow">
+  <div class="kids-band-content">
+    <!-- contenido de la siguiente franja -->
+  </div>
+</div>
+
+<style>
+/* ============================================================
+   FRANJAS BASE — paleta pastel
+   ============================================================ */
+.kids-band {
+  position: relative;
+  width: 100%;
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(5rem, 10vw, 8rem);
+  overflow: hidden;
+}
+
+.kids-band--fuchsia { background-color: var(--pastel-fuchsia); }
+.kids-band--yellow  { background-color: var(--pastel-yellow); }
+.kids-band--lime    { background-color: var(--pastel-lime); }
+.kids-band--cream   { background-color: var(--pastel-cream); }
+
+.kids-band-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================================
+   NUBE DE TRANSICIÓN — SVG orgánico, en diagonal
+   Se posiciona absoluto al final (bottom) de la franja actual,
+   pintado en el color de la SIGUIENTE franja, creando el efecto
+   de "nube mordiendo" el borde en vez de un corte recto.
+   ============================================================ */
+.kids-cloud-transition {
+  position: absolute;
+  bottom: -2px; /* evita líneas de 1px visibles entre franjas */
+  left: 0;
+  width: 100%;
+  height: clamp(90px, 12vw, 160px);
+  z-index: 3;
+  transform: rotate(-1.2deg) scale(1.04); /* el ángulo diagonal sutil */
+  transform-origin: center bottom;
+}
+
+.kids-cloud-transition svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* El color del path = color de la franja que viene DESPUÉS */
+.kids-cloud-transition--to-yellow svg path {
+  fill: var(--pastel-yellow);
+}
+
+.kids-cloud-transition--to-lime svg path {
+  fill: var(--pastel-lime);
+}
+
+.kids-cloud-transition--to-fuchsia svg path {
+  fill: var(--pastel-fuchsia);
+}
+
+.kids-cloud-transition--to-cream svg path {
+  fill: var(--pastel-cream);
+}
+
+/* ============================================================
+   RESPONSIVE — en mobile, la diagonal se reduce para no
+   "comerse" demasiado contenido en pantallas angostas
+   ============================================================ */
+@media (max-width: 600px) {
+  .kids-cloud-transition {
+    height: clamp(60px, 16vw, 100px);
+    transform: rotate(-0.8deg) scale(1.06);
+  }
+}
+</style>

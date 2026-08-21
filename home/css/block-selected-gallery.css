@@ -1,0 +1,351 @@
+/**
+ * Selected Gallery — curated masonry of illustrations at original proportions
+ */
+
+.hm-selected-gallery {
+  background: none;
+  border: none;
+  box-shadow: none;
+  margin-top: 0;
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.hm-selected-gallery__header {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto clamp(3rem, 7vw, 5rem);
+}
+
+.hm-selected-gallery__header .hm-body {
+  margin: 0.85rem auto 0;
+  color: #525252;
+  max-width: 36rem;
+}
+
+.hm-selected-gallery__header .hm-divider { margin-left: auto; margin-right: auto; }
+
+/* Lookbook folio — rooms, then plates at native proportions, generously spaced */
+.hm-folio {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4.5rem, 9vw, 8rem);
+}
+
+.hm-room {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 5rem);
+}
+
+.hm-room__masthead {
+  text-align: center;
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.hm-room__masthead .hm-kicker { margin-bottom: 0.4rem; }
+
+.hm-room__masthead .hm-section-title {
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+  margin-bottom: 0.55rem;
+}
+
+.hm-room__masthead .hm-body {
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: #525252;
+}
+
+.hm-room__masthead .hm-divider { margin: 0.9rem auto 0; }
+
+.hm-room__row {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 5rem);
+}
+
+.hm-room__row--pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+  align-items: start;
+}
+
+.hm-room__row--trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 2.8vw, 2.25rem);
+  align-items: start;
+}
+
+.hm-look {
+  margin: 0;
+  width: 100%;
+  min-width: 0;
+}
+
+.hm-look--portrait {
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.hm-look--feature {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+/* Artwork now reads as a printed plate resting on the page — soft at rest,
+   lifts with a deeper, warm-tinted shadow on hover/focus. */
+.hm-look__frame {
+  position: relative;
+  overflow: visible;
+  background: transparent;
+  border-radius: 3px;
+  box-shadow: var(--shadow-soft, 0 4px 14px rgb(17 17 17 / 0.06));
+  transition: transform 0.5s var(--ease-organic, ease), box-shadow 0.5s var(--ease-organic, ease);
+  line-height: 0;
+}
+
+.hm-look__frame:hover,
+.hm-look__frame:focus-within {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lifted, 0 24px 48px -12px rgb(17 17 17 / 0.18));
+}
+
+.hm-look__trigger {
+  all: unset;
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  cursor: zoom-in;
+}
+
+.hm-look__trigger:focus-visible {
+  outline: 2px solid var(--citrus-fuchsia, #F23C9E);
+  outline-offset: 4px;
+}
+
+.hm-look__frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s var(--ease-organic, ease);
+}
+
+.hm-look__frame:hover img,
+.hm-look__trigger:focus-visible img {
+  transform: scale(1.02);
+}
+
+.hm-look__hint {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 4;
+  padding: 0.3rem 0.7rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #111;
+  background: rgb(255 255 255 / 0.85);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.12);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s var(--ease-organic, ease), transform 0.3s var(--ease-organic, ease);
+  pointer-events: none;
+}
+
+.hm-look__trigger:hover .hm-look__hint,
+.hm-look__trigger:focus-visible .hm-look__hint,
+.hm-hero__logo-wrap:hover .hm-look__hint,
+.hm-hero__logo-wrap:focus-visible .hm-look__hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hm-look__caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.28rem;
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.hm-look__index {
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #a3a3a3;
+}
+
+.hm-look__title {
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #171717;
+}
+
+.hm-look__meta {
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #8a8a8a;
+}
+
+.hm-room__row--trio .hm-look__caption,
+.hm-room__row--pair .hm-look__caption {
+  margin-top: 0.9rem;
+}
+
+.hm-room__row--trio .hm-look__title {
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+}
+
+.hm-room__row--trio .hm-look__hint {
+  right: 0.45rem;
+  bottom: 0.45rem;
+  font-size: 0.58rem;
+  padding: 0.22rem 0.5rem;
+}
+
+.hm-selected-gallery__footer {
+  text-align: center;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* Lightbox — white stage, then click the image again to zoom into detail */
+.hm-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.hm-lightbox[hidden] { display: none; }
+
+.hm-lightbox.is-zoomed {
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+  padding: 4.25rem 1.5rem 1.75rem;
+}
+
+.hm-lightbox__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgb(255 255 255 / 0.97);
+  border: none;
+  padding: 0;
+  cursor: zoom-out;
+}
+
+.hm-lightbox__panel {
+  position: relative;
+  z-index: 1;
+  max-width: 94vw;
+  max-height: 90vh;
+  line-height: 0;
+  border-radius: 4px;
+  box-shadow: var(--shadow-deep, 0 32px 64px -16px rgb(17 17 17 / 0.22));
+}
+
+.hm-lightbox.is-zoomed .hm-lightbox__panel {
+  max-width: none;
+  max-height: none;
+  box-shadow: none;
+}
+
+.hm-lightbox__image {
+  display: block;
+  max-width: 94vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  cursor: zoom-in;
+  border-radius: inherit;
+}
+
+.hm-lightbox.is-zoomed .hm-lightbox__image {
+  max-width: none;
+  max-height: none;
+  width: min(3200px, 240vw);
+  cursor: zoom-out;
+  border-radius: 0;
+}
+
+.hm-lightbox__close {
+  position: fixed;
+  top: clamp(0.75rem, 2vw, 1.5rem);
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(0 0 0 / 0.12);
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 20px -8px rgb(17 17 17 / 0.25);
+  transition: transform 0.3s var(--ease-organic, ease), box-shadow 0.3s var(--ease-organic, ease);
+}
+
+.hm-lightbox__close:hover,
+.hm-lightbox__close:focus-visible {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px -8px rgb(17 17 17 / 0.32);
+}
+
+@media (max-width: 900px) {
+  .hm-room__row--trio {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .hm-room__row--pair,
+  .hm-room__row--trio {
+    grid-template-columns: 1fr;
+  }
+
+  .hm-look--portrait,
+  .hm-look--feature {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hm-look__frame,
+  .hm-look__frame img,
+  .hm-look__frame:hover,
+  .hm-look__frame:hover img,
+  .hm-hero__logo-wrap,
+  .hm-hero__logo-wrap:hover,
+  .hm-clean-card,
+  .hm-btn-primary {
+    transform: none;
+    transition: none;
+  }
+}

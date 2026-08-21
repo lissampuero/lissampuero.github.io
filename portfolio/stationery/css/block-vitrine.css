@@ -1,0 +1,544 @@
+/**
+ * Stationery vitrine
+ * Session: vibrant colours from the new pattern studies
+ *   (teal + offset pink dots, cyan + red blobs, red/hot-pink stripes,
+ *    lavender/mustard + cobalt, floral clash).
+ * Containers: previous bay patterns, one per department.
+ * Lettering: cream on the dark session, ink on pale containers.
+ */
+
+.stationery-page {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  background-color: #0b5c56;
+  background-image: none;
+}
+
+.stn-store {
+  --ag-pink: #ff5aa5;
+  --ag-pink-deep: #f23c9e;
+  --ag-red: #e6332a;
+  --ag-orange: #e23a1a;
+  --ag-yellow: #ffe34a;
+  --ag-lemon: #fff3a8;
+  --ag-green: #1f8a4a;
+  --ag-mint: #b8f0c4;
+  --ag-blue: #2a4bd7;
+  --ag-cyan: #4eb8e2;
+  --ag-teal: #0b5c56;
+  --ag-peri: #6b7fe8;
+  --ag-lilac: #d4b8e8;
+  --ag-mustard: #c4a035;
+  --ag-cream: #fff6e8;
+  --ag-ink: #1c1630;
+
+  position: relative;
+  isolation: isolate;
+  /* visible: 100vw bay breakout must not be clipped into a left strip */
+  overflow: visible;
+  width: 100%;
+  max-width: none;
+  padding-bottom: clamp(2rem, 4vw, 3.25rem);
+  color: var(--ag-ink);
+}
+
+/* —— Session wallpaper: collage of the new vibrant studies —— */
+.stn-store::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: -4% -6%;
+  pointer-events: none;
+  background-color: var(--ag-teal);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='200' viewBox='0 0 220 200'%3E%3Cellipse cx='55' cy='50' rx='42' ry='40' fill='%23e6332a'/%3E%3Cellipse cx='58' cy='48' rx='18' ry='16' fill='%23f5c7d8'/%3E%3Cellipse cx='160' cy='70' rx='36' ry='34' fill='%23e6332a'/%3E%3Cellipse cx='162' cy='68' rx='14' ry='13' fill='%23f5c7d8'/%3E%3Cellipse cx='110' cy='150' rx='32' ry='30' fill='%23e6332a'/%3E%3Cellipse cx='112' cy='148' rx='12' ry='11' fill='%23f5c7d8'/%3E%3Cellipse cx='200' cy='160' rx='28' ry='26' fill='%23e6332a'/%3E%3Cellipse cx='201' cy='158' rx='11' ry='10' fill='%23f5c7d8'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='122' viewBox='0 0 140 122'%3E%3Cellipse cx='32' cy='34' rx='26' ry='25' fill='%23e23a1a'/%3E%3Cellipse cx='36' cy='29' rx='26' ry='25' fill='%23ff5aa5'/%3E%3Cellipse cx='102' cy='34' rx='24' ry='23' fill='%23e23a1a'/%3E%3Cellipse cx='106' cy='29' rx='24' ry='23' fill='%23ff5aa5'/%3E%3Cellipse cx='67' cy='94' rx='25' ry='24' fill='%23e23a1a'/%3E%3Cellipse cx='71' cy='89' rx='25' ry='24' fill='%23ff5aa5'/%3E%3C/svg%3E"),
+    linear-gradient(#4eb8e2, #4eb8e2),
+    repeating-linear-gradient(90deg, #e6332a 0 1.45rem, #ff4d9a 1.45rem 2.9rem),
+    repeating-linear-gradient(180deg, #e8c8f0 0 1.2rem, #c4a035 1.2rem 2.4rem),
+    linear-gradient(90deg, #2a4bd7, #2a4bd7),
+    repeating-linear-gradient(0deg, #111 0 0.72rem, #fff 0.72rem 1.44rem),
+    repeating-linear-gradient(90deg, #e6332a 0 0.9rem, #2a6fe0 0.9rem 1.8rem);
+  background-size:
+    18rem 16rem,
+    11rem 9.5rem,
+    100% 30%,
+    100% 22%,
+    calc(18% - 0.7rem) 100%,
+    0.7rem 100%,
+    100% 14%,
+    48% 14%;
+  background-position:
+    0 0,
+    0 0,
+    0 36%,
+    0 72%,
+    100% 0,
+    82% 0,
+    0 100%,
+    52% 100%;
+  background-repeat:
+    repeat,
+    repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+}
+
+.stn-store::after {
+  display: none;
+}
+
+.stn-store > .stn-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 82rem;
+  margin-inline: auto;
+}
+
+/* —— Hero: shop sign on the clash —— */
+.stn-store__hero {
+  position: relative;
+  max-width: 44rem;
+  margin-inline: auto;
+  padding: clamp(2.25rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 2.75rem) clamp(2rem, 4vw, 2.75rem);
+  background: var(--ag-pink-deep);
+  border-radius: 0 0 2.5rem 2.5rem;
+  box-shadow:
+    0 24px 48px rgb(11 40 38 / 0.35),
+    8px 10px 0 var(--ag-yellow);
+}
+
+.stn-store__hero::before,
+.stn-store__hero::after {
+  content: "";
+  position: absolute;
+  width: 1.35rem;
+  height: 1.35rem;
+  background: var(--ag-yellow);
+  clip-path: polygon(50% 0%, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0% 50%, 38% 38%);
+  pointer-events: none;
+}
+
+.stn-store__hero::before {
+  top: 1.1rem;
+  left: 1.25rem;
+  animation: stn-spark 3.2s ease-in-out infinite;
+}
+
+.stn-store__hero::after {
+  right: 1.4rem;
+  bottom: 1.2rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: var(--ag-cream);
+  animation: stn-spark 2.6s ease-in-out 0.4s infinite;
+}
+
+@keyframes stn-spark {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; }
+  50% { transform: scale(1.28) rotate(18deg); opacity: 1; }
+}
+
+.stn-store__hero .stn-kicker { color: var(--ag-yellow); letter-spacing: 0.28em; }
+.stn-store__hero .stn-page-title { color: var(--ag-cream); }
+.stn-store__hero .stn-slogan { color: var(--ag-yellow); }
+.stn-store__hero .stn-body { color: rgb(255 246 232 / 0.88); }
+
+.stn-store__hero .stn-divider,
+.stn-bay__masthead .stn-divider {
+  background: var(--ag-yellow);
+  width: 3.25rem;
+  height: 4px;
+  border-radius: 99px;
+}
+
+/* —— Nav chips: grey buttons, strong letter colours —— */
+.stn-store__nav {
+  margin-bottom: clamp(1.35rem, 3vw, 2rem);
+}
+
+.stn-store__nav a {
+  border: 0;
+  font-weight: 800;
+  color: var(--ag-cream);
+  background: #000;
+  box-shadow: 3px 4px 0 rgb(0 0 0 / 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.stn-store__nav li:nth-child(1) a { color: var(--ag-red); }
+.stn-store__nav li:nth-child(2) a { color: var(--ag-orange); }
+.stn-store__nav li:nth-child(3) a { color: #4d6fff; }
+.stn-store__nav li:nth-child(4) a { color: #2ec86a; }
+.stn-store__nav li:nth-child(5) a { color: #ff4eb8; }
+.stn-store__nav li:nth-child(6) a { color: #3ad4ff; }
+.stn-store__nav li:nth-child(7) a { color: #ffe34a; }
+.stn-store__nav li:nth-child(8) a { color: #e85cff; }
+
+.stn-store__nav a:hover,
+.stn-store__nav a:focus-visible {
+  background: #111 !important;
+  border-color: transparent;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 6px 0 rgb(0 0 0 / 0.55);
+}
+
+/* —— Bays sit on the session wallpaper (no local fill) —— */
+.stn-bays {
+  width: 100%;
+  min-width: 0;
+  gap: clamp(0.65rem, 1.8vw, 1.25rem);
+}
+
+.stn-bay {
+  position: relative;
+  isolation: isolate;
+  /* Full-bleed via margins only — avoid width:100vw which expands flex min-size and clips to a left strip */
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: clamp(1.1rem, 2.4vw, 1.75rem) clamp(1.25rem, 4vw, 3rem) clamp(1.2rem, 2.6vw, 1.9rem);
+  gap: clamp(0.85rem, 2vw, 1.25rem);
+  background: transparent;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+.stn-bay > * { position: relative; z-index: 1; }
+
+.stn-bay__masthead {
+  max-width: 38rem;
+  margin-bottom: 0;
+  padding: 0.75rem 1.1rem 0.85rem;
+  background: #000;
+  border-radius: 1rem;
+}
+
+.stn-bay__masthead .stn-kicker {
+  font-weight: 800;
+  color: var(--ag-yellow);
+}
+
+.stn-bay__masthead .stn-section-title {
+  font-style: italic;
+  color: var(--ag-cream);
+}
+
+.stn-bay__masthead .stn-body {
+  color: rgb(255 246 232 / 0.86);
+}
+
+/* Product containers — skip fan, compose, study plates (original mockups) */
+.stn-bay > :not(.stn-bay__masthead):not(.stn-fan):not(.stn-compose):not(.stn-pair):not(.stn-colour):not(.stn-paper-duo) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 72rem;
+  margin-inline: auto;
+  width: 100%;
+  border-radius: 1.35rem;
+  padding: clamp(1.1rem, 2.8vw, 1.85rem);
+  box-shadow:
+    0 18px 44px rgb(11 40 38 / 0.22),
+    6px 8px 0 rgb(28 22 48 / 0.18);
+}
+
+.stn-bay > :not(.stn-bay__masthead):not(.stn-fan):not(.stn-compose):not(.stn-pair):not(.stn-colour):not(.stn-paper-duo) > * {
+  position: relative;
+  z-index: 1;
+}
+
+.stn-bay > :not(.stn-bay__masthead):not(.stn-fan):not(.stn-compose):not(.stn-pair):not(.stn-colour):not(.stn-paper-duo)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stn-paper-duo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  max-width: 72rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+#paper > .stn-bookmarks {
+  max-width: 36rem;
+}
+
+.stn-paper-duo > .stn-magbook,
+.stn-paper-duo > .stn-wallcal-set {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  flex: 1 1 16rem;
+  max-width: calc(50% - 0.65rem);
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  border-radius: 1.35rem;
+  padding: 0.65rem;
+  box-shadow:
+    0 18px 44px rgb(11 40 38 / 0.22),
+    6px 8px 0 rgb(28 22 48 / 0.18);
+}
+
+.stn-paper-duo > .stn-magbook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0.65rem;
+}
+
+.stn-paper-duo > .stn-magbook > *,
+.stn-paper-duo > .stn-wallcal-set > * {
+  position: relative;
+  z-index: 1;
+}
+
+.stn-paper-duo > .stn-magbook::before,
+.stn-paper-duo > .stn-wallcal-set::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 01 Cards — pink / orange stripes on cream */
+#letters > :not(.stn-bay__masthead) {
+  background-color: var(--ag-cream);
+}
+
+#letters > :not(.stn-bay__masthead)::before {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(255 138 184 / 0.55) 0 0.85rem,
+    rgb(255 246 232 / 0.2) 0.85rem 1.85rem,
+    rgb(255 106 26 / 0.4) 1.85rem 2.55rem,
+    rgb(255 246 232 / 0.2) 2.55rem 3.55rem
+  );
+}
+
+/* 02 Stickers — mint grid (not study plates) */
+#stickers > :not(.stn-bay__masthead):not(.stn-pair) {
+  background-color: #c8f0d4;
+}
+
+#stickers > :not(.stn-bay__masthead):not(.stn-pair)::before {
+  background-image:
+    linear-gradient(rgb(110 190 230 / 0.7) 2px, transparent 2px),
+    linear-gradient(90deg, rgb(110 190 230 / 0.7) 2px, transparent 2px);
+  background-size: 1.85rem 1.85rem;
+}
+
+/* 04 Paper — lemon stripes */
+#paper > :not(.stn-bay__masthead):not(.stn-paper-duo),
+#paper .stn-paper-duo > .stn-magbook,
+#paper .stn-paper-duo > .stn-wallcal-set {
+  background-color: var(--ag-lemon);
+}
+
+#paper > :not(.stn-bay__masthead):not(.stn-paper-duo)::before,
+#paper .stn-paper-duo > .stn-magbook::before,
+#paper .stn-paper-duo > .stn-wallcal-set::before {
+  background-image: repeating-linear-gradient(
+    92deg,
+    rgb(255 227 74 / 0.95) 0 1.05rem,
+    rgb(255 243 168 / 0.5) 1.05rem 2.2rem
+  );
+}
+
+/* 05 Pattern — royal blue / cream stripes (not colour / compose) */
+#pattern > :not(.stn-bay__masthead):not(.stn-colour):not(.stn-compose) {
+  background-color: var(--ag-blue);
+}
+
+#pattern > .stn-swatch {
+  overflow: visible;
+  padding-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+#pattern > :not(.stn-bay__masthead):not(.stn-colour):not(.stn-compose)::before {
+  background-image: repeating-linear-gradient(
+    88deg,
+    rgb(255 246 232 / 0.28) 0 1.1rem,
+    rgb(42 75 215 / 0.12) 1.1rem 2.25rem
+  );
+}
+
+/* 06 Place — green / peach stripes */
+#place > :not(.stn-bay__masthead) {
+  background-color: #e8f8d8;
+}
+
+#place > :not(.stn-bay__masthead)::before {
+  background-image: repeating-linear-gradient(
+    94deg,
+    rgb(61 181 74 / 0.45) 0 1.15rem,
+    rgb(247 181 160 / 0.5) 1.15rem 2.3rem
+  );
+}
+
+/* 07 Gifts — marigold stripes */
+#gifts > :not(.stn-bay__masthead) {
+  background-color: #ffb24a;
+}
+
+#gifts > :not(.stn-bay__masthead)::before {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(255 106 26 / 0.35) 0 0.9rem,
+    transparent 0.9rem 2rem
+  );
+}
+
+.stn-wallframes__wall::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='64' viewBox='0 0 72 64'%3E%3Cpath fill='%23fff' fill-opacity='0.55' d='M14 6l.7 4.8L20 12l-5.3 1.2L14 18l-.7-4.8L8 12l5.3-1.2z'/%3E%3Cpath fill='%23fff' fill-opacity='0.35' d='M52 34l.45 3.1L56 38l-3.55.9L52 42l-.45-3.1L48 38l3.55-.9z'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='50' viewBox='0 0 54 50'%3E%3Cpath fill='%23fffce8' fill-opacity='0.4' d='M36 8l.4 2.7L40 11.5l-3.6.8L36 15l-.4-2.7L32 11.5l3.6-.8z'/%3E%3C/svg%3E");
+  background-size: 7.2rem 6.4rem, 5.4rem 5rem;
+  background-position: 8% 12%, 62% 58%;
+  mix-blend-mode: screen;
+  opacity: 0.65;
+}
+
+#stickers .stn-sheet::after,
+#stickers .stn-sheet__stage::after,
+#stickers .stn-sheet__pad::after,
+#stickers .stn-sheet__stickers::after {
+  content: none;
+  display: none;
+  background-image: none;
+  mix-blend-mode: normal;
+  opacity: 0;
+}
+
+/* 08 Branding — pink field, red bar, spiral */
+#branding > :not(.stn-bay__masthead) {
+  background-color: #ff8ab8;
+}
+
+#branding > :not(.stn-bay__masthead)::before {
+  width: 32%;
+  right: auto;
+  background:
+    repeating-radial-gradient(
+      circle at 35% 0,
+      transparent 0 1.05rem,
+      rgb(255 106 26 / 0.55) 1.1rem 1.25rem,
+      transparent 1.3rem 2.3rem
+    );
+  border-right: 0.95rem solid var(--ag-red);
+  border-radius: 0 70% 60% 0 / 0 18% 22% 0;
+}
+
+/* Study plates — bone-cream plate, no pattern */
+#stickers > .stn-pair {
+  position: relative;
+  max-width: 72rem;
+  margin-inline: auto;
+  width: 100%;
+  padding: clamp(1.1rem, 2.8vw, 1.85rem);
+  background: #f6efe4;
+  border-radius: 1.35rem;
+  box-shadow:
+    0 18px 44px rgb(11 40 38 / 0.12),
+    0 1px 0 rgb(255 255 255 / 0.7) inset;
+  overflow: visible;
+}
+
+#trilogy .stn-sku__caption,
+#stickers > .stn-pair .stn-sku__caption {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  width: auto;
+}
+
+/* Captions sit on a cream chip so they stay readable on pattern */
+.stn-store .stn-sku__caption {
+  background: rgb(255 252 247 / 0.94);
+  padding: 0.7rem 1rem 0.8rem;
+  border-radius: 0.85rem;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.stn-store .stn-sku__dept { color: var(--ag-pink-deep); }
+.stn-store .stn-sku__name { color: var(--ag-ink); }
+.stn-store .stn-sku__use { color: rgb(28 22 48 / 0.58); }
+
+.stn-close {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(1.5rem, 3.5vw, 2.5rem);
+  background: var(--ag-cream);
+  border: 0;
+  box-shadow: 8px 10px 0 var(--ag-yellow);
+  border-radius: 1.25rem;
+}
+
+.stn-close .stn-section-title { color: var(--ag-pink-deep); }
+.stn-close .stn-body { color: rgb(28 22 48 / 0.7); }
+
+.stn-signoff__oval {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ag-cream);
+  border-radius: 50%;
+  padding: 1.35rem 1.9rem 1.15rem;
+}
+
+.stn-signoff img {
+  mix-blend-mode: normal;
+}
+
+@media (max-width: 40rem) {
+  .stn-store__hero { border-radius: 0 0 1.5rem 1.5rem; }
+
+  .stn-bay > :not(.stn-bay__masthead):not(.stn-fan):not(.stn-compose):not(.stn-pair):not(.stn-colour):not(.stn-paper-duo) {
+    border-radius: 1rem;
+    padding: 0.85rem;
+  }
+
+  #branding > :not(.stn-bay__masthead)::before { width: 22%; }
+
+  #paper .stn-paper-duo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #paper .stn-paper-duo > .stn-magbook,
+  #paper .stn-paper-duo > .stn-wallcal-set {
+    max-width: 22rem;
+    width: 100%;
+    padding: 0.45rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stn-store__hero::before,
+  .stn-store__hero::after {
+    animation: none;
+  }
+}

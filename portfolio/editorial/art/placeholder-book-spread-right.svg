@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" role="img" aria-label="Book spread placeholder right page">
+  <rect width="360" height="480" fill="#FFFDF7"/>
+  <rect x="30" y="40" width="300" height="400" fill="none" stroke="#d4cfc4" stroke-width="1"/>
+  <rect x="60" y="80" width="240" height="180" fill="#2d6a4f" opacity="0.2" stroke="#111" stroke-width="1.5"/>
+  <ellipse cx="180" cy="170" rx="70" ry="40" fill="#a8d8ff" opacity="0.5"/>
+  <path d="M120 250 Q180 220 240 250" fill="none" stroke="#6b3fa0" stroke-width="2"/>
+  <text x="60" y="310" font-family="Georgia, serif" font-size="13" fill="#444">
+    <tspan x="60" dy="0">The treasure was not gold,</tspan>
+    <tspan x="60" dy="22">but the story the lake kept</tspan>
+    <tspan x="60" dy="22">for anyone brave enough to look.</tspan>
+  </text>
+  <text x="40" y="450" font-family="serif" font-size="11" fill="#999">13</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Manuscript illustration editorial project">
+  <rect width="800" height="520" fill="#f7f3eb"/>
+  <rect x="50" y="50" width="700" height="420" fill="#fff" stroke="#111" stroke-width="2"/>
+  <rect x="80" y="80" width="300" height="360" fill="#C4E600" opacity="0.2"/>
+  <circle cx="230" cy="250" r="80" fill="#F23C9E" opacity="0.25" stroke="#111" stroke-width="2"/>
+  <text x="450" y="130" font-family="Georgia, serif" font-size="24" fill="#111">Manuscript Notes</text>
+  <text x="450" y="180" font-family="Georgia, serif" font-size="13" fill="#444">
+    <tspan x="450" dy="0">Interior spread design combining</tspan>
+    <tspan x="450" dy="22">hand-drawn illustration with</tspan>
+    <tspan x="450" dy="22">structured typographic grids </tspan>
+    <tspan x="450" dy="22">print-ready and screen-optimized.</tspan>
+  </text>
+  <rect x="450" y="300" width="260" height="100" fill="none" stroke="#d4cfc4" stroke-width="1"/>
+  <line x1="470" y1="330" x2="690" y2="330" stroke="#d4cfc4"/>
+  <line x1="470" y1="350" x2="650" y2="350" stroke="#d4cfc4"/>
+  <line x1="470" y1="370" x2="670" y2="370" stroke="#d4cfc4"/>
+</svg>

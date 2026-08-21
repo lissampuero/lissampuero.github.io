@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Marquise de Croac editorial spread">
+  <rect width="800" height="500" fill="#2a1f3d"/>
+  <!-- Left page -->
+  <rect x="30" y="40" width="360" height="420" fill="#3d2a5c" stroke="#d4a853" stroke-width="2"/>
+  <text x="60" y="100" font-family="Georgia, serif" font-size="28" fill="#d4a853" font-style="italic">Memoirs of</text>
+  <text x="60" y="140" font-family="Georgia, serif" font-size="32" fill="#fff" font-weight="bold">The Marquise</text>
+  <ellipse cx="210" cy="280" rx="80" ry="60" fill="#5a8f5a" stroke="#111" stroke-width="2"/>
+  <circle cx="185" cy="265" r="12" fill="#fff" stroke="#111" stroke-width="1.5"/>
+  <circle cx="235" cy="265" r="12" fill="#fff" stroke="#111" stroke-width="1.5"/>
+  <!-- Right page -->
+  <rect x="410" y="40" width="360" height="420" fill="#fff" stroke="#111" stroke-width="2"/>
+  <text x="440" y="90" font-family="Georgia, serif" font-size="14" fill="#333" line-height="1.6">
+    <tspan x="440" dy="0">In the kingdom of the swamp,</tspan>
+    <tspan x="440" dy="22">where lily pads hold court</tspan>
+    <tspan x="440" dy="22">and fireflies serve as chandeliers,</tspan>
+    <tspan x="440" dy="22">one frog wore a crown of gold</tspan>
+    <tspan x="440" dy="22">and ruled with a velvet tongue.</tspan>
+  </text>
+  <rect x="440" y="240" width="300" height="180" fill="#6b3fa0" opacity="0.2" rx="4"/>
+  <path d="M500 350 Q590 280 680 350" fill="none" stroke="#F23C9E" stroke-width="3"/>
+</svg>

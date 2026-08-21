@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Editorial spread with vintage woman and binoculars">
+  <rect width="800" height="520" fill="#FFFDF7"/>
+  <rect x="0" y="0" width="800" height="80" fill="#F23C9E" opacity="0.15"/>
+  <text x="40" y="50" font-family="Georgia, serif" font-size="14" fill="#111" letter-spacing="4">EDITORIAL</text>
+  <rect x="40" y="100" width="340" height="380" fill="#FFE800" opacity="0.25"/>
+  <!-- Illustrated figure -->
+  <ellipse cx="210" cy="320" rx="80" ry="120" fill="#ffe0bd" stroke="#111" stroke-width="2"/>
+  <circle cx="210" cy="220" r="50" fill="#ffe0bd" stroke="#111" stroke-width="2"/>
+  <circle cx="195" cy="215" r="6" fill="#111"/>
+  <circle cx="225" cy="215" r="6" fill="#111"/>
+  <!-- Binoculars -->
+  <rect x="160" y="235" width="35" height="25" rx="12" fill="#111"/>
+  <rect x="225" y="235" width="35" height="25" rx="12" fill="#111"/>
+  <rect x="193" y="242" width="34" height="4" fill="#d4a853"/>
+  <path d="M120 180 Q210 140 300 180" fill="#5c3d2e" stroke="#111" stroke-width="2"/>
+  <!-- Text column -->
+  <text x="430" y="140" font-family="Georgia, serif" font-size="28" fill="#111">Through the Lens</text>
+  <text x="430" y="190" font-family="Georgia, serif" font-size="14" fill="#444">
+    <tspan x="430" dy="0">A visual essay on observation,</tspan>
+    <tspan x="430" dy="24">curiosity, and the art of seeing</tspan>
+    <tspan x="430" dy="24">what others overlook.</tspan>
+  </text>
+  <line x1="430" y1="280" x2="760" y2="280" stroke="#d4cfc4" stroke-width="1"/>
+  <text x="430" y="320" font-family="Georgia, serif" font-size="13" fill="#666" font-style="italic">
+    Illustration &amp; layout by Liss Ampuero
+  </text>
+</svg>

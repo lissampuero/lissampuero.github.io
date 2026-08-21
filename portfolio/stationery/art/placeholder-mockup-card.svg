@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Greeting card product mockup placeholder">
+  <rect width="400" height="500" fill="#FFFDF7"/>
+  <rect x="0" y="380" width="400" height="120" fill="#F5F0E8"/>
+  <!-- Shadow -->
+  <ellipse cx="200" cy="390" rx="120" ry="12" fill="#111" opacity="0.08"/>
+  <!-- Folded card -->
+  <rect x="110" y="120" width="180" height="240" rx="4" fill="#fff" stroke="#111" stroke-width="2.5"/>
+  <rect x="110" y="120" width="180" height="240" rx="4" fill="#F23C9E" opacity="0.15"/>
+  <!-- Illustration on card -->
+  <circle cx="200" cy="200" r="50" fill="#FFE800" stroke="#111" stroke-width="2"/>
+  <path d="M170 260 Q200 230 230 260" fill="none" stroke="#111" stroke-width="2"/>
+  <path d="M185 250 L200 235 L215 250" fill="#C4E600" stroke="#111" stroke-width="1.5"/>
+  <text x="200" y="310" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#111" font-style="italic">With love</text>
+  <!-- Envelope behind -->
+  <path d="M90 280 L200 220 L310 280 L310 360 L90 360 Z" fill="#FFE800" stroke="#111" stroke-width="2" opacity="0.7"/>
+</svg>

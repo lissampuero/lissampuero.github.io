@@ -1,0 +1,268 @@
+/**
+ * Stationery — typography, bands, washi tape, pins, doodles
+ */
+
+.stn-band {
+  width: 100%;
+  max-width: 100%;
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.stn-band--paper {
+  background: transparent;
+}
+
+.stn-band--cream {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 252, 248, 0.6) 100%);
+}
+
+.stn-container {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 3rem);
+  padding-right: clamp(1.25rem, 4vw, 3rem);
+  position: relative;
+  z-index: 1;
+}
+
+.stn-container--wide { max-width: 82rem; }
+
+/* Typography — serif titles, script subtitles */
+.stn-kicker {
+  font-family: var(--stn-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--stn-ink-light);
+  margin-bottom: 0.75rem;
+}
+
+.stn-page-title {
+  font-family: var(--stn-serif);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  color: var(--stn-ink);
+  margin: 0 0 0.5rem;
+}
+
+.stn-slogan {
+  font-family: var(--stn-script);
+  font-weight: 700;
+  font-size: clamp(1.85rem, 4vw, 2.65rem);
+  color: var(--stn-ink);
+  margin: 0 0 1.25rem;
+  line-height: 1.2;
+}
+
+.stn-section-title {
+  font-family: var(--stn-serif);
+  font-weight: 600;
+  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+  color: var(--stn-ink);
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.stn-section-title--script {
+  font-family: var(--stn-script);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: 0;
+}
+
+.stn-body {
+  font-family: var(--stn-sans);
+  font-size: clamp(0.975rem, 1.4vw, 1.075rem);
+  line-height: 1.75;
+  color: var(--stn-ink-muted);
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stn-body--center {
+  text-align: center;
+}
+
+/* Washi tape corners */
+.stn-washi {
+  position: absolute;
+  width: clamp(3rem, 8vw, 4.5rem);
+  height: clamp(0.85rem, 2vw, 1.1rem);
+  z-index: 5;
+  opacity: 0.88;
+  box-shadow: 0 1px 2px rgba(38, 32, 24, 0.08);
+}
+
+.stn-washi::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -3deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.25) 2px,
+    rgba(255, 255, 255, 0.25) 4px
+  );
+  pointer-events: none;
+}
+
+.stn-washi--cream { background: var(--stn-tape-cream); }
+.stn-washi--blush { background: var(--stn-tape-blush); }
+.stn-washi--sage { background: var(--stn-tape-sage); }
+
+.stn-washi--tl {
+  top: -0.35rem;
+  left: 0.75rem;
+  transform: rotate(-2deg);
+}
+
+.stn-washi--tr {
+  top: -0.35rem;
+  right: 0.75rem;
+  transform: rotate(2deg);
+}
+
+/* Push pin */
+.stn-pin {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  z-index: 8;
+  box-shadow:
+    0 2px 4px rgba(38, 32, 24, 0.25),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.45),
+    inset -1px -1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.stn-pin--gold {
+  background: radial-gradient(circle at 35% 30%, #E8C547, var(--stn-pin-gold) 60%, #9A7B15);
+}
+
+.stn-pin--wood {
+  background: radial-gradient(circle at 35% 30%, #B8892E, var(--stn-pin-wood) 65%, #5C4510);
+}
+
+.stn-pin::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 7px;
+  background: linear-gradient(180deg, #888, #666);
+  border-radius: 1px;
+}
+
+.stn-pin--top-center {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stn-pin--top-left {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+/* Pantone swatch chip */
+.stn-swatch-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 0.65rem 0.6rem;
+  background: #FFFCF8;
+  box-shadow: var(--stn-shadow-paper);
+  border: 1px solid rgba(42, 37, 32, 0.07);
+  min-width: 4.5rem;
+}
+
+.stn-swatch-card__chip {
+  width: 100%;
+  height: 2.25rem;
+  border: 1px solid rgba(42, 37, 32, 0.1);
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.stn-swatch-card__name {
+  font-family: var(--stn-sans);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stn-ink-muted);
+  margin-top: 0.35rem;
+}
+
+.stn-swatch-card__hex {
+  font-size: 0.48rem;
+  color: var(--stn-ink-light);
+  letter-spacing: 0.04em;
+}
+
+.stn-swatch-card--fuchsia .stn-swatch-card__chip { background: var(--citrus-fuchsia); }
+.stn-swatch-card--lemon .stn-swatch-card__chip { background: var(--citrus-yellow); }
+.stn-swatch-card--lime .stn-swatch-card__chip { background: var(--citrus-lime); }
+
+/* Background doodles layer */
+.stn-doodles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.stn-doodle {
+  position: absolute;
+  opacity: 0.12;
+  color: var(--stn-ink);
+}
+
+.stn-doodle svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stn-citrus-card {
+  background: rgba(255, 252, 248, 0.92);
+  border-radius: 2px;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  box-shadow: var(--stn-shadow-paper);
+  border: 1px solid rgba(42, 37, 32, 0.06);
+}
+
+.stn-product-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stn-product-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--stn-ink-muted);
+  margin-bottom: 0.5rem;
+}
+
+.stn-product-list li::before {
+  content: '✦';
+  flex-shrink: 0;
+  font-size: 0.65rem;
+  color: var(--citrus-fuchsia);
+  margin-top: 0.35rem;
+}

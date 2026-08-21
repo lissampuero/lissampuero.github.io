@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Paper goods illustration placeholder">
+  <rect width="400" height="400" fill="#FFFDF7"/>
+  <rect x="60" y="80" width="120" height="160" fill="#fff" stroke="#111" stroke-width="2"/>
+  <rect x="200" y="100" width="140" height="100" fill="#FFE800" stroke="#111" stroke-width="2"/>
+  <rect x="200" y="220" width="140" height="100" fill="#F23C9E" opacity="0.35" stroke="#111" stroke-width="2"/>
+  <circle cx="120" cy="160" r="30" fill="#C4E600" opacity="0.5"/>
+  <path d="M230 140 L310 140 L270 180 Z" fill="#C4E600" stroke="#111" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 580" role="img" aria-label="LoLo and Fuzzle character portrait">
+  <rect width="500" height="580" fill="#FFFDF7"/>
+  <circle cx="400" cy="100" r="60" fill="#FBF3A0" opacity="0.8"/>
+  <circle cx="80" cy="480" r="80" fill="#F8C4DE" opacity="0.5"/>
+  <!-- LoLo body -->
+  <ellipse cx="250" cy="420" rx="70" ry="90" fill="#FFE800" stroke="#111" stroke-width="2.5"/>
+  <!-- Head -->
+  <circle cx="250" cy="280" r="75" fill="#ffe0bd" stroke="#111" stroke-width="2.5"/>
+  <!-- Hair -->
+  <path d="M180 260 Q200 180 250 170 Q300 180 320 260 Q280 200 250 195 Q220 200 180 260" fill="#5c3d2e" stroke="#111" stroke-width="2"/>
+  <!-- Eyes -->
+  <circle cx="220" cy="285" r="10" fill="#111"/>
+  <circle cx="280" cy="285" r="10" fill="#111"/>
+  <circle cx="223" cy="282" r="3" fill="#fff"/>
+  <circle cx="283" cy="282" r="3" fill="#fff"/>
+  <!-- Smile -->
+  <path d="M230 310 Q250 325 270 310" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+  <!-- Paint brush -->
+  <line x1="320" y1="350" x2="380" y2="280" stroke="#8B4513" stroke-width="5" stroke-linecap="round"/>
+  <path d="M375 275 L395 255 L385 290 Z" fill="#F23C9E" stroke="#111" stroke-width="1.5"/>
+  <!-- Fuzzle bird plush -->
+  <ellipse cx="160" cy="340" rx="45" ry="50" fill="#a8d8ff" stroke="#111" stroke-width="2.5"/>
+  <circle cx="145" cy="320" r="18" fill="#a8d8ff" stroke="#111" stroke-width="2"/>
+  <circle cx="138" cy="315" r="5" fill="#111"/>
+  <circle cx="152" cy="315" r="5" fill="#111"/>
+  <path d="M175 330 L200 325 L175 340 Z" fill="#F23C9E" stroke="#111" stroke-width="1.5"/>
+  <path d="M130 360 Q160 380 190 360" fill="#C4E600" stroke="#111" stroke-width="2"/>
+</svg>

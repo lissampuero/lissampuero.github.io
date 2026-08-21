@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Journal notebook product mockup placeholder">
+  <rect width="400" height="500" fill="#FFFDF7"/>
+  <ellipse cx="200" cy="420" rx="100" ry="14" fill="#111" opacity="0.07"/>
+  <!-- Journal body -->
+  <rect x="120" y="90" width="160" height="300" rx="4" fill="#111"/>
+  <rect x="125" y="95" width="150" height="290" rx="2" fill="#FFE800"/>
+  <!-- Cover illustration -->
+  <circle cx="200" cy="200" r="55" fill="#F23C9E" opacity="0.3" stroke="#111" stroke-width="2"/>
+  <path d="M160 280 Q200 240 240 280" fill="none" stroke="#111" stroke-width="2.5"/>
+  <path d="M175 260 L200 230 L225 260" fill="#C4E600" stroke="#111" stroke-width="1.5"/>
+  <!-- Spine detail -->
+  <rect x="120" y="90" width="12" height="300" rx="2" fill="#333"/>
+  <!-- Elastic band -->
+  <rect x="268" y="120" width="8" height="240" rx="4" fill="#F23C9E"/>
+</svg>

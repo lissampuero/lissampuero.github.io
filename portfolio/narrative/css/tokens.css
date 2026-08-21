@@ -1,0 +1,27 @@
+:root {
+  --citrus-fuchsia: #F23C9E;
+  --citrus-yellow: #FFE800;
+  --citrus-lime: #C4E600;
+  --citrus-cream: #FFFDF7;
+  --ink-black: #111111;
+  --ink-white: #FFFFFF;
+
+  /* Narrative / Marquise dramatic palette */
+  --swamp-deep: #1a1428;
+  --swamp-purple: #3d2a5c;
+  --swamp-mist: #6b3fa0;
+  --lily-green: #2d6a4f;
+  --marquise-gold: #d4a853;
+  --marquise-lime: #f2fce2;
+
+  /* Marquise pastel wash — soft lilac band, watercolour friendly */
+  --marquise-lilac: #F1EBF9;
+  --marquise-lilac-deep: #DCCFEF;
+  --marquise-plum: #453258;
+  --marquise-plum-soft: #6C588A;
+  --marquise-accent: #7A4FB6;
+
+  /* LoLo whimsical accents */
+  --lolo-sky: #a8d8ff;
+  --lolo-blush: #F8C4DE;
+}

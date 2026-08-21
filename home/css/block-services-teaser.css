@@ -1,0 +1,46 @@
+/**
+ * Services teaser — conversion entry point
+ */
+
+.hm-services-teaser {
+  background: var(--citrus-lime);
+  overflow: hidden;
+}
+
+.hm-services-teaser::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 80% 50%, rgb(255 232 0 / 0.35) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hm-services-teaser > .hm-container { position: relative; z-index: 1; }
+
+.hm-services-teaser__layout {
+  display: grid; gap: clamp(2.25rem, 4.5vw, 3.5rem);
+  align-items: center; text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hm-services-teaser__layout {
+    grid-template-columns: 1fr auto;
+    text-align: left; gap: 3.5rem;
+  }
+}
+
+.hm-services-teaser__slogan {
+  font-family: 'Caveat', cursive; font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem); color: #111;
+  margin: 0 0 0.75rem;
+}
+
+.hm-services-teaser__body {
+  font-family: 'Inter', sans-serif; font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  line-height: 1.7; color: #262626; margin: 0;
+  max-width: 36rem;
+}
+
+.hm-services-teaser__cta { flex-shrink: 0; }
+
+@media (min-width: 768px) {
+  .hm-services-teaser__cta { text-align: right; }
+}

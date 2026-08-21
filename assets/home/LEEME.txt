@@ -1,0 +1,24 @@
+CARPETA: assets/home/
+Ilustraciones exclusivas de la página de inicio
+
+✅ logo-liss-ampuero-hero.png
+   → Logo hero con tu nombre y la ilustradora bailando (YA COLOCADO)
+
+Pendiente — arrastra aquí y renombra exactamente así, a la mayor resolución
+posible (evita mandarlas solo por chat, mejor la ruta del archivo original):
+
+1. selected-gallery-illustration-01.webp (o .jpg/.png)
+2. selected-gallery-illustration-02.webp
+3. selected-gallery-illustration-03.webp
+4. selected-gallery-illustration-04.webp
+5. selected-gallery-illustration-05.webp
+6. selected-gallery-illustration-06.webp
+7. selected-gallery-illustration-07.webp
+8. selected-gallery-illustration-08.webp
+9. selected-gallery-illustration-09.webp
+10. selected-gallery-illustration-10.webp
+   → Galería seleccionada de ilustraciones a tamaño/proporción original,
+     mosaico debajo del hero. Pueden ser retrato, paisaje o cuadradas,
+     no es necesario recortarlas.
+
+Total: 10 archivos pendientes

@@ -1,0 +1,34 @@
+/* ============================================================
+   PALETA MAESTRA — SISTEMA CÍTRICO ACTUALIZADO
+   Añadir/reemplazar en tu styles.css global (:root)
+   ============================================================ */
+
+:root {
+  /* ===== CÍTRICOS VIBRANTES (Fashion, About, Editorial, Services) ===== */
+  --citrus-fuchsia: #F23C9E;
+  --citrus-yellow: #FFE800;
+  --citrus-lime: #C4E600;        /* NUEVO: verde limón */
+  --citrus-strawberry: #F2413C;  /* NUEVO: rojo fresa — CTA de contacto */
+  --citrus-cream: #FFFDF7;        /* tono de descanso entre franjas */
+
+  /* ===== VERSIÓN PASTEL (Children's Books únicamente) ===== */
+  --pastel-fuchsia: #F8C4DE;
+  --pastel-yellow: #FBF3A0;
+  --pastel-lime: #E2F0B8;        /* NUEVO: verde limón pastel */
+  --pastel-cream: #FFFCF5;
+
+  /* ===== NEUTROS ===== */
+  --ink-black: #111111;
+  --ink-white: #FFFFFF;
+
+  /* Morado y coral RETIRADOS del sistema activo —
+     se conservan solo como referencia histórica, no usar en páginas nuevas */
+  /* --legacy-purple: #6b3fa0; */
+  /* --legacy-coral: #e85d4a; */
+}
+
+/* ============================================================
+   ROTACIÓN DE FRANJAS — orden recomendado para evitar
+   dos colores iguales consecutivos en una misma página
+   ============================================================ */
+/* Fucsia → Crema → Amarillo limón → Crema → Verde limón → Crema → (repetir) */

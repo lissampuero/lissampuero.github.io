@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Fashion print illustration placeholder">
+  <rect width="400" height="400" fill="#FFFDF7"/>
+  <rect x="0" y="0" width="400" height="120" fill="#F23C9E" opacity="0.3"/>
+  <path d="M160 80 L200 320 L240 80" fill="none" stroke="#111" stroke-width="3"/>
+  <ellipse cx="200" cy="90" rx="30" ry="15" fill="#FFE800" stroke="#111" stroke-width="2"/>
+  <circle cx="120" cy="200" r="25" fill="#C4E600" opacity="0.6"/>
+  <circle cx="280" cy="250" r="30" fill="#FFE800" opacity="0.7"/>
+</svg>

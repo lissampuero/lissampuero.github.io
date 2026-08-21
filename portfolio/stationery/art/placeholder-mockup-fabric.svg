@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Fabric tote and napkin product mockup placeholder">
+  <rect width="400" height="500" fill="#FFFDF7"/>
+  <!-- Tote bag -->
+  <path d="M130 140 L130 360 L270 360 L270 140 Z" fill="#C4E600" stroke="#111" stroke-width="2.5"/>
+  <path d="M155 140 Q155 100 200 100 Q245 100 245 140" fill="none" stroke="#111" stroke-width="2.5"/>
+  <!-- Pattern on tote -->
+  <circle cx="170" cy="220" r="20" fill="#F23C9E" opacity="0.6"/>
+  <circle cx="230" cy="260" r="25" fill="#FFE800" opacity="0.8"/>
+  <path d="M180 300 L220 280 L240 320 L190 330 Z" fill="#F23C9E" opacity="0.5"/>
+  <!-- Napkin folded -->
+  <path d="M60 320 L140 280 L180 340 L100 380 Z" fill="#FFE800" stroke="#111" stroke-width="2"/>
+  <path d="M100 380 L180 340 L220 400 L140 440 Z" fill="#F23C9E" opacity="0.4" stroke="#111" stroke-width="2"/>
+  <circle cx="130" cy="350" r="12" fill="#C4E600" stroke="#111" stroke-width="1.5"/>
+</svg>

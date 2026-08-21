@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" role="img" aria-label="Book spread placeholder left page">
+  <rect width="360" height="480" fill="#FFFDF7"/>
+  <rect x="30" y="40" width="300" height="400" fill="none" stroke="#d4cfc4" stroke-width="1"/>
+  <text x="180" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#111">Chapter One</text>
+  <text x="60" y="150" font-family="Georgia, serif" font-size="13" fill="#444">
+    <tspan x="60" dy="0">At the edge of the lake, where</tspan>
+    <tspan x="60" dy="22">willows dipped their fingers into</tspan>
+    <tspan x="60" dy="22">still water, a map was found</tspan>
+    <tspan x="60" dy="22">folded inside a corked bottle.</tspan>
+  </text>
+  <rect x="80" y="280" width="200" height="120" fill="#a8d8ff" opacity="0.35" stroke="#111" stroke-width="1.5"/>
+  <circle cx="180" cy="330" r="30" fill="#FFE800" opacity="0.5"/>
+  <text x="320" y="450" font-family="serif" font-size="11" fill="#999">12</text>
+</svg>

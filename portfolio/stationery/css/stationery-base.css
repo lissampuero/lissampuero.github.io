@@ -1,0 +1,109 @@
+/**
+ * Stationery — global base (Vintage Atelier paper surface)
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.stn-body,
+body.bg-citrus-cream.stn-body {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  font-family: var(--stn-sans);
+  background-color: var(--stn-paper);
+  color: var(--stn-ink);
+}
+
+.stationery-page {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--stn-paper);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 10% 0%, rgba(243, 230, 210, 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse 90% 60% at 95% 20%, rgba(230, 220, 200, 0.4) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.035'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+.stn-smart-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Paper card utility */
+.stn-paper-card {
+  background: #FFFCF8;
+  box-shadow: var(--stn-shadow-paper);
+  border: 1px solid rgba(42, 37, 32, 0.06);
+}
+
+.stn-contact-form input,
+.stn-contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(42, 37, 32, 0.15);
+  border-radius: 2px;
+  padding: 0.625rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  color: var(--stn-ink);
+  background: #FFFCF8;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.stn-contact-form input:focus,
+.stn-contact-form textarea:focus {
+  outline: none;
+  border-color: var(--stn-ink);
+  box-shadow: 0 0 0 1px var(--stn-ink);
+}
+
+.stn-contact-form label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--stn-ink);
+  margin-bottom: 0.35rem;
+}
+
+.stn-btn-primary {
+  display: inline-block;
+  background: var(--stn-ink);
+  color: #FFFCF8;
+  font-family: var(--stn-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.9rem 1.85rem;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(38, 32, 24, 0.18);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.stn-btn-primary:hover {
+  background: #3D3630;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(38, 32, 24, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stn-closing__envelope-wrap,
+  .stn-closing__peek,
+  .stn-hero__botanical {
+    animation: none !important;
+  }
+}

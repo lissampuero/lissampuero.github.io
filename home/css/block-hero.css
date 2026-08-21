@@ -1,0 +1,64 @@
+/**
+ * Hero — logo (LCP) + girl paint pot + slogan
+ */
+
+.hm-hero {
+  position: relative;
+  overflow: visible;
+  padding: clamp(1.15rem, 3vw, 2.25rem) 0 clamp(2.5rem, 5.5vw, 4rem);
+  background: none;
+  text-align: center;
+}
+
+.hm-hero > .hm-container { position: relative; z-index: 1; }
+
+.hm-hero > .hm-container--wide {
+  max-width: none;
+  padding-left: clamp(0.35rem, 1.2vw, 1rem);
+  padding-right: clamp(0.35rem, 1.2vw, 1rem);
+}
+
+.hm-hero__logo-wrap {
+  all: unset;
+  display: block;
+  position: relative;
+  max-width: min(100%, 94rem);
+  margin: 0 auto clamp(1.1rem, 2.5vw, 1.75rem);
+  cursor: zoom-in;
+  box-sizing: border-box;
+  transition: transform 0.5s var(--ease-organic, ease);
+}
+
+.hm-hero__logo-wrap:hover {
+  transform: translateY(-4px);
+}
+
+.hm-hero__logo-wrap:focus-visible {
+  outline: 2px solid var(--citrus-fuchsia, #F23C9E);
+  outline-offset: 6px;
+}
+
+.hm-hero__logo {
+  width: 100%; height: auto; display: block;
+  filter: drop-shadow(0 20px 40px rgb(17 17 17 / 0.12)) drop-shadow(0 6px 16px rgb(242 60 158 / 0.08));
+  transition: filter 0.5s var(--ease-organic, ease);
+}
+
+.hm-hero__logo-wrap:hover .hm-hero__logo {
+  filter: drop-shadow(0 28px 56px rgb(17 17 17 / 0.16)) drop-shadow(0 10px 22px rgb(242 60 158 / 0.12));
+}
+
+.hm-hero__slogan {
+  font-family: var(--ab-script, 'Caveat', cursive); font-weight: 700;
+  font-size: clamp(1.75rem, 4.5vw, 3rem);
+  color: #111; margin: 0;
+  max-width: 32rem; margin-inline: auto;
+  line-height: 1.15;
+}
+
+.hm-hero__tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: #525252; margin-top: 1.25rem;
+  letter-spacing: 0.02em;
+}

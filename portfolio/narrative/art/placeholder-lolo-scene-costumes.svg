@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" role="img" aria-label="LoLo with costumes">
+  <rect width="700" height="500" fill="#FFFDF7"/>
+  <!-- Three costume panels -->
+  <rect x="40" y="60" width="180" height="380" rx="8" fill="#fff" stroke="#111" stroke-width="2"/>
+  <rect x="260" y="60" width="180" height="380" rx="8" fill="#fff" stroke="#111" stroke-width="2"/>
+  <rect x="480" y="60" width="180" height="380" rx="8" fill="#fff" stroke="#111" stroke-width="2"/>
+  <!-- Bird costume -->
+  <circle cx="130" cy="180" r="40" fill="#ffe0bd" stroke="#111" stroke-width="2"/>
+  <path d="M90 160 Q130 100 170 160" fill="#a8d8ff" stroke="#111" stroke-width="2"/>
+  <path d="M70 200 L50 170 L90 190" fill="#C4E600" stroke="#111" stroke-width="1.5"/>
+  <path d="M190 200 L210 170 L150 190" fill="#C4E600" stroke="#111" stroke-width="1.5"/>
+  <ellipse cx="130" cy="280" rx="35" ry="50" fill="#a8d8ff" stroke="#111" stroke-width="2"/>
+  <text x="130" y="420" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#666" font-weight="bold">BIRD</text>
+  <!-- Robot costume -->
+  <rect x="310" y="140" width="80" height="70" rx="6" fill="#ccc" stroke="#111" stroke-width="2"/>
+  <rect x="325" y="155" width="20" height="15" fill="#F23C9E"/>
+  <rect x="355" y="155" width="20" height="15" fill="#F23C9E"/>
+  <rect x="320" y="210" width="60" height="80" fill="#ccc" stroke="#111" stroke-width="2"/>
+  <rect x="300" y="220" width="20" height="50" fill="#ccc" stroke="#111" stroke-width="2"/>
+  <rect x="380" y="220" width="20" height="50" fill="#ccc" stroke="#111" stroke-width="2"/>
+  <text x="350" y="420" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#666" font-weight="bold">ROBOT</text>
+  <!-- Dinosaur costume -->
+  <circle cx="570" cy="180" r="40" fill="#ffe0bd" stroke="#111" stroke-width="2"/>
+  <path d="M530 150 L510 100 L550 140" fill="#C4E600" stroke="#111" stroke-width="2"/>
+  <path d="M610 150 L630 100 L590 140" fill="#C4E600" stroke="#111" stroke-width="2"/>
+  <ellipse cx="570" cy="290" rx="45" ry="60" fill="#C4E600" stroke="#111" stroke-width="2"/>
+  <path d="M620 260 L680 240 L650 300 Z" fill="#C4E600" stroke="#111" stroke-width="2"/>
+  <text x="570" y="420" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#666" font-weight="bold">DINO</text>
+</svg>

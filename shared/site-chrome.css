@@ -1,0 +1,310 @@
+/**
+ * Global site chrome — header, footer, language switcher
+ * Used across all EN pages. Prefix: site-
+ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  font-family: 'Inter', system-ui, sans-serif;
+  border-bottom: 1px solid rgb(0 0 0 / 0.06);
+  background: rgb(255 255 255 / 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.875rem clamp(1.25rem, 4vw, 3rem);
+}
+
+.site-header__logo {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #111;
+  text-decoration: none;
+}
+
+.site-header__logo:hover { opacity: 0.65; }
+
+.site-header__menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid rgb(0 0 0 / 0.1);
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+}
+
+@media (min-width: 1024px) {
+  .site-header__menu-btn { display: none; }
+}
+
+.site-header__nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem clamp(1.25rem, 4vw, 3rem) 1.5rem;
+  background: rgb(255 255 255 / 0.98);
+  border-bottom: 1px solid rgb(0 0 0 / 0.06);
+  box-shadow: 0 12px 24px rgb(0 0 0 / 0.06);
+}
+
+.site-header__nav.is-open { display: flex; }
+
+@media (min-width: 1024px) {
+  .site-header__nav {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.site-header__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .site-header__links {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.125rem;
+  }
+}
+
+.site-header__links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #525252;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.15s;
+}
+
+.site-header__links a:hover,
+.site-header__links a[aria-current="page"] {
+  color: #111;
+}
+
+.site-header__links a[aria-current="page"] {
+  font-weight: 700;
+}
+
+.site-header__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .site-header__actions {
+    flex-wrap: nowrap;
+    margin-left: auto;
+  }
+}
+
+.site-header__cta {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #111;
+  padding: 0.625rem 1.25rem;
+  border-radius: 2px;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.site-header__cta:hover { background: #262626; }
+
+.site-lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.site-lang-switch a {
+  color: #a3a3a3;
+  text-decoration: none;
+}
+
+.site-lang-switch a:hover { color: #111; }
+
+.site-lang-switch [aria-current="page"] { color: #111; }
+
+.site-lang-switch li:not(:last-child)::after {
+  content: '|';
+  margin-left: 0.5rem;
+  color: #d4d4d4;
+  font-weight: 400;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+  font-family: 'Inter', system-ui, sans-serif;
+  border-top: 1px solid #e5e5e5;
+  background: #fff;
+  padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 3rem) 1.5rem;
+}
+
+.site-footer__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.site-footer__logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #111;
+  margin: 0 0 0.5rem;
+}
+
+.site-footer__tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #737373;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.site-footer__nav-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #737373;
+  margin: 0 0 0.75rem;
+}
+
+.site-footer__links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 480px) {
+  .site-footer__links { grid-template-columns: repeat(3, 1fr); }
+}
+
+.site-footer__links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #525252;
+  text-decoration: none;
+}
+
+.site-footer__links a:hover { color: #111; }
+
+.site-footer__bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.site-footer__copy {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  color: #737373;
+  margin: 0;
+}
+
+.site-footer__social a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+}
+
+.site-footer__social a:hover { text-decoration: underline; }
+
+.site-footer__lang {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.site-footer__lang a { color: #a3a3a3; text-decoration: none; }
+.site-footer__lang a:hover { color: #111; }
+.site-footer__lang [aria-current="page"] { color: #111; }
+
+.site-footer__lang li:not(:last-child)::after {
+  content: '|';
+  margin-left: 0.5rem;
+  color: #d4d4d4;
+  font-weight: 400;
+}

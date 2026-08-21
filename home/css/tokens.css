@@ -1,0 +1,18 @@
+:root {
+  --citrus-fuchsia: #F23C9E;
+  --citrus-yellow: #FFE800;
+  --citrus-lime: #C4E600;
+  --citrus-strawberry: #F2413C;
+  --citrus-cream: #FFFDF7;
+  --ink-black: #111111;
+  --ink-white: #FFFFFF;
+
+  /* Art-direction additions: organic motion + layered shadow system */
+  --ease-organic: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --shadow-soft:    0 4px 14px rgb(17 17 17 / 0.06);
+  --shadow-lifted:  0 24px 48px -12px rgb(17 17 17 / 0.18),
+                     0 8px 20px -6px rgb(242 60 158 / 0.12);
+  --shadow-deep:    0 32px 64px -16px rgb(17 17 17 / 0.22),
+                     0 12px 28px -8px rgb(17 17 17 / 0.12);
+}

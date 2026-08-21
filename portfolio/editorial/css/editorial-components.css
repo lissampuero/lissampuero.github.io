@@ -1,0 +1,100 @@
+.ed-band { width: 100%; padding: clamp(3.5rem, 7vw, 6rem) 0; position: relative; z-index: 1; }
+.ed-band--cream { background: var(--citrus-cream); }
+.ed-band--paper { background: var(--ed-paper); }
+.ed-band--yellow { background: var(--citrus-yellow); }
+.ed-band--fuchsia { background: var(--citrus-fuchsia); color: #fff; }
+
+.ed-container { width: 100%; max-width: 72rem; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
+.ed-container--wide { max-width: 80rem; }
+
+.ed-kicker {
+  font-family: var(--ed-sans); text-transform: uppercase;
+  letter-spacing: 0.32em; font-size: 0.6875rem; font-weight: 700;
+  margin-bottom: 0.65rem; color: var(--ed-night-accent);
+}
+.ed-page-title {
+  font-family: var(--ed-display); font-style: italic; font-weight: 700;
+  font-size: clamp(2.75rem, 8vw, 5.5rem); letter-spacing: -0.035em;
+  text-transform: none;
+  line-height: 0.92; margin: 0 0 0.85rem; color: #FFFFFF;
+  text-shadow: 0 0 40px rgb(242 60 158 / 0.35);
+}
+.ed-page-deck {
+  margin: 0 auto 1.75rem;
+  max-width: 32rem;
+  font-family: var(--ed-sans);
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+  line-height: 1.6;
+  color: rgb(255 232 245 / 0.82);
+}
+.ed-slogan {
+  font-family: 'Caveat', cursive; font-weight: 700;
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem); margin-bottom: 1rem;
+  color: var(--ed-night-accent);
+}
+.ed-section-title {
+  font-family: var(--ed-display); font-style: italic; font-weight: 600;
+  font-size: clamp(1.65rem, 3.2vw, 2.35rem); letter-spacing: -0.02em; margin-bottom: 0.5rem;
+  color: var(--ed-night-text);
+}
+.ed-project-title {
+  font-family: var(--ed-sans);
+  font-weight: 600; font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.15; margin: 0 0 0.5rem; color: var(--ed-night-text);
+}
+.ed-body {
+  font-family: var(--ed-sans); font-size: 1rem;
+  line-height: 1.7; color: var(--ed-night-text-muted); max-width: 38rem;
+}
+.ed-body--light { color: rgb(255 255 255 / 0.88); max-width: none; }
+
+/* Glass card — night theme */
+.ed-clean-card {
+  background: var(--ed-night-card);
+  border: 1px solid var(--ed-night-card-border);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px; padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 20px 40px rgb(0 0 0 / 0.25);
+}
+
+.ed-project-tag {
+  display: inline-block; font-family: var(--ed-sans);
+  font-size: 0.625rem; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; padding: 0.4rem 0.75rem;
+  border-radius: 999px; margin-bottom: 1rem;
+}
+.ed-project-tag--book { background: var(--ed-night-accent-deep); color: #fff; }
+.ed-project-tag--magazine { background: var(--citrus-fuchsia); color: #fff; }
+
+.ed-divider { width: 3rem; height: 3px; border-radius: 2px; margin: 1rem 0 1.25rem; }
+.ed-divider--fuchsia { background: var(--citrus-fuchsia); }
+.ed-divider--accent { background: var(--ed-night-accent); }
+
+.ed-section-pill {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--ed-sans); font-size: 0.8125rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  color: #FFFFFF; background: rgb(8 4 28 / 0.45);
+  border: 1px solid rgb(255 255 255 / 0.55); padding: 0.7rem 1.5rem;
+  border-radius: 999px;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.ed-section-pill:hover {
+  transform: translateY(-2px);
+  background: rgb(62 255 246 / 0.12);
+  border-color: var(--ed-night-accent);
+  box-shadow: 0 0 22px rgb(62 255 246 / 0.28);
+}
+.ed-section-pill__dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--ed-night-accent); box-shadow: 0 0 10px 2px rgb(62 255 246 / 0.85); }
+
+.ed-type-specimen {
+  font-family: var(--ed-sans);
+  border-top: 1px solid var(--ed-night-line); padding-top: 1.25rem; margin-top: 1.25rem;
+}
+.ed-type-specimen__label {
+  font-family: var(--ed-sans); font-size: 0.625rem;
+  font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ed-night-accent); margin-bottom: 0.5rem;
+}
+.ed-type-specimen__sample { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--ed-night-text); line-height: 1.2; }
+.ed-type-specimen__meta { font-family: var(--ed-sans); font-size: 0.75rem; color: var(--ed-night-text-muted); margin-top: 0.35rem; }

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" role="img" aria-label="LoLo painting a rainbow">
+  <rect width="700" height="500" fill="#a8d8ff"/>
+  <rect y="380" width="700" height="120" fill="#C4E600" opacity="0.5"/>
+  <!-- Rainbow -->
+  <path d="M100 400 Q350 100 600 400" fill="none" stroke="#F23C9E" stroke-width="18" opacity="0.7"/>
+  <path d="M130 400 Q350 140 570 400" fill="none" stroke="#FFE800" stroke-width="18" opacity="0.7"/>
+  <path d="M160 400 Q350 180 540 400" fill="none" stroke="#C4E600" stroke-width="18" opacity="0.7"/>
+  <!-- LoLo small figure -->
+  <circle cx="350" cy="360" r="35" fill="#ffe0bd" stroke="#111" stroke-width="2"/>
+  <path d="M320 350 Q350 310 380 350" fill="#5c3d2e" stroke="#111" stroke-width="1.5"/>
+  <ellipse cx="350" cy="420" rx="30" ry="40" fill="#FFE800" stroke="#111" stroke-width="2"/>
+  <!-- Easel -->
+  <line x1="420" y1="300" x2="420" y2="440" stroke="#8B4513" stroke-width="4"/>
+  <line x1="390" y1="440" x2="450" y2="440" stroke="#8B4513" stroke-width="4"/>
+  <rect x="395" y="320" width="50" height="60" fill="#fff" stroke="#111" stroke-width="2"/>
+  <rect x="400" y="330" width="40" height="8" fill="#F23C9E"/>
+  <rect x="400" y="345" width="40" height="8" fill="#FFE800"/>
+  <rect x="400" y="360" width="40" height="8" fill="#C4E600"/>
+  <!-- Fuzzle watching -->
+  <ellipse cx="260" cy="400" rx="25" ry="28" fill="#a8d8ff" stroke="#111" stroke-width="2"/>
+  <circle cx="250" cy="388" r="10" fill="#a8d8ff" stroke="#111" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,566 @@
+/* About Me — editorial illustrated composition */
+
+:root {
+  --about-cream: #FDFBF7;
+  --about-accent: var(--citrus-fuchsia, #F23C9E);
+  --about-ink: #1A1A1A;
+  --about-ink-soft: #2D2D2D;
+}
+
+.about-page {
+  font-family: var(--ab-sans, 'Inter', system-ui, sans-serif);
+  background-color: var(--about-cream);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgb(242 60 158 / 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 60%, rgb(196 230 0 / 0.09) 0%, transparent 42%),
+    radial-gradient(circle at 20% 85%, rgb(242 60 158 / 0.06) 0%, transparent 40%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--about-ink);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* —— 1. Hero + arch portal (no borders) —— */
+.about-hero {
+  position: relative;
+  padding-bottom: clamp(4rem, 9vw, 7rem);
+}
+
+.about-hero__band {
+  text-align: center;
+  background-color: var(--about-accent);
+  padding: clamp(2.75rem, 5vw, 4.25rem) 1.5rem;
+}
+
+.about-hero__arch {
+  display: block;
+  width: 100%;
+  height: clamp(12rem, 28vw, 18rem);
+  margin: -2px 0 0;
+  color: var(--about-accent);
+}
+
+.about-hero__kicker {
+  margin: 0 0 1rem;
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.78);
+}
+
+.hero-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(0.6rem, 2.2vw, 1.25rem);
+  line-height: 1;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hero-title__about,
+.hero-title__me {
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic;
+  font-size: clamp(3.5rem, 10vw, 6.25rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.hero-arch-portal {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 2;
+  width: min(30vw, 18rem);
+  transform: translate(-50%, 14%);
+  line-height: 0;
+}
+
+.hero-character__trigger {
+  all: unset;
+  display: block;
+  position: relative;
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.hero-character {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: bottom center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.35s ease;
+}
+
+.hero-character__trigger:hover .hero-character,
+.hero-character__trigger:focus-visible .hero-character {
+  transform: scale(1.03);
+}
+
+.hero-character__trigger:focus-visible {
+  outline: 2px solid var(--about-accent);
+  outline-offset: 4px;
+}
+
+/* —— 2. My History triptych —— */
+.my-history-section {
+  max-width: 76rem;
+  margin: clamp(2rem, 5vw, 4rem) auto 0;
+  padding: 0 clamp(1rem, 3vw, 2rem) clamp(2rem, 4vw, 3rem);
+}
+
+.history-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(0.5rem, 1.5vw, 0.85rem);
+  margin: 0 0 clamp(2rem, 4vw, 3rem);
+}
+
+.history-heading__my,
+.history-heading__word {
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic;
+  font-size: clamp(2.25rem, 5.5vw, 3.35rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--about-accent);
+}
+
+.history-triptych {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.8fr) minmax(360px, 2fr);
+  gap: clamp(1.5rem, 3.5vw, 2.5rem);
+  align-items: center;
+  justify-content: center;
+}
+
+.portrait-photo {
+  position: relative;
+  overflow: visible;
+  max-width: 19rem;
+}
+
+.portrait-photo__trigger,
+.about-emblem__trigger {
+  all: unset;
+  display: block;
+  position: relative;
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.portrait-photo__trigger img,
+.about-emblem__trigger img {
+  transition: transform 0.35s ease;
+}
+
+.portrait-photo__trigger:hover img,
+.portrait-photo__trigger:focus-visible img,
+.about-emblem__trigger:hover img,
+.about-emblem__trigger:focus-visible img {
+  transform: scale(1.03);
+}
+
+.portrait-photo__trigger:focus-visible,
+.about-emblem__trigger:focus-visible {
+  outline: 2px solid var(--about-accent);
+  outline-offset: 4px;
+}
+
+.portrait-photo,
+.storytelling-illustration {
+  line-height: 0;
+  background: transparent;
+}
+
+.history-bio {
+  position: relative;
+}
+
+/* Block 1 — the intro sits flush with the second block, at the same
+   left edge, so the photo reads as one continuous wall beside it. */
+.history-bio__intro {
+  margin: 0 0 clamp(1.5rem, 3.5vw, 2.15rem) !important;
+  text-align: justify !important;
+  hyphens: auto !important;
+}
+
+/* Block 2 — text and illustration sit side by side in their own fixed
+   columns; the illustration is the more prominent of the two, so it
+   takes the larger share of the row. */
+.history-bio__block {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 1.35fr);
+  gap: clamp(1.5rem, 4vw, 2.25rem);
+  align-items: end;
+}
+
+.storytelling-illustration {
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 0 auto auto;
+  filter: drop-shadow(0 12px 26px rgb(26 26 26 / 0.15));
+}
+
+.portrait-photo img,
+.storytelling-illustration img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.storytelling-illustration__trigger {
+  all: unset;
+  display: block;
+  position: relative;
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.storytelling-illustration__trigger img {
+  transition: transform 0.35s ease;
+}
+
+.storytelling-illustration__trigger:hover img,
+.storytelling-illustration__trigger:focus-visible img {
+  transform: scale(1.015);
+}
+
+.storytelling-illustration__hint,
+.portrait-photo__hint,
+.hero-character__hint,
+.about-emblem__hint,
+.about-cta-band__hint {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  padding: 0.35rem 0.7rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgb(26 26 26 / 0.62);
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.storytelling-illustration__trigger:hover .storytelling-illustration__hint,
+.storytelling-illustration__trigger:focus-visible .storytelling-illustration__hint,
+.portrait-photo__trigger:hover .portrait-photo__hint,
+.portrait-photo__trigger:focus-visible .portrait-photo__hint,
+.hero-character__trigger:hover .hero-character__hint,
+.hero-character__trigger:focus-visible .hero-character__hint,
+.about-emblem__trigger:hover .about-emblem__hint,
+.about-emblem__trigger:focus-visible .about-emblem__hint,
+.about-cta-band:hover .about-cta-band__hint,
+.about-cta-band__trigger:focus-visible .about-cta-band__hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.storytelling-illustration__trigger:focus-visible {
+  outline: 2px solid var(--about-accent);
+  outline-offset: 4px;
+}
+
+.history-bio p {
+  font-family: var(--ab-sans, 'Inter', system-ui, sans-serif);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--about-ink-soft);
+  margin: 0 0 0.9rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.history-bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* —— Brand signature — hand-lettered slogan under the history copy —— */
+.about-emblem {
+  display: block;
+  width: min(22rem, 78%);
+  margin: clamp(2rem, 5vw, 3.25rem) auto 0;
+  padding: 0;
+  text-align: center;
+}
+
+.about-emblem img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  mix-blend-mode: screen;
+}
+
+/* —— 4. Illustrated invitation band —— */
+/* Shown at its full, original artwork proportions (uncropped) rather
+   than stretched edge-to-edge or sliced into a thin ribbon, so the
+   illustration keeps its detail and presence; capped at its native
+   pixel width so it is never upscaled past its own sharpness. */
+.about-cta-band {
+  position: relative;
+  width: min(64rem, calc(100% - 2.5rem));
+  max-width: 64rem;
+  aspect-ratio: 1024 / 512;
+  margin: clamp(1.5rem, 4vw, 2.5rem) auto 0;
+  padding: 0;
+  container-type: inline-size;
+}
+
+/* The artwork's edges dissolve softly into the page background
+   through a blurred, irregular mask, like a torn/diffused paper edge,
+   rather than a hard rectangular crop. */
+.about-cta-band__media {
+  position: absolute;
+  inset: 0;
+  display: block;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='torn' x='-0.2' y='-0.5' width='1.4' height='2'%3E%3CfeGaussianBlur stdDeviation='11'/%3E%3C/filter%3E%3C/defs%3E%3Cpath filter='url(%23torn)' fill='white' d='M0,30 C60,8 130,48 190,22 C270,-6 330,52 410,18 C490,-10 570,42 650,12 C730,-8 810,38 890,10 C970,-14 1050,32 1130,14 C1165,6 1200,22 1200,22 L1200,378 C1160,398 1090,362 1010,388 C930,408 850,372 770,394 C690,416 610,378 530,400 C450,420 370,382 290,404 C210,424 130,388 50,406 C25,412 0,398 0,398 Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='torn' x='-0.2' y='-0.5' width='1.4' height='2'%3E%3CfeGaussianBlur stdDeviation='11'/%3E%3C/filter%3E%3C/defs%3E%3Cpath filter='url(%23torn)' fill='white' d='M0,30 C60,8 130,48 190,22 C270,-6 330,52 410,18 C490,-10 570,42 650,12 C730,-8 810,38 890,10 C970,-14 1050,32 1130,14 C1165,6 1200,22 1200,22 L1200,378 C1160,398 1090,362 1010,388 C930,408 850,372 770,394 C690,416 610,378 530,400 C450,420 370,382 290,404 C210,424 130,388 50,406 C25,412 0,398 0,398 Z'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.about-cta-band__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.about-cta-band__trigger {
+  all: unset;
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: zoom-in;
+}
+
+.about-cta-band__trigger:focus-visible {
+  outline: 2px solid var(--about-accent);
+  outline-offset: 4px;
+}
+
+.about-cta-band__hint {
+  right: auto;
+  left: 0.6rem;
+}
+
+.about-cta-band__heading {
+  position: absolute;
+  z-index: 2;
+  right: 5.5%;
+  bottom: 11%;
+  width: 34%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3.4cqw;
+  line-height: 1.3;
+  text-align: right;
+  color: #131313;
+  pointer-events: none;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 28px rgb(255 255 255 / 0.85);
+}
+
+/* —— Storytelling lightbox (click/tap to view full size) —— */
+.storytelling-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.storytelling-lightbox[hidden] {
+  display: none;
+}
+
+.storytelling-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(255 255 255 / 0.97);
+  border: none;
+  padding: 0;
+  cursor: zoom-out;
+}
+
+.storytelling-lightbox__panel {
+  position: relative;
+  z-index: 1;
+  max-width: 94vw;
+  max-height: 90vh;
+  line-height: 0;
+}
+
+.storytelling-lightbox__stage {
+  position: relative;
+  display: block;
+  width: fit-content;
+  max-width: 94vw;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.storytelling-lightbox__overlays {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.storytelling-lightbox__image {
+  display: block;
+  max-width: 94vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+}
+
+.storytelling-lightbox__image.is-screen {
+  mix-blend-mode: screen;
+}
+
+.storytelling-lightbox__stage--cta {
+  width: min(94vw, calc(85vh * 1024 / 512));
+  max-width: 94vw;
+  aspect-ratio: 1024 / 512;
+  container-type: inline-size;
+}
+
+.storytelling-lightbox__stage--cta .storytelling-lightbox__image {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+
+.storytelling-lightbox__close {
+  position: fixed;
+  top: clamp(0.75rem, 2vw, 1.5rem);
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(0 0 0 / 0.25);
+  border-radius: 50%;
+  background: #ffffff;
+  color: #111111;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.storytelling-lightbox__close:hover,
+.storytelling-lightbox__close:focus-visible {
+  background: #f5f5f5;
+}
+
+@media (max-width: 860px) {
+  .history-triptych {
+    grid-template-columns: minmax(140px, 0.85fr) 1.4fr;
+  }
+
+  .history-bio__block {
+    grid-template-columns: minmax(0, 0.9fr) minmax(11rem, 1.2fr);
+    gap: 1.25rem;
+  }
+
+  .storytelling-illustration {
+    max-width: 18rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-arch-portal {
+    width: min(34vw, 12rem);
+    transform: translate(-50%, 10%);
+  }
+
+  .history-triptych {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .portrait-photo {
+    max-width: 16rem;
+    margin: 0 auto;
+  }
+
+  .history-bio__block {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .history-bio p {
+    text-align: left;
+  }
+
+  .storytelling-illustration {
+    max-width: min(85%, 19rem);
+    margin: 0.5rem auto 0;
+  }
+
+}
+
+@media (max-width: 40rem) {
+  .storytelling-lightbox {
+    padding: 3.75rem 0.7rem 1.1rem;
+  }
+
+  .storytelling-lightbox__image {
+    max-height: 78vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-character,
+  .hero-character__trigger:hover .hero-character,
+  .portrait-photo__trigger img,
+  .about-emblem__trigger img,
+  .storytelling-illustration__trigger img {
+    transform: none;
+    transition: none;
+  }
+}

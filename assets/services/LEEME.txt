@@ -1,0 +1,15 @@
+CARPETA: assets/services/
+Ilustraciones exclusivas de la página de Servicios
+
+Arrastra aquí y renombra exactamente así:
+
+1. illustration-liss-studio-portrait.webp
+   → Tú en tu estudio bohemio (franja amarilla, hero de Services)
+
+2. illustration-process-mailbox-dropoff.webp
+   → Buzón desbordado con cartas ("Drop an idea")
+
+3. illustration-process-book-bloom.webp
+   → Libro floreciendo con flores/estrellas doradas ("Get a full universe")
+
+Total: 3 archivos

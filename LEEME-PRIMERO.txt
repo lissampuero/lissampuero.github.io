@@ -1,0 +1,43 @@
+CARPETA PLANTILLA DE ILUSTRACIONES — Liss Ampuero Portfolio
+===============================================================
+
+Esta carpeta ya tiene la estructura exacta que espera el documento
+maestro (lissampuero-master-spec-v4-FINAL.md, Sección 14).
+
+CÓMO USARLA:
+1. Entra a cada subcarpeta de assets/
+2. Lee el archivo LEEME.txt de esa subcarpeta — te dice exactamente
+   qué ilustración va ahí y con qué nombre exacto
+3. Arrastra tu ilustración a la carpeta y renómbrala según indica
+4. Borra el archivo LEEME.txt de esa carpeta una vez completada
+   (son solo guías temporales, no van al sitio final)
+
+FORMATO DE ARCHIVO:
+- Si tienes el archivo en PNG (con transparencia) o JPG, guárdalo así
+  por ahora, pero con el nombre terminado en .webp de todas formas
+  (ej. "logo-liss-ampuero-hero.webp" aunque el archivo real sea PNG)
+- Cursor se encarga de la conversión final a WebP durante el build
+
+REGLA DE TRANSPARENCIA (PNG):
+- Si un archivo necesita transparencia real (fondo transparente),
+  comprímelo en un .zip ANTES de subirlo a cualquier chat o
+  herramienta — esto evita que se convierta accidentalmente a JPEG
+  y pierda el canal alpha (nos pasó antes, ya está resuelto así)
+
+RESUMEN DE CANTIDADES POR CARPETA:
+  assets/ui/                                    4 archivos
+  assets/home/                                  8 archivos
+  assets/services/                              3 archivos
+  assets/portfolio/editorial/                   5 archivos
+  assets/portfolio/fashion/                     5 archivos
+  assets/portfolio/narrative/marquise/          3 archivos
+  assets/portfolio/narrative/lolo/              3 archivos
+  assets/portfolio/childrens-books/             4 archivos
+  assets/portfolio/stationery/                6-8 archivos
+  -----------------------------------------------------
+  TOTAL:                                    41-43 archivos
+
+CUANDO TERMINES:
+Comprime toda la carpeta "assets/" en un .zip y súbela — así puedo
+verificar que cada archivo llegó con el nombre correcto antes de
+integrarlo al código.

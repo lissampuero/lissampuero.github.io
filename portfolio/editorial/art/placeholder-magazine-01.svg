@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Lookbook illustration placeholder">
+  <rect width="640" height="480" fill="#1B1948"/>
+  <rect x="40" y="40" width="260" height="400" fill="#322C6E"/>
+  <rect x="340" y="80" width="260" height="320" fill="#5B7FF2" opacity="0.55"/>
+  <text x="320" y="250" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#F5F3FF" letter-spacing="3">LOOKBOOK</text>
+</svg>

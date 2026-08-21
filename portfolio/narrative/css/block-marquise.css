@@ -1,0 +1,747 @@
+/**
+ * The Marquise de Croac — pastel lilac swamp universe
+ * Watercolour plates with live text floating in the artwork's empty areas.
+ */
+
+.nar-marquise {
+  /* Soft session wash that dissolves into the page at top and bottom */
+  background:
+    radial-gradient(ellipse 70% 55% at 22% 18%, rgb(196 168 232 / 0.38) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 50% at 82% 72%, rgb(214 190 238 / 0.34) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 55% 45%, rgb(232 222 246 / 0.5) 0%, transparent 70%),
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      var(--marquise-lilac) 10%,
+      var(--marquise-lilac-deep) 50%,
+      var(--marquise-lilac) 90%,
+      transparent 100%
+    );
+  color: var(--marquise-plum);
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/* Feathered top and bottom edges so the band never reads as a hard block */
+.nar-marquise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--citrus-cream) 0%, transparent 9%),
+    linear-gradient(0deg, var(--citrus-cream) 0%, transparent 9%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nar-marquise > .nar-container,
+.nar-marquise > .nar-marquise__plates {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------------------- header */
+
+.nar-marquise__header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.nar-marquise__title {
+  margin: 0.35rem 0 0.5rem;
+}
+
+.nar-marquise__lettering {
+  display: block;
+  width: min(36rem, 86vw);
+  height: auto;
+  margin: 0 auto;
+  mix-blend-mode: multiply;
+}
+
+.nar-marquise__header .nar-slogan {
+  color: var(--marquise-plum-soft);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.nar-marquise__header .nar-body {
+  margin: 0 auto;
+  color: var(--marquise-plum);
+}
+
+.nar-marquise .nar-project-tag--marquise {
+  background: rgb(122 79 182 / 0.12);
+  color: var(--marquise-accent);
+}
+
+/* ------------------------------------------------------- plate scaffold */
+
+/* Plates break out of the text container: the art needs the extra width */
+.nar-marquise__plates {
+  width: min(110rem, calc(100vw - 0.75rem));
+  margin: 0 auto;
+  padding: 0 clamp(0.4rem, 1.6vw, 1.1rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 7vw, 5.5rem);
+}
+
+.nar-plate {
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+
+/* Artwork + overlays share one box, so % / cqw track the PNG, not the caption */
+.nar-plate__stage {
+  position: relative;
+  container-type: inline-size;
+}
+
+.nar-plate__art {
+  all: unset;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.nar-plate__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.nar-plate__art:focus-visible {
+  outline: 2px solid var(--marquise-accent);
+  outline-offset: 6px;
+}
+
+.nar-plate__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 1.1rem 0 0;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.nar-plate__caption-title {
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--marquise-plum);
+}
+
+.nar-plate__caption-meta {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--marquise-plum-soft);
+}
+
+/*
+ * Overlays lock to the illustration: position and width are % of the plate,
+ * type is cqw. Never mix cm/px into coordinates — those stay put while the
+ * PNG scales, so the copy drifts. Coordinates stay locked at every viewport.
+ */
+.nar-plate__text {
+  position: absolute;
+  z-index: 2;
+  left: var(--nar-x);
+  top: var(--nar-y);
+  width: var(--nar-w);
+  margin: 0;
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic;
+  font-size: 1.22cqw;
+  line-height: 1.52;
+  color: var(--marquise-plum);
+  text-wrap: pretty;
+  pointer-events: none;
+}
+
+.nar-plate__text > * + * { margin-top: 0.85em; }
+
+.nar-plate__text p { margin: 0; }
+
+.nar-plate__salutation {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.nar-plate--letter .nar-plate__salutation {
+  font-size: 1.45em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-align: right;
+}
+
+.nar-plate--letter .nar-plate__salutation + p {
+  margin-top: 1.1em;
+}
+
+.nar-plate__signoff {
+  font-family: 'Caveat', cursive;
+  font-size: 1.9em;
+  line-height: 1.1;
+  color: var(--marquise-accent);
+}
+
+.nar-plate__text-title {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85em;
+  line-height: 1.2;
+  color: var(--marquise-plum);
+}
+
+.nar-plate__text-label {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--marquise-accent);
+}
+
+.nar-plate__list {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.nar-plate__list li + li { margin-top: 0.3em; }
+
+.nar-plate__specs {
+  margin: 0;
+  display: grid;
+  gap: 0.35em;
+}
+
+.nar-plate__specs dt {
+  font-weight: 700;
+  color: var(--marquise-accent);
+}
+
+.nar-plate__specs dd { margin: 0 0 0.5em; }
+
+.nar-plate__quotes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
+  font-style: italic;
+}
+
+.nar-plate__quotes li + li { margin-top: 0.35em; }
+
+/* Per-plate coordinates, measured against each illustration's clear area */
+.nar-plate--letter {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.nar-plate--letter .nar-plate__text {
+  --nar-x: 41.3%;
+  --nar-y: 14.9%;
+  --nar-w: 35%;
+  text-align: center;
+  font-size: 1.18cqw;
+  text-shadow:
+    0 0.07em 0.05em rgb(122 79 182 / 0.55),
+    0 0.14em 0.22em rgb(122 79 182 / 0.32);
+}
+
+.nar-plate--letter .nar-plate__text > * + * {
+  margin-top: 0.42em;
+}
+
+.nar-plate--letter .nar-plate__text > * + .nar-plate__signoff {
+  margin-top: 0;
+}
+
+.nar-plate--letter .nar-plate__text > p:nth-of-type(n+2):nth-of-type(-n+5) {
+  width: 128%;
+  margin-left: -14%;
+}
+
+.nar-plate--letter .nar-plate__signoff {
+  line-height: 1.25;
+}
+
+.nar-plate--highlight {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  isolation: isolate;
+}
+
+.nar-plate--highlight .nar-plate__stage {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.nar-plate--highlight .nar-plate__art {
+  position: relative;
+  z-index: 1;
+}
+
+.nar-plate--highlight .nar-plate__img {
+  position: relative;
+  z-index: 1;
+}
+
+.nar-plate--highlight .nar-plate__caption {
+  position: relative;
+  z-index: 3;
+}
+
+.nar-plate--highlight .nar-plate__stage::before,
+.nar-plate--highlight .nar-plate__stage::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Soft lime field: edges fade into the session, never a hard rectangle */
+.nar-plate--highlight .nar-plate__stage::before {
+  inset: 4% 2% 10% 2%;
+  background: radial-gradient(
+    ellipse 92% 82% at 50% 48%,
+    rgb(242 252 226 / 0.98) 0%,
+    rgb(226 249 195 / 0.5) 46%,
+    rgb(226 249 195 / 0.12) 68%,
+    transparent 86%
+  );
+  filter: blur(68px);
+  opacity: 0.95;
+  -webkit-mask-image:
+    radial-gradient(ellipse 88% 78% at 50% 46%, #000 8%, transparent 72%),
+    linear-gradient(to bottom, transparent 0%, #000 16%, #000 78%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    radial-gradient(ellipse 88% 78% at 50% 46%, #000 8%, transparent 72%),
+    linear-gradient(to bottom, transparent 0%, #000 16%, #000 78%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.nar-plate--highlight .nar-plate__stage::after {
+  left: 10%;
+  top: 10%;
+  width: 80%;
+  height: 72%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse 80% 74% at 50% 48%,
+    rgb(242 252 226 / 0.65) 0%,
+    rgb(226 249 195 / 0.22) 50%,
+    transparent 74%
+  );
+  filter: blur(64px);
+  opacity: 0.8;
+  -webkit-mask-image: radial-gradient(ellipse 74% 70% at 50% 48%, #000 10%, transparent 70%);
+  mask-image: radial-gradient(ellipse 74% 70% at 50% 48%, #000 10%, transparent 70%);
+}
+
+.nar-plate--highlight .nar-plate__text {
+  --nar-x: 22%;
+  --nar-y: 42%;
+  --nar-w: 42%;
+  text-align: center;
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  font-style: normal;
+  font-size: 0.98cqw;
+  line-height: 1.42;
+  text-shadow:
+    0 0.07em 0.05em rgb(122 79 182 / 0.55),
+    0 0.14em 0.22em rgb(122 79 182 / 0.32);
+}
+
+.nar-plate--highlight .nar-plate__text--highlight-intro {
+  --nar-x: 22%;
+  --nar-y: 17.8%;
+  --nar-w: 42%;
+  text-align: center;
+}
+
+.nar-plate--highlight .nar-plate__text--highlight-intro .nar-plate__specs {
+  justify-items: center;
+  text-align: center;
+}
+
+.nar-plate--highlight .nar-plate__text--highlight-intro dd {
+  margin-inline: auto;
+  max-width: 28em;
+  text-align: center;
+}
+
+.nar-plate--highlight .nar-plate__specs dt:nth-of-type(-n+2),
+.nar-plate--highlight .nar-plate__specs dd:nth-of-type(-n+2) {
+  transform: none;
+  justify-self: end;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+  text-align-last: right;
+}
+
+.nar-plate--highlight .nar-plate__specs dt:nth-of-type(3) {
+  width: auto;
+  max-width: none;
+  justify-self: center;
+  text-align: center;
+}
+
+.nar-plate--highlight .nar-plate__specs dd:nth-of-type(3) {
+  width: fit-content;
+  max-width: 100%;
+  justify-self: center;
+  margin-inline: auto;
+  text-align: center;
+  text-align-last: center;
+}
+
+.nar-plate--highlight .nar-plate__text--highlight-intro > :not(.nar-plate__specs) {
+  width: 132%;
+  margin-left: -16%;
+  margin-right: auto;
+  text-align: center;
+  text-align-last: center;
+}
+
+.nar-plate--highlight .nar-plate__text > * + * { margin-top: 0.5em; }
+
+.nar-plate--highlight .nar-plate__quotes,
+.nar-plate--highlight .nar-plate__list {
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.nar-plate--highlight .nar-plate__specs { gap: 0.15em; }
+
+.nar-plate--highlight .nar-plate__specs dd:last-of-type {
+  margin-bottom: 0;
+}
+
+.nar-plate--highlight .nar-plate__text > .nar-plate__specs + .nar-plate__text-label {
+  margin-top: 0;
+}
+
+.nar-plate--memoirs .nar-plate__text {
+  z-index: 4;
+  text-shadow:
+    0 0.07em 0.05em rgb(122 79 182 / 0.55),
+    0 0.14em 0.22em rgb(122 79 182 / 0.32);
+}
+
+.nar-plate--memoirs .nar-plate__glints {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.nar-plate--memoirs .nar-plate__glint,
+.nar-plate--court .nar-plate__glint {
+  position: absolute;
+  left: var(--gx);
+  top: var(--gy);
+  width: 0.7rem;
+  height: 0.7rem;
+  transform: translate(-50%, -50%);
+  animation: nar-plate-twinkle 2.8s ease-in-out infinite;
+  animation-delay: var(--gd, 0s);
+}
+
+.nar-plate--memoirs .nar-plate__glint::before,
+.nar-plate--memoirs .nar-plate__glint::after,
+.nar-plate--court .nar-plate__glint::before,
+.nar-plate--court .nar-plate__glint::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  clip-path: polygon(50% 0%, 57% 43%, 100% 50%, 57% 57%, 50% 100%, 43% 57%, 0% 50%, 43% 43%);
+  filter:
+    drop-shadow(0 0 4px #fff)
+    drop-shadow(0 0 10px rgb(232 210 255 / 0.9));
+}
+
+.nar-plate--memoirs .nar-plate__glint::after,
+.nar-plate--court .nar-plate__glint::after {
+  transform: rotate(20deg) scale(0.5);
+  opacity: 0.7;
+}
+
+.nar-plate--memoirs .nar-plate__glint--lg,
+.nar-plate--court .nar-plate__glint--lg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nar-plate--memoirs .nar-plate__glint--sm,
+.nar-plate--court .nar-plate__glint--sm {
+  width: 0.42rem;
+  height: 0.42rem;
+}
+
+@keyframes nar-plate-twinkle {
+  0%, 100% { opacity: 0.22; transform: translate(-50%, -50%) scale(0.7) rotate(0deg); }
+  40% { opacity: 1; transform: translate(-50%, -50%) scale(1.18) rotate(12deg); }
+  70% { opacity: 0.38; transform: translate(-50%, -50%) scale(0.85) rotate(-8deg); }
+}
+
+.nar-plate--memoirs .nar-plate__art,
+.nar-plate--memoirs .nar-plate__img {
+  position: relative;
+  z-index: 1;
+}
+
+.nar-plate--memoirs .nar-plate__stage {
+  isolation: isolate;
+}
+
+.nar-plate--memoirs .nar-plate__stage::before,
+.nar-plate--memoirs .nar-plate__stage::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse 74% 70% at 48% 50%,
+    rgb(255 255 255 / 0.92) 0%,
+    rgb(255 252 245 / 0.42) 42%,
+    transparent 74%
+  );
+  filter: blur(34px);
+}
+
+.nar-plate--memoirs .nar-plate__stage::before {
+  left: 2%;
+  top: 38%;
+  width: 36%;
+  height: 58%;
+}
+
+.nar-plate--memoirs .nar-plate__stage::after {
+  right: 1%;
+  bottom: 2%;
+  width: 34%;
+  height: 56%;
+}
+
+.nar-plate--memoirs .nar-plate__text--quote {
+  left: 50%;
+  top: 13%;
+  width: 22%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.45cqw;
+  line-height: 1.62;
+  color: var(--marquise-plum);
+}
+
+.nar-plate--memoirs .nar-plate__text--quote .nar-plate__text-title,
+.nar-plate--memoirs .nar-plate__text--quote p {
+  text-align: center;
+  text-align-last: center;
+  color: var(--marquise-plum);
+}
+
+.nar-plate--memoirs .nar-plate__text--quote .nar-plate__text-title + p {
+  margin-top: 0.5em;
+}
+
+.nar-plate--memoirs .nar-plate__text--scroll {
+  --nar-x: 8%;
+  --nar-y: 47%;
+  --nar-w: 27%;
+  text-align: left;
+  font-size: 1.02cqw;
+  color: #4a3a2c;
+  text-shadow:
+    0 0.09em 0.06em rgb(122 79 182 / 0.7),
+    0 0.18em 0.28em rgb(122 79 182 / 0.42);
+}
+
+.nar-plate--memoirs .nar-plate__text--scroll .nar-plate__text-title {
+  font-family: 'Caveat', cursive;
+  font-size: 1.9em;
+  color: #5c4327;
+  text-align: left;
+}
+
+.nar-plate--memoirs .nar-plate__text--scroll .nar-plate__quotes {
+  text-align: center;
+  text-align-last: center;
+  margin-top: 0.5em;
+}
+
+.nar-plate--court {
+  width: 108vw;
+  max-width: 108vw;
+  margin-left: calc(50% - 54vw);
+  margin-right: calc(50% - 54vw);
+}
+
+.nar-plate--court .nar-plate__caption {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  max-width: 100vw;
+  margin-top: -3.6rem;
+  transform: translateX(-50%);
+}
+
+.nar-marquise .nar-plate--expressions {
+  margin-top: calc(-1 * clamp(1.5rem, 4vw, 3rem));
+}
+
+.nar-plate--expressions .nar-plate__caption {
+  position: relative;
+  left: 50%;
+  width: 100%;
+  margin-top: -3.6rem;
+  transform: translateX(-50%);
+}
+
+.nar-plate--court .nar-plate__text {
+  --nar-x: 44%;
+  --nar-y: 11.8%;
+  --nar-w: 22%;
+  text-align: center;
+  text-align-last: center;
+  font-size: 1.1cqw;
+  line-height: 1.58;
+  color: var(--marquise-plum);
+  isolation: isolate;
+  text-shadow:
+    0 0.07em 0.05em rgb(122 79 182 / 0.55),
+    0 0.14em 0.22em rgb(122 79 182 / 0.32);
+}
+
+.nar-plate--court .nar-plate__text::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -75%;
+  right: -60%;
+  top: -5%;
+  bottom: -8%;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse 62% 68% at 48% 42%,
+    rgb(255 255 255 / 0.9) 0%,
+    rgb(255 252 246 / 0.52) 40%,
+    rgb(253 251 247 / 0.16) 64%,
+    transparent 78%
+  );
+  filter: blur(32px);
+}
+
+.nar-plate--court .nar-plate__glints {
+  position: absolute;
+  z-index: 0;
+  left: -75%;
+  right: -60%;
+  top: -5%;
+  bottom: -8%;
+  pointer-events: none;
+}
+
+.nar-plate--court .nar-plate__text > p:nth-of-type(1) {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.nar-plate--court .nar-plate__text > p:nth-of-type(2) {
+  width: 165%;
+  margin-left: -32.5%;
+  margin-top: 1.55em;
+  margin-bottom: 1.55em;
+}
+
+.nar-plate--court .nar-plate__text > p:nth-of-type(3),
+.nar-plate--court .nar-plate__text > p:nth-of-type(6),
+.nar-plate--court .nar-plate__text > p:nth-of-type(7) {
+  width: 195%;
+  margin-left: -58%;
+}
+
+.nar-plate--court .nar-plate__text > p:nth-of-type(6),
+.nar-plate--court .nar-plate__text > p:nth-of-type(7) {
+  margin-left: -66%;
+}
+
+.nar-plate--court .nar-plate__text > p:nth-of-type(6) {
+  margin-top: 1.55em;
+}
+
+/* Standalone plates that carry their own artwork text */
+.nar-plate--wide .nar-plate__img { width: 100%; }
+
+/* --------------------------------------------------------- small screens */
+
+/*
+ * Keep overlay copy locked to the plate. Soft glows are hidden so they
+ * cannot spill sideways on a narrow viewport; type still tracks in % / cqw.
+ * The lightbox enlarges the same composition for reading.
+ */
+@media (max-width: 60rem) {
+  .nar-plate--highlight .nar-plate__stage::before,
+  .nar-plate--highlight .nar-plate__stage::after,
+  .nar-plate--memoirs .nar-plate__stage::before,
+  .nar-plate--memoirs .nar-plate__stage::after,
+  .nar-plate--court .nar-plate__text::before,
+  .nar-plate--court .nar-plate__glints {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------ showcases */
+
+.nar-marquise__strip {
+  margin: 0;
+  width: 100%;
+}
+
+.nar-marquise__strip .nar-plate__img {
+  width: 100%;
+  height: auto;
+}
+
+.nar-marquise__quote {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.55;
+  color: var(--marquise-accent);
+  border-left: 3px solid var(--marquise-accent);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nar-plate__art { transition: none; }
+  .nar-plate--memoirs .nar-plate__glint,
+  .nar-plate--court .nar-plate__glint { animation: none; opacity: 0.7; }
+}
+
+/* Lightbox reuses plate overlay CSS; don't let full-bleed plate layout leak in */
+.nar-lightbox__stage.nar-plate--letter,
+.nar-lightbox__stage.nar-plate--highlight,
+.nar-lightbox__stage.nar-plate--memoirs,
+.nar-lightbox__stage.nar-plate--court {
+  width: fit-content;
+  max-width: 94vw;
+  margin: 0 auto;
+  overflow: visible;
+  container-type: inline-size;
+}

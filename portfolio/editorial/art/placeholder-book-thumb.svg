@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-label="Character thumbnail">
+  <rect width="240" height="320" fill="#2a1848"/>
+  <circle cx="120" cy="118" r="48" fill="#f5e6d3"/>
+  <ellipse cx="120" cy="250" rx="70" ry="90" fill="#6b3fa0"/>
+  <circle cx="108" cy="112" r="5" fill="#111"/>
+  <circle cx="132" cy="112" r="5" fill="#111"/>
+</svg>

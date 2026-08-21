@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Open book spread, The Treasure of the Lake">
+  <rect width="1200" height="675" fill="#1a1a1a"/>
+  <rect x="20" y="20" width="575" height="635" fill="#FFFDF7"/>
+  <rect x="605" y="20" width="575" height="635" fill="#FFFDF7"/>
+  <rect x="590" y="20" width="20" height="635" fill="#cfc8ba"/>
+  <rect x="598" y="20" width="4" height="635" fill="#8a8478"/>
+  <text x="307" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#111">The Treasure of the Lake</text>
+  <text x="80" y="140" font-family="Georgia, serif" font-size="16" fill="#444">
+    <tspan x="80" dy="0">At the edge of the lake, where willows</tspan>
+    <tspan x="80" dy="28">dipped their fingers into still water,</tspan>
+    <tspan x="80" dy="28">a map was found folded inside a bottle.</tspan>
+  </text>
+  <ellipse cx="300" cy="420" rx="140" ry="80" fill="#2d6a4f" opacity="0.35"/>
+  <ellipse cx="300" cy="410" rx="110" ry="50" fill="#a8d8ff" opacity="0.55"/>
+  <ellipse cx="890" cy="280" rx="160" ry="110" fill="#6b3fa0" opacity="0.18"/>
+  <text x="680" y="480" font-family="Georgia, serif" font-size="16" fill="#444">
+    <tspan x="680" dy="0">The treasure was not gold,</tspan>
+    <tspan x="680" dy="28">but the story the lake kept</tspan>
+    <tspan x="680" dy="28">for anyone brave enough to look.</tspan>
+  </text>
+  <text x="50" y="630" font-family="serif" font-size="13" fill="#999">12</text>
+  <text x="1140" y="630" text-anchor="end" font-family="serif" font-size="13" fill="#999">13</text>
+</svg>

@@ -1,0 +1,34 @@
+/* Stationery — Vintage & Modern Atelier tokens */
+:root {
+  --stn-paper: #F9F6F0;
+  --stn-paper-warm: #F3EDE4;
+  --stn-paper-shadow: rgba(38, 32, 24, 0.12);
+  --stn-paper-shadow-soft: rgba(38, 32, 24, 0.06);
+  --stn-ink: #2A2520;
+  --stn-ink-muted: #5C534A;
+  --stn-ink-light: #8A8076;
+
+  --citrus-fuchsia: #F23C9E;
+  --citrus-yellow: #FFE800;
+  --citrus-lime: #C4E600;
+  --citrus-cream: #FFFDF7;
+
+  --stn-serif: 'Playfair Display', 'Georgia', serif;
+  --stn-script: 'Caveat', cursive;
+  --stn-sans: 'Inter', system-ui, sans-serif;
+
+  --stn-shadow-paper:
+    0 1px 2px rgba(38, 32, 24, 0.04),
+    0 8px 24px -4px rgba(38, 32, 24, 0.1),
+    0 20px 48px -12px rgba(38, 32, 24, 0.08);
+  --stn-shadow-lifted:
+    0 2px 4px rgba(38, 32, 24, 0.05),
+    0 16px 40px -8px rgba(38, 32, 24, 0.14),
+    0 32px 64px -16px rgba(38, 32, 24, 0.1);
+
+  --stn-tape-cream: rgba(245, 235, 210, 0.72);
+  --stn-tape-blush: rgba(242, 180, 190, 0.65);
+  --stn-tape-sage: rgba(180, 210, 185, 0.6);
+  --stn-pin-gold: #C9A227;
+  --stn-pin-wood: #8B6914;
+}

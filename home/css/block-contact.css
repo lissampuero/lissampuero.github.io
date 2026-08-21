@@ -1,0 +1,19 @@
+.hm-contact { border-top: 1px solid rgb(0 0 0 / 0.05); }
+.hm-contact__inner { max-width: 36rem; margin: 0 auto; text-align: center; }
+.hm-contact-form { text-align: left; margin-bottom: 2.5rem; }
+.hm-contact-form__row { display: grid; gap: 1.1rem; }
+@media (min-width: 640px) { .hm-contact-form__row { grid-template-columns: 1fr 1fr; } }
+.hm-contact-form__field { margin-bottom: 1.1rem; }
+.hm-contact-direct {
+  font-style: normal; font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem; line-height: 1.75; color: #404040;
+}
+.hm-contact-direct a {
+  color: #111; text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s var(--ease-organic, ease), border-color 0.3s var(--ease-organic, ease);
+}
+.hm-contact-direct a:hover {
+  color: var(--citrus-fuchsia, #F23C9E);
+  border-bottom-color: var(--citrus-fuchsia, #F23C9E);
+}

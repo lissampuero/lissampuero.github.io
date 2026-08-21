@@ -1,0 +1,26 @@
+CARPETA: assets/portfolio/stationery/
+Papelería y productos — estructura mixta (mockups + catálogo)
+
+Arrastra aquí y renombra exactamente así:
+
+BLOQUE 1 — Hero collage:
+1. illustration-stationery-hero-envelope.webp
+   → Composición hero central (sobre abierto + elementos flotantes)
+
+BLOQUE 2 — Mockups de producto real (elige 3-4):
+2. mockup-product-card-01.webp   → ej. postal o tarjeta
+3. mockup-product-card-02.webp   → ej. lámina de stickers
+4. mockup-product-card-03.webp   → ej. cuaderno/journal
+5. mockup-product-card-04.webp   → (opcional) bolsa de tela u otro
+
+BLOQUE 4 — Cierre:
+6. decorative-sketch-character-01.webp
+   → Sketch decorativo pequeño (para el sobre de cierre)
+7. decorative-sketch-character-02.webp
+   → Sketch decorativo pequeño adicional (opcional)
+
+Total: 6-8 archivos
+
+NOTA: el Bloque 3 (catálogo "Discover the Collection") REUTILIZA
+ilustraciones ya puestas en otras carpetas — no necesitas piezas nuevas
+para ese bloque.

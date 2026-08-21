@@ -1,0 +1,14 @@
+CARPETA: assets/portfolio/editorial/
+Sesión Editorial — paleta nocturna.
+
+Ya en la página:
+- illustration-editorial-feature.png → ilustración grande entre los botones y el libro
+- illustration-book-cover.png → portada hardcover
+- spreads/page-01.png … page-16.png → pliegos (1-2, 3-4, … 15-16)
+
+Magazine — Fashion Illustration (galería vacía hasta que llegue el arte)
+1. illustration-magazine-fashion-hero.webp
+2. illustration-magazine-01.webp
+3. illustration-magazine-02.webp
+4. illustration-magazine-03.webp
+5. illustration-magazine-04.webp

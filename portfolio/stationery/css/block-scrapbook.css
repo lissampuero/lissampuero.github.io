@@ -1,0 +1,305 @@
+/**
+ * Block 2+3 — Moodboard & Scrapbook (organic collage + catalog)
+ */
+
+.stn-scrapbook {
+  position: relative;
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(5rem, 10vw, 7rem);
+}
+
+.stn-scrapbook__header {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+}
+
+.stn-scrapbook__header .stn-section-title {
+  margin-bottom: 0.5rem;
+}
+
+.stn-scrapbook__subtitle {
+  font-family: var(--stn-script);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--stn-ink-muted);
+  margin: 0 0 1rem;
+}
+
+.stn-scrapbook__divider {
+  width: 4rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--stn-ink-light), transparent);
+  margin: 0 auto 1.25rem;
+}
+
+/* Asymmetric masonry collage */
+.stn-scrapbook__collage {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  align-items: start;
+}
+
+.stn-scrapbook__piece {
+  position: relative;
+  margin: 0;
+}
+
+/* Envelope with pattern liner — hero feature */
+.stn-scrapbook__piece--envelope {
+  grid-column: span 12;
+}
+
+@media (min-width: 900px) {
+  .stn-scrapbook__piece--envelope {
+    grid-column: span 5;
+    grid-row: span 2;
+  }
+}
+
+.stn-envelope-liner {
+  position: relative;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #FFFCF8;
+  box-shadow: var(--stn-shadow-lifted);
+  transform: rotate(-0.6deg);
+  border: 1px solid rgba(42, 37, 32, 0.06);
+}
+
+.stn-envelope-liner__flap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 5 / 3.2;
+  background:
+    linear-gradient(165deg, #F5EDE4 0%, #EBE3D8 100%);
+  box-shadow: inset 0 0 0 1px rgba(42, 37, 32, 0.06);
+}
+
+.stn-envelope-liner__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 4c-2 4-6 6-10 6 2 2 4 6 4 10-4-2-8-2-12 0 3 3 6 8 6 14h24c0-6 3-11 6-14-4-2-8-2-12 0 0-4 2-8 4-10-4 0-8-2-10-6z' fill='%23F23C9E' fill-opacity='0.15'/%3E%3C/svg%3E");
+  background-size: 48px 48px;
+}
+
+.stn-envelope-liner__interior {
+  position: absolute;
+  inset: 18% 8% 8%;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgba(38, 32, 24, 0.12);
+}
+
+.stn-envelope-liner__interior img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stn-envelope-liner__fold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background: linear-gradient(180deg, rgba(255, 252, 248, 0.95) 0%, rgba(255, 252, 248, 0.4) 100%);
+  clip-path: polygon(0 0, 50% 85%, 100% 0);
+  border-bottom: 1px solid rgba(42, 37, 32, 0.06);
+}
+
+.stn-envelope-liner__caption {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.stn-envelope-liner__caption h3 {
+  font-family: var(--stn-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+  color: var(--stn-ink);
+}
+
+.stn-envelope-liner__caption p {
+  font-family: var(--stn-sans);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--stn-ink-muted);
+  margin: 0;
+}
+
+/* Product mockup cards in collage */
+.stn-scrapbook__piece--mockup {
+  grid-column: span 6;
+}
+
+@media (min-width: 640px) {
+  .stn-scrapbook__piece--mockup { grid-column: span 4; }
+}
+
+@media (min-width: 900px) {
+  .stn-scrapbook__piece--mockup:nth-child(2) { grid-column: 6 / span 4; }
+  .stn-scrapbook__piece--mockup:nth-child(3) { grid-column: 10 / span 3; }
+  .stn-scrapbook__piece--mockup:nth-child(4) { grid-column: 6 / span 3; }
+  .stn-scrapbook__piece--mockup:nth-child(5) { grid-column: 9 / span 4; }
+}
+
+.stn-mockup-card {
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.stn-mockup-card:hover {
+  transform: translateY(-4px);
+}
+
+.stn-mockup-card__frame {
+  position: relative;
+  padding: 0.65rem;
+  background: #FFFCF8;
+  box-shadow: var(--stn-shadow-paper);
+  border: 1px solid rgba(42, 37, 32, 0.05);
+}
+
+.stn-mockup-card:nth-child(2) .stn-mockup-card__frame { transform: rotate(0.8deg); }
+.stn-mockup-card:nth-child(3) .stn-mockup-card__frame { transform: rotate(-0.5deg); }
+.stn-mockup-card:nth-child(4) .stn-mockup-card__frame { transform: rotate(1.2deg); }
+.stn-mockup-card:nth-child(5) .stn-mockup-card__frame { transform: rotate(-0.9deg); }
+
+.stn-mockup-card__image-wrap {
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--stn-paper-warm);
+}
+
+.stn-mockup-card__image {
+  transition: transform 0.45s ease;
+}
+
+.stn-mockup-card:hover .stn-mockup-card__image {
+  transform: scale(1.03);
+}
+
+.stn-mockup-card__num {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  font-family: var(--stn-serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--stn-ink-light);
+}
+
+.stn-mockup-card__body {
+  padding: 1rem 0.35rem 0.25rem;
+  text-align: center;
+}
+
+.stn-mockup-card__label {
+  font-family: var(--stn-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--stn-ink);
+  margin: 0 0 0.35rem;
+}
+
+.stn-mockup-card__desc {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--stn-ink-muted);
+  margin: 0;
+}
+
+/* Catalog prints in collage */
+.stn-scrapbook__piece--print {
+  grid-column: span 6;
+}
+
+@media (min-width: 640px) {
+  .stn-scrapbook__piece--print { grid-column: span 4; }
+}
+
+@media (min-width: 900px) {
+  .stn-scrapbook__piece--print:nth-child(6) { grid-column: 1 / span 3; }
+  .stn-scrapbook__piece--print:nth-child(7) { grid-column: 4 / span 3; }
+  .stn-scrapbook__piece--print:nth-child(8) { grid-column: 7 / span 3; }
+  .stn-scrapbook__piece--print:nth-child(9) { grid-column: 10 / span 3; }
+  .stn-scrapbook__piece--print:nth-child(10) { grid-column: 2 / span 3; }
+  .stn-scrapbook__piece--print:nth-child(11) { grid-column: 5 / span 3; }
+  .stn-scrapbook__piece--print:nth-child(12) { grid-column: 8 / span 3; }
+}
+
+.stn-print-card {
+  position: relative;
+  padding: 0.55rem;
+  background: #FFFCF8;
+  box-shadow: var(--stn-shadow-paper);
+  border: 1px solid rgba(42, 37, 32, 0.05);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.stn-print-card:hover {
+  box-shadow: var(--stn-shadow-lifted);
+  transform: translateY(-3px) rotate(0deg) !important;
+}
+
+.stn-print-card:nth-child(odd) { transform: rotate(-0.7deg); }
+.stn-print-card:nth-child(even) { transform: rotate(0.6deg); }
+
+.stn-print-card__mat {
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--stn-paper-warm);
+}
+
+.stn-print-card__caption {
+  display: block;
+  font-family: var(--stn-script);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--stn-ink-muted);
+  margin-top: 0.5rem;
+}
+
+/* Services list card in collage */
+.stn-scrapbook__piece--services {
+  grid-column: span 12;
+  max-width: 28rem;
+  margin: clamp(1.5rem, 4vw, 2.5rem) auto 0;
+}
+
+.stn-scrapbook__piece--services .stn-citrus-card {
+  transform: rotate(0.4deg);
+  text-align: center;
+}
+
+.stn-scrapbook__services-title {
+  font-family: var(--stn-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--stn-ink);
+}
+
+/* Catalog intro strip */
+.stn-catalog-strip {
+  grid-column: span 12;
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3rem) 0 clamp(1rem, 3vw, 1.5rem);
+}
+
+.stn-catalog-strip .stn-section-title {
+  font-family: var(--stn-script);
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 2.85rem);
+}
+
+@media (max-width: 639px) {
+  .stn-scrapbook__piece--mockup,
+  .stn-scrapbook__piece--print {
+    grid-column: span 12;
+  }
+}

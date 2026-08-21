@@ -1,0 +1,122 @@
+/**
+ * Block 3 — "Discover the Collection" catalog grid
+ */
+
+.stn-catalog {
+  position: relative;
+}
+
+.stn-catalog__intro {
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  max-width: 42rem;
+  text-align: center;
+}
+
+.stn-catalog__intro .stn-section-title {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.stn-catalog__divider {
+  width: 3rem;
+  height: 3px;
+  background: var(--citrus-fuchsia);
+  margin: 1rem auto 1.25rem;
+  border-radius: 2px;
+}
+
+.stn-catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(0.875rem, 2vw, 1.5rem);
+}
+
+@media (min-width: 768px) {
+  .stn-catalog__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+  }
+}
+
+.stn-catalog__item {
+  position: relative;
+  margin: 0;
+  padding: clamp(0.5rem, 1.5vw, 0.75rem);
+  background: #fff;
+  border-radius: 4px;
+  box-shadow:
+    0 1px 0 rgb(0 0 0 / 0.04),
+    0 8px 24px -8px rgb(0 0 0 / 0.12);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.stn-catalog__item:hover {
+  box-shadow:
+    0 1px 0 rgb(0 0 0 / 0.04),
+    0 20px 40px -12px rgb(0 0 0 / 0.18);
+  transform: translateY(-3px);
+}
+
+/* Slight rotation variation for collage feel */
+.stn-catalog__item:nth-child(1) { transform: rotate(-0.8deg); }
+.stn-catalog__item:nth-child(2) { transform: rotate(0.6deg); }
+.stn-catalog__item:nth-child(3) { transform: rotate(-0.4deg); }
+.stn-catalog__item:nth-child(4) { transform: rotate(0.9deg); }
+.stn-catalog__item:nth-child(5) { transform: rotate(-0.5deg); }
+.stn-catalog__item:nth-child(6) { transform: rotate(0.4deg); }
+
+.stn-catalog__item:nth-child(1):hover,
+.stn-catalog__item:nth-child(2):hover,
+.stn-catalog__item:nth-child(3):hover,
+.stn-catalog__item:nth-child(4):hover,
+.stn-catalog__item:nth-child(5):hover,
+.stn-catalog__item:nth-child(6):hover {
+  transform: translateY(-3px) rotate(0deg);
+}
+
+.stn-catalog__mat {
+  overflow: hidden;
+  border-radius: 2px;
+  aspect-ratio: 1 / 1;
+  background: #fafafa;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.05);
+}
+
+.stn-catalog__mat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.stn-catalog__item:hover .stn-catalog__mat img {
+  transform: scale(1.04);
+}
+
+.stn-catalog__caption {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #525252;
+  text-align: center;
+  margin-top: 0.625rem;
+  padding: 0 0.25rem;
+}
+
+.stn-catalog__item:hover .stn-catalog__caption {
+  color: #111;
+}
+
+/* Always-visible label on mobile (no hover) */
+@media (max-width: 767px) {
+  .stn-catalog__caption {
+    color: #111;
+  }
+}

@@ -1,0 +1,17 @@
+CARPETA: assets/portfolio/childrens-books/
+Ilustración infantil — paleta cítrica PASTEL (no vibrante)
+
+Arrastra aquí y renombra exactamente así:
+
+1. illustration-childrens-hero.webp
+   → Ilustración hero de la página (tonos pastel)
+
+2. illustration-childrens-spread-01.webp
+3. illustration-childrens-spread-02.webp
+4. illustration-childrens-spread-03.webp
+   → 3 escenas/spreads infantiles
+
+Total: 4 archivos
+
+NOTA: estas ilustraciones deben tener paleta PASTEL (fucsia/amarillo/
+verde limón desaturados), no los tonos vibrantes del resto del sitio.

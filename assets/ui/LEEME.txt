@@ -1,0 +1,18 @@
+CARPETA: assets/ui/
+Archivos globales — usados en varias páginas del sitio
+
+Arrastra aquí y renombra exactamente así:
+
+1. logo-liss-ampuero-hero.webp
+   → Tu logo ilustrado (PNG con transparencia, confirmado)
+
+2. photo-about-liss-ampuero.webp
+   → Tu foto de perfil real
+
+3. illustration-storytelling-mural.webp
+   → El mural narrativo grande ("My birth took place where the sea sings...")
+
+4. illustration-about-arch-character.webp
+   → La niña con el pájaro (PNG transparente, para el arco de About Me)
+
+Total: 4 archivos
