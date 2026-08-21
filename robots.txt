@@ -1,4 +1,4 @@
-# lissampuero.com — crawl policy
+# lissampuero.com — crawl policy (SEO plan)
 User-agent: *
 Allow: /
 
@@ -13,26 +13,5 @@ Disallow: /portfolio/narrative/blocks/
 Disallow: /portfolio/stationery/blocks/
 Disallow: /shared/components/
 Disallow: /children-books/
-
-# Keep CSS, JS, and artwork crawlable for rendering and image search
-Allow: /shared/*.css
-Allow: /shared/js/
-Allow: /assets/
-Allow: /home/
-Allow: /portfolio/
-Allow: /about/
-Allow: /services/
-Allow: /contact/
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /assets/
-Allow: /portfolio/
-Allow: /home/
-
-User-agent: Bingbot
-Allow: /
 
 Sitemap: https://lissampuero.com/sitemap.xml
