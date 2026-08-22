@@ -538,13 +538,18 @@
 
 .nar-plate--memoirs .nar-plate__text--quote {
   left: 50%;
-  top: 13%;
-  width: 22%;
+  top: 11.5%;
+  width: 36%;
   transform: translateX(-50%);
   text-align: center;
-  font-size: 1.45cqw;
-  line-height: 1.62;
+  font-size: 1.32cqw;
+  line-height: 1.5;
   color: var(--marquise-plum);
+}
+
+.nar-plate--memoirs .nar-plate__text--quote .nar-plate__text-title {
+  font-size: 1.62em;
+  line-height: 1.15;
 }
 
 .nar-plate--memoirs .nar-plate__text--quote .nar-plate__text-title,
@@ -555,13 +560,13 @@
 }
 
 .nar-plate--memoirs .nar-plate__text--quote .nar-plate__text-title + p {
-  margin-top: 0.5em;
+  margin-top: 0.45em;
 }
 
 .nar-plate--memoirs .nar-plate__text--scroll {
-  --nar-x: 8%;
-  --nar-y: 47%;
-  --nar-w: 27%;
+  --nar-x: 7%;
+  --nar-y: 46%;
+  --nar-w: 31%;
   text-align: left;
   font-size: 1.02cqw;
   color: #4a3a2c;
@@ -612,13 +617,13 @@
 }
 
 .nar-plate--court .nar-plate__text {
-  --nar-x: 44%;
-  --nar-y: 11.8%;
-  --nar-w: 22%;
+  --nar-x: 43%;
+  --nar-y: 9.2%;
+  --nar-w: 32%;
   text-align: center;
   text-align-last: center;
-  font-size: 1.1cqw;
-  line-height: 1.58;
+  font-size: 1.06cqw;
+  line-height: 1.54;
   color: var(--marquise-plum);
   isolation: isolate;
   text-shadow:
@@ -662,22 +667,22 @@
 }
 
 .nar-plate--court .nar-plate__text > p:nth-of-type(2) {
-  width: 165%;
-  margin-left: -32.5%;
-  margin-top: 1.55em;
-  margin-bottom: 1.55em;
+  width: 148%;
+  margin-left: -24%;
+  margin-top: 1.45em;
+  margin-bottom: 1.45em;
 }
 
 .nar-plate--court .nar-plate__text > p:nth-of-type(3),
 .nar-plate--court .nar-plate__text > p:nth-of-type(6),
 .nar-plate--court .nar-plate__text > p:nth-of-type(7) {
-  width: 195%;
-  margin-left: -58%;
+  width: 172%;
+  margin-left: -36%;
 }
 
 .nar-plate--court .nar-plate__text > p:nth-of-type(6),
 .nar-plate--court .nar-plate__text > p:nth-of-type(7) {
-  margin-left: -66%;
+  margin-left: -42%;
 }
 
 .nar-plate--court .nar-plate__text > p:nth-of-type(6) {
@@ -702,6 +707,71 @@
   .nar-plate--court .nar-plate__text::before,
   .nar-plate--court .nar-plate__glints {
     display: none;
+  }
+
+  /* Memoirs — quote column wider so copy stays on parchment, not over the caption */
+  .nar-plate--memoirs .nar-plate__text--quote {
+    left: 50%;
+    top: 10%;
+    width: 47%;
+    transform: translateX(-50%);
+    font-size: 1.18cqw;
+    line-height: 1.46;
+  }
+
+  .nar-plate--memoirs .nar-plate__text--quote .nar-plate__text-title {
+    font-size: 1.48em;
+  }
+
+  .nar-plate--memoirs .nar-plate__text--scroll {
+    --nar-x: 5.5%;
+    --nar-y: 45%;
+    --nar-w: 34%;
+    font-size: 0.92cqw;
+  }
+
+  .nar-plate--memoirs .nar-plate__caption {
+    margin-top: clamp(1.25rem, 4vw, 1.75rem);
+  }
+
+  /* Swamp Court — wider column, raised on the plate */
+  .nar-plate--court .nar-plate__text {
+    --nar-x: 42%;
+    --nar-y: 7.8%;
+    --nar-w: 38%;
+    font-size: 1cqw;
+    line-height: 1.48;
+  }
+
+  .nar-plate--court .nar-plate__text > p:nth-of-type(1) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .nar-plate--court .nar-plate__text > p:nth-of-type(2) {
+    width: 118%;
+    margin-left: -9%;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+  }
+
+  .nar-plate--court .nar-plate__text > p:nth-of-type(3),
+  .nar-plate--court .nar-plate__text > p:nth-of-type(6),
+  .nar-plate--court .nar-plate__text > p:nth-of-type(7) {
+    width: 128%;
+    margin-left: -14%;
+  }
+
+  .nar-plate--court .nar-plate__text > p:nth-of-type(6),
+  .nar-plate--court .nar-plate__text > p:nth-of-type(7) {
+    margin-left: -14%;
+  }
+
+  .nar-plate--court .nar-plate__caption {
+    width: 100%;
+    max-width: 100%;
+    margin-top: clamp(1.25rem, 4vw, 1.75rem);
+    transform: translateX(-50%);
   }
 }
 

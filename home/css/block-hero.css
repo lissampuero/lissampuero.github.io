@@ -65,7 +65,7 @@
   letter-spacing: 0.02em;
 }
 
-/* Mobile — wide wordmark: width-fit is ~29vw tall; oversize width + center clip for presence */
+/* Mobile — cropped wordmark at full width (no overscale) */
 @media (max-width: 47.99rem) {
   .hm-hero {
     overflow-x: clip;
@@ -91,21 +91,14 @@
   }
 
   .hm-hero__logo {
-    width: 162vw;
+    width: 100vw;
     max-width: none;
-    margin-left: calc(50% - 81vw);
+    margin-left: calc(50% - 50vw);
     transform: none;
   }
 
   .hm-hero__slogan {
     margin-top: 0.1rem;
     font-size: clamp(1.5rem, 4.2vw, 1.85rem);
-  }
-}
-
-@media (max-width: 47.99rem) and (prefers-reduced-motion: reduce) {
-  .hm-hero__logo {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
   }
 }
