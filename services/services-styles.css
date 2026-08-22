@@ -114,19 +114,40 @@
   outline-offset: 4px;
 }
 
+/* Proceso creativo — composición apaisada; centrada y ancha para que el lettering no se corte */
+.svc-process-illustration {
+  display: flex;
+  justify-content: center;
+  padding-left: clamp(0.75rem, 3vw, 2rem);
+  padding-right: clamp(0.75rem, 3vw, 2rem);
+  overflow: visible;
+}
+
+.svc-process-illustration .svc-illustration {
+  width: min(920px, 100%);
+  margin-inline: auto;
+}
+
 .svc-process-illustration .svc-illustration__trigger {
-  max-width: 620px;
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
 }
 
 .svc-process-illustration .svc-illustration__img {
-  max-width: none;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
   display: block;
+  object-fit: contain;
+  object-position: center center;
 }
 
 .svc-process-illustration .svc-illustration__trigger:hover .svc-illustration__img,
 .svc-process-illustration .svc-illustration__trigger:focus-visible .svc-illustration__img {
-  transform: scale(1.08);
+  transform: scale(1.03);
+  transform-origin: center center;
 }
 
 /* ============================================
@@ -553,6 +574,20 @@
   .svc-cta-btn {
     width: 100%;
     max-width: 320px;
+  }
+
+  .svc-process-illustration {
+    padding-left: clamp(0.35rem, 2vw, 0.75rem);
+    padding-right: clamp(0.35rem, 2vw, 0.75rem);
+  }
+
+  .svc-process-illustration .svc-illustration {
+    width: 100%;
+  }
+
+  .svc-process-illustration .svc-illustration__trigger:hover .svc-illustration__img,
+  .svc-process-illustration .svc-illustration__trigger:focus-visible .svc-illustration__img {
+    transform: none;
   }
 
   .svc-script-label--drop {
