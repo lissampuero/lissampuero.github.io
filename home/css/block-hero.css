@@ -38,11 +38,6 @@
   outline-offset: 6px;
 }
 
-.hm-hero__logo-picture {
-  display: block;
-  width: 100%;
-}
-
 .hm-hero__logo {
   width: 100%;
   height: auto;
@@ -70,7 +65,7 @@
   letter-spacing: 0.02em;
 }
 
-/* Mobile — cropped wordmark at full width (no overscale) */
+/* Mobile only — cropped wordmark, full bleed; desktop rules above unchanged */
 @media (max-width: 47.99rem) {
   .hm-hero {
     overflow-x: clip;
@@ -96,6 +91,7 @@
   }
 
   .hm-hero__logo-picture {
+    display: block;
     width: 100vw;
     margin-left: calc(50% - 50vw);
   }
