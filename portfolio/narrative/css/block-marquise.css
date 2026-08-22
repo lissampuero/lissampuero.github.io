@@ -690,113 +690,18 @@
 /* --------------------------------------------------------- small screens */
 
 /*
- * Mobile — stack copy below the artwork in readable panels.
- * Desktop keeps absolute overlays on the illustration; only narrow viewports
- * switch to static text blocks (original mobile behaviour).
+ * Keep overlay copy locked to the plate. Soft glows are hidden so they
+ * cannot spill sideways on a narrow viewport; type still tracks in % / cqw.
+ * The lightbox enlarges the same composition for reading.
  */
 @media (max-width: 60rem) {
-  .nar-plate--letter,
-  .nar-plate--highlight,
-  .nar-plate--court {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
   .nar-plate--highlight .nar-plate__stage::before,
   .nar-plate--highlight .nar-plate__stage::after,
   .nar-plate--memoirs .nar-plate__stage::before,
   .nar-plate--memoirs .nar-plate__stage::after,
-  .nar-plate--memoirs .nar-plate__glints,
   .nar-plate--court .nar-plate__text::before,
   .nar-plate--court .nar-plate__glints {
     display: none;
-  }
-
-  .nar-plate__text,
-  .nar-plate--highlight .nar-plate__text,
-  .nar-plate--highlight .nar-plate__text--highlight-intro,
-  .nar-plate--memoirs .nar-plate__text--quote,
-  .nar-plate--memoirs .nar-plate__text--scroll,
-  .nar-plate--court .nar-plate__text {
-    position: static;
-    left: auto;
-    top: auto;
-    transform: none;
-    width: auto;
-    max-width: 42rem;
-    margin: 1.25rem auto 0;
-    font-family: var(--ab-display, 'Playfair Display', Georgia, serif);
-    font-style: italic;
-    font-size: 1rem;
-    line-height: 1.55;
-    text-align: left;
-    text-align-last: left;
-    color: var(--marquise-plum);
-    text-shadow: none;
-    pointer-events: auto;
-    background: rgb(255 255 255 / 0.52);
-    border-radius: 0.75rem;
-    padding: clamp(1.1rem, 4vw, 1.75rem);
-  }
-
-  .nar-plate--highlight .nar-plate__text,
-  .nar-plate--highlight .nar-plate__text--highlight-intro {
-    font-family: var(--ab-sans, 'Inter', sans-serif);
-    font-style: normal;
-    text-align: center;
-    text-align-last: center;
-  }
-
-  .nar-plate--memoirs .nar-plate__text--quote,
-  .nar-plate--memoirs .nar-plate__text--scroll {
-    text-align: left;
-    text-align-last: left;
-  }
-
-  .nar-plate--memoirs .nar-plate__text--scroll .nar-plate__text-title {
-    font-family: 'Caveat', cursive;
-    text-align: left;
-  }
-
-  .nar-plate--memoirs .nar-plate__text--scroll .nar-plate__quotes {
-    text-align: left;
-    text-align-last: left;
-  }
-
-  .nar-plate--letter .nar-plate__text > p:nth-of-type(n+2):nth-of-type(-n+5),
-  .nar-plate--highlight .nar-plate__text--highlight-intro > :not(.nar-plate__specs),
-  .nar-plate--court .nar-plate__text > p:nth-of-type(1),
-  .nar-plate--court .nar-plate__text > p:nth-of-type(2),
-  .nar-plate--court .nar-plate__text > p:nth-of-type(3),
-  .nar-plate--court .nar-plate__text > p:nth-of-type(6),
-  .nar-plate--court .nar-plate__text > p:nth-of-type(7) {
-    width: auto;
-    margin-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .nar-plate--court .nar-plate__text > p:nth-of-type(2) {
-    margin-top: 0.85em;
-    margin-bottom: 0.85em;
-  }
-
-  .nar-plate--court .nar-plate__text > p:nth-of-type(6) {
-    margin-top: 0.85em;
-  }
-
-  .nar-plate--court .nar-plate__caption {
-    width: 100%;
-    max-width: 100%;
-    left: auto;
-    margin-top: clamp(1.25rem, 4vw, 1.75rem);
-    transform: none;
-  }
-
-  .nar-plate--memoirs .nar-plate__caption {
-    margin-top: clamp(1.25rem, 4vw, 1.75rem);
   }
 }
 
