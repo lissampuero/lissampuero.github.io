@@ -745,3 +745,7 @@
   overflow: visible;
   container-type: inline-size;
 }
+
+.nar-plate__glints .nar-plate__glint:nth-child(n+8) {
+  display: none;
+}

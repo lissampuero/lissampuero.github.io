@@ -765,3 +765,7 @@
   object-fit: cover;
   object-position: 88% center;
 }
+
+.lolo-glints .lolo-glint:nth-child(n+5) {
+  display: none;
+}
