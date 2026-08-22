@@ -67,6 +67,13 @@
   width: 100%;
   max-width: min(96vw, 1240px);
   margin: 0 auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
   cursor: zoom-in;
 }
 
@@ -114,39 +121,42 @@
   outline-offset: 4px;
 }
 
-/* Proceso creativo — composición apaisada; centrada y ancha para que el lettering no se corte */
+/* Proceso creativo — composición apaisada, flotando sobre crema (sin caja de botón iOS) */
 .svc-process-illustration {
-  display: flex;
-  justify-content: center;
-  padding-left: clamp(0.75rem, 3vw, 2rem);
-  padding-right: clamp(0.75rem, 3vw, 2rem);
+  display: grid;
+  place-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.75rem, 3vw, 1.5rem);
   overflow: visible;
+  background: transparent;
 }
 
 .svc-process-illustration .svc-illustration {
-  width: min(920px, 100%);
-  margin-inline: auto;
+  width: 100%;
+  max-width: min(920px, 100%);
+  margin: 0;
 }
 
 .svc-process-illustration .svc-illustration__trigger {
   width: 100%;
   max-width: 100%;
-  margin-inline: auto;
+  margin: 0 auto;
+  background: transparent;
 }
 
 .svc-process-illustration .svc-illustration__img {
   width: 100%;
-  max-width: 100%;
   height: auto;
-  margin-inline: auto;
   display: block;
-  object-fit: contain;
-  object-position: center center;
+  margin: 0 auto;
+  background: transparent;
+  filter: drop-shadow(0 16px 32px rgb(0 0 0 / 0.1));
 }
 
 .svc-process-illustration .svc-illustration__trigger:hover .svc-illustration__img,
 .svc-process-illustration .svc-illustration__trigger:focus-visible .svc-illustration__img {
-  transform: scale(1.03);
+  transform: scale(1.02);
   transform-origin: center center;
 }
 
@@ -577,12 +587,16 @@
   }
 
   .svc-process-illustration {
-    padding-left: clamp(0.35rem, 2vw, 0.75rem);
-    padding-right: clamp(0.35rem, 2vw, 0.75rem);
+    padding-inline: 0.65rem;
   }
 
   .svc-process-illustration .svc-illustration {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .svc-process-illustration .svc-illustration__img {
+    filter: drop-shadow(0 12px 24px rgb(0 0 0 / 0.08));
   }
 
   .svc-process-illustration .svc-illustration__trigger:hover .svc-illustration__img,
