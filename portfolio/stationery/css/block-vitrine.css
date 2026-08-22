@@ -1,8 +1,6 @@
 /**
  * Stationery vitrine
- * Session: vibrant colours from the new pattern studies
- *   (teal + offset pink dots, cyan + red blobs, red/hot-pink stripes,
- *    lavender/mustard + cobalt, floral clash).
+ * Session wallpaper: fine checkerboard + scattered hearts (Agatha reference).
  * Containers: previous bay patterns, one per department.
  * Lettering: cream on the dark session, ink on pale containers.
  */
@@ -11,7 +9,7 @@
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
-  background-color: #0b5c56;
+  background-color: var(--ag-cream, #fff6e8);
   background-image: none;
 }
 
@@ -43,50 +41,43 @@
   color: var(--ag-ink);
 }
 
-/* —— Session wallpaper: collage of the new vibrant studies —— */
+/* ═══════════════════════════════════════════════════════════════
+   BACKGROUND — ajedrez fino + corazones dispersos como acento.
+   ═══════════════════════════════════════════════════════════════ */
 .stn-store::before {
   content: "";
   position: absolute;
   z-index: 0;
   inset: -4% -6%;
   pointer-events: none;
-  background-color: var(--ag-teal);
+  background-color: var(--ag-cream, #fff6e8);
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='200' viewBox='0 0 220 200'%3E%3Cellipse cx='55' cy='50' rx='42' ry='40' fill='%23e6332a'/%3E%3Cellipse cx='58' cy='48' rx='18' ry='16' fill='%23f5c7d8'/%3E%3Cellipse cx='160' cy='70' rx='36' ry='34' fill='%23e6332a'/%3E%3Cellipse cx='162' cy='68' rx='14' ry='13' fill='%23f5c7d8'/%3E%3Cellipse cx='110' cy='150' rx='32' ry='30' fill='%23e6332a'/%3E%3Cellipse cx='112' cy='148' rx='12' ry='11' fill='%23f5c7d8'/%3E%3Cellipse cx='200' cy='160' rx='28' ry='26' fill='%23e6332a'/%3E%3Cellipse cx='201' cy='158' rx='11' ry='10' fill='%23f5c7d8'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='122' viewBox='0 0 140 122'%3E%3Cellipse cx='32' cy='34' rx='26' ry='25' fill='%23e23a1a'/%3E%3Cellipse cx='36' cy='29' rx='26' ry='25' fill='%23ff5aa5'/%3E%3Cellipse cx='102' cy='34' rx='24' ry='23' fill='%23e23a1a'/%3E%3Cellipse cx='106' cy='29' rx='24' ry='23' fill='%23ff5aa5'/%3E%3Cellipse cx='67' cy='94' rx='25' ry='24' fill='%23e23a1a'/%3E%3Cellipse cx='71' cy='89' rx='25' ry='24' fill='%23ff5aa5'/%3E%3C/svg%3E"),
-    linear-gradient(#4eb8e2, #4eb8e2),
-    repeating-linear-gradient(90deg, #e6332a 0 1.45rem, #ff4d9a 1.45rem 2.9rem),
-    repeating-linear-gradient(180deg, #e8c8f0 0 1.2rem, #c4a035 1.2rem 2.4rem),
-    linear-gradient(90deg, #2a4bd7, #2a4bd7),
-    repeating-linear-gradient(0deg, #111 0 0.72rem, #fff 0.72rem 1.44rem),
-    repeating-linear-gradient(90deg, #e6332a 0 0.9rem, #2a6fe0 0.9rem 1.8rem);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cpath d='M70 118C46 96 18 76 18 48a24 24 0 0 1 48-5 24 24 0 0 1 48 5c0 28-30 48-44 70z' fill='%23ffffff' fill-opacity='0.55'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 84C33 68 13 54 13 34a17 17 0 0 1 34-4 17 17 0 0 1 34 4c0 20-21 34-31 50z' fill='%23f23c9e' fill-opacity='0.16'/%3E%3C/svg%3E"),
+    repeating-conic-gradient(
+      var(--ag-pink, #ff5aa5) 0% 25%,
+      transparent 0% 50%
+    );
   background-size:
-    18rem 16rem,
-    11rem 9.5rem,
-    100% 30%,
-    100% 22%,
-    calc(18% - 0.7rem) 100%,
-    0.7rem 100%,
-    100% 14%,
-    48% 14%;
+    18rem 18rem,
+    13rem 13rem,
+    2.15rem 2.15rem;
   background-position:
-    0 0,
-    0 0,
-    0 36%,
-    0 72%,
-    100% 0,
-    82% 0,
-    0 100%,
-    52% 100%;
+    6% 12%,
+    82% 68%,
+    0 0;
   background-repeat:
-    repeat,
-    repeat,
     no-repeat,
     no-repeat,
-    no-repeat,
-    no-repeat,
-    no-repeat,
-    no-repeat;
+    repeat;
+  opacity: 1;
+  filter: opacity(0.85);
+}
+
+.stn-store__hero,
+.stn-close {
+  position: relative;
+  z-index: 1;
 }
 
 .stn-store::after {

@@ -104,12 +104,10 @@
 
 /* —— Life: twinkling glints —— */
 .hm-selected-gallery__item::before,
-.hm-look__frame::before,
 .nar-art-trigger::before,
 .svc-illustration__trigger::before,
 .hm-contact-illustration__trigger::before,
 .ed-feature-art__trigger::before,
-.hm-hero__logo-wrap::before,
 .hero-arch-portal::before,
 .stn-sku__frame::before {
   content: '';
@@ -135,13 +133,6 @@
 .svc-illustration__trigger::before {
   top: 16%;
   right: 18%;
-}
-
-.hm-hero__logo-wrap::before {
-  top: 28%;
-  right: 22%;
-  width: 0.85rem;
-  height: 0.85rem;
 }
 
 .hero-arch-portal::before {
@@ -170,7 +161,6 @@
 @media (prefers-reduced-motion: reduce) {
   .hm-selected-gallery__item::before,
   .hm-selected-gallery__item::after,
-  .hm-look__frame::before,
   .hm-look__frame::after,
   .nar-art-trigger::before,
   .nar-art-trigger::after,
@@ -185,7 +175,6 @@
   .ed-feature-art__trigger::after,
   .ed-book-3d__cover .ed-img-trigger::after,
   .ed-book-spread .ed-img-trigger::after,
-  .hm-hero__logo-wrap::before,
   .hero-arch-portal::before,
   .stn-sku__frame::before,
   .stn-sku__frame::after {

@@ -146,8 +146,8 @@
       <button type="button" class="site-header__menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-header__nav" id="site-nav" aria-label="Hoofdnavigatie">
         <ul class="site-header__links">
-          <li><a href="about/">Over</a></li>
-          <li><a href="services/">Diensten</a></li>
+          <li><a href="about/index.html">Over</a></li>
+          <li><a href="services/index.html">Diensten</a></li>
           <li><a href="portfolio/editorial/index.html">Redactioneel</a></li>
           <li><a href="portfolio/narrative/index.html">Verhalen</a></li>
           <li><a href="portfolio/stationery/index.html">Drukwerk</a></li>
@@ -174,12 +174,14 @@
           type="button"
           class="hm-hero__logo-wrap"
           data-lightbox-open="hm-lightbox"
-          data-lightbox-src="../assets/home/logo-liss-ampuero-hero.webp"
+          data-lightbox-src="../assets/home/logo-liss-ampuero-hero.png"
           data-lightbox-alt="Liss Ampuero, digitaal kunstenaar en illustrator gevestigd in België. Handgetekend logo met een geïllustreerde figuur die danst met een penseel en een verfpot."
           aria-haspopup="dialog"
         >
           <img
             src="../assets/home/logo-liss-ampuero-hero.webp"
+            srcset="../assets/home/logo-liss-ampuero-hero.webp 2601w"
+            sizes="(min-width: 80rem) 94rem, calc(100vw - 2rem)"
             alt="Liss Ampuero, digitaal kunstenaar en illustrator gevestigd in België. Handgetekend logo met een geïllustreerde figuur die danst met een penseel en een verfpot."
             class="hm-hero__logo"
             width="1800"
@@ -209,14 +211,14 @@
 
           <article class="hm-room" aria-labelledby="hm-room-child">
         <header class="hm-room__masthead">
-          <p class="hm-kicker">Hoofdstuk 01</p>
+          <p class="hm-kicker">Hoofdstuk I</p>
           <h3 class="hm-section-title" id="hm-room-child">Kinderboekillustratie</h3>
           <div class="hm-divider" aria-hidden="true"></div>
           <p class="hm-body">Prentenboeken en narratieve platen. Verschillende technieken, één blik.</p>
         </header>
 
             <div class="hm-room__row">
-          <figure class="hm-look hm-look--spread">
+          <figure class="hm-look hm-look--spread hm-look--spotlit">
             <div class="hm-look__frame">
               <button
                 type="button"
@@ -246,7 +248,7 @@
             </figcaption>
           </figure>
 
-          <figure class="hm-look hm-look--spread">
+          <figure class="hm-look hm-look--spread hm-look--spotlit">
             <div class="hm-look__frame">
               <button
                 type="button"
@@ -276,7 +278,7 @@
             </figcaption>
           </figure>
 
-          <figure class="hm-look hm-look--spread">
+          <figure class="hm-look hm-look--spread hm-look--spotlit">
             <div class="hm-look__frame">
               <button
                 type="button"
@@ -559,7 +561,7 @@
 
           <article class="hm-room" aria-labelledby="hm-room-pattern">
         <header class="hm-room__masthead">
-          <p class="hm-kicker">Hoofdstuk 02</p>
+          <p class="hm-kicker">Hoofdstuk II</p>
           <h3 class="hm-section-title" id="hm-room-pattern">Pattern</h3>
           <div class="hm-divider" aria-hidden="true"></div>
           <p class="hm-body">Oppervlaktedesign voor textiel, papier en werelden die zich herhalen.</p>
@@ -601,7 +603,7 @@
 
           <article class="hm-room" aria-labelledby="hm-room-pop">
         <header class="hm-room__masthead">
-          <p class="hm-kicker">Hoofdstuk 03</p>
+          <p class="hm-kicker">Hoofdstuk III</p>
           <h3 class="hm-section-title" id="hm-room-pop">Pop</h3>
           <div class="hm-divider" aria-hidden="true"></div>
           <p class="hm-body">Citruskleur, grafische lijn en bijzonder ontwerp.</p>
@@ -1199,21 +1201,37 @@
     </section>
 
 
-    <section class="hm-band hm-services-teaser" id="services-teaser" aria-labelledby="services-teaser-title">
+    <section
+      class="hm-band hm-services-teaser"
+      aria-labelledby="about-storytelling-title contact-commissions-title"
+    >
       <div class="hm-container hm-container--wide">
 
-        <div class="hm-services-teaser__layout">
-          <div>
-            <p class="hm-kicker">Diensten</p>
-            <h2 class="hm-section-title" id="services-teaser-title">Illustratie &amp; artdirectie</h2>
+        <div class="hm-services-teaser__grid">
+          <div class="hm-services-teaser__col" id="about-storytelling">
+            <p class="hm-kicker">Studio</p>
+            <h2 class="hm-section-title" id="about-storytelling-title">Over mij &amp; visueel verhalen</h2>
             <p class="hm-services-teaser__slogan">Ideeën. Inkt. Impact.</p>
             <p class="hm-services-teaser__body">
               Eén studio voor redactie, personage, merk en papier.
               Elke briefing wordt een beeld dat verkoopt, leert, verrast en blijft hangen.
             </p>
+            <div class="hm-services-teaser__cta">
+              <a href="about/index.html" class="hm-btn-primary">Over Liss</a>
+              <a href="services/index.html" class="hm-btn-primary">Ontdek diensten</a>
+            </div>
           </div>
-          <div class="hm-services-teaser__cta">
-            <a href="services/" class="hm-btn-primary">Ontdek diensten</a>
+
+          <div class="hm-services-teaser__col" id="contact-commissions">
+            <p class="hm-kicker">Opdrachten</p>
+            <h2 class="hm-section-title" id="contact-commissions-title">Contact &amp; opdrachten</h2>
+            <p class="hm-services-teaser__body">
+              Uitgevers, bureaus en merken: start een gesprek over je volgende kinderboek,
+              personagewereld of geïllustreerde campagne.
+            </p>
+            <div class="hm-services-teaser__cta">
+              <a href="contact/index.html" class="hm-btn-primary">Start een project</a>
+            </div>
           </div>
         </div>
 
@@ -1240,8 +1258,8 @@
         <p class="site-footer__nav-title">Ontdek</p>
         <ul class="site-footer__links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about/">Over</a></li>
-          <li><a href="services/">Diensten</a></li>
+          <li><a href="about/index.html">Over</a></li>
+          <li><a href="services/index.html">Diensten</a></li>
           <li><a href="portfolio/editorial/index.html">Redactioneel</a></li>
           <li><a href="portfolio/narrative/index.html">Verhalen</a></li>
           <li><a href="portfolio/stationery/index.html">Drukwerk</a></li>

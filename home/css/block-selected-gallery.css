@@ -94,22 +94,59 @@
   margin-inline: auto;
 }
 
-/* Artwork now reads as a printed plate resting on the page — soft at rest,
-   lifts with a deeper, warm-tinted shadow on hover/focus. */
+/* Museum wall — overhead spot, cast shadow, top-left catch light */
 .hm-look__frame {
   position: relative;
   overflow: visible;
   background: transparent;
-  border-radius: 3px;
-  box-shadow: var(--shadow-soft, 0 4px 14px rgb(17 17 17 / 0.06));
+  border-radius: 2px;
+  box-shadow:
+    1px 3px 6px rgb(17 17 17 / 0.1),
+    3px 12px 22px rgb(17 17 17 / 0.16),
+    5px 24px 44px -6px rgb(17 17 17 / 0.22);
   transition: transform 0.5s var(--ease-organic, ease), box-shadow 0.5s var(--ease-organic, ease);
   line-height: 0;
 }
 
+/* Soft pool of light on the wall above — like a track spot */
+.hm-look__frame::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  top: -32%;
+  left: 50%;
+  width: 88%;
+  height: 42%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse 100% 100% at 50% 100%,
+    rgb(255 255 255 / 0.62) 0%,
+    rgb(255 253 247 / 0.28) 38%,
+    rgb(255 253 247 / 0.06) 62%,
+    transparent 82%
+  );
+  filter: blur(12px);
+}
+
 .hm-look__frame:hover,
 .hm-look__frame:focus-within {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lifted, 0 24px 48px -12px rgb(17 17 17 / 0.18));
+  transform: translateY(-3px);
+  box-shadow:
+    2px 5px 8px rgb(17 17 17 / 0.12),
+    4px 16px 30px rgb(17 17 17 / 0.2),
+    7px 30px 56px -6px rgb(17 17 17 / 0.28);
+}
+
+.hm-look__frame:hover::before,
+.hm-look__frame:focus-within::before {
+  background: radial-gradient(
+    ellipse 100% 100% at 50% 100%,
+    rgb(255 255 255 / 0.72) 0%,
+    rgb(255 253 247 / 0.34) 38%,
+    rgb(255 253 247 / 0.08) 62%,
+    transparent 82%
+  );
 }
 
 .hm-look__trigger {
@@ -118,8 +155,128 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-radius: inherit;
+  border-radius: 2px;
   cursor: zoom-in;
+  box-shadow: inset 1px 1px 0 rgb(255 255 255 / 0.14);
+}
+
+/* Catch light upper-left; falloff on right edge and base (cast shadow) */
+.hm-look__trigger::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    radial-gradient(
+      ellipse 62% 52% at 0% 0%,
+      rgb(255 255 255 / 0.32) 0%,
+      rgb(255 253 247 / 0.1) 46%,
+      transparent 74%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 70%,
+      rgb(17 17 17 / 0.05) 88%,
+      rgb(17 17 17 / 0.13) 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 66%,
+      rgb(17 17 17 / 0.07) 84%,
+      rgb(17 17 17 / 0.2) 100%
+    );
+}
+
+.hm-look__frame:hover .hm-look__trigger::after,
+.hm-look__frame:focus-within .hm-look__trigger::after {
+  background:
+    radial-gradient(
+      ellipse 62% 52% at 0% 0%,
+      rgb(255 255 255 / 0.38) 0%,
+      rgb(255 253 247 / 0.12) 46%,
+      transparent 74%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 70%,
+      rgb(17 17 17 / 0.06) 88%,
+      rgb(17 17 17 / 0.15) 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 66%,
+      rgb(17 17 17 / 0.09) 84%,
+      rgb(17 17 17 / 0.24) 100%
+    );
+}
+
+/* Nunca estoy solo — hero spreads: stronger gallery spot (Storm / Held / Into) */
+.hm-look--spotlit .hm-look__frame {
+  box-shadow:
+    2px 5px 10px rgb(17 17 17 / 0.14),
+    5px 18px 36px rgb(17 17 17 / 0.22),
+    8px 36px 64px -4px rgb(17 17 17 / 0.32);
+}
+
+.hm-look--spotlit .hm-look__frame::before {
+  top: -38%;
+  width: 96%;
+  height: 48%;
+  filter: blur(16px);
+  background: radial-gradient(
+    ellipse 100% 100% at 50% 100%,
+    rgb(255 255 255 / 0.88) 0%,
+    rgb(255 253 247 / 0.45) 34%,
+    rgb(255 253 247 / 0.12) 58%,
+    transparent 84%
+  );
+}
+
+.hm-look--spotlit .hm-look__trigger {
+  box-shadow: inset 2px 2px 0 rgb(255 255 255 / 0.22);
+}
+
+.hm-look--spotlit .hm-look__trigger::after {
+  background:
+    radial-gradient(
+      ellipse 68% 58% at 0% 0%,
+      rgb(255 255 255 / 0.48) 0%,
+      rgb(255 253 247 / 0.16) 44%,
+      transparent 72%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 62%,
+      rgb(17 17 17 / 0.08) 86%,
+      rgb(17 17 17 / 0.22) 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 60%,
+      rgb(17 17 17 / 0.1) 82%,
+      rgb(17 17 17 / 0.32) 100%
+    );
+}
+
+.hm-look--spotlit .hm-look__frame:hover,
+.hm-look--spotlit .hm-look__frame:focus-within {
+  box-shadow:
+    3px 8px 14px rgb(17 17 17 / 0.16),
+    6px 22px 44px rgb(17 17 17 / 0.26),
+    10px 42px 76px -4px rgb(17 17 17 / 0.38);
+}
+
+.hm-look--spotlit .hm-look__frame:hover::before,
+.hm-look--spotlit .hm-look__frame:focus-within::before {
+  background: radial-gradient(
+    ellipse 100% 100% at 50% 100%,
+    rgb(255 255 255 / 0.95) 0%,
+    rgb(255 253 247 / 0.52) 34%,
+    rgb(255 253 247 / 0.14) 58%,
+    transparent 84%
+  );
 }
 
 .hm-look__trigger:focus-visible {
@@ -136,7 +293,7 @@
 
 .hm-look__frame:hover img,
 .hm-look__trigger:focus-visible img {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 .hm-look__hint {
@@ -341,8 +498,6 @@
   .hm-look__frame img,
   .hm-look__frame:hover,
   .hm-look__frame:hover img,
-  .hm-hero__logo-wrap,
-  .hm-hero__logo-wrap:hover,
   .hm-clean-card,
   .hm-btn-primary {
     transform: none;

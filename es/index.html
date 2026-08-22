@@ -146,8 +146,8 @@
       <button type="button" class="site-header__menu-btn" aria-expanded="false" aria-controls="site-nav">Menú</button>
       <nav class="site-header__nav" id="site-nav" aria-label="Navegación principal">
         <ul class="site-header__links">
-          <li><a href="about/">Sobre</a></li>
-          <li><a href="services/">Servicios</a></li>
+          <li><a href="about/index.html">Sobre</a></li>
+          <li><a href="services/index.html">Servicios</a></li>
           <li><a href="portfolio/editorial/index.html">Editorial</a></li>
           <li><a href="portfolio/narrative/index.html">Narrativa</a></li>
           <li><a href="portfolio/stationery/index.html">Papelería</a></li>
@@ -174,12 +174,14 @@
           type="button"
           class="hm-hero__logo-wrap"
           data-lightbox-open="hm-lightbox"
-          data-lightbox-src="../assets/home/logo-liss-ampuero-hero.webp"
+          data-lightbox-src="../assets/home/logo-liss-ampuero-hero.png"
           data-lightbox-alt="Liss Ampuero, artista digital e ilustradora con base en Bélgica. Logotipo hecho a mano con una figura ilustrada que baila con un pincel y un bote de pintura."
           aria-haspopup="dialog"
         >
           <img
             src="../assets/home/logo-liss-ampuero-hero.webp"
+            srcset="../assets/home/logo-liss-ampuero-hero.webp 2601w"
+            sizes="(min-width: 80rem) 94rem, calc(100vw - 2rem)"
             alt="Liss Ampuero, artista digital e ilustradora con base en Bélgica. Logotipo hecho a mano con una figura ilustrada que baila con un pincel y un bote de pintura."
             class="hm-hero__logo"
             width="1800"
@@ -209,14 +211,14 @@
 
           <article class="hm-room" aria-labelledby="hm-room-child">
         <header class="hm-room__masthead">
-          <p class="hm-kicker">Capítulo 01</p>
+          <p class="hm-kicker">Capítulo I</p>
           <h3 class="hm-section-title" id="hm-room-child">Ilustración de libro infantil</h3>
           <div class="hm-divider" aria-hidden="true"></div>
           <p class="hm-body">Libros ilustrados y láminas narrativas. Distintas técnicas, una misma mirada.</p>
         </header>
 
             <div class="hm-room__row">
-          <figure class="hm-look hm-look--spread">
+          <figure class="hm-look hm-look--spread hm-look--spotlit">
             <div class="hm-look__frame">
               <button
                 type="button"
@@ -246,7 +248,7 @@
             </figcaption>
           </figure>
 
-          <figure class="hm-look hm-look--spread">
+          <figure class="hm-look hm-look--spread hm-look--spotlit">
             <div class="hm-look__frame">
               <button
                 type="button"
@@ -276,7 +278,7 @@
             </figcaption>
           </figure>
 
-          <figure class="hm-look hm-look--spread">
+          <figure class="hm-look hm-look--spread hm-look--spotlit">
             <div class="hm-look__frame">
               <button
                 type="button"
@@ -559,7 +561,7 @@
 
           <article class="hm-room" aria-labelledby="hm-room-pattern">
         <header class="hm-room__masthead">
-          <p class="hm-kicker">Capítulo 02</p>
+          <p class="hm-kicker">Capítulo II</p>
           <h3 class="hm-section-title" id="hm-room-pattern">Pattern</h3>
           <div class="hm-divider" aria-hidden="true"></div>
           <p class="hm-body">Diseño de superficie para textil, papel y mundos que se repiten.</p>
@@ -601,7 +603,7 @@
 
           <article class="hm-room" aria-labelledby="hm-room-pop">
         <header class="hm-room__masthead">
-          <p class="hm-kicker">Capítulo 03</p>
+          <p class="hm-kicker">Capítulo III</p>
           <h3 class="hm-section-title" id="hm-room-pop">Pop</h3>
           <div class="hm-divider" aria-hidden="true"></div>
           <p class="hm-body">Color cítrico, línea gráfica y diseño especial.</p>
@@ -1198,21 +1200,37 @@
       </div>
     </section>
 
-    <section class="hm-band hm-services-teaser" id="services-teaser" aria-labelledby="services-teaser-title">
+    <section
+      class="hm-band hm-services-teaser"
+      aria-labelledby="about-storytelling-title contact-commissions-title"
+    >
       <div class="hm-container hm-container--wide">
 
-        <div class="hm-services-teaser__layout">
-          <div>
-            <p class="hm-kicker">Servicios</p>
-            <h2 class="hm-section-title" id="services-teaser-title">Servicios de ilustración y dirección de arte</h2>
+        <div class="hm-services-teaser__grid">
+          <div class="hm-services-teaser__col" id="about-storytelling">
+            <p class="hm-kicker">Estudio</p>
+            <h2 class="hm-section-title" id="about-storytelling-title">Sobre mí e ilustración visual</h2>
             <p class="hm-services-teaser__slogan">Ideas. Tinta. Impacto.</p>
             <p class="hm-services-teaser__body">
               Un solo estudio para editorial, personaje, marca y papel.
               Cada encargo se convierte en una pieza visual que vende, enseña, encanta y permanece.
             </p>
+            <div class="hm-services-teaser__cta">
+              <a href="about/index.html" class="hm-btn-primary">Sobre Liss</a>
+              <a href="services/index.html" class="hm-btn-primary">Explorar servicios</a>
+            </div>
           </div>
-          <div class="hm-services-teaser__cta">
-            <a href="services/" class="hm-btn-primary">Explorar servicios</a>
+
+          <div class="hm-services-teaser__col" id="contact-commissions">
+            <p class="hm-kicker">Encargos</p>
+            <h2 class="hm-section-title" id="contact-commissions-title">Contacto y encargos</h2>
+            <p class="hm-services-teaser__body">
+              Editoriales, agencias y marcas: inicia una conversación sobre tu próximo libro infantil,
+              universo de personajes o campaña ilustrada.
+            </p>
+            <div class="hm-services-teaser__cta">
+              <a href="contact/index.html" class="hm-btn-primary">Iniciar un proyecto</a>
+            </div>
           </div>
         </div>
 
@@ -1239,8 +1257,8 @@
         <p class="site-footer__nav-title">Explorar</p>
         <ul class="site-footer__links">
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="about/">Sobre</a></li>
-          <li><a href="services/">Servicios</a></li>
+          <li><a href="about/index.html">Sobre</a></li>
+          <li><a href="services/index.html">Servicios</a></li>
           <li><a href="portfolio/editorial/index.html">Editorial</a></li>
           <li><a href="portfolio/narrative/index.html">Narrativa</a></li>
           <li><a href="portfolio/stationery/index.html">Papelería</a></li>

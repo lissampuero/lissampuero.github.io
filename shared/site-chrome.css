@@ -15,6 +15,7 @@
 }
 
 .site-header__inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,8 +64,11 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
+  left: 50%;
+  right: auto;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: 201;
   flex-direction: column;
   gap: 1.25rem;
   padding: 1.25rem clamp(1.25rem, 4vw, 3rem) 1.5rem;
@@ -79,6 +83,9 @@
   .site-header__nav {
     display: flex;
     position: static;
+    left: auto;
+    width: auto;
+    transform: none;
     flex-direction: row;
     align-items: center;
     gap: 1.5rem;

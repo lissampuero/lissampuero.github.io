@@ -156,8 +156,8 @@
       <button type="button" class="site-header__menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-header__nav" id="site-nav" aria-label="Main navigation">
         <ul class="site-header__links">
-          <li><a href="about/">About</a></li>
-          <li><a href="services/">Services</a></li>
+          <li><a href="about/index.html">About</a></li>
+          <li><a href="services/index.html">Services</a></li>
           <li><a href="portfolio/editorial/index.html">Editorial</a></li>
           <li><a href="portfolio/narrative/index.html">Narrative</a></li>
           <li><a href="portfolio/stationery/index.html">Stationery</a></li>
@@ -187,12 +187,14 @@
           type="button"
           class="hm-hero__logo-wrap"
           data-lightbox-open="hm-lightbox"
-          data-lightbox-src="assets/home/logo-liss-ampuero-hero.webp"
+          data-lightbox-src="assets/home/logo-liss-ampuero-hero.png"
           data-lightbox-alt="Liss Ampuero, digital artist and illustrator based in Belgium. Hand-lettered logo with an illustrated figure dancing with a paintbrush and a paint pot."
           aria-haspopup="dialog"
         >
           <img
             src="assets/home/logo-liss-ampuero-hero.webp"
+            srcset="assets/home/logo-liss-ampuero-hero.webp 2601w"
+            sizes="(min-width: 80rem) 94rem, calc(100vw - 2rem)"
             alt="Liss Ampuero, digital artist and illustrator based in Belgium. Hand-lettered logo with an illustrated figure dancing with a paintbrush and a paint pot."
             class="hm-hero__logo"
             width="1800"
@@ -226,14 +228,14 @@
 
           <article class="hm-room" aria-labelledby="hm-room-child">
         <header class="hm-room__masthead">
-          <p class="hm-kicker">Chapter 01</p>
+          <p class="hm-kicker">Chapter I</p>
           <h3 class="hm-section-title" id="hm-room-child">Children's book illustration</h3>
           <div class="hm-divider" aria-hidden="true"></div>
           <p class="hm-body">Picture books and narrative plates. Different techniques, one way of seeing.</p>
         </header>
 
             <div class="hm-room__row">
-          <figure class="hm-look hm-look--spread">
+          <figure class="hm-look hm-look--spread hm-look--spotlit">
             <div class="hm-look__frame">
               <button
                 type="button"
@@ -263,7 +265,7 @@
             </figcaption>
           </figure>
 
-          <figure class="hm-look hm-look--spread">
+          <figure class="hm-look hm-look--spread hm-look--spotlit">
             <div class="hm-look__frame">
               <button
                 type="button"
@@ -293,7 +295,7 @@
             </figcaption>
           </figure>
 
-          <figure class="hm-look hm-look--spread">
+          <figure class="hm-look hm-look--spread hm-look--spotlit">
             <div class="hm-look__frame">
               <button
                 type="button"
@@ -576,7 +578,7 @@
 
           <article class="hm-room" aria-labelledby="hm-room-pattern">
         <header class="hm-room__masthead">
-          <p class="hm-kicker">Chapter 02</p>
+          <p class="hm-kicker">Chapter II</p>
           <h3 class="hm-section-title" id="hm-room-pattern">Pattern</h3>
           <div class="hm-divider" aria-hidden="true"></div>
           <p class="hm-body">Surface design for textile, paper, and worlds that repeat.</p>
@@ -618,7 +620,7 @@
 
           <article class="hm-room" aria-labelledby="hm-room-pop">
         <header class="hm-room__masthead">
-          <p class="hm-kicker">Chapter 03</p>
+          <p class="hm-kicker">Chapter III</p>
           <h3 class="hm-section-title" id="hm-room-pop">Pop</h3>
           <div class="hm-divider" aria-hidden="true"></div>
           <p class="hm-body">Citrus colour, graphic line, and special design.</p>
@@ -1219,11 +1221,14 @@
     <!-- ================================================================
          ABOUT & CONTACT — storytelling + commissions CTA (SEO plan §3)
          ================================================================ -->
-    <section class="hm-band hm-services-teaser" id="about-storytelling" aria-labelledby="about-storytelling-title">
+    <section
+      class="hm-band hm-services-teaser"
+      aria-labelledby="about-storytelling-title contact-commissions-title"
+    >
       <div class="hm-container hm-container--wide">
 
-        <div class="hm-services-teaser__layout">
-          <div>
+        <div class="hm-services-teaser__grid">
+          <div class="hm-services-teaser__col" id="about-storytelling">
             <p class="hm-kicker">Studio</p>
             <h2 class="hm-section-title" id="about-storytelling-title">About &amp; Visual Storytelling</h2>
             <p class="hm-services-teaser__slogan">Ideas. Ink. Impact.</p>
@@ -1231,31 +1236,25 @@
               One studio across editorial, character, brand, and paper.
               Every brief becomes a visual that sells, teaches, delights, and endures.
             </p>
+            <div class="hm-services-teaser__cta">
+              <a href="about/index.html" class="hm-btn-primary">About Liss</a>
+              <a href="services/index.html" class="hm-btn-primary">Explore Services</a>
+            </div>
           </div>
-          <div class="hm-services-teaser__cta">
-            <a href="about/" class="hm-btn-primary">About Liss</a>
-            <a href="services/" class="hm-btn-primary">Explore Services</a>
-          </div>
-        </div>
 
-      </div>
-    </section>
-
-    <section class="hm-band hm-services-teaser" id="contact-commissions" aria-labelledby="contact-commissions-title">
-      <div class="hm-container hm-container--wide">
-        <div class="hm-services-teaser__layout">
-          <div>
+          <div class="hm-services-teaser__col" id="contact-commissions">
             <p class="hm-kicker">Commissions</p>
             <h2 class="hm-section-title" id="contact-commissions-title">Contact &amp; Commissions</h2>
             <p class="hm-services-teaser__body">
-              Publishers, agencies, and brands — start a conversation about your next children's book,
+              Publishers, agencies, and brands: start a conversation about your next children's book,
               character world, or illustrated campaign.
             </p>
-          </div>
-          <div class="hm-services-teaser__cta">
-            <a href="contact/index.html" class="hm-btn-primary">Start a Project</a>
+            <div class="hm-services-teaser__cta">
+              <a href="contact/index.html" class="hm-btn-primary">Start a Project</a>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -1279,8 +1278,8 @@
         <p class="site-footer__nav-title">Explore</p>
         <ul class="site-footer__links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about/">About</a></li>
-          <li><a href="services/">Services</a></li>
+          <li><a href="about/index.html">About</a></li>
+          <li><a href="services/index.html">Services</a></li>
           <li><a href="portfolio/editorial/index.html">Editorial</a></li>
           <li><a href="portfolio/narrative/index.html">Narrative</a></li>
           <li><a href="portfolio/stationery/index.html">Stationery</a></li>

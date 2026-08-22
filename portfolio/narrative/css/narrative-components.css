@@ -23,6 +23,20 @@
 
 .nar-container--wide { max-width: 80rem; }
 
+.nar-close {
+  background: var(--citrus-cream);
+  text-align: center;
+  padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.nar-close .nar-container {
+  max-width: 44rem;
+}
+
+.nar-close .nar-body {
+  margin: 0 auto 1.5rem;
+}
+
 .nar-kicker {
   font-family: var(--ab-sans, 'Inter', sans-serif);
   text-transform: uppercase;
