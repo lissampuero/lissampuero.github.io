@@ -191,18 +191,25 @@
           data-lightbox-alt="Liss Ampuero, digital artist and illustrator based in Belgium. Hand-lettered logo with an illustrated figure dancing with a paintbrush and a paint pot."
           aria-haspopup="dialog"
         >
-          <img
-            src="assets/home/logo-liss-ampuero-hero.webp"
-            srcset="assets/home/logo-liss-ampuero-hero.webp 1601w"
-            sizes="(min-width: 80rem) 94rem, 100vw"
-            alt="Liss Ampuero, digital artist and illustrator based in Belgium. Hand-lettered logo with an illustrated figure dancing with a paintbrush and a paint pot."
-            class="hm-hero__logo"
-            width="1601"
-            height="465"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          />
+          <picture class="hm-hero__logo-picture">
+            <source
+              media="(max-width: 47.99rem)"
+              srcset="assets/home/logo-liss-ampuero-hero-mobile.webp"
+              type="image/webp"
+            />
+            <img
+              src="assets/home/logo-liss-ampuero-hero.webp"
+              srcset="assets/home/logo-liss-ampuero-hero.webp 2601w"
+              sizes="(min-width: 80rem) 94rem, calc(100vw - 2rem)"
+              alt="Liss Ampuero, digital artist and illustrator based in Belgium. Hand-lettered logo with an illustrated figure dancing with a paintbrush and a paint pot."
+              class="hm-hero__logo"
+              width="1800"
+              height="643"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
           <span class="hm-look__hint">Click to enlarge</span>
         </button>
         <p class="hm-hero__slogan">Worlds you can step into.</p>

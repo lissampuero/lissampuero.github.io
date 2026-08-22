@@ -38,6 +38,11 @@
   outline-offset: 6px;
 }
 
+.hm-hero__logo-picture {
+  display: block;
+  width: 100%;
+}
+
 .hm-hero__logo {
   width: 100%;
   height: auto;
@@ -90,10 +95,15 @@
     transform: none;
   }
 
-  .hm-hero__logo {
+  .hm-hero__logo-picture {
     width: 100vw;
-    max-width: none;
     margin-left: calc(50% - 50vw);
+  }
+
+  .hm-hero__logo {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
     transform: none;
   }
 
