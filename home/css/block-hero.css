@@ -64,3 +64,48 @@
   color: #525252; margin-top: 1.25rem;
   letter-spacing: 0.02em;
 }
+
+/* Mobile — wide wordmark: width-fit is ~29vw tall; oversize width + center clip for presence */
+@media (max-width: 47.99rem) {
+  .hm-hero {
+    overflow-x: clip;
+    padding-top: 0.25rem;
+    padding-bottom: 1.35rem;
+  }
+
+  .hm-hero > .hm-container--wide {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hm-hero__logo-wrap {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.65rem;
+  }
+
+  .hm-hero__logo-wrap:hover {
+    transform: none;
+  }
+
+  .hm-hero__logo {
+    width: 162vw;
+    max-width: none;
+    margin-left: calc(50% - 81vw);
+    transform: none;
+  }
+
+  .hm-hero__slogan {
+    margin-top: 0.1rem;
+    font-size: clamp(1.5rem, 4.2vw, 1.85rem);
+  }
+}
+
+@media (max-width: 47.99rem) and (prefers-reduced-motion: reduce) {
+  .hm-hero__logo {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}

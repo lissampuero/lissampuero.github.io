@@ -92,6 +92,7 @@
 .stn-sheet__stage {
   position: relative;
   isolation: isolate;
+  container-type: inline-size;
   aspect-ratio: 4 / 3.2;
   overflow: hidden;
   background-color: #fbf3ea;
@@ -215,6 +216,7 @@
   top: 4%;
   width: 44%;
   height: 84%;
+  container-type: inline-size;
   background-color: #f7fbff;
   background-image:
     linear-gradient(#c9dced 1px, transparent 1px),
@@ -231,14 +233,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 1.8cqw;
   margin: 0;
   background: none;
   color: #f4a3c4;
   text-align: center;
   font-family: var(--stn-sans, Inter, sans-serif);
   font-weight: 500;
-  font-size: clamp(0.5rem, 1.05vw, 0.72rem);
+  font-size: 5.2cqw;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   line-height: 1.15;
@@ -246,22 +248,22 @@
 }
 
 .stn-sheet__pad-head {
-  padding: 0.85rem 0.6rem 0.35rem;
+  padding: 6.2cqw 4.4cqw 2.6cqw;
 }
 
 .stn-sheet__pad-foot {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0.35rem;
-  padding: 0.35rem 0.6rem 0.7rem;
+  bottom: 2.6cqw;
+  padding: 2.6cqw 4.4cqw 5.2cqw;
   pointer-events: none;
 }
 
 .stn-sheet__swirl {
   display: block;
-  width: 0.95rem;
-  height: 0.95rem;
+  width: 4.3cqw;
+  height: 4.3cqw;
   flex: 0 0 auto;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%232d5c4a' stroke-width='2.1' stroke-linecap='round'%3E%3Cpath d='M7 24c1-9 17-7 17-17M9 9c7 .5 12 5 12 12'/%3E%3C/svg%3E");
   background-size: contain;
@@ -275,7 +277,7 @@
 .stn-sheet__stickers {
   position: absolute;
   z-index: 1;
-  inset: 2.2rem 0.55rem 2.2rem;
+  inset: 8.8% 1.76% 8.8% 1.76%;
 }
 
 .stn-sheet__sticker {
@@ -296,7 +298,7 @@
 
 .stn-sheet__sticker--witch {
   top: 4%;
-  right: calc(1% + 2.35rem);
+  right: 8.5%;
   width: 39%;
   transform: rotate(5deg);
 }
@@ -375,10 +377,10 @@
   position: absolute;
   z-index: 6;
   margin: 0;
-  padding: 0.4rem 1rem 0.5rem;
+  padding: 1.3cqw 3.2cqw 1.6cqw;
   font-family: var(--ab-script, Caveat, cursive);
   font-weight: 700;
-  font-size: clamp(1.2rem, 2.6vw, 1.95rem);
+  font-size: 6.2cqw;
   line-height: 0.95;
   letter-spacing: 0.02em;
   color: #fff;
@@ -393,10 +395,10 @@
 .stn-sheet__bubble::after {
   content: "";
   position: absolute;
-  left: 0.55rem;
-  bottom: -0.32rem;
-  width: 0.72rem;
-  height: 0.72rem;
+  left: 1.76cqw;
+  bottom: -1cqw;
+  width: 2.3cqw;
+  height: 2.3cqw;
   background: inherit;
   border-radius: 0 0 0.12rem 0.12rem;
   transform: rotate(28deg);
@@ -438,9 +440,6 @@
   .stn-sheet__pad { width: 48%; left: 2%; }
   .stn-sheet__shop { width: 42%; }
   .stn-sheet__logo { width: 82%; }
-  .stn-sheet__bubble { font-size: 1.02rem; padding: 0.26rem 0.65rem 0.32rem; }
-  .stn-sheet__pad-head,
-  .stn-sheet__pad-foot { letter-spacing: 0.16em; font-size: 0.52rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1450,6 +1449,7 @@
   line-height: 0;
   border-radius: 0.15rem;
   overflow: hidden;
+  container-type: inline-size;
   box-shadow: 0 0.85rem 1.8rem -0.4rem rgb(42 28 48 / 0.22);
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -1475,15 +1475,15 @@
 
 .stn-compose__hint {
   position: absolute;
-  right: 0.75rem;
-  bottom: 0.75rem;
+  right: 2.5cqw;
+  bottom: 2.5cqw;
   z-index: 2;
-  padding: 0.35rem 0.65rem;
+  padding: 1.2cqw 2.2cqw;
   border-radius: 0.15rem;
   background: rgb(255 255 255 / 0.92);
   color: #2a1c30;
   font-family: var(--stn-sans, inherit);
-  font-size: 0.72rem;
+  font-size: 2.4cqw;
   letter-spacing: 0.04em;
   line-height: 1.2;
   opacity: 0;
@@ -1540,12 +1540,14 @@
   min-width: 0;
 }
 
+/* Sheet is the scale reference — art + month/grid track together at every width */
 .stn-calpage__sheet {
   position: relative;
   display: flex;
   flex-direction: column;
+  container-type: inline-size;
   background: #fff;
-  padding: 1.15rem 0.85rem 0.85rem;
+  padding: 6.6cqw 4.9cqw 4.9cqw;
   box-shadow:
     0 1px 0 rgb(42 24 48 / 0.04),
     0 10px 28px rgb(42 24 48 / 0.1);
@@ -1553,9 +1555,9 @@
 
 .stn-calpage__hole {
   display: block;
-  width: 0.55rem;
-  height: 0.55rem;
-  margin: 0 auto 0.85rem;
+  width: 3.1cqw;
+  height: 3.1cqw;
+  margin: 0 auto 4.9cqw;
   border-radius: 50%;
   background: #e8e0d4;
   box-shadow:
@@ -1594,28 +1596,28 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: 0.85rem;
-  min-height: 4.75rem;
+  gap: 4.3cqw;
+  margin-top: 4.9cqw;
+  min-height: 27cqw;
 }
 
 .stn-calpage__month {
   font-family: var(--stn-sans, Inter, sans-serif);
-  font-size: 0.72rem;
+  font-size: 4.1cqw;
   font-weight: 700;
   letter-spacing: 0.01em;
   text-transform: lowercase;
   color: #1a1a1a;
   line-height: 1.2;
-  padding-top: 0.05rem;
+  padding-top: 0.2cqw;
 }
 
 .stn-calpage__grid {
   border-collapse: collapse;
   table-layout: fixed;
-  width: 7.1rem;
+  width: 40.6cqw;
   font-family: var(--stn-sans, Inter, sans-serif);
-  font-size: 0.48rem;
+  font-size: 2.74cqw;
   font-weight: 500;
   line-height: 1;
   color: #1a1a1a;
@@ -1624,7 +1626,7 @@
 
 .stn-calpage__grid th,
 .stn-calpage__grid td {
-  padding: 0.14rem 0;
+  padding: 0.8cqw 0;
   width: 14.28%;
   font-weight: 500;
 }
@@ -1632,7 +1634,7 @@
 .stn-calpage__grid th {
   font-weight: 700;
   letter-spacing: 0.02em;
-  padding-bottom: 0.28rem;
+  padding-bottom: 1.6cqw;
 }
 
 .stn-calpage__grid td.is-empty {
@@ -2245,6 +2247,7 @@
 }
 
 .stn-magbook__book {
+  container-type: inline-size;
   display: flex;
   align-items: stretch;
   width: 100%;
@@ -2255,7 +2258,7 @@
 }
 
 .stn-magbook__spine {
-  flex: 0 0 clamp(1.65rem, 5vw, 2.15rem);
+  flex: 0 0 8.6cqw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2289,19 +2292,19 @@
 }
 
 .stn-magbook__spine-brand {
-  font-size: clamp(0.42rem, 1.1vw, 0.58rem);
+  font-size: 2.32cqw;
   font-weight: 500;
   letter-spacing: 0.16em;
 }
 
 .stn-magbook__spine-title {
-  font-size: clamp(0.48rem, 1.25vw, 0.68rem);
+  font-size: 2.72cqw;
   font-weight: 700;
   letter-spacing: 0.22em;
 }
 
 .stn-magbook__spine-num {
-  font-size: clamp(0.38rem, 1vw, 0.5rem);
+  font-size: 2cqw;
   font-weight: 500;
   letter-spacing: 0.14em;
 }
@@ -2354,16 +2357,6 @@
 @media (max-width: 40rem) {
   .stn-magbook {
     max-width: 22rem;
-  }
-
-  .stn-magbook__spine {
-    flex-basis: 1.45rem;
-  }
-
-  .stn-magbook__spine-brand,
-  .stn-magbook__spine-title,
-  .stn-magbook__spine-num {
-    font-size: 0.36rem;
   }
 }
 
