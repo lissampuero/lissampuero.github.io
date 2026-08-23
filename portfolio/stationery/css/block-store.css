@@ -1515,7 +1515,8 @@
 
 /* Wall calendar plates — hang hole, art, month + grid */
 .stn-wallcal-set {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: none;
   margin: 0 auto;
@@ -1529,23 +1530,26 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(0.85rem, 2.2vw, 1.5rem) clamp(0.75rem, 2vw, 1.25rem);
+  flex: 1 1 auto;
   width: 100%;
   margin: 0;
   padding: clamp(0.85rem, 2.2vw, 1.35rem);
   background: #f3ebe0;
 }
 
+/* Calpage is the scale reference — grid cell width drives cqw for sheet innards */
 .stn-calpage {
   margin: 0;
   min-width: 0;
+  width: 100%;
+  container-type: inline-size;
 }
 
-/* Sheet is the scale reference — art + month/grid track together at every width */
 .stn-calpage__sheet {
   position: relative;
   display: flex;
   flex-direction: column;
-  container-type: inline-size;
+  width: 100%;
   background: #fff;
   padding: 6.6cqw 4.9cqw 4.9cqw;
   box-shadow:

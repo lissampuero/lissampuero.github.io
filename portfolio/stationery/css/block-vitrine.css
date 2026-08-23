@@ -275,6 +275,9 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 1 1 16rem;
   max-width: calc(50% - 0.65rem);
   min-width: 0;
@@ -288,9 +291,6 @@
 }
 
 .stn-paper-duo > .stn-magbook {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding-top: 0.65rem;
 }
 
