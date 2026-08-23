@@ -1654,6 +1654,17 @@
     grid-template-columns: 1fr;
     padding: 1rem;
   }
+
+  /* Paper goods duo — keep desktop 2×2 mockup proportions on mobile */
+  #paper .stn-paper-duo > .stn-wallcal-set {
+    max-width: none;
+  }
+
+  #paper .stn-paper-duo .stn-wallcal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(0.85rem, 2.2vw, 1.5rem) clamp(0.75rem, 2vw, 1.25rem);
+    padding: clamp(0.85rem, 2.2vw, 1.35rem);
+  }
 }
 
 .stn-sku__frame {
@@ -2361,6 +2372,11 @@
 @media (max-width: 40rem) {
   .stn-magbook {
     max-width: 22rem;
+  }
+
+  #paper .stn-paper-duo .stn-magbook__book {
+    width: 100%;
+    max-width: 100%;
   }
 }
 

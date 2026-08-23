@@ -521,9 +521,10 @@
 
   #paper .stn-paper-duo > .stn-magbook,
   #paper .stn-paper-duo > .stn-wallcal-set {
+    flex: 0 1 auto;
     max-width: 22rem;
     width: 100%;
-    padding: 0.45rem;
+    padding: 0.65rem;
   }
 }
 
