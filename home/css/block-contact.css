@@ -17,3 +17,28 @@
   color: var(--citrus-fuchsia, #F23C9E);
   border-bottom-color: var(--citrus-fuchsia, #F23C9E);
 }
+
+.hm-form-status {
+  margin-top: 1rem;
+  padding: 0.875rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.hm-form-status--loading {
+  background: rgb(0 0 0 / 0.04);
+  color: #525252;
+}
+
+.hm-form-status--success {
+  background: rgb(196 230 0 / 0.18);
+  color: #111;
+}
+
+.hm-form-status--error {
+  background: rgb(242 65 60 / 0.12);
+  color: #7f1d1d;
+}

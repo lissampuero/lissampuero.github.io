@@ -20,6 +20,14 @@
     }
   }
 
+  function getFocusable(container) {
+    return Array.prototype.slice.call(container.querySelectorAll(
+      'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )).filter(function (el) {
+      return el.offsetParent !== null || el === document.activeElement;
+    });
+  }
+
   function closeLightbox(id) {
     var state = states[id];
     if (!state) return;
@@ -28,6 +36,8 @@
     var x = state.scrollX;
     var y = state.scrollY;
 
+    document.removeEventListener('keydown', state.onKeydown);
+
     if (opener) focusQuiet(opener);
     else if (document.activeElement && lightbox.contains(document.activeElement)) {
       document.activeElement.blur();
@@ -35,7 +45,6 @@
 
     lightbox.hidden = true;
     document.body.style.overflow = '';
-    document.removeEventListener('keydown', state.onKeydown);
     window.scrollTo(x, y);
   }
 
@@ -53,7 +62,26 @@
       };
 
       states[id].onKeydown = function (e) {
-        if (e.key === 'Escape') closeLightbox(id);
+        if (e.key === 'Escape') {
+          closeLightbox(id);
+          return;
+        }
+        if (e.key !== 'Tab') return;
+
+        var panel = lightbox.querySelector('[class*="__panel"]') || lightbox;
+        var focusable = getFocusable(panel);
+        if (focusable.length < 2) return;
+
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       };
 
       lightbox.querySelectorAll('[data-lightbox-close]').forEach(function (el) {

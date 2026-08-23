@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found | Liss Ampuero</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared/utilities.css?v=20260823">
+  <link rel="stylesheet" href="shared/site-chrome.css?v=20260823">
+  <link rel="stylesheet" href="home/css/tokens.css">
+  <link rel="stylesheet" href="home/css/home-base.css">
+  <link rel="stylesheet" href="home/css/home-components.css">
+  <style>
+    .not-found {
+      min-height: 60vh;
+      display: grid;
+      place-content: center;
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+    .not-found__title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 1rem;
+    }
+    .not-found__body {
+      max-width: 32rem;
+      margin: 0 auto 2rem;
+      color: #525252;
+      line-height: 1.6;
+    }
+    .not-found__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    .not-found__links a {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #111;
+      border: 1px solid #111;
+      padding: 0.625rem 1.25rem;
+      border-radius: 2px;
+    }
+    .not-found__links a:hover { background: #111; color: #fff; }
+  </style>
+</head>
+<body class="bg-citrus-cream text-neutral-900 antialiased">
+  <a class="site-skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">Liss Ampuero</a>
+    </div>
+  </header>
+  <main id="main" class="not-found">
+    <p class="hm-kicker">404</p>
+    <h1 class="not-found__title">This page wandered off the map</h1>
+    <p class="not-found__body">The illustration you’re looking for isn’t here — but the portfolio is. Pick a door below.</p>
+    <nav class="not-found__links" aria-label="Helpful links">
+      <a href="index.html">Home</a>
+      <a href="portfolio/editorial/index.html">Editorial</a>
+      <a href="portfolio/narrative/index.html">Narrative</a>
+      <a href="contact/index.html">Contact</a>
+    </nav>
+  </main>
+  <script src="shared/site-analytics.js?v=20260823" defer></script>
+</body>
+</html>

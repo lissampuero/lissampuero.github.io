@@ -20,7 +20,7 @@
   <meta property="og:title" content="Portafolio de ilustración editorial | Liss Ampuero">
   <meta property="og:description" content="Ilustración infantil, diseño de portada, maquetación editorial e ilustración de moda por Liss Ampuero. Portafolio para editoriales y revistas.">
   <meta property="og:url" content="https://lissampuero.com/es/portfolio/editorial/">
-  <meta property="og:image" content="https://lissampuero.com/portfolio/editorial/art/illustration-editorial-feature@2x.jpg">
+  <meta property="og:image" content="https://lissampuero.com/portfolio/editorial/art/illustration-editorial-feature@2x.webp">
   <meta property="og:locale" content="es_ES">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:locale:alternate" content="nl_BE">
@@ -28,15 +28,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Portafolio de ilustración editorial | Liss Ampuero">
   <meta name="twitter:description" content="Ilustración infantil, diseño de portada, maquetación editorial e ilustración de moda por Liss Ampuero. Portafolio para editoriales y revistas.">
-  <meta name="twitter:image" content="https://lissampuero.com/portfolio/editorial/art/illustration-editorial-feature@2x.jpg">
+  <meta name="twitter:image" content="https://lissampuero.com/portfolio/editorial/art/illustration-editorial-feature@2x.webp">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../../../portfolio/editorial/css/fonts.css">
-  <link rel="stylesheet" href="../../../shared/site-chrome.css">
-  <link rel="stylesheet" href="../../../shared/artbook.css">
+  <link rel="stylesheet" href="../../../shared/utilities.css?v=20260823">
+  <link rel="stylesheet" href="../../../shared/site-chrome.css?v=20260823">
+  <link rel="stylesheet" href="../../../shared/artbook.css?v=20260823">
   <link rel="stylesheet" href="../../../portfolio/editorial/css/tokens.css">
   <link rel="stylesheet" href="../../../portfolio/editorial/css/editorial-base.css">
   <link rel="stylesheet" href="../../../portfolio/editorial/css/editorial-components.css">
@@ -57,6 +58,7 @@
   </script>
 </head>
 <body class="antialiased">
+  <a class="site-skip-link" href="#main">Saltar al contenido</a>
 
   <header class="site-header">
     <div class="site-header__inner">
@@ -82,7 +84,7 @@
     </div>
   </header>
 
-  <main class="editorial-page">
+  <main id="main" class="editorial-page">
 
     <div class="ed-night-sky" aria-hidden="true">
       <div class="ed-night-sky__stars"></div>
@@ -119,8 +121,6 @@
           <img
             class="ed-feature-art__img"
             src="../../../portfolio/editorial/art/illustration-editorial-feature@2x.webp"
-            srcset="../../../portfolio/editorial/art/illustration-editorial-feature.webp 1024w, ../../../portfolio/editorial/art/illustration-editorial-feature@2x.webp 2048w"
-            sizes="(min-width: 72rem) 72rem, 92vw"
             alt="Ilustración de Liss Ampuero: una mujer con cabello de fuego alcanza un fénix en la luna, sobre un cielo nocturno en movimiento. Haz clic para ampliar."
             width="2048"
             height="1280"
@@ -147,8 +147,6 @@
               <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/illustration-book-cover@2x.webp" data-lightbox-alt="Portada de The Treasure of the Lake, Liss Ampuero" aria-haspopup="dialog">
                 <img
                   src="../../../portfolio/editorial/art/illustration-book-cover@2x.webp"
-                  srcset="../../../portfolio/editorial/art/illustration-book-cover.webp 1024w, ../../../portfolio/editorial/art/illustration-book-cover@2x.webp 2048w"
-                  sizes="(min-width: 34rem) 34rem, 88vw"
                   alt="Portada de The Treasure of the Lake. Haz clic para ampliar."
                   width="1024"
                   height="741"
@@ -165,59 +163,59 @@
 
         <div class="ed-book-spreads">
           <figure class="ed-book-spread">
-            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-01.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-02.webp" data-lightbox-alt="The Treasure of the Lake, páginas 1 y 2" data-lightbox-alt2="The Treasure of the Lake, página 2" aria-haspopup="dialog">
-              <img src="../../../portfolio/editorial/art/spreads/page-01.webp" alt="The Treasure of the Lake, página 1." width="1507" height="1091" loading="lazy" />
-              <img src="../../../portfolio/editorial/art/spreads/page-02.webp" alt="The Treasure of the Lake, página 2." width="1507" height="1091" loading="lazy" />
-              <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
+            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-01.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-02@2x.webp" data-lightbox-alt="The Treasure of the Lake, pages 1 and 2" data-lightbox-alt2="The Treasure of the Lake, page 2" aria-haspopup="dialog">
+              <img src="../../../portfolio/editorial/art/spreads/page-01.webp" alt="The Treasure of the Lake, page 1." width="1507" height="1091" loading="lazy" />
+              <img src="../../../portfolio/editorial/art/spreads/page-02.webp" alt="The Treasure of the Lake, page 2." width="1507" height="1091" loading="lazy" />
+              <span class="ed-img-trigger__hint">Click to enlarge</span>
             </button>
           </figure>
           <figure class="ed-book-spread">
-            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-03.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-04.webp" data-lightbox-alt="The Treasure of the Lake, páginas 3 y 4" data-lightbox-alt2="The Treasure of the Lake, página 4" aria-haspopup="dialog">
-              <img src="../../../portfolio/editorial/art/spreads/page-03.webp" alt="The Treasure of the Lake, página 3." width="1507" height="1091" loading="lazy" />
-              <img src="../../../portfolio/editorial/art/spreads/page-04.webp" alt="The Treasure of the Lake, página 4." width="1507" height="1091" loading="lazy" />
-              <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
+            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-03.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-04@2x.webp" data-lightbox-alt="The Treasure of the Lake, pages 3 and 4" data-lightbox-alt2="The Treasure of the Lake, page 4" aria-haspopup="dialog">
+              <img src="../../../portfolio/editorial/art/spreads/page-03.webp" alt="The Treasure of the Lake, page 3." width="1507" height="1091" loading="lazy" />
+              <img src="../../../portfolio/editorial/art/spreads/page-04.webp" alt="The Treasure of the Lake, page 4." width="1507" height="1091" loading="lazy" />
+              <span class="ed-img-trigger__hint">Click to enlarge</span>
             </button>
           </figure>
           <figure class="ed-book-spread">
-            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-05.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-06.webp" data-lightbox-alt="The Treasure of the Lake, páginas 5 y 6" data-lightbox-alt2="The Treasure of the Lake, página 6" aria-haspopup="dialog">
-              <img src="../../../portfolio/editorial/art/spreads/page-05.webp" alt="The Treasure of the Lake, página 5." width="1507" height="1091" loading="lazy" />
-              <img src="../../../portfolio/editorial/art/spreads/page-06.webp" alt="The Treasure of the Lake, página 6." width="1507" height="1091" loading="lazy" />
-              <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
+            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-05.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-06@2x.webp" data-lightbox-alt="The Treasure of the Lake, pages 5 and 6" data-lightbox-alt2="The Treasure of the Lake, page 6" aria-haspopup="dialog">
+              <img src="../../../portfolio/editorial/art/spreads/page-05.webp" alt="The Treasure of the Lake, page 5." width="1507" height="1091" loading="lazy" />
+              <img src="../../../portfolio/editorial/art/spreads/page-06.webp" alt="The Treasure of the Lake, page 6." width="1507" height="1091" loading="lazy" />
+              <span class="ed-img-trigger__hint">Click to enlarge</span>
             </button>
           </figure>
           <figure class="ed-book-spread">
-            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-07.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-08.webp" data-lightbox-alt="The Treasure of the Lake, páginas 7 y 8" data-lightbox-alt2="The Treasure of the Lake, página 8" aria-haspopup="dialog">
-              <img src="../../../portfolio/editorial/art/spreads/page-07.webp" alt="The Treasure of the Lake, página 7." width="1507" height="1091" loading="lazy" />
-              <img src="../../../portfolio/editorial/art/spreads/page-08.webp" alt="The Treasure of the Lake, página 8." width="1507" height="1091" loading="lazy" />
-              <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
+            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-07.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-08@2x.webp" data-lightbox-alt="The Treasure of the Lake, pages 7 and 8" data-lightbox-alt2="The Treasure of the Lake, page 8" aria-haspopup="dialog">
+              <img src="../../../portfolio/editorial/art/spreads/page-07.webp" alt="The Treasure of the Lake, page 7." width="1507" height="1091" loading="lazy" />
+              <img src="../../../portfolio/editorial/art/spreads/page-08.webp" alt="The Treasure of the Lake, page 8." width="1507" height="1091" loading="lazy" />
+              <span class="ed-img-trigger__hint">Click to enlarge</span>
             </button>
           </figure>
           <figure class="ed-book-spread">
-            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-09.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-10.webp" data-lightbox-alt="The Treasure of the Lake, páginas 9 y 10" data-lightbox-alt2="The Treasure of the Lake, página 10" aria-haspopup="dialog">
-              <img src="../../../portfolio/editorial/art/spreads/page-09.webp" alt="The Treasure of the Lake, página 9." width="1507" height="1091" loading="lazy" />
-              <img src="../../../portfolio/editorial/art/spreads/page-10.webp" alt="The Treasure of the Lake, página 10." width="1507" height="1091" loading="lazy" />
-              <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
+            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-09.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-10@2x.webp" data-lightbox-alt="The Treasure of the Lake, pages 9 and 10" data-lightbox-alt2="The Treasure of the Lake, page 10" aria-haspopup="dialog">
+              <img src="../../../portfolio/editorial/art/spreads/page-09.webp" alt="The Treasure of the Lake, page 9." width="1507" height="1091" loading="lazy" />
+              <img src="../../../portfolio/editorial/art/spreads/page-10.webp" alt="The Treasure of the Lake, page 10." width="1507" height="1091" loading="lazy" />
+              <span class="ed-img-trigger__hint">Click to enlarge</span>
             </button>
           </figure>
           <figure class="ed-book-spread">
-            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-11.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-12.webp" data-lightbox-alt="The Treasure of the Lake, páginas 11 y 12" data-lightbox-alt2="The Treasure of the Lake, página 12" aria-haspopup="dialog">
-              <img src="../../../portfolio/editorial/art/spreads/page-11.webp" alt="The Treasure of the Lake, página 11." width="1507" height="1091" loading="lazy" />
-              <img src="../../../portfolio/editorial/art/spreads/page-12.webp" alt="The Treasure of the Lake, página 12." width="1507" height="1091" loading="lazy" />
-              <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
+            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-11.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-12@2x.webp" data-lightbox-alt="The Treasure of the Lake, pages 11 and 12" data-lightbox-alt2="The Treasure of the Lake, page 12" aria-haspopup="dialog">
+              <img src="../../../portfolio/editorial/art/spreads/page-11.webp" alt="The Treasure of the Lake, page 11." width="1507" height="1091" loading="lazy" />
+              <img src="../../../portfolio/editorial/art/spreads/page-12.webp" alt="The Treasure of the Lake, page 12." width="1507" height="1091" loading="lazy" />
+              <span class="ed-img-trigger__hint">Click to enlarge</span>
             </button>
           </figure>
           <figure class="ed-book-spread">
-            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-13.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-14.webp" data-lightbox-alt="The Treasure of the Lake, páginas 13 y 14" data-lightbox-alt2="The Treasure of the Lake, página 14" aria-haspopup="dialog">
-              <img src="../../../portfolio/editorial/art/spreads/page-13.webp" alt="The Treasure of the Lake, página 13." width="1507" height="1091" loading="lazy" />
-              <img src="../../../portfolio/editorial/art/spreads/page-14.webp" alt="The Treasure of the Lake, página 14." width="1507" height="1091" loading="lazy" />
-              <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
+            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-13.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-14@2x.webp" data-lightbox-alt="The Treasure of the Lake, pages 13 and 14" data-lightbox-alt2="The Treasure of the Lake, page 14" aria-haspopup="dialog">
+              <img src="../../../portfolio/editorial/art/spreads/page-13.webp" alt="The Treasure of the Lake, page 13." width="1507" height="1091" loading="lazy" />
+              <img src="../../../portfolio/editorial/art/spreads/page-14.webp" alt="The Treasure of the Lake, page 14." width="1507" height="1091" loading="lazy" />
+              <span class="ed-img-trigger__hint">Click to enlarge</span>
             </button>
           </figure>
           <figure class="ed-book-spread">
-            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-15.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-16.webp" data-lightbox-alt="The Treasure of the Lake, páginas 15 y 16" data-lightbox-alt2="The Treasure of the Lake, página 16" aria-haspopup="dialog">
-              <img src="../../../portfolio/editorial/art/spreads/page-15.webp" alt="The Treasure of the Lake, página 15." width="1507" height="1091" loading="lazy" />
-              <img src="../../../portfolio/editorial/art/spreads/page-16.webp" alt="The Treasure of the Lake, página 16." width="1507" height="1091" loading="lazy" />
-              <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
+            <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/spreads/page-15.webp" data-lightbox-src2="../../../portfolio/editorial/art/spreads/page-16@2x.webp" data-lightbox-alt="The Treasure of the Lake, pages 15 and 16" data-lightbox-alt2="The Treasure of the Lake, page 16" aria-haspopup="dialog">
+              <img src="../../../portfolio/editorial/art/spreads/page-15.webp" alt="The Treasure of the Lake, page 15." width="1507" height="1091" loading="lazy" />
+              <img src="../../../portfolio/editorial/art/spreads/page-16.webp" alt="The Treasure of the Lake, page 16." width="1507" height="1091" loading="lazy" />
+              <span class="ed-img-trigger__hint">Click to enlarge</span>
             </button>
           </figure>
         </div>
@@ -243,8 +241,6 @@
               <img
                 class="ed-magazine-feature__img"
                 src="../../../portfolio/editorial/art/magazine/fashion-hero@2x.webp"
-                srcset="../../../portfolio/editorial/art/magazine/fashion-hero.webp 1600w, ../../../portfolio/editorial/art/magazine/fashion-hero@2x.webp 2560w"
-                sizes="(min-width: 80rem) 80rem, 92vw"
                 alt="Ilustración de moda de Liss Ampuero: un vestidor con una figura frente al espejo, un perro y accesorios flotando sobre negro. Haz clic para ampliar."
                 width="2560"
                 height="2067"
@@ -278,8 +274,8 @@
 
             <figure class="ed-look">
               <div class="ed-sparkle-stage">
-                <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/magazine/fashion-a.webp" data-lightbox-alt="Ilustración de moda de Liss Ampuero: una bailarina con vestido floral y de lunares sobre magenta" aria-haspopup="dialog">
-                  <img src="../../../portfolio/editorial/art/magazine/fashion-a.webp" alt="Ilustración de moda de Liss Ampuero: una bailarina con vestido floral y de lunares sobre magenta. Haz clic para ampliar." width="2048" height="2732" loading="lazy" />
+                <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/magazine/fashion-a@2x.webp" data-lightbox-alt="Ilustración de moda de Liss Ampuero: una bailarina con vestido floral y de lunares sobre magenta" aria-haspopup="dialog">
+                  <img src="../../../portfolio/editorial/art/magazine/fashion-a-1024.webp" srcset="../../../portfolio/editorial/art/magazine/fashion-a-1024.webp 1024w, ../../../portfolio/editorial/art/magazine/fashion-a@2x.webp 2048w" sizes="(min-width: 64rem) 28vw, 88vw" alt="Ilustración de moda de Liss Ampuero: una bailarina con vestido floral y de lunares sobre magenta. Haz clic para ampliar." width="2048" height="2732" loading="lazy" />
                   <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
                 </button>
                 <span class="ed-sheen" aria-hidden="true"></span>
@@ -297,8 +293,8 @@
 
             <figure class="ed-look">
               <div class="ed-sparkle-stage">
-                <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/magazine/fashion-b.webp" data-lightbox-alt="Ilustración de moda de Liss Ampuero: una mujer al teléfono con chaqueta rosa y pantalón de loros" aria-haspopup="dialog">
-                  <img src="../../../portfolio/editorial/art/magazine/fashion-b.webp" alt="Ilustración de moda de Liss Ampuero: una mujer al teléfono con chaqueta rosa y pantalón de loros. Haz clic para ampliar." width="2048" height="2732" loading="lazy" />
+                <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/magazine/fashion-b@2x.webp" data-lightbox-alt="Ilustración de moda de Liss Ampuero: una mujer al teléfono con chaqueta rosa y pantalón de loros" aria-haspopup="dialog">
+                  <img src="../../../portfolio/editorial/art/magazine/fashion-b-1024.webp" srcset="../../../portfolio/editorial/art/magazine/fashion-b-1024.webp 1024w, ../../../portfolio/editorial/art/magazine/fashion-b@2x.webp 2048w" sizes="(min-width: 64rem) 28vw, 88vw" alt="Ilustración de moda de Liss Ampuero: una mujer al teléfono con chaqueta rosa y pantalón de loros. Haz clic para ampliar." width="2048" height="2732" loading="lazy" />
                   <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
                 </button>
                 <span class="ed-sheen" aria-hidden="true"></span>
@@ -316,8 +312,8 @@
 
             <figure class="ed-look">
               <div class="ed-sparkle-stage">
-                <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/magazine/fashion-c.webp" data-lightbox-alt="Ilustración de moda de Liss Ampuero: una figura con chaqueta lila y pantalón amarillo estampado sobre menta" aria-haspopup="dialog">
-                  <img src="../../../portfolio/editorial/art/magazine/fashion-c.webp" alt="Ilustración de moda de Liss Ampuero: una figura con chaqueta lila y pantalón amarillo estampado sobre menta. Haz clic para ampliar." width="2048" height="2732" loading="lazy" />
+                <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/magazine/fashion-c@2x.webp" data-lightbox-alt="Ilustración de moda de Liss Ampuero: una figura con chaqueta lila y pantalón amarillo estampado sobre menta" aria-haspopup="dialog">
+                  <img src="../../../portfolio/editorial/art/magazine/fashion-c-1024.webp" srcset="../../../portfolio/editorial/art/magazine/fashion-c-1024.webp 1024w, ../../../portfolio/editorial/art/magazine/fashion-c@2x.webp 2048w" sizes="(min-width: 64rem) 28vw, 88vw" alt="Ilustración de moda de Liss Ampuero: una figura con chaqueta lila y pantalón amarillo estampado sobre menta. Haz clic para ampliar." width="2048" height="2732" loading="lazy" />
                   <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
                 </button>
                 <span class="ed-sheen" aria-hidden="true"></span>
@@ -336,8 +332,8 @@
 
             <figure class="ed-look">
               <div class="ed-sparkle-stage">
-                <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/magazine/fashion-d.webp" data-lightbox-alt="Ilustración de moda de Liss Ampuero: una figura con blusa menta y falda verde escamada sobre amarillo" aria-haspopup="dialog">
-                  <img src="../../../portfolio/editorial/art/magazine/fashion-d.webp" alt="Ilustración de moda de Liss Ampuero: una figura con blusa menta y falda verde escamada sobre amarillo. Haz clic para ampliar." width="2048" height="2732" loading="lazy" />
+                <button type="button" class="ed-img-trigger" data-lightbox-open="ed-lightbox" data-lightbox-src="../../../portfolio/editorial/art/magazine/fashion-d@2x.webp" data-lightbox-alt="Ilustración de moda de Liss Ampuero: una figura con blusa menta y falda verde escamada sobre amarillo" aria-haspopup="dialog">
+                  <img src="../../../portfolio/editorial/art/magazine/fashion-d-1024.webp" srcset="../../../portfolio/editorial/art/magazine/fashion-d-1024.webp 1024w, ../../../portfolio/editorial/art/magazine/fashion-d@2x.webp 2048w" sizes="(min-width: 64rem) 28vw, 88vw" alt="Ilustración de moda de Liss Ampuero: una figura con blusa menta y falda verde escamada sobre amarillo. Haz clic para ampliar." width="2048" height="2732" loading="lazy" />
                   <span class="ed-img-trigger__hint">Haz clic para ampliar</span>
                 </button>
                 <span class="ed-sheen" aria-hidden="true"></span>
@@ -377,7 +373,7 @@
     <button type="button" class="ed-lightbox__backdrop" data-lightbox-close aria-label="Cerrar ilustración a tamaño completo"></button>
     <div class="ed-lightbox__panel" role="dialog" aria-modal="true" aria-label="Ilustración, tamaño completo">
       <button type="button" class="ed-lightbox__close" data-lightbox-close aria-label="Cerrar">&times;</button>
-      <img src="../../../portfolio/editorial/art/placeholder-book-cover.svg" alt="" class="ed-lightbox__image" width="1024" height="720">
+      <img src="../../../portfolio/editorial/art/spreads/page-01@2x.webp" alt="" class="ed-lightbox__image" width="1024" height="720">
       <img alt="" class="ed-lightbox__image ed-lightbox__image--pair" width="1507" height="1091" hidden>
     </div>
   </div>
@@ -414,8 +410,9 @@
     </div>
   </footer>
 
-  <script src="../../../shared/site-nav.js" defer></script>
+  <script src="../../../shared/site-nav.js?v=20260823" defer></script>
   <script src="../../../portfolio/editorial/js/editorial-images.js" defer></script>
-  <script src="../../../shared/js/lightbox.js" defer></script>
+  <script src="../../../shared/js/lightbox.js?v=20260823" defer></script>
+<script src="../../../shared/site-analytics.js?v=20260823" defer></script>
 </body>
 </html>

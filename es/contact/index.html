@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contacta a Liss Ampuero | Empieza Tu Proyecto</title>
 <meta name="description" content="Ponte en contacto con Liss Ampuero para proyectos de ilustración, dirección de arte y diseño editorial. Radicada en Bélgica, trabajando en todo el mundo.">
-<meta name="keywords" content="contactar ilustradora, contratar ilustradora Bélgica, consulta dirección de arte, proyecto de ilustración freelance">
 <meta name="author" content="Liss Ampuero">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -20,7 +19,7 @@
 <meta property="og:title" content="Contacta a Liss Ampuero | Empieza Tu Proyecto">
 <meta property="og:description" content="Ponte en contacto con Liss Ampuero para proyectos de ilustración, dirección de arte y diseño editorial. Radicada en Bélgica, trabajando en todo el mundo.">
 <meta property="og:url" content="https://lissampuero.com/es/contact/">
-<meta property="og:image" content="https://lissampuero.com/assets/ui/photo-about-liss-ampuero.jpg">
+<meta property="og:image" content="https://lissampuero.com/assets/ui/photo-about-liss-ampuero.webp">
 <meta property="og:image:alt" content="Retrato de Liss Ampuero, ilustradora y directora de arte en Bélgica">
 <meta property="og:image:width" content="696">
 <meta property="og:image:height" content="1200">
@@ -31,7 +30,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contacta a Liss Ampuero | Empieza Tu Proyecto">
 <meta name="twitter:description" content="Ponte en contacto con Liss Ampuero para proyectos de ilustración, dirección de arte y diseño editorial. Radicada en Bélgica, trabajando en todo el mundo.">
-<meta name="twitter:image" content="https://lissampuero.com/assets/ui/photo-about-liss-ampuero.jpg">
+<meta name="twitter:image" content="https://lissampuero.com/assets/ui/photo-about-liss-ampuero.webp">
 
 <script type="application/ld+json">
 {
@@ -70,8 +69,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../../shared/site-chrome.css">
-<link rel="stylesheet" href="../../shared/artbook.css">
+<link rel="stylesheet" href="../../shared/utilities.css?v=20260823">
+  <link rel="stylesheet" href="../../shared/site-chrome.css?v=20260823">
+<link rel="stylesheet" href="../../shared/artbook.css?v=20260823">
 <link rel="stylesheet" href="../../home/css/tokens.css">
 <link rel="stylesheet" href="../../home/css/home-base.css">
 <link rel="stylesheet" href="../../home/css/home-components.css">
@@ -79,6 +79,7 @@
 <link rel="stylesheet" href="../../contact/contact-styles.css">
 </head>
 <body class="bg-citrus-cream text-neutral-900 antialiased">
+  <a class="site-skip-link" href="#main">Saltar al contenido</a>
 
 <header class="site-header">
   <div class="site-header__inner">
@@ -104,7 +105,7 @@
   </div>
 </header>
 
-<main class="contact-page">
+<main id="main" class="contact-page">
 
   <section class="contact-hero">
     <div class="hm-container">
@@ -123,9 +124,12 @@
   <section class="hm-band hm-contact" aria-labelledby="contact-heading">
     <div class="hm-container hm-contact__inner">
 
-      <form class="hm-contact-form" action="https://formspree.io/f/xkjwbqyr" method="post">
+      <form class="hm-contact-form" action="https://formspree.io/f/xkjwbqyr" method="post" data-formspree
+        data-msg-sending="Enviando tu mensaje…"
+        data-msg-success="Gracias — tu mensaje está en camino. Responderé pronto."
+        data-msg-error="Algo salió mal. Escríbeme directamente a lissampuero@outlook.com.">
         <input type="hidden" name="_subject" value="Nueva consulta de proyecto desde el sitio de Liss Ampuero">
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="hm-contact-form__row">
           <div class="hm-contact-form__field">
             <label for="firstName">Nombre</label>
@@ -148,6 +152,7 @@
           <button type="submit" class="hm-btn-primary">Enviar una idea</button>
           <a href="mailto:lissampuero@outlook.com?subject=Solicitud%20de%20Presupuesto" class="hm-btn-quote">Pedir un presupuesto</a>
         </div>
+        <p class="hm-form-status" data-form-status role="status" aria-live="polite" hidden></p>
       </form>
 
       <address class="hm-contact-direct">
@@ -215,7 +220,9 @@
   </div>
 </footer>
 
-<script src="../../shared/js/lightbox.js" defer></script>
-<script src="../../shared/site-nav.js" defer></script>
+<script src="../../shared/js/lightbox.js?v=20260823" defer></script>
+<script src="../../shared/js/contact-form.js?v=20260823" defer></script>
+<script src="../../shared/site-nav.js?v=20260823" defer></script>
+<script src="../../shared/site-analytics.js?v=20260823" defer></script>
 </body>
 </html>

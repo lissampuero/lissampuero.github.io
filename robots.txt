@@ -13,5 +13,9 @@ Disallow: /portfolio/narrative/blocks/
 Disallow: /portfolio/stationery/blocks/
 Disallow: /shared/components/
 Disallow: /children-books/
+Disallow: /scripts/
+Disallow: /contact/thanks.html
+Disallow: /es/contact/thanks.html
+Disallow: /nl/contact/thanks.html
 
 Sitemap: https://lissampuero.com/sitemap.xml

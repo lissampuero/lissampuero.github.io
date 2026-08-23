@@ -7,7 +7,6 @@
 <meta name="description" content="Book illustration, character design, branding, fashion art and commissions by Liss Ampuero. Art direction from Belgium for publishers and brands worldwide.">
 <meta name="author" content="Liss Ampuero">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="keywords" content="illustration services Belgium, children's book illustrator for hire, character design services, art direction, brand illustration, editorial illustrator Europe">
 
 <link rel="canonical" href="https://lissampuero.com/services/">
 <link rel="alternate" hreflang="en" href="https://lissampuero.com/services/">
@@ -20,7 +19,7 @@
 <meta property="og:title" content="Illustration &amp; Art Direction Services | Liss Ampuero">
 <meta property="og:description" content="Book illustration, character design, branding, fashion art and commissions by Liss Ampuero. Art direction from Belgium for publishers and brands worldwide.">
 <meta property="og:url" content="https://lissampuero.com/services/">
-<meta property="og:image" content="https://lissampuero.com/assets/services/illustration-liss-studio-portrait.png">
+<meta property="og:image" content="https://lissampuero.com/assets/services/illustration-liss-studio-portrait.webp">
 <meta property="og:image:alt" content="Illustrated portrait of Liss Ampuero in her studio">
 <meta property="og:image:width" content="1300">
 <meta property="og:image:height" content="738">
@@ -31,15 +30,16 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Illustration &amp; Art Direction Services | Liss Ampuero">
 <meta name="twitter:description" content="Book illustration, character design, branding, fashion art and commissions by Liss Ampuero. Art direction from Belgium for publishers and brands worldwide.">
-<meta name="twitter:image" content="https://lissampuero.com/assets/services/illustration-liss-studio-portrait.png">
+<meta name="twitter:image" content="https://lissampuero.com/assets/services/illustration-liss-studio-portrait.webp">
 <meta name="twitter:image:alt" content="Illustrated portrait of Liss Ampuero in her studio">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="../shared/site-chrome.css">
-<link rel="stylesheet" href="../shared/artbook.css">
+<link rel="stylesheet" href="../shared/utilities.css?v=20260823">
+  <link rel="stylesheet" href="../shared/site-chrome.css?v=20260823">
+<link rel="stylesheet" href="../shared/artbook.css?v=20260823">
 <link rel="stylesheet" href="services-styles.css">
 <script type="application/ld+json">
 {
@@ -85,6 +85,7 @@
 </script>
 </head>
 <body>
+  <a class="site-skip-link" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="site-header__inner">
@@ -93,7 +94,7 @@
     <nav class="site-header__nav" id="site-nav" aria-label="Main navigation">
       <ul class="site-header__links">
         <li><a href="../about/index.html">About</a></li>
-        <li><a href="./" aria-current="page">Services</a></li>
+        <li><a href="index.html" aria-current="page">Services</a></li>
         <li><a href="../portfolio/editorial/index.html">Editorial</a></li>
         <li><a href="../portfolio/narrative/index.html">Narrative</a></li>
         <li><a href="../portfolio/stationery/index.html">Stationery</a></li>
@@ -110,7 +111,7 @@
   </div>
 </header>
 
-<main class="services-page">
+<main id="main" class="services-page">
 
   <!-- ============================================
        FRANJA 1 — AMARILLO LIMÓN CÍTRICO: solo título
@@ -209,7 +210,7 @@
       <div class="svc-cta-buttons">
 
         <div class="svc-cta-button-wrap">
-          <button class="svc-cta-btn svc-cta-btn--book" onclick="toggleContactMenu('book')">
+          <button type="button" class="svc-cta-btn svc-cta-btn--book">
             Start a Book Project
           </button>
           <div class="svc-contact-menu" id="menu-book">
@@ -226,7 +227,7 @@
         </div>
 
         <div class="svc-cta-button-wrap">
-          <button class="svc-cta-btn svc-cta-btn--studio" onclick="toggleContactMenu('studio')">
+          <button type="button" class="svc-cta-btn svc-cta-btn--studio">
             Request a Studio Quote
           </button>
           <div class="svc-contact-menu" id="menu-studio">
@@ -259,7 +260,7 @@
       <ul class="site-footer__links">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about/index.html">About</a></li>
-        <li><a href="./">Services</a></li>
+        <li><a href="index.html">Services</a></li>
         <li><a href="../portfolio/editorial/index.html">Editorial</a></li>
         <li><a href="../portfolio/narrative/index.html">Narrative</a></li>
         <li><a href="../portfolio/stationery/index.html">Stationery</a></li>
@@ -288,29 +289,9 @@
   </div>
 </div>
 
-<script>
-  function toggleContactMenu(which) {
-    const allMenus = document.querySelectorAll('.svc-contact-menu');
-    const target = document.getElementById('menu-' + which);
-    const isOpen = target.classList.contains('is-open');
-
-    allMenus.forEach(menu => menu.classList.remove('is-open'));
-
-    if (!isOpen) {
-      target.classList.add('is-open');
-    }
-  }
-
-  // Cierra el menú si se hace clic fuera de él
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.svc-cta-button-wrap')) {
-      document.querySelectorAll('.svc-contact-menu').forEach(menu => menu.classList.remove('is-open'));
-    }
-  });
-</script>
-
+<script src="../shared/js/services-contact.js?v=20260823" defer></script>
 <script src="js/services-lightbox.js" defer></script>
-<script src="../shared/site-nav.js" defer></script>
-
+<script src="../shared/site-nav.js?v=20260823" defer></script>
+<script src="../shared/site-analytics.js?v=20260823" defer></script>
 </body>
 </html>

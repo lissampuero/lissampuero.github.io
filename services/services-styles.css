@@ -553,6 +553,12 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+.svc-cta-btn:focus-visible,
+.svc-contact-option:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
 /* ============================================
    RESPONSIVE — TABLET
    ============================================ */
