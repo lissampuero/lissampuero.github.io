@@ -59,6 +59,17 @@
   mix-blend-mode: multiply;
 }
 
+.nar-marquise__crest {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(0.7rem, 1.4vw, 0.85rem);
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--marquise-ink, #7A1F3D);
+  margin: 0.65rem 0 0;
+}
+
 .nar-marquise__header .nar-slogan {
   color: var(--marquise-plum-soft);
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
@@ -744,4 +755,8 @@
   margin: 0 auto;
   overflow: visible;
   container-type: inline-size;
+}
+
+.nar-plate__glints .nar-plate__glint:nth-child(n+8) {
+  display: none;
 }

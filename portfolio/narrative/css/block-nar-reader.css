@@ -1,0 +1,161 @@
+/**
+ * Reading panel — full narrative text, off the illustration.
+ * Reuses the generic lightbox.js open/close mechanism.
+ */
+
+/* ---------------------------------------------------------- panel */
+
+.nar-reader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+.nar-reader[hidden] { display: none; }
+
+.nar-reader__backdrop {
+  position: fixed;
+  inset: 0;
+  border: none;
+  padding: 0;
+  background: rgb(28 22 48 / 0.55);
+  backdrop-filter: blur(3px);
+  cursor: pointer;
+}
+
+.nar-reader__panel {
+  position: relative;
+  z-index: 1;
+  width: min(34rem, 100%);
+  max-height: 86vh;
+  overflow-y: auto;
+  background: #FFFDF7;
+  border-radius: 4px;
+  padding: clamp(2rem, 5vw, 3.25rem);
+  box-shadow: 0 32px 64px -16px rgb(23 23 23 / 0.35);
+  transform-origin: bottom center;
+  animation: nar-reader-unfurl 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes nar-reader-unfurl {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) rotate(-2deg) translateY(24px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.015) rotate(0.4deg) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg) translateY(0);
+  }
+}
+
+.nar-reader__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(0 0 0 / 0.12);
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.nar-reader__close:hover { background: #f5f5f5; }
+
+.nar-reader__eyebrow {
+  margin: 0 0 0.5rem;
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--marquise-accent, #7a4fb6);
+}
+
+.nar-reader--lolo .nar-reader__eyebrow { color: var(--citrus-fuchsia, #F23C9E); }
+
+.nar-reader__title {
+  margin: 0 0 1.5rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  color: var(--marquise-plum, #2c1f3d);
+}
+
+.nar-reader__body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #3a3a3a;
+}
+
+.nar-reader__body > * + * { margin-top: 1rem; }
+
+.nar-reader__preamble {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.05em;
+  color: var(--marquise-accent, #7A4FB6);
+  border-bottom: 1px solid rgb(122 79 182 / 0.18);
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem !important;
+}
+
+.nar-reader--lolo .nar-reader__preamble {
+  color: var(--citrus-fuchsia, #F23C9E);
+  border-bottom-color: rgb(242 60 158 / 0.18);
+}
+
+.nar-reader__salutation {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.nar-reader__signoff {
+  margin-top: 1.5rem !important;
+  font-style: italic;
+  color: #6b6b6b;
+}
+
+.nar-reader__quotes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  color: var(--marquise-plum, #2c1f3d);
+}
+
+.nar-reader__quotes li + li { margin-top: 0.5rem; }
+
+.nar-reader__label {
+  font-family: var(--ab-sans, 'Inter', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--marquise-accent, #7a4fb6);
+  margin-top: 1.5rem !important;
+}
+
+@media (max-width: 30rem) {
+  .nar-reader__panel { padding: 1.75rem; max-height: 90vh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nar-reader__panel { animation: none; }
+}

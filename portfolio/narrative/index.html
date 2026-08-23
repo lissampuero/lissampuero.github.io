@@ -33,7 +33,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Tangerine:wght@400;700&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -61,6 +61,8 @@
   <link rel="stylesheet" href="css/block-page-hero.css">
   <link rel="stylesheet" href="css/block-marquise.css?v=30c133b">
   <link rel="stylesheet" href="css/block-lolo.css">
+  <link rel="stylesheet" href="css/block-nar-reader.css">
+  <link rel="stylesheet" href="css/block-nar-command.css">
   <!-- JSON-LD: VisualArtwork: spec Section 16.3 -->
   <script type="application/ld+json">
   [
@@ -255,6 +257,7 @@
               height="285"
             />
           </h2>
+          <p class="nar-marquise__crest">Her Grace, Sovereign of the Swamp</p>
           <p class="nar-slogan">A swamp, a crown, and absolute self-belief.</p>
           <p class="nar-body">
             An aristocratic frog ruling a swamp kingdom: satirical, theatrical,
@@ -287,30 +290,11 @@
               decoding="async"
             />
           </button>
-          <div class="nar-plate__text">
-            <p class="nar-plate__salutation">My darlings,</p>
-            <p>
-              Allow me the pleasure, or the misfortune, depending on your mediocre luck,
-              of introducing myself: I am The Marquise of Croac, amphibian aristocrat.
-              Who needs jewels when one already shines this brightly?
-            </p>
-            <p>
-              Fireflies and mud, and the entire swamp is my ballroom. Living chandeliers,
-              toads singing in chorus just for me. The waters seem clearer when they
-              reflect my image. Born with false lashes, and scandal with impeccable posture.
-            </p>
-            <p>
-              My life is a perpetual parade: impossible gowns, gravity-defying hairstyles,
-              and phrases that, frankly, should be embroidered on palace walls&hellip;
-              if only there were a palace worthy of me.
-            </p>
-            <p>
-              So if you ever dare to enter my domain, remember to bow, clumsily will do,
-              and prepare your ears: because my voice, sweet, sharp, unforgettable,
-              will always echo louder than yours.
-            </p>
-            <p class="nar-plate__signoff">Sincerely,<br>in purple ink and lily perfume</p>
-          </div>
+          <button type="button" class="nar-command nar-command--marquise" data-lightbox-open="reader-marquise-letter">
+            <span class="nar-command__excerpt">Allow me the pleasure&mdash;</span>
+            <span class="nar-command__dare">Ahhh, but if you wish to keep cultivating yourself in my presence, you shall have to strive in your uselessness and click&hellip; with reverence.</span>
+            <span class="sr-only">— open the full letter</span>
+          </button>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">A Letter from the Swamp</span>
@@ -338,36 +322,11 @@
               decoding="async"
             />
           </button>
-          <div class="nar-plate__text nar-plate__text--highlight-intro">
-            <dl class="nar-plate__specs">
-              <dt>Species</dt>
-              <dd>Amphibian aristocrat, self-proclaimed royalty of the swamp</dd>
-              <dt>Residence</dt>
-              <dd>A lily-pad palace, adorned with dragonflies and scented with algae</dd>
-              <dt>Personality</dt>
-              <dd>Sarcastic, dramatic, vain, witty, delightfully unbearable</dd>
-            </dl>
-            <p class="nar-plate__text-label">Notable quotes</p>
-            <ul class="nar-plate__quotes">
-              <li>&ldquo;The swamp is my stage, and I am the only protagonist.&rdquo;</li>
-              <li>&ldquo;Darling, if you can&rsquo;t shine, at least make noise when you fall.&rdquo;</li>
-              <li>&ldquo;If you need me, I&rsquo;ll be busy being unforgettable.&rdquo;</li>
-              <li>&ldquo;The loudest croak will always be mine.&rdquo;</li>
-              <li>&ldquo;Modesty is a luxury I simply won&rsquo;t afford.&rdquo;</li>
-            </ul>
-            <p class="nar-plate__text-label">Strengths</p>
-            <ul class="nar-plate__list">
-              <li>Turns mud into a stage.</li>
-              <li>Can silence an entire swamp with one raised eyebrow.</li>
-              <li>Unshakable self-love, and an impressive collection of wigs.</li>
-            </ul>
-            <p class="nar-plate__text-label">Weaknesses</p>
-            <ul class="nar-plate__list">
-              <li>Cannot tolerate mediocrity.</li>
-              <li>Prone to fainting if applause is insufficient.</li>
-            </ul>
-            <p><strong>Legacy.</strong> The Marquise of Croac is not just a frog; she is the event. A living satire wrapped in silk, a reminder that even in the muddiest of swamps, one can reign with style, sarcasm, and unapologetic vanity.</p>
-          </div>
+          <button type="button" class="nar-command nar-command--marquise" data-lightbox-open="reader-marquise-profile">
+            <span class="nar-command__excerpt">The swamp is my stage&mdash;</span>
+            <span class="nar-command__dare">&hellip;and I am, evidently, the only protagonist. Click, if you wish to study true greatness.</span>
+            <span class="sr-only">— open the full character profile</span>
+          </button>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">Character Highlight</span>
@@ -411,27 +370,14 @@
             <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:36%;--gy:11%;--gd:1.45s"></span>
             <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:62%;--gy:10%;--gd:0.6s"></span>
           </span>
-          <div class="nar-plate__text nar-plate__text--quote">
-            <h3 class="nar-plate__text-title">Memoirs of the Marquise of Croac</h3>
-            <p>
-              &ldquo;Dearest creatures of muddy waters and fragile wings, I bestow upon you
-              the honour of my memoirs. A legacy written in fine mud and perfumed with
-              water lilies, so you may learn from me and, with luck, love yourselves a
-              little more. Because if I, with these regal legs and swamp complexion,
-              consider myself divine&hellip; what excuse do you have?&rdquo;
-            </p>
-          </div>
-          <div class="nar-plate__text nar-plate__text--scroll">
-            <h3 class="nar-plate__text-title">Eternal truths</h3>
-            <ul class="nar-plate__quotes">
-              <li>&ldquo;Mud only dirties if you don&rsquo;t know how to strut on it.&rdquo;</li>
-              <li>&ldquo;Envy is nothing but a mosquito: small, annoying, and easily crushed with my fan.&rdquo;</li>
-              <li>&ldquo;One well-intoned croak can slay more than a thousand speeches.&rdquo;</li>
-              <li>&ldquo;I am never late. The swamp begins when I arrive.&rdquo;</li>
-              <li>&ldquo;If your reflection in the water doesn&rsquo;t adore you, change ponds.&rdquo;</li>
-              <li>&ldquo;Humility is overrated; I prefer the honesty of my magnificence.&rdquo;</li>
-            </ul>
-          </div>
+          <p class="nar-memoirs__title" aria-hidden="true">
+            <span class="nar-memoirs__title-line">Dearest</span>
+            <span class="nar-memoirs__title-line">creatures</span>
+          </p>
+          <button type="button" class="nar-command nar-command--marquise nar-command--memoirs-link" data-lightbox-open="reader-marquise-memoirs">
+            <span class="nar-command__dare">&hellip;I bestow upon you the honour of my memoirs. Click, and try not to weep from gratitude.</span>
+            <span class="sr-only">— read her memoirs</span>
+          </button>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">Illustrated Memoirs</span>
@@ -459,8 +405,7 @@
               decoding="async"
             />
           </button>
-          <div class="nar-plate__text">
-            <span class="nar-plate__glints" aria-hidden="true">
+          <span class="nar-plate__glints" aria-hidden="true">
               <span class="nar-plate__glint nar-plate__glint--lg" style="--gx:8%;--gy:7%;--gd:0s"></span>
               <span class="nar-plate__glint" style="--gx:22%;--gy:4%;--gd:0.4s"></span>
               <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:38%;--gy:9%;--gd:1.1s"></span>
@@ -482,35 +427,11 @@
               <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:48%;--gy:22%;--gd:1.05s"></span>
               <span class="nar-plate__glint" style="--gx:18%;--gy:88%;--gd:0.75s"></span>
             </span>
-            <p>
-              They call me extravagant, dramatic, unbearable&hellip;
-              and I call it simply existing at a higher level of grace.
-              I am the Marquise sovereign, fashion icon of the swamp,
-              and the only reason mosquitoes bother to shine at night.
-            </p>
-            <p>
-              My palace? This swamp, decorated by dragonflies and perfumed by algae.
-              My throne? A perfectly chosen lily pad, naturally.
-            </p>
-            <p>
-              Oh, the peasants croak, they jump, they splash&hellip;
-              but someone must give glamour to this puddle, and who better than me?
-            </p>
-            <p>
-              &ldquo;Applaud? Or do you croak out of habit?&rdquo; I once asked my subjects.
-              Silence. Because when the Marquise speaks, the swamp listens.
-            </p>
-            <p>Respect? Oh no, worship will suffice.</p>
-            <p>
-              Yes, I have ridden a fish as if it were a horse. Yes, I wear wigs taller
-              than reeds and heavier than a frog&rsquo;s conscience. And yes, everything
-              looks fabulous on me, especially tragedy.
-            </p>
-            <p>
-              Remember my words, little tadpoles of mediocrity: nothing is eternal,
-              not even the lily blossoms&hellip; except my elegance.
-            </p>
-          </div>
+          <button type="button" class="nar-command nar-command--marquise" data-lightbox-open="reader-marquise-court">
+            <span class="nar-command__excerpt">They call me extravagant&mdash;</span>
+            <span class="nar-command__dare">&hellip;and I call it existing at a higher level of grace. Silence. Click. Listen.</span>
+            <span class="sr-only">— hear her address the court</span>
+          </button>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">The Swamp Court</span>
@@ -643,12 +564,11 @@
               <span class="lolo-glint lolo-glint--sm" style="--gx:54%;--gy:8%;--gd:0.55s"></span>
               <span class="lolo-glint" style="--gx:8%;--gy:36%;--gd:1.3s"></span>
             </span>
-            <div class="lolo-float">
-              <div class="lolo-float__pair">
-                <p class="lolo-float__copy">LoLo is a dream painter: every brushstroke opens a world, every dream becomes a destination. He lives with joy, innocence, and playful mischief, turning feelings into magical journeys. Fuzzle, his fluffy bird plush, is his witty, mischievous best friend and inseparable companion.</p>
-                <p class="lolo-float__copy">Their world is whimsical: rain becomes a playground, books become stairways, clouds turn into castles. Together, they show that imagination can paint reality with wonder.</p>
-              </div>
-            </div>
+            <button type="button" class="nar-command nar-command--lolo" data-lightbox-open="reader-lolo-highlights">
+              <span class="nar-command__excerpt">LoLo is a dream painter&hellip;</span>
+              <span class="nar-command__dare">&hellip;want to see what he painted today? Come closer, I'll show you.</span>
+              <span class="sr-only">— read their story</span>
+            </button>
           </div>
           <figcaption class="lolo-plate__caption">
             <span class="lolo-plate__index">01</span>
@@ -671,13 +591,12 @@
               <span class="lolo-glint lolo-glint--sm" style="--gx:78%;--gy:62%;--gd:0.25s"></span>
               <span class="lolo-glint" style="--gx:90%;--gy:78%;--gd:0.9s"></span>
             </span>
-            <div class="lolo-float">
-              <p>LoLo lives life with the joy and wonder of a child who never stops being amazed. For him, every day is a new adventure; every cloud looks like a castle, and every puddle is an ocean full of secrets. His greatest power lies in his imagination: he paints what he dreams and dreams what he paints. With his brushes, he turns feelings into journeys; if he misses someone, he paints hugs; if he feels curious, he paints doors to unknown worlds; if he wants to play, he paints friends that come alive.</p>
-              <p>By his side is always his inseparable companion: Fuzzle, a fluffy bird plush that, although soft and huggable, seems to have a mind of its own. Together they are a mischievous, inseparable duo: LoLo paints, and Fuzzle comments, observes, and sometimes sneaks his own silly ideas into the canvases.</p>
-              <p>LoLo’s world is full of innocent mischief: jumping in the rain until he feels like a frog, talking to butterflies only he can understand, or hiding in his grandmother’s mountain of books while imagining they are steps to another planet. With each brushstroke, he creates a portal, and with each dream, he finds a new destination.</p>
-              <p>LoLo doesn’t just paint worlds, he paints the way he wants to live them. Because for him, life is not a place to be, but an adventure to imagine.</p>
             </div>
-            </div>
+            <button type="button" class="nar-command nar-command--lolo" data-lightbox-open="reader-lolo-sheet">
+              <span class="nar-command__excerpt">Every puddle is an ocean&hellip;</span>
+              <span class="nar-command__dare">&hellip;full of secrets. Want to peek inside his sketchbook?</span>
+              <span class="sr-only">— read the full character sheet</span>
+            </button>
           </div>
           <figcaption class="lolo-plate__caption">
             <span class="lolo-plate__index">02</span>
@@ -812,6 +731,124 @@
     </section>
 
   </main>
+
+  <div class="nar-reader" id="reader-marquise-letter" hidden>
+    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Close"></button>
+    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-letter-title">
+      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Close">&times;</button>
+      <p class="nar-reader__eyebrow">Character Universe I · Marquise of Croac</p>
+      <h3 class="nar-reader__title" id="reader-marquise-letter-title">A Letter from the Swamp</h3>
+      <div class="nar-reader__body">
+        <p class="nar-reader__preamble">Ahh&mdash; I see you're captivated by my magnificence. You have proven yourself worthy of my greatness. Very well&hellip; continue.</p>
+        <p class="nar-reader__salutation">My darlings,</p>
+        <p>Allow me the pleasure, or the misfortune, depending on your mediocre luck, of introducing myself: I am The Marquise of Croac, amphibian aristocrat. Who needs jewels when one already shines this brightly?</p>
+        <p>Fireflies and mud, and the entire swamp is my ballroom. Living chandeliers, toads singing in chorus just for me. The waters seem clearer when they reflect my image. Born with false lashes, and scandal with impeccable posture.</p>
+        <p>My life is a perpetual parade: impossible gowns, gravity-defying hairstyles, and phrases that, frankly, should be embroidered on palace walls&hellip; if only there were a palace worthy of me.</p>
+        <p>So if you ever dare to enter my domain, remember to bow, clumsily will do, and prepare your ears: because my voice, sweet, sharp, unforgettable, will always echo louder than yours.</p>
+        <p class="nar-reader__signoff">Sincerely,<br>in purple ink and lily perfume</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nar-reader" id="reader-marquise-profile" hidden>
+    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Close"></button>
+    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-profile-title">
+      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Close">&times;</button>
+      <p class="nar-reader__eyebrow">Character Universe I · Marquise of Croac</p>
+      <h3 class="nar-reader__title" id="reader-marquise-profile-title">Character Highlight</h3>
+      <div class="nar-reader__body">
+        <p class="nar-reader__preamble">So. You wish to know what makes me&hellip; magnificent. Wise choice. Read carefully &mdash; there will be no repeating.</p>
+        <p><strong>Species.</strong> Amphibian aristocrat, self-proclaimed royalty of the swamp.</p>
+        <p><strong>Residence.</strong> A lily-pad palace, adorned with dragonflies and scented with algae.</p>
+        <p><strong>Personality.</strong> Sarcastic, dramatic, vain, witty, delightfully unbearable.</p>
+        <p class="nar-reader__label">Notable quotes</p>
+        <ul class="nar-reader__quotes">
+          <li>&ldquo;The swamp is my stage, and I am the only protagonist.&rdquo;</li>
+          <li>&ldquo;Darling, if you can&rsquo;t shine, at least make noise when you fall.&rdquo;</li>
+          <li>&ldquo;If you need me, I&rsquo;ll be busy being unforgettable.&rdquo;</li>
+          <li>&ldquo;The loudest croak will always be mine.&rdquo;</li>
+          <li>&ldquo;Modesty is a luxury I simply won&rsquo;t afford.&rdquo;</li>
+        </ul>
+        <p class="nar-reader__label">Strengths</p>
+        <p>Turns mud into a stage. Can silence an entire swamp with one raised eyebrow. Unshakable self-love, and an impressive collection of wigs.</p>
+        <p class="nar-reader__label">Weaknesses</p>
+        <p>Cannot tolerate mediocrity. Prone to fainting if applause is insufficient.</p>
+        <p class="nar-reader__label">Legacy</p>
+        <p>The Marquise of Croac is not just a frog; she is the event. A living satire wrapped in silk, a reminder that even in the muddiest of swamps, one can reign with style, sarcasm, and unapologetic vanity.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nar-reader" id="reader-marquise-memoirs" hidden>
+    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Close"></button>
+    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-memoirs-title">
+      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Close">&times;</button>
+      <p class="nar-reader__eyebrow">Character Universe I · Marquise of Croac</p>
+      <h3 class="nar-reader__title" id="reader-marquise-memoirs-title">Memoirs of the Marquise of Croac</h3>
+      <div class="nar-reader__body">
+        <p class="nar-reader__preamble">Ahh, my memoirs. Few are permitted this close to greatness. Turn the page, darling &mdash; if you can keep up.</p>
+        <p>&ldquo;Dearest creatures of muddy waters and fragile wings, I bestow upon you the honour of my memoirs. A legacy written in fine mud and perfumed with water lilies, so you may learn from me and, with luck, love yourselves a little more. Because if I, with these regal legs and swamp complexion, consider myself divine&hellip; what excuse do you have?&rdquo;</p>
+        <p class="nar-reader__label">Eternal truths</p>
+        <ul class="nar-reader__quotes">
+          <li>&ldquo;Mud only dirties if you don&rsquo;t know how to strut on it.&rdquo;</li>
+          <li>&ldquo;Envy is nothing but a mosquito: small, annoying, and easily crushed with my fan.&rdquo;</li>
+          <li>&ldquo;One well-intoned croak can slay more than a thousand speeches.&rdquo;</li>
+          <li>&ldquo;I am never late. The swamp begins when I arrive.&rdquo;</li>
+          <li>&ldquo;If your reflection in the water doesn&rsquo;t adore you, change ponds.&rdquo;</li>
+          <li>&ldquo;Humility is overrated; I prefer the honesty of my magnificence.&rdquo;</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="nar-reader" id="reader-marquise-court" hidden>
+    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Close"></button>
+    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-court-title">
+      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Close">&times;</button>
+      <p class="nar-reader__eyebrow">Character Universe I · Marquise of Croac</p>
+      <h3 class="nar-reader__title" id="reader-marquise-court-title">The Swamp Court</h3>
+      <div class="nar-reader__body">
+        <p class="nar-reader__preamble">You dare enter my court uninvited? Very well &mdash; since you are already here, kneel, and listen closely.</p>
+        <p>They call me extravagant, dramatic, unbearable&hellip; and I call it simply existing at a higher level of grace. I am the Marquise sovereign, fashion icon of the swamp, and the only reason mosquitoes bother to shine at night.</p>
+        <p>My palace? This swamp, decorated by dragonflies and perfumed by algae. My throne? A perfectly chosen lily pad, naturally.</p>
+        <p>Oh, the peasants croak, they jump, they splash&hellip; but someone must give glamour to this puddle, and who better than me?</p>
+        <p>&ldquo;Applaud? Or do you croak out of habit?&rdquo; I once asked my subjects. Silence. Because when the Marquise speaks, the swamp listens.</p>
+        <p>Respect? Oh no, worship will suffice.</p>
+        <p>Yes, I have ridden a fish as if it were a horse. Yes, I wear wigs taller than reeds and heavier than a frog&rsquo;s conscience. And yes, everything looks fabulous on me, especially tragedy.</p>
+        <p>Remember my words, little tadpoles of mediocrity: nothing is eternal, not even the lily blossoms&hellip; except my elegance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nar-reader nar-reader--lolo" id="reader-lolo-highlights" hidden>
+    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Close"></button>
+    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-lolo-highlights-title">
+      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Close">&times;</button>
+      <p class="nar-reader__eyebrow">Character Universe II · LoLo &amp; Fuzzle</p>
+      <h3 class="nar-reader__title" id="reader-lolo-highlights-title">Character Highlights</h3>
+      <div class="nar-reader__body">
+        <p class="nar-reader__preamble">Yay, you came! Fuzzle says hi too &mdash; he's the fluffy one hiding behind the brush. Here's our story&hellip;</p>
+        <p>LoLo is a dream painter: every brushstroke opens a world, every dream becomes a destination. He lives with joy, innocence, and playful mischief, turning feelings into magical journeys. Fuzzle, his fluffy bird plush, is his witty, mischievous best friend and inseparable companion.</p>
+        <p>Their world is whimsical: rain becomes a playground, books become stairways, clouds turn into castles. Together, they show that imagination can paint reality with wonder.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nar-reader nar-reader--lolo" id="reader-lolo-sheet" hidden>
+    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Close"></button>
+    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-lolo-sheet-title">
+      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Close">&times;</button>
+      <p class="nar-reader__eyebrow">Character Universe II · LoLo &amp; Fuzzle</p>
+      <h3 class="nar-reader__title" id="reader-lolo-sheet-title">Character Sheet</h3>
+      <div class="nar-reader__body">
+        <p class="nar-reader__preamble">Shhh, come in quietly &mdash; Fuzzle's still deciding if he trusts you. Okay, he says you can stay. Here's everything about us&hellip;</p>
+        <p>LoLo lives life with the joy and wonder of a child who never stops being amazed. For him, every day is a new adventure; every cloud looks like a castle, and every puddle is an ocean full of secrets. His greatest power lies in his imagination: he paints what he dreams and dreams what he paints. With his brushes, he turns feelings into journeys; if he misses someone, he paints hugs; if he feels curious, he paints doors to unknown worlds; if he wants to play, he paints friends that come alive.</p>
+        <p>By his side is always his inseparable companion: Fuzzle, a fluffy bird plush that, although soft and huggable, seems to have a mind of its own. Together they are a mischievous, inseparable duo: LoLo paints, and Fuzzle comments, observes, and sometimes sneaks his own silly ideas into the canvases.</p>
+        <p>LoLo&rsquo;s world is full of innocent mischief: jumping in the rain until he feels like a frog, talking to butterflies only he can understand, or hiding in his grandmother&rsquo;s mountain of books while imagining they are steps to another planet. With each brushstroke, he creates a portal, and with each dream, he finds a new destination.</p>
+        <p>LoLo doesn&rsquo;t just paint worlds, he paints the way he wants to live them. Because for him, life is not a place to be, but an adventure to imagine.</p>
+      </div>
+    </div>
+  </div>
 
   <div class="nar-lightbox" id="nar-lightbox" hidden>
     <button type="button" class="nar-lightbox__backdrop" data-lightbox-close aria-label="Close full-size illustration"></button>

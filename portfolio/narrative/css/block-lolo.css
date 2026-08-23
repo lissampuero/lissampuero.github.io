@@ -765,3 +765,35 @@
   object-fit: cover;
   object-position: 88% center;
 }
+
+.lolo-glints .lolo-glint:nth-child(n+5) {
+  display: none;
+}
+
+.lolo-plate--highlights .nar-command {
+  left: calc(6% + 2.25cm);
+  top: calc(58% + 0.675cm);
+  width: 32%;
+}
+
+.lolo-plate--highlights .nar-command__excerpt {
+  font-size: clamp(2.95rem, 6.7cqw, 4.2rem);
+}
+
+.lolo-plate--highlights .nar-command__dare {
+  font-size: clamp(2rem, 4cqw, 2.6rem);
+}
+
+.lolo-plate--sheet .nar-command {
+  left: 8%;
+  top: 62%;
+  width: 42%;
+}
+
+.lolo-plate--sheet .nar-command__excerpt {
+  font-size: clamp(1.9rem, 4cqw, 2.75rem);
+}
+
+.lolo-plate--sheet .nar-command__dare {
+  font-size: clamp(1.3rem, 2.5cqw, 1.7rem);
+}
