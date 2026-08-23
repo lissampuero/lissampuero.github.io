@@ -12,7 +12,7 @@
   flex-direction: column;
   border: none;
   background: none;
-  padding: 1em 1.1em;
+  padding: 1.1cqw 1.2cqw;
   cursor: pointer;
   text-align: left;
   -webkit-tap-highlight-color: transparent;
@@ -46,20 +46,20 @@
 .nar-command--marquise .nar-command__excerpt {
   font-family: 'Tangerine', 'Caveat', cursive;
   font-weight: 700;
-  font-size: clamp(2.15rem, 5.1cqw, 3.65rem);
+  font-size: 5.1cqw;
   line-height: 0.98;
   color: var(--marquise-ink, #7A1F3D);
-  text-shadow: 0 0.04em 0 rgb(122 31 61 / 0.1);
+  text-shadow: 0 0.04cqw 0 rgb(122 31 61 / 0.1);
   transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
   animation: nar-command-breathe 6s ease-in-out infinite;
 }
 
 .nar-command--marquise .nar-command__dare {
   display: block;
-  margin-top: 0.35em;
+  margin-top: 0.35cqw;
   font-family: var(--ab-script, 'Caveat', cursive);
   font-weight: 700;
-  font-size: clamp(1.1rem, 1.85cqw, 1.45rem);
+  font-size: 1.85cqw;
   line-height: 1.2;
   color: var(--marquise-ink-deep, #4E1428);
   opacity: 0.82;
@@ -81,7 +81,7 @@
 .nar-command--lolo .nar-command__excerpt {
   font-family: var(--ab-script, 'Caveat', cursive);
   font-weight: 700;
-  font-size: clamp(1.65rem, 3.5cqw, 2.4rem);
+  font-size: 3.5cqw;
   line-height: 1.08;
   color: #1A3A5C;
   transform: rotate(-2deg);
@@ -91,10 +91,10 @@
 
 .nar-command--lolo .nar-command__dare {
   display: block;
-  margin-top: 0.3em;
+  margin-top: 0.3cqw;
   font-family: var(--ab-script, 'Caveat', cursive);
   font-weight: 600;
-  font-size: clamp(1.15rem, 2.2cqw, 1.5rem);
+  font-size: 2.2cqw;
   line-height: 1.25;
   color: #6b4a2e;
   opacity: 0.85;
@@ -149,7 +149,10 @@
   border: 0;
 }
 
-/* --------------------------------------------------------- posiciones */
+/* --------------------------------------------------------- posiciones
+ * Anchored to .nar-plate__stage / .lolo-stage — % + cqw only (no cm/vw).
+ * Offsets converted from prior cm tweaks at ~1400px plate width.
+ */
 
 .nar-plate--letter .nar-command {
   left: 38%;
@@ -179,7 +182,7 @@
 
 .nar-plate--highlight .nar-command {
   left: 18%;
-  top: calc(68% - 2.75cm);
+  top: calc(68% - 21.39%);
   width: 48%;
 }
 
@@ -203,16 +206,22 @@
   color: var(--marquise-plum, #453258);
 }
 
+.nar-plate--memoirs .nar-plate__stage {
+  container-type: inline-size;
+  container-name: nar-memoirs;
+}
+
 .nar-plate--memoirs .nar-memoirs__title {
   position: absolute;
   z-index: 5;
   left: 8%;
-  top: calc(40% + 1.5cm);
+  top: 54.25%;
   width: 24%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0;
+  padding: 0;
   pointer-events: none;
   text-align: center;
 }
@@ -221,18 +230,19 @@
   display: block;
   font-family: 'Tangerine', 'Caveat', cursive;
   font-weight: 700;
-  font-size: clamp(2.5rem, 5.6cqw, 3.95rem);
+  font-size: 5.6cqw;
   line-height: 0.92;
   color: #735418;
-  -webkit-text-stroke: 0.04em rgb(58 40 18 / 0.5);
+  -webkit-text-stroke: 0.04cqw rgb(58 40 18 / 0.5);
   paint-order: stroke fill;
-  text-shadow: 0 0.14em 0.06em rgb(62 38 22 / 0.62);
+  text-shadow: 0 0.14cqw 0.06cqw rgb(62 38 22 / 0.62);
 }
 
 .nar-plate--memoirs .nar-command--memoirs-link {
-  left: calc(50% + 0.5cm);
-  top: calc(24% + 1.25cm);
+  left: calc(50% + 2.5cqw);
+  top: 36.82%;
   width: 32%;
+  padding: 0;
   transform: translateX(-50%);
 }
 
@@ -241,25 +251,22 @@
   text-align: center;
   transform: none;
   opacity: 1;
-  font-size: clamp(1.35rem, 2.45cqw, 1.8rem);
+  font-weight: 500;
+  font-size: 2.45cqw;
+  line-height: 1.2;
   color: var(--marquise-copper, #a8722a);
-  text-shadow: 0 0.04em 0.1em rgb(168 114 42 / 0.28);
+  text-shadow: 0 0.04cqw 0.1cqw rgb(168 114 42 / 0.28);
 }
 
 .nar-plate--memoirs .nar-command--memoirs-link:hover .nar-command__dare,
 .nar-plate--memoirs .nar-command--memoirs-link:focus-visible .nar-command__dare {
   color: var(--marquise-gold, #d4a853);
   opacity: 1;
-  text-shadow: 0 0.06em 0.14em rgb(212 168 83 / 0.45);
+  text-shadow: 0 0.06cqw 0.14cqw rgb(212 168 83 / 0.45);
 }
 
 .nar-plate--court .nar-command {
-  left: 40%;
-  top: calc(52% - 2cm);
+  left: 36%;
+  top: calc(52% - 13.4%);
   width: 30%;
-}
-
-@media (max-width: 40rem) {
-  .nar-command--marquise .nar-command__excerpt { font-size: clamp(1.75rem, 8vw, 2.35rem); }
-  .nar-command--lolo .nar-command__excerpt { font-size: clamp(1.45rem, 7vw, 1.85rem); }
 }

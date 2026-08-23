@@ -107,6 +107,7 @@
 .nar-plate__stage {
   position: relative;
   container-type: inline-size;
+  container-name: nar-art;
 }
 
 .nar-plate__art {

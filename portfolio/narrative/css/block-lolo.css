@@ -231,6 +231,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   container-type: inline-size;
+  container-name: lolo-highlights;
 }
 
 .lolo-plate--highlights .lolo-plate__trigger {
@@ -295,6 +296,7 @@
   aspect-ratio: 3 / 2;
   overflow: hidden;
   container-type: inline-size;
+  container-name: lolo-sheet;
 }
 
 .lolo-plate--sheet .lolo-stage__lock {
@@ -771,29 +773,33 @@
 }
 
 .lolo-plate--highlights .nar-command {
-  left: calc(6% + 2.25cm);
-  top: calc(58% + 0.675cm);
+  left: calc(6% + 10.6cqw);
+  top: calc(58% + 5.75%);
   width: 32%;
 }
 
 .lolo-plate--highlights .nar-command__excerpt {
-  font-size: clamp(2.95rem, 6.7cqw, 4.2rem);
+  font-size: 6.7cqw;
 }
 
 .lolo-plate--highlights .nar-command__dare {
-  font-size: clamp(2rem, 4cqw, 2.6rem);
+  font-size: 4cqw;
 }
 
 .lolo-plate--sheet .nar-command {
   left: 8%;
-  top: 62%;
+  top: 56%;
   width: 42%;
+  padding: 0;
 }
 
 .lolo-plate--sheet .nar-command__excerpt {
-  font-size: clamp(1.9rem, 4cqw, 2.75rem);
+  font-size: 4cqw;
+  font-weight: 500;
 }
 
 .lolo-plate--sheet .nar-command__dare {
-  font-size: clamp(1.3rem, 2.5cqw, 1.7rem);
+  font-size: 2.5cqw;
+  font-weight: 500;
+  margin-top: 0.3cqw;
 }
