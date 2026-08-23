@@ -136,6 +136,8 @@
       var alt = thumb.getAttribute('data-alt') || '';
 
       img.src = src;
+      img.srcset = src + ' 1100w, ' + src2x + ' 1600w';
+      img.sizes = '(min-width: 80rem) 80rem, 92vw';
       img.alt = alt;
       img.setAttribute('width', thumb.getAttribute('data-width') || '1800');
       img.setAttribute('height', thumb.getAttribute('data-height') || '1349');
