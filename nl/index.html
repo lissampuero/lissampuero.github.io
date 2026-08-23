@@ -85,11 +85,58 @@
         "sameAs": ["https://instagram.com/lissampueroi"]
       },
       {
+        "@type": "Organization",
+        "@id": "https://lissampuero.com/#organization",
+        "name": "Liss Ampuero",
+        "alternateName": "Liss Ampuero · Illustratie & artdirectie",
+        "url": "https://lissampuero.com/nl/",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://lissampuero.com/#logo",
+          "url": "https://lissampuero.com/assets/home/logo-liss-ampuero-hero.webp",
+          "contentUrl": "https://lissampuero.com/assets/home/logo-liss-ampuero-hero.webp",
+          "width": 1800,
+          "height": 643,
+          "caption": "Handgetekend logo van Liss Ampuero"
+        },
+        "image": "https://lissampuero.com/assets/ui/photo-about-liss-ampuero.webp",
+        "description": "Illustratie- en artdirectiestudio in Herentals, België. Prentenboeken, personage-ontwerp, branding, packaging en redactionele illustratie voor klanten in Europa en wereldwijd.",
+        "email": "lissampuero@outlook.com",
+        "telephone": "+32472120550",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Herentals",
+          "postalCode": "2200",
+          "addressRegion": "Antwerp",
+          "addressCountry": "BE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 51.1764,
+          "longitude": 4.8364
+        },
+        "sameAs": [
+          "https://www.instagram.com/lissampueroi",
+          "https://github.com/lissampuero"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "lissampuero@outlook.com",
+            "telephone": "+32472120550",
+            "areaServed": ["BE", "EU", "Worldwide"],
+            "availableLanguage": ["English", "Spanish", "Dutch"]
+          }
+        ],
+        "founder": { "@id": "https://lissampuero.com/#person" }
+      },
+      {
         "@type": "ProfessionalService",
         "@id": "https://lissampuero.com/nl/#service",
         "name": "Liss Ampuero · Illustratie & artdirectie",
         "image": "https://lissampuero.com/assets/home/logo-liss-ampuero-hero.webp",
-        "logo": "https://lissampuero.com/assets/home/logo-liss-ampuero-hero.webp",
+        "logo": { "@id": "https://lissampuero.com/#logo" },
         "url": "https://lissampuero.com/nl/",
         "telephone": "+32472120550",
         "email": "lissampuero@outlook.com",
@@ -98,6 +145,7 @@
           "@type": "PostalAddress",
           "addressLocality": "Herentals",
           "postalCode": "2200",
+          "addressRegion": "Antwerp",
           "addressCountry": "BE"
         },
         "geo": {
@@ -105,8 +153,19 @@
           "latitude": 51.1764,
           "longitude": 4.8364
         },
+        "parentOrganization": { "@id": "https://lissampuero.com/#organization" },
         "founder": { "@id": "https://lissampuero.com/#person" },
         "employee": { "@id": "https://lissampuero.com/#person" },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "lissampuero@outlook.com",
+            "telephone": "+32472120550",
+            "areaServed": ["BE", "EU", "Worldwide"],
+            "availableLanguage": ["English", "Spanish", "Dutch"]
+          }
+        ],
         "areaServed": [
           { "@type": "Country", "name": "Belgium" },
           { "@type": "Place", "name": "Europe" },
@@ -133,7 +192,7 @@
         "url": "https://lissampuero.com/",
         "name": "Liss Ampuero",
         "inLanguage": ["en", "nl", "es"],
-        "publisher": { "@id": "https://lissampuero.com/#person" }
+        "publisher": { "@id": "https://lissampuero.com/#organization" }
       }
     ]
   }
