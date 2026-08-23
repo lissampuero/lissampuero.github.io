@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="icon" href="../../assets/home/logo-liss-ampuero-hero-mobile.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="../../assets/home/logo-liss-ampuero-hero-mobile.webp">
+
   <title>Character Design &amp; Narrative Worlds | Liss Ampuero</title>
   <meta name="description" content="Original character universes by Liss Ampuero: The Marquise of Croac and LoLo &amp; Fuzzle. Character design for books, brands and picture worlds.">
   <meta name="author" content="Liss Ampuero">
@@ -49,9 +52,18 @@
   <link rel="stylesheet" href="css/block-nar-command.css">
   <!-- JSON-LD: VisualArtwork: spec Section 16.3 -->
   <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://lissampuero.com/portfolio/narrative/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lissampuero.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Narrative", "item": "https://lissampuero.com/portfolio/narrative/" }
+        ]
+      },
+      {
       "@type": "VisualArtwork",
       "name": "The Marquise of Croac",
       "image": "https://lissampuero.com/portfolio/narrative/art/marquise/letter-plate.webp",
@@ -65,7 +77,6 @@
       "url": "https://lissampuero.com/portfolio/narrative/#marquise"
     },
     {
-      "@context": "https://schema.org",
       "@type": "VisualArtwork",
       "name": "LoLo & Fuzzle",
       "image": "https://lissampuero.com/portfolio/narrative/art/lolo/highlights.webp",
@@ -78,7 +89,8 @@
       "copyrightYear": "2026",
       "url": "https://lissampuero.com/portfolio/narrative/#lolo"
     }
-  ]
+    ]
+  }
   </script>
 </head>
 <body class="bg-citrus-cream text-neutral-900 antialiased">

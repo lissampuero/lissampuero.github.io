@@ -17,5 +17,11 @@ Disallow: /scripts/
 Disallow: /contact/thanks.html
 Disallow: /es/contact/thanks.html
 Disallow: /nl/contact/thanks.html
+Disallow: /about/about.html
+Disallow: /es/about/about.html
+Disallow: /nl/about/about.html
+Disallow: /services/services.html
+Disallow: /es/services/services.html
+Disallow: /nl/services/services.html
 
 Sitemap: https://lissampuero.com/sitemap.xml
