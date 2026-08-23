@@ -1,0 +1,268 @@
+/**
+ * .nar-command v2 — pergamino de dos actos.
+ * Acto I (.nar-command__excerpt): su voz real, caligrafía de corte.
+ * Acto II (.nar-command__dare / __invite): el giro — burla o ternura.
+ * Un halo de pergamino detrás llena el espacio negativo sin caja dura.
+ */
+
+.nar-command {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background: none;
+  padding: 1.1cqw 1.2cqw;
+  cursor: pointer;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 1.5rem;
+}
+
+/* Halo de pergamino — llena el espacio negativo, nunca una caja dura */
+.nar-command::before {
+  content: '';
+  position: absolute;
+  inset: -8% -6%;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(
+    ellipse 80% 78% at 50% 50%,
+    rgb(255 253 247 / 0.55) 0%,
+    rgb(255 253 247 / 0.22) 55%,
+    transparent 78%
+  );
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nar-command:hover::before,
+.nar-command:focus-visible::before {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------- MARQUISE */
+
+.nar-command--marquise .nar-command__excerpt {
+  font-family: 'Tangerine', 'Caveat', cursive;
+  font-weight: 700;
+  font-size: clamp(2.15rem, 5.1cqw, 3.65rem);
+  line-height: 0.98;
+  color: var(--marquise-ink, #7A1F3D);
+  text-shadow: 0 0.04em 0 rgb(122 31 61 / 0.1);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: nar-command-breathe 6s ease-in-out infinite;
+}
+
+.nar-command--marquise .nar-command__dare {
+  display: block;
+  margin-top: 0.35em;
+  font-family: var(--ab-script, 'Caveat', cursive);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.85cqw, 1.45rem);
+  line-height: 1.2;
+  color: var(--marquise-ink-deep, #4E1428);
+  opacity: 0.82;
+  transform: rotate(-1.5deg);
+}
+
+.nar-command--marquise:hover .nar-command__excerpt,
+.nar-command--marquise:focus-visible .nar-command__excerpt {
+  transform: scale(1.035);
+}
+
+.nar-command--marquise:hover .nar-command__dare,
+.nar-command--marquise:focus-visible .nar-command__dare {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------- LOLO */
+
+.nar-command--lolo .nar-command__excerpt {
+  font-family: var(--ab-script, 'Caveat', cursive);
+  font-weight: 700;
+  font-size: clamp(1.65rem, 3.5cqw, 2.4rem);
+  line-height: 1.08;
+  color: #1A3A5C;
+  transform: rotate(-2deg);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: nar-command-bob 4.5s ease-in-out infinite;
+}
+
+.nar-command--lolo .nar-command__dare {
+  display: block;
+  margin-top: 0.3em;
+  font-family: var(--ab-script, 'Caveat', cursive);
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.2cqw, 1.5rem);
+  line-height: 1.25;
+  color: #6b4a2e;
+  opacity: 0.85;
+}
+
+.nar-command--lolo:hover .nar-command__excerpt,
+.nar-command--lolo:focus-visible .nar-command__excerpt {
+  transform: rotate(0deg) scale(1.04);
+}
+
+.nar-command--lolo:hover .nar-command__dare,
+.nar-command--lolo:focus-visible .nar-command__dare {
+  opacity: 1;
+}
+
+/* -------------------------------------------------------- animations */
+
+@keyframes nar-command-breathe {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+
+@keyframes nar-command-bob {
+  0%, 100% { transform: rotate(-2deg) translateY(0); }
+  50% { transform: rotate(-1deg) translateY(-3px); }
+}
+
+.nar-command:focus-visible {
+  outline: none;
+}
+
+.nar-command--marquise:focus-visible .nar-command__excerpt,
+.nar-command--lolo:focus-visible .nar-command__excerpt {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 0.18em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nar-command__excerpt { animation: none; }
+}
+
+.nar-command .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --------------------------------------------------------- posiciones
+ * Locked to .nar-plate__stage / .lolo-stage — % + cqw/cqh only (no cm/vw).
+ */
+
+.nar-plate--letter .nar-command {
+  left: 38%;
+  top: 30%;
+  width: 42%;
+}
+
+.nar-plate--letter .nar-command--marquise .nar-command__excerpt {
+  color: var(--marquise-plum, #453258);
+  text-shadow: 0 0.04em 0 rgb(69 50 88 / 0.14);
+}
+
+.nar-plate--letter .nar-command--marquise .nar-command__dare {
+  color: var(--swamp-purple, #3d2a5c);
+}
+
+.nar-plate--letter .nar-command--marquise:hover .nar-command__excerpt,
+.nar-plate--letter .nar-command--marquise:focus-visible .nar-command__excerpt {
+  color: var(--swamp-deep, #1a1428);
+  text-shadow: 0 0.06em 0.12em rgb(69 50 88 / 0.3);
+}
+
+.nar-plate--letter .nar-command--marquise:hover .nar-command__dare,
+.nar-plate--letter .nar-command--marquise:focus-visible .nar-command__dare {
+  color: var(--marquise-plum, #453258);
+}
+
+.nar-plate--highlight .nar-command {
+  left: 18%;
+  top: calc(68% - 12.1cqh);
+  width: 48%;
+}
+
+.nar-plate--highlight .nar-command--marquise .nar-command__excerpt {
+  color: var(--marquise-plum, #453258);
+  text-shadow: 0 0.04em 0 rgb(69 50 88 / 0.14);
+}
+
+.nar-plate--highlight .nar-command--marquise .nar-command__dare {
+  color: var(--swamp-purple, #3d2a5c);
+}
+
+.nar-plate--highlight .nar-command--marquise:hover .nar-command__excerpt,
+.nar-plate--highlight .nar-command--marquise:focus-visible .nar-command__excerpt {
+  color: var(--swamp-deep, #1a1428);
+  text-shadow: 0 0.06em 0.12em rgb(69 50 88 / 0.3);
+}
+
+.nar-plate--highlight .nar-command--marquise:hover .nar-command__dare,
+.nar-plate--highlight .nar-command--marquise:focus-visible .nar-command__dare {
+  color: var(--marquise-plum, #453258);
+}
+
+.nar-plate--memoirs .nar-memoirs__title {
+  position: absolute;
+  z-index: 5;
+  left: 8%;
+  top: calc(40% + 7.5cqh);
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  pointer-events: none;
+  text-align: center;
+}
+
+.nar-plate--memoirs .nar-memoirs__title-line {
+  display: block;
+  font-family: 'Tangerine', 'Caveat', cursive;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5.6cqw, 3.95rem);
+  line-height: 0.92;
+  color: #735418;
+  -webkit-text-stroke: 0.04em rgb(58 40 18 / 0.5);
+  paint-order: stroke fill;
+  text-shadow: 0 0.14em 0.06em rgb(62 38 22 / 0.62);
+}
+
+.nar-plate--memoirs .nar-command--memoirs-link {
+  left: calc(50% + 1.2cqw);
+  top: calc(24% + 6.2cqh);
+  width: 32%;
+  transform: translateX(-50%);
+}
+
+.nar-plate--memoirs .nar-command--memoirs-link .nar-command__dare {
+  margin-top: 0;
+  text-align: center;
+  transform: none;
+  opacity: 1;
+  font-size: clamp(1.35rem, 2.45cqw, 1.8rem);
+  color: var(--marquise-copper, #a8722a);
+  text-shadow: 0 0.04em 0.1em rgb(168 114 42 / 0.28);
+}
+
+.nar-plate--memoirs .nar-command--memoirs-link:hover .nar-command__dare,
+.nar-plate--memoirs .nar-command--memoirs-link:focus-visible .nar-command__dare {
+  color: var(--marquise-gold, #d4a853);
+  opacity: 1;
+  text-shadow: 0 0.06em 0.14em rgb(212 168 83 / 0.45);
+}
+
+.nar-plate--court .nar-command {
+  left: 40%;
+  top: calc(52% - 7.8cqh);
+  width: 30%;
+}
+
+@media (max-width: 40rem) {
+  .nar-command {
+    padding: 1.4cqw 1.5cqw;
+  }
+}
