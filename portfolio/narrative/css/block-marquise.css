@@ -716,6 +716,10 @@
   .nar-plate--court .nar-plate__glints {
     display: none;
   }
+
+  .nar-plate--court .nar-plate__caption {
+    margin-top: 0.65rem;
+  }
 }
 
 /* ------------------------------------------------------------ showcases */
