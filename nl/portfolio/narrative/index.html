@@ -32,7 +32,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Tangerine:wght@400;700&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -60,8 +60,6 @@
   <link rel="stylesheet" href="../../../portfolio/narrative/css/block-page-hero.css">
   <link rel="stylesheet" href="../../../portfolio/narrative/css/block-marquise.css?v=30c133b">
   <link rel="stylesheet" href="../../../portfolio/narrative/css/block-lolo.css">
-  <link rel="stylesheet" href="../../../portfolio/narrative/css/block-nar-reader.css">
-  <link rel="stylesheet" href="../../../portfolio/narrative/css/block-nar-command.css">
   <!-- JSON-LD: VisualArtwork: spec Section 16.3 -->
   <script type="application/ld+json">
   [
@@ -257,7 +255,6 @@
               height="285"
             />
           </h2>
-          <p class="nar-marquise__crest">Haar Genade, Soeverein van het Moeras</p>
           <p class="nar-slogan">Een moeras, een kroon en absoluut zelfvertrouwen.</p>
           <p class="nar-body">
             Een aristocratische kikker die een moerasrijk bestuurt: satirisch,
@@ -290,11 +287,30 @@
               decoding="async"
             />
           </button>
-          <button type="button" class="nar-command nar-command--marquise" data-lightbox-open="reader-marquise-letter">
-            <span class="nar-command__excerpt">Sta me het genoegen toe&mdash;</span>
-            <span class="nar-command__dare">Ahhh, maar als je in mijn aanwezigheid wilt blijven groeien, zul je je nutteloosheid moeten beheersen en klikken&hellip; met eerbied.</span>
-            <span class="sr-only">— open de volledige brief</span>
-          </button>
+          <div class="nar-plate__text">
+            <p class="nar-plate__salutation">Mijn schatten,</p>
+            <p>
+              Sta me toe mezelf voor te stellen, tot jullie genoegen of onheil,
+              afhankelijk van jullie middelmatige geluk: ik ben The Marquise of Croac, aristocratische amfibie.
+              Wie heeft er juwelen nodig als men al zo fel schittert?
+            </p>
+            <p>
+              Vuurvliegjes en modder, en het hele moeras is mijn balzaal. Levende kroonluchters,
+              padden die alleen voor mij in koor zingen. Het water lijkt helderder wanneer het
+              mijn beeld weerspiegelt. Geboren met kunstwimpers, en schandaal met een onberispelijke houding.
+            </p>
+            <p>
+              Mijn leven is een eeuwige parade: onmogelijke japonnen, kapsels die de zwaartekracht
+              tarten, en zinnen die, eerlijk gezegd, op paleismuren geborduurd zouden moeten worden&hellip;
+              als er maar een paleis was dat mij waardig is.
+            </p>
+            <p>
+              Dus als je ooit mijn rijk durft te betreden, denk eraan te buigen, onhandig mag ook,
+              en bereid je oren voor: want mijn stem, zoet, scherp, onvergetelijk,
+              zal altijd luider klinken dan de jouwe.
+            </p>
+            <p class="nar-plate__signoff">Oprecht,<br>in paarse inkt en lelieparfum</p>
+          </div>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">Een brief uit het moeras</span>
@@ -322,11 +338,36 @@
               decoding="async"
             />
           </button>
-          <button type="button" class="nar-command nar-command--marquise" data-lightbox-open="reader-marquise-profile">
-            <span class="nar-command__excerpt">Het moeras is mijn podium&mdash;</span>
-            <span class="nar-command__dare">&hellip;en ik ben, uiteraard, de enige protagonist. Klik, als je ware grootheid wilt bestuderen.</span>
-            <span class="sr-only">— open het volledige profiel</span>
-          </button>
+          <div class="nar-plate__text nar-plate__text--highlight-intro">
+            <dl class="nar-plate__specs">
+              <dt>Soort</dt>
+              <dd>Aristocratische amfibie, zelfverklaarde royalty van het moeras</dd>
+              <dt>Residentie</dt>
+              <dd>Een paleis van leliebladen, versierd met libellen en geparfumeerd met algen</dd>
+              <dt>Persoonlijkheid</dt>
+              <dd>Sarcastisch, dramatisch, ijdel, geestig, heerlijk onuitstaanbaar</dd>
+            </dl>
+            <p class="nar-plate__text-label">Gedenkwaardige citaten</p>
+            <ul class="nar-plate__quotes">
+              <li>&ldquo;Het moeras is mijn podium, en ik ben de enige protagonist.&rdquo;</li>
+              <li>&ldquo;Schat, als je niet kunt schitteren, maak dan ten minste lawaai als je valt.&rdquo;</li>
+              <li>&ldquo;Als je me nodig hebt, ben ik druk bezig onvergetelijk te zijn.&rdquo;</li>
+              <li>&ldquo;Het luidste gekwaak zal altijd het mijne zijn.&rdquo;</li>
+              <li>&ldquo;Bescheidenheid is een luxe die ik mezelf simpelweg niet veroorloof.&rdquo;</li>
+            </ul>
+            <p class="nar-plate__text-label">Sterke punten</p>
+            <ul class="nar-plate__list">
+              <li>Maakt van modder een podium.</li>
+              <li>Kan een heel moeras tot zwijgen brengen met één opgetrokken wenkbrauw.</li>
+              <li>Onwrikbare eigenliefde, en een indrukwekkende collectie pruiken.</li>
+            </ul>
+            <p class="nar-plate__text-label">Zwaktes</p>
+            <ul class="nar-plate__list">
+              <li>Verdraagt geen middelmatigheid.</li>
+              <li>Neigt tot flauwvallen als het applaus tekortschiet.</li>
+            </ul>
+            <p><strong>Nalatenschap.</strong> The Marquise of Croac is niet zomaar een kikker; zij is het evenement. Een levende satire in zijde gewikkeld, een herinnering dat je zelfs in het modderigste moeras kunt heersen met stijl, sarcasme en ongegeneerde ijdelheid.</p>
+          </div>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">Personage in de schijnwerpers</span>
@@ -370,14 +411,27 @@
             <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:36%;--gy:11%;--gd:1.45s"></span>
             <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:62%;--gy:10%;--gd:0.6s"></span>
           </span>
-          <p class="nar-memoirs__title" aria-hidden="true">
-            <span class="nar-memoirs__title-line">Lieve</span>
-            <span class="nar-memoirs__title-line">wezens</span>
-          </p>
-          <button type="button" class="nar-command nar-command--marquise nar-command--memoirs-link" data-lightbox-open="reader-marquise-memoirs">
-            <span class="nar-command__dare">&hellip;ik schenk jullie de eer van mijn memoires. Klik, en probeer niet van dankbaarheid te huilen.</span>
-            <span class="sr-only">— lees haar memoires</span>
-          </button>
+          <div class="nar-plate__text nar-plate__text--quote">
+            <h3 class="nar-plate__text-title">Memoires van de Marquise of Croac</h3>
+            <p>
+              &ldquo;Liefste wezens van modderig water en tere vleugels, ik schenk jullie de eer
+              van mijn memoires. Een nalatenschap geschreven in fijne modder en geparfumeerd
+              met waterlelies, zodat jullie van mij kunnen leren en, met een beetje geluk,
+              jezelf wat meer kunnen liefhebben. Want als ík, met deze vorstelijke benen
+              en deze moeraskleurige huid, mezelf goddelijk acht&hellip; welk excuus hebben jullie dan?&rdquo;
+            </p>
+          </div>
+          <div class="nar-plate__text nar-plate__text--scroll">
+            <h3 class="nar-plate__text-title">Eeuwige waarheden</h3>
+            <ul class="nar-plate__quotes">
+              <li>&ldquo;Modder maakt alleen vies als je er niet op kunt paraderen.&rdquo;</li>
+              <li>&ldquo;Afgunst is niets dan een mug: klein, irritant, en met mijn waaier makkelijk plat te slaan.&rdquo;</li>
+              <li>&ldquo;Eén goed getoonzet gekwaak kan meer vellen dan duizend toespraken.&rdquo;</li>
+              <li>&ldquo;Ik ben nooit te laat. Het moeras begint wanneer ik aankom.&rdquo;</li>
+              <li>&ldquo;Als je weerspiegeling in het water je niet aanbidt, kies dan een andere vijver.&rdquo;</li>
+              <li>&ldquo;Nederigheid is overschat; ik verkies de eerlijkheid van mijn pracht.&rdquo;</li>
+            </ul>
+          </div>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">Geïllustreerde memoires</span>
@@ -405,7 +459,8 @@
               decoding="async"
             />
           </button>
-          <span class="nar-plate__glints" aria-hidden="true">
+          <div class="nar-plate__text">
+            <span class="nar-plate__glints" aria-hidden="true">
               <span class="nar-plate__glint nar-plate__glint--lg" style="--gx:8%;--gy:7%;--gd:0s"></span>
               <span class="nar-plate__glint" style="--gx:22%;--gy:4%;--gd:0.4s"></span>
               <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:38%;--gy:9%;--gd:1.1s"></span>
@@ -427,11 +482,35 @@
               <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:48%;--gy:22%;--gd:1.05s"></span>
               <span class="nar-plate__glint" style="--gx:18%;--gy:88%;--gd:0.75s"></span>
             </span>
-          <button type="button" class="nar-command nar-command--marquise" data-lightbox-open="reader-marquise-court">
-            <span class="nar-command__excerpt">Ze noemen me extravagant&mdash;</span>
-            <span class="nar-command__dare">&hellip;en ik noem het bestaan op een hoger niveau van gratie. Stilte. Klik. Luister.</span>
-            <span class="sr-only">— hoor haar toespraak aan het hof</span>
-          </button>
+            <p>
+              Ze noemen me extravagant, dramatisch, onuitstaanbaar&hellip;
+              en ik noem het gewoon bestaan op een hoger niveau van gratie.
+              Ik ben the Marquise, soeverein, mode-icoon van het moeras,
+              en de enige reden dat muggen &rsquo;s nachts de moeite nemen om te schijnen.
+            </p>
+            <p>
+              Mijn paleis? Dit moeras, gedecoreerd door libellen en geparfumeerd door algen.
+              Mijn troon? Een zorgvuldig gekozen lelieblad, uiteraard.
+            </p>
+            <p>
+              Ach, de boeren kwaken, ze springen, ze spetteren&hellip;
+              maar iemand moet dit plasje glamour geven, en wie beter dan ik?
+            </p>
+            <p>
+              &ldquo;Applaus? Of kwaken jullie uit gewoonte?&rdquo; vroeg ik eens aan mijn onderdanen.
+              Stilte. Want als the Marquise spreekt, luistert het moeras.
+            </p>
+            <p>Respect? Oh nee, verering volstaat.</p>
+            <p>
+              Ja, ik heb op een vis gereden alsof het een paard was. Ja, ik draag pruiken
+              hoger dan riet en zwaarder dan het geweten van een kikker. En ja, alles
+              staat me fabelachtig, vooral tragedie.
+            </p>
+            <p>
+              Onthoud mijn woorden, kleine dikkopjes van de middelmatigheid: niets is eeuwig,
+              zelfs de leliebloesems niet&hellip; behalve mijn elegantie.
+            </p>
+          </div>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">Het moerashof</span>
@@ -564,11 +643,12 @@
               <span class="lolo-glint lolo-glint--sm" style="--gx:54%;--gy:8%;--gd:0.55s"></span>
               <span class="lolo-glint" style="--gx:8%;--gy:36%;--gd:1.3s"></span>
             </span>
-            <button type="button" class="nar-command nar-command--lolo" data-lightbox-open="reader-lolo-highlights">
-              <span class="nar-command__excerpt">LoLo is een droomverver&hellip;</span>
-              <span class="nar-command__dare">&hellip;wil je zien wat hij vandaag schilderde? Kom dichterbij, ik laat het je zien.</span>
-              <span class="sr-only">— lees hun verhaal</span>
-            </button>
+            <div class="lolo-float">
+              <div class="lolo-float__pair">
+                <p class="lolo-float__copy">LoLo is een droomschilder: elke penseelstreek opent een wereld, elke droom wordt een bestemming. Hij leeft met vreugde, onschuld en speelse ondeugendheid, en maakt van gevoelens magische reizen. Fuzzle, zijn pluchen vogel, is zijn geestige, ondeugende beste vriend en onafscheidelijke metgezel.</p>
+                <p class="lolo-float__copy">Hun wereld is grillig: regen wordt een speelplaats, boeken worden trappen, wolken worden kastelen. Samen laten ze zien dat verbeelding de werkelijkheid met verwondering kan schilderen.</p>
+              </div>
+            </div>
           </div>
           <figcaption class="lolo-plate__caption">
             <span class="lolo-plate__index">01</span>
@@ -591,12 +671,13 @@
               <span class="lolo-glint lolo-glint--sm" style="--gx:78%;--gy:62%;--gd:0.25s"></span>
               <span class="lolo-glint" style="--gx:90%;--gy:78%;--gd:0.9s"></span>
             </span>
+            <div class="lolo-float">
+              <p>LoLo leeft met de vreugde en verwondering van een kind dat nooit ophoudt zich te verbazen. Voor hem is elke dag een nieuw avontuur; elke wolk lijkt op een kasteel, en elke plas is een oceaan vol geheimen. Zijn grootste kracht ligt in zijn verbeelding: hij schildert wat hij droomt en droomt wat hij schildert. Met zijn penselen maakt hij van gevoelens reizen; als hij iemand mist, schildert hij knuffels; als hij nieuwsgierig is, schildert hij deuren naar onbekende werelden; als hij wil spelen, schildert hij vrienden die tot leven komen.</p>
+              <p>Aan zijn zijde is altijd zijn onafscheidelijke metgezel: Fuzzle, een pluizige pluchen vogel die, hoewel zacht en knuffelbaar, een eigen wil lijkt te hebben. Samen zijn ze een ondeugend, onafscheidelijk duo: LoLo schildert, en Fuzzle commentarieert, observeert, en smokkelt soms zijn eigen dwaze ideeën het doek op.</p>
+              <p>LoLo’s wereld zit vol onschuldige kattenkwaad: springen in de regen tot hij zich een kikker voelt, praten met vlinders die alleen hij begrijpt, of zich verstoppen in de boekenberg van zijn grootmoeder terwijl hij zich inbeeldt dat het treden naar een andere planeet zijn. Met elke penseelstreek maakt hij een poort, en met elke droom vindt hij een nieuwe bestemming.</p>
+              <p>LoLo schildert niet alleen werelden, hij schildert de manier waarop hij ze wil leven. Want voor hem is het leven geen plek om te zijn, maar een avontuur om te verbeelden.</p>
             </div>
-            <button type="button" class="nar-command nar-command--lolo" data-lightbox-open="reader-lolo-sheet">
-              <span class="nar-command__excerpt">Elke plas is een oceaan&hellip;</span>
-              <span class="nar-command__dare">&hellip;vol geheimen. Wil je in zijn schetsboek kijken?</span>
-              <span class="sr-only">— lees het volledige character sheet</span>
-            </button>
+            </div>
           </div>
           <figcaption class="lolo-plate__caption">
             <span class="lolo-plate__index">02</span>
@@ -731,124 +812,6 @@
     </section>
 
   </main>
-
-  <div class="nar-reader" id="reader-marquise-letter" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Sluiten"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-letter-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Sluiten">&times;</button>
-      <p class="nar-reader__eyebrow">Personage-universum I · Marquise of Croac</p>
-      <h3 class="nar-reader__title" id="reader-marquise-letter-title">Een brief uit het moeras</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Ahh&mdash; ik zie dat je geboeid bent door mijn magnificence. Je hebt bewezen waardig te zijn voor mijn grootheid. Goed&hellip; ga verder.</p>
-        <p class="nar-reader__salutation">Mijn schatten,</p>
-        <p>Sta me toe mezelf voor te stellen, tot jullie genoegen of onheil, afhankelijk van jullie middelmatige geluk: ik ben The Marquise of Croac, aristocratische amfibie. Wie heeft er juwelen nodig als men al zo fel schittert?</p>
-        <p>Vuurvliegjes en modder, en het hele moeras is mijn balzaal. Levende kroonluchters, padden die alleen voor mij in koor zingen. Het water lijkt helderder wanneer het mijn beeld weerspiegelt. Geboren met kunstwimpers, en schandaal met een onberispelijke houding.</p>
-        <p>Mijn leven is een eeuwige parade: onmogelijke japonnen, kapsels die de zwaartekracht tarten, en zinnen die, eerlijk gezegd, op paleismuren geborduurd zouden moeten worden&hellip; als er maar een paleis was dat mij waardig is.</p>
-        <p>Dus als je ooit mijn rijk durft te betreden, denk eraan te buigen, onhandig mag ook, en bereid je oren voor: want mijn stem, zoet, scherp, onvergetelijk, zal altijd luider klinken dan de jouwe.</p>
-        <p class="nar-reader__signoff">Oprecht,<br>in paarse inkt en lelieparfum</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader" id="reader-marquise-profile" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Sluiten"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-profile-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Sluiten">&times;</button>
-      <p class="nar-reader__eyebrow">Personage-universum I · Marquise of Croac</p>
-      <h3 class="nar-reader__title" id="reader-marquise-profile-title">Personage in de schijnwerpers</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Dus. Je wilt weten wat me&hellip; magnifiek maakt. Wijze keuze. Lees aandachtig &mdash; er komt geen herhaling.</p>
-        <p><strong>Soort.</strong> Aristocratische amfibie, zelfverklaarde royalty van het moeras.</p>
-        <p><strong>Residentie.</strong> Een paleis van leliebladen, versierd met libellen en geparfumeerd met algen.</p>
-        <p><strong>Persoonlijkheid.</strong> Sarcastisch, dramatisch, ijdel, geestig, heerlijk onuitstaanbaar.</p>
-        <p class="nar-reader__label">Gedenkwaardige citaten</p>
-        <ul class="nar-reader__quotes">
-          <li>&ldquo;Het moeras is mijn podium, en ik ben de enige protagonist.&rdquo;</li>
-          <li>&ldquo;Schat, als je niet kunt schitteren, maak dan ten minste lawaai als je valt.&rdquo;</li>
-          <li>&ldquo;Als je me nodig hebt, ben ik druk bezig onvergetelijk te zijn.&rdquo;</li>
-          <li>&ldquo;Het luidste gekwaak zal altijd het mijne zijn.&rdquo;</li>
-          <li>&ldquo;Bescheidenheid is een luxe die ik mezelf simpelweg niet veroorloof.&rdquo;</li>
-        </ul>
-        <p class="nar-reader__label">Sterke punten</p>
-        <p>Maakt van modder een podium. Kan een heel moeras tot zwijgen brengen met één opgetrokken wenkbrauw. Onwrikbare eigenliefde, en een indrukwekkende collectie pruiken.</p>
-        <p class="nar-reader__label">Zwaktes</p>
-        <p>Verdraagt geen middelmatigheid. Neigt tot flauwvallen als het applaus tekortschiet.</p>
-        <p class="nar-reader__label">Nalatenschap</p>
-        <p>The Marquise of Croac is niet zomaar een kikker; zij is het evenement. Een levende satire in zijde gewikkeld, een herinnering dat je zelfs in het modderigste moeras kunt heersen met stijl, sarcasme en ongegeneerde ijdelheid.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader" id="reader-marquise-memoirs" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Sluiten"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-memoirs-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Sluiten">&times;</button>
-      <p class="nar-reader__eyebrow">Personage-universum I · Marquise of Croac</p>
-      <h3 class="nar-reader__title" id="reader-marquise-memoirs-title">Memoires van de Marquise of Croac</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Ahh, mijn memoires. Weinigen mogen zo dicht bij grootheid komen. Sla de pagina om, schat &mdash; als je me kunt bijhouden.</p>
-        <p>&ldquo;Liefste wezens van modderig water en tere vleugels, ik schenk jullie de eer van mijn memoires. Een nalatenschap geschreven in fijne modder en geparfumeerd met waterlelies, zodat jullie van mij kunnen leren en, met een beetje geluk, jezelf wat meer kunnen liefhebben. Want als ík, met deze vorstelijke benen en deze moeraskleurige huid, mezelf goddelijk acht&hellip; welk excuus hebben jullie dan?&rdquo;</p>
-        <p class="nar-reader__label">Eeuwige waarheden</p>
-        <ul class="nar-reader__quotes">
-          <li>&ldquo;Modder maakt alleen vies als je er niet op kunt paraderen.&rdquo;</li>
-          <li>&ldquo;Afgunst is niets dan een mug: klein, irritant, en met mijn waaier makkelijk plat te slaan.&rdquo;</li>
-          <li>&ldquo;Eén goed getoonzet gekwaak kan meer vellen dan duizend toespraken.&rdquo;</li>
-          <li>&ldquo;Ik ben nooit te laat. Het moeras begint wanneer ik aankom.&rdquo;</li>
-          <li>&ldquo;Als je weerspiegeling in het water je niet aanbidt, kies dan een andere vijver.&rdquo;</li>
-          <li>&ldquo;Nederigheid is overschat; ik verkies de eerlijkheid van mijn pracht.&rdquo;</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader" id="reader-marquise-court" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Sluiten"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-court-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Sluiten">&times;</button>
-      <p class="nar-reader__eyebrow">Personage-universum I · Marquise of Croac</p>
-      <h3 class="nar-reader__title" id="reader-marquise-court-title">Het moerashof</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Je waagt het mijn hof binnen te treden zonder uitnodiging? Goed &mdash; nu je er bent, kniel en luister aandachtig.</p>
-        <p>Ze noemen me extravagant, dramatisch, onuitstaanbaar&hellip; en ik noem het gewoon bestaan op een hoger niveau van gratie. Ik ben the Marquise, soeverein, mode-icoon van het moeras, en de enige reden dat muggen &rsquo;s nachts de moeite nemen om te schijnen.</p>
-        <p>Mijn paleis? Dit moeras, gedecoreerd door libellen en geparfumeerd door algen. Mijn troon? Een zorgvuldig gekozen lelieblad, uiteraard.</p>
-        <p>Ach, de boeren kwaken, ze springen, ze spetteren&hellip; maar iemand moet dit plasje glamour geven, en wie beter dan ik?</p>
-        <p>&ldquo;Applaus? Of kwaken jullie uit gewoonte?&rdquo; vroeg ik eens aan mijn onderdanen. Stilte. Want als the Marquise spreekt, luistert het moeras.</p>
-        <p>Respect? Oh nee, verering volstaat.</p>
-        <p>Ja, ik heb op een vis gereden alsof het een paard was. Ja, ik draag pruiken hoger dan riet en zwaarder dan het geweten van een kikker. En ja, alles staat me fabelachtig, vooral tragedie.</p>
-        <p>Onthoud mijn woorden, kleine dikkopjes van de middelmatigheid: niets is eeuwig, zelfs de leliebloesems niet&hellip; behalve mijn elegantie.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader nar-reader--lolo" id="reader-lolo-highlights" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Sluiten"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-lolo-highlights-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Sluiten">&times;</button>
-      <p class="nar-reader__eyebrow">Personage-universum II · LoLo &amp; Fuzzle</p>
-      <h3 class="nar-reader__title" id="reader-lolo-highlights-title">Character Highlights</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Yay, je bent gekomen! Fuzzle groet ook &mdash; hij is de pluizige achter het penseel. Hier is ons verhaal&hellip;</p>
-        <p>LoLo is een droomschilder: elke penseelstreek opent een wereld, elke droom wordt een bestemming. Hij leeft met vreugde, onschuld en speelse ondeugendheid, en maakt van gevoelens magische reizen. Fuzzle, zijn pluchen vogel, is zijn geestige, ondeugende beste vriend en onafscheidelijke metgezel.</p>
-        <p>Hun wereld is grillig: regen wordt een speelplaats, boeken worden trappen, wolken worden kastelen. Samen laten ze zien dat verbeelding de werkelijkheid met verwondering kan schilderen.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader nar-reader--lolo" id="reader-lolo-sheet" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Sluiten"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-lolo-sheet-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Sluiten">&times;</button>
-      <p class="nar-reader__eyebrow">Personage-universum II · LoLo &amp; Fuzzle</p>
-      <h3 class="nar-reader__title" id="reader-lolo-sheet-title">Character Sheet</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Shhh, kom stilletjes binnen &mdash; Fuzzle moet nog beslissen of hij je vertrouwt. Oké, hij zegt dat je mag blijven. Hier is alles over ons&hellip;</p>
-        <p>LoLo leeft met de vreugde en verwondering van een kind dat nooit ophoudt zich te verbazen. Voor hem is elke dag een nieuw avontuur; elke wolk lijkt op een kasteel, en elke plas is een oceaan vol geheimen. Zijn grootste kracht ligt in zijn verbeelding: hij schildert wat hij droomt en droomt wat hij schildert. Met zijn penselen maakt hij van gevoelens reizen; als hij iemand mist, schildert hij knuffels; als hij nieuwsgierig is, schildert hij deuren naar onbekende werelden; als hij wil spelen, schildert hij vrienden die tot leven komen.</p>
-        <p>Aan zijn zijde is altijd zijn onafscheidelijke metgezel: Fuzzle, een pluizige pluchen vogel die, hoewel zacht en knuffelbaar, een eigen wil lijkt te hebben. Samen zijn ze een ondeugend, onafscheidelijk duo: LoLo schildert, en Fuzzle commentarieert, observeert, en smokkelt soms zijn eigen dwaze ideeën het doek op.</p>
-        <p>LoLo&rsquo;s wereld zit vol onschuldige kattenkwaad: springen in de regen tot hij zich een kikker voelt, praten met vlinders die alleen hij begrijpt, of zich verstoppen in de boekenberg van zijn grootmoeder terwijl hij zich inbeeldt dat het treden naar een andere planeet zijn. Met elke penseelstreek maakt hij een poort, en met elke droom vindt hij een nieuwe bestemming.</p>
-        <p>LoLo schildert niet alleen werelden, hij schildert de manier waarop hij ze wil leven. Want voor hem is het leven geen plek om te zijn, maar een avontuur om te verbeelden.</p>
-      </div>
-    </div>
-  </div>
 
   <div class="nar-lightbox" id="nar-lightbox" hidden>
     <button type="button" class="nar-lightbox__backdrop" data-lightbox-close aria-label="Illustratie op volledige grootte sluiten"></button>

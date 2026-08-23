@@ -157,8 +157,6 @@
 
 .lolo-stage {
   position: relative;
-  container-type: size;
-  container-name: lolo-art;
 }
 
 .lolo-plate__trigger {
@@ -230,21 +228,23 @@
 
 .lolo-plate--highlights .lolo-stage {
   width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
+  container-type: inline-size;
 }
 
 .lolo-plate--highlights .lolo-plate__trigger {
-  display: block;
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
   width: 100%;
 }
 
 .lolo-plate--highlights img {
   width: 100%;
-  height: auto;
-  object-fit: unset;
-  object-position: unset;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
 }
 
 .lolo-plate--highlights .lolo-float {
@@ -292,25 +292,28 @@
 
 .lolo-plate--sheet .lolo-stage {
   width: 100%;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
+  container-type: inline-size;
 }
 
 .lolo-plate--sheet .lolo-stage__lock {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  inset: 0;
 }
 
 .lolo-plate--sheet .lolo-plate__trigger {
-  display: block;
-  position: relative;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   width: 100%;
 }
 
 .lolo-plate--sheet img {
   width: 100%;
-  height: auto;
-  object-fit: unset;
-  object-position: unset;
+  height: 100%;
+  object-fit: cover;
+  object-position: 88% center;
 }
 
 .lolo-plate--sheet .lolo-float {
@@ -646,17 +649,40 @@
     margin-right: 0;
   }
 
-  .lolo-plate--highlights .lolo-stage,
-  .lolo-plate--sheet .lolo-stage {
+  .lolo-plate--highlights .lolo-stage {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
   }
 
-  .lolo-plate--highlights img,
+  .lolo-plate--highlights .lolo-plate__trigger {
+    position: absolute;
+    inset: 0;
+  }
+
+  .lolo-plate--highlights img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 58%;
+  }
+
+  .lolo-plate--sheet .lolo-stage {
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+  }
+
+  .lolo-plate--sheet .lolo-plate__trigger {
+    position: absolute;
+    inset: 0;
+  }
+
   .lolo-plate--sheet img {
     width: 100%;
-    height: auto;
-    object-fit: unset;
-    object-position: unset;
+    height: 100%;
+    object-fit: cover;
+    object-position: 88% center;
   }
 
   .lolo-float__pair {
@@ -703,71 +729,39 @@
 }
 
 .nar-lightbox__stage.lolo-plate--highlights {
-  width: min(94vw, calc(85vh * 2000 / 698));
+  width: min(94vw, calc(85vh * 16 / 9));
   max-width: 94vw;
   max-height: 85vh;
-  aspect-ratio: 2000 / 698;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  container-type: size;
+  container-type: inline-size;
   margin: 0 auto;
 }
 
 .nar-lightbox__stage.lolo-plate--highlights .nar-lightbox__image {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: none;
   max-height: none;
-  object-fit: unset;
-  object-position: unset;
+  object-fit: cover;
+  object-position: center 58%;
 }
 
 .nar-lightbox__stage.lolo-plate--sheet {
-  width: min(94vw, calc(85vh * 2000 / 913));
+  width: min(94vw, calc(85vh * 3 / 2));
   max-width: 94vw;
   max-height: 85vh;
-  aspect-ratio: 2000 / 913;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
-  container-type: size;
+  container-type: inline-size;
   margin: 0 auto;
 }
 
 .nar-lightbox__stage.lolo-plate--sheet .nar-lightbox__image {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: none;
   max-height: none;
-  object-fit: unset;
-  object-position: unset;
-}
-
-.lolo-glints .lolo-glint:nth-child(n+5) {
-  display: none;
-}
-
-.lolo-plate--highlights .nar-command {
-  left: calc(6% + 5.3cqw);
-  top: calc(58% + 2.4cqh);
-  width: 32%;
-}
-
-.lolo-plate--highlights .nar-command__excerpt {
-  font-size: clamp(2.95rem, 6.7cqw, 4.2rem);
-}
-
-.lolo-plate--highlights .nar-command__dare {
-  font-size: clamp(2rem, 4cqw, 2.6rem);
-}
-
-.lolo-plate--sheet .nar-command {
-  left: 8%;
-  top: 62%;
-  width: 42%;
-}
-
-.lolo-plate--sheet .nar-command__excerpt {
-  font-size: clamp(1.9rem, 4cqw, 2.75rem);
-}
-
-.lolo-plate--sheet .nar-command__dare {
-  font-size: clamp(1.3rem, 2.5cqw, 1.7rem);
+  object-fit: cover;
+  object-position: 88% center;
 }

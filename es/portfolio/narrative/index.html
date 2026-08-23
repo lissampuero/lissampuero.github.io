@@ -32,7 +32,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Tangerine:wght@400;700&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -60,8 +60,6 @@
   <link rel="stylesheet" href="../../../portfolio/narrative/css/block-page-hero.css">
   <link rel="stylesheet" href="../../../portfolio/narrative/css/block-marquise.css?v=30c133b">
   <link rel="stylesheet" href="../../../portfolio/narrative/css/block-lolo.css">
-  <link rel="stylesheet" href="../../../portfolio/narrative/css/block-nar-reader.css">
-  <link rel="stylesheet" href="../../../portfolio/narrative/css/block-nar-command.css">
   <!-- JSON-LD: VisualArtwork: spec Section 16.3 -->
   <script type="application/ld+json">
   [
@@ -257,7 +255,6 @@
               height="285"
             />
           </h2>
-          <p class="nar-marquise__crest">Su Excelencia, Soberana del Pantano</p>
           <p class="nar-slogan">Un pantano, una corona y una seguridad absoluta.</p>
           <p class="nar-body">
             Una rana aristocrática que gobierna un reino pantanoso: satírica,
@@ -290,11 +287,31 @@
               decoding="async"
             />
           </button>
-          <button type="button" class="nar-command nar-command--marquise" data-lightbox-open="reader-marquise-letter">
-            <span class="nar-command__excerpt">Permíteme el placer&mdash;</span>
-            <span class="nar-command__dare">Ahhh, pero si deseas seguir cultivándote en mi presencia, deberás esforzarte en tu inutilidad y hacer clic&hellip; con reverencia.</span>
-            <span class="sr-only">— abrir la carta completa</span>
-          </button>
+          <div class="nar-plate__text">
+            <p class="nar-plate__salutation">Mis queridos,</p>
+            <p>
+              Permítanme el placer, o la desgracia, según su mediocre fortuna,
+              de presentarme: soy The Marquise of Croac, aristócrata anfibia.
+              ¿Quién necesita joyas cuando ya brilla con esta intensidad?
+            </p>
+            <p>
+              Luciérnagas y barro, y todo el pantano es mi salón de baile.
+              Arañas de luz vivas, sapos que cantan en coro solo para mí.
+              Las aguas parecen más claras cuando reflejan mi imagen.
+              Nacida con pestañas postizas, y el escándalo con una postura impecable.
+            </p>
+            <p>
+              Mi vida es un desfile perpetuo: vestidos imposibles, peinados que desafían
+              la gravedad y frases que, francamente, deberían bordarse en las paredes
+              de un palacio&hellip; si existiera un palacio digno de mí.
+            </p>
+            <p>
+              Así que, si alguna vez se atreven a entrar en mi dominio, recuerden
+              inclinarse, torpemente vale, y preparen los oídos: porque mi voz,
+              dulce, afilada, inolvidable, siempre resonará más alto que la suya.
+            </p>
+            <p class="nar-plate__signoff">Sinceramente,<br>en tinta púrpura y perfume de nenúfar</p>
+          </div>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">Carta desde el pantano</span>
@@ -322,11 +339,36 @@
               decoding="async"
             />
           </button>
-          <button type="button" class="nar-command nar-command--marquise" data-lightbox-open="reader-marquise-profile">
-            <span class="nar-command__excerpt">El pantano es mi escenario&mdash;</span>
-            <span class="nar-command__dare">&hellip;y yo soy, evidentemente, la única protagonista. Haz clic, si deseas estudiar la verdadera grandeza.</span>
-            <span class="sr-only">— abrir el perfil completo</span>
-          </button>
+          <div class="nar-plate__text nar-plate__text--highlight-intro">
+            <dl class="nar-plate__specs">
+              <dt>Especie</dt>
+              <dd>Aristócrata anfibia, realeza autoproclamada del pantano</dd>
+              <dt>Residencia</dt>
+              <dd>Un palacio de nenúfar, adornado con libélulas y perfumado de algas</dd>
+              <dt>Personalidad</dt>
+              <dd>Sarcástica, dramática, vanidosa, aguda, deliciosamente insoportable</dd>
+            </dl>
+            <p class="nar-plate__text-label">Citas notables</p>
+            <ul class="nar-plate__quotes">
+              <li>«El pantano es mi escenario, y yo soy la única protagonista.»</li>
+              <li>«Cariño, si no puedes brillar, al menos haz ruido al caer.»</li>
+              <li>«Si me necesitas, estaré ocupada siendo inolvidable.»</li>
+              <li>«El croar más alto será siempre el mío.»</li>
+              <li>«La modestia es un lujo que simplemente no voy a permitirme.»</li>
+            </ul>
+            <p class="nar-plate__text-label">Fortalezas</p>
+            <ul class="nar-plate__list">
+              <li>Convierte el barro en un escenario.</li>
+              <li>Puede silenciar todo un pantano con una ceja alzada.</li>
+              <li>Amor propio inquebrantable, y una colección impresionante de pelucas.</li>
+            </ul>
+            <p class="nar-plate__text-label">Debilidades</p>
+            <ul class="nar-plate__list">
+              <li>No tolera la mediocridad.</li>
+              <li>Propensa a desmayarse si el aplauso no basta.</li>
+            </ul>
+            <p><strong>Legado.</strong> The Marquise of Croac no es solo una rana; es el acontecimiento. Una sátira viva envuelta en seda, un recordatorio de que incluso en el pantano más lodoso se puede reinar con estilo, sarcasmo y vanidad sin disculpas.</p>
+          </div>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">Destacado de personaje</span>
@@ -370,14 +412,27 @@
             <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:36%;--gy:11%;--gd:1.45s"></span>
             <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:62%;--gy:10%;--gd:0.6s"></span>
           </span>
-          <p class="nar-memoirs__title" aria-hidden="true">
-            <span class="nar-memoirs__title-line">Queridas</span>
-            <span class="nar-memoirs__title-line">criaturas</span>
-          </p>
-          <button type="button" class="nar-command nar-command--marquise nar-command--memoirs-link" data-lightbox-open="reader-marquise-memoirs">
-            <span class="nar-command__dare">&hellip;os concedo el honor de mis memorias. Haz clic, e intenta no llorar de gratitud.</span>
-            <span class="sr-only">— leer sus memorias</span>
-          </button>
+          <div class="nar-plate__text nar-plate__text--quote">
+            <h3 class="nar-plate__text-title">Memorias de la Marquise of Croac</h3>
+            <p>
+              «Queridas criaturas de aguas turbias y alas frágiles, os concedo el honor
+              de mis memorias. Un legado escrito en barro fino y perfumado de nenúfares,
+              para que aprendáis de mí y, con suerte, os queráis un poco más. Porque si yo,
+              con estas patas regias y este cutis de pantano, me considero divina&hellip;
+              ¿qué excusa os queda?»
+            </p>
+          </div>
+          <div class="nar-plate__text nar-plate__text--scroll">
+            <h3 class="nar-plate__text-title">Verdades eternas</h3>
+            <ul class="nar-plate__quotes">
+              <li>«El barro solo ensucia si no sabes pavonearte sobre él.»</li>
+              <li>«La envidia no es más que un mosquito: pequeño, molesto y fácil de aplastar con mi abanico.»</li>
+              <li>«Un croar bien entonado puede abatir más que mil discursos.»</li>
+              <li>«Nunca llego tarde. El pantano empieza cuando yo llego.»</li>
+              <li>«Si tu reflejo en el agua no te adora, cambia de estanque.»</li>
+              <li>«La humildad está sobrevalorada; prefiero la honestidad de mi magnificencia.»</li>
+            </ul>
+          </div>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">Memorias ilustradas</span>
@@ -405,7 +460,8 @@
               decoding="async"
             />
           </button>
-          <span class="nar-plate__glints" aria-hidden="true">
+          <div class="nar-plate__text">
+            <span class="nar-plate__glints" aria-hidden="true">
               <span class="nar-plate__glint nar-plate__glint--lg" style="--gx:8%;--gy:7%;--gd:0s"></span>
               <span class="nar-plate__glint" style="--gx:22%;--gy:4%;--gd:0.4s"></span>
               <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:38%;--gy:9%;--gd:1.1s"></span>
@@ -427,11 +483,35 @@
               <span class="nar-plate__glint nar-plate__glint--sm" style="--gx:48%;--gy:22%;--gd:1.05s"></span>
               <span class="nar-plate__glint" style="--gx:18%;--gy:88%;--gd:0.75s"></span>
             </span>
-          <button type="button" class="nar-command nar-command--marquise" data-lightbox-open="reader-marquise-court">
-            <span class="nar-command__excerpt">Me llaman extravagante&mdash;</span>
-            <span class="nar-command__dare">&hellip;y yo lo llamo existir en un nivel superior de gracia. Silencio. Clic. Escucha.</span>
-            <span class="sr-only">— escuchar su discurso en la corte</span>
-          </button>
+            <p>
+              Me llaman extravagante, dramática, insoportable&hellip;
+              y yo lo llamo existir simplemente a un nivel más alto de gracia.
+              Soy la Marquise soberana, icono de moda del pantano,
+              y la única razón por la que los mosquitos se molestan en brillar de noche.
+            </p>
+            <p>
+              ¿Mi palacio? Este pantano, decorado por libélulas y perfumado de algas.
+              ¿Mi trono? Un nenúfar perfectamente elegido, por supuesto.
+            </p>
+            <p>
+              Ah, los campesinos croan, saltan, chapotean&hellip;
+              pero alguien debe darle glamour a este charco, ¿y quién mejor que yo?
+            </p>
+            <p>
+              «¿Aplaudís? ¿O croáis por costumbre?», pregunté una vez a mis súbditos.
+              Silencio. Porque cuando habla la Marquise, el pantano escucha.
+            </p>
+            <p>¿Respeto? Oh, no: bastará con la adoración.</p>
+            <p>
+              Sí, he montado un pez como si fuera un caballo. Sí, llevo pelucas más altas
+              que los juncos y más pesadas que la conciencia de una rana. Y sí, todo
+              me queda fabuloso, sobre todo la tragedia.
+            </p>
+            <p>
+              Recordad mis palabras, pequeños renacuajos de la mediocridad: nada es eterno,
+              ni siquiera las flores del nenúfar&hellip; excepto mi elegancia.
+            </p>
+          </div>
           </div>
           <figcaption class="nar-plate__caption">
             <span class="nar-plate__caption-title">La corte del pantano</span>
@@ -564,11 +644,12 @@
               <span class="lolo-glint lolo-glint--sm" style="--gx:54%;--gy:8%;--gd:0.55s"></span>
               <span class="lolo-glint" style="--gx:8%;--gy:36%;--gd:1.3s"></span>
             </span>
-            <button type="button" class="nar-command nar-command--lolo" data-lightbox-open="reader-lolo-highlights">
-              <span class="nar-command__excerpt">LoLo es un pintor de sueños&hellip;</span>
-              <span class="nar-command__dare">&hellip;¿quieres ver lo que pintó hoy? Acércate, te lo enseño.</span>
-              <span class="sr-only">— leer su historia</span>
-            </button>
+            <div class="lolo-float">
+              <div class="lolo-float__pair">
+                <p class="lolo-float__copy">LoLo es un pintor de sueños: cada pincelada abre un mundo, cada sueño se vuelve un destino. Vive con alegría, inocencia y travesura, y convierte los sentimientos en viajes mágicos. Fuzzle, su peluche de pájaro, es su mejor amigo ingenioso, travieso e inseparable.</p>
+                <p class="lolo-float__copy">Su mundo es caprichoso: la lluvia se vuelve un patio de juegos, los libros se vuelven escaleras, las nubes se vuelven castillos. Juntos demuestran que la imaginación puede pintar la realidad con asombro.</p>
+              </div>
+            </div>
           </div>
           <figcaption class="lolo-plate__caption">
             <span class="lolo-plate__index">01</span>
@@ -591,12 +672,13 @@
               <span class="lolo-glint lolo-glint--sm" style="--gx:78%;--gy:62%;--gd:0.25s"></span>
               <span class="lolo-glint" style="--gx:90%;--gy:78%;--gd:0.9s"></span>
             </span>
+            <div class="lolo-float">
+              <p>LoLo vive con la alegría y el asombro de un niño que nunca deja de maravillarse. Para él, cada día es una nueva aventura; cada nube parece un castillo, y cada charco es un océano lleno de secretos. Su mayor poder está en la imaginación: pinta lo que sueña y sueña lo que pinta. Con sus pinceles convierte los sentimientos en viajes; si extraña a alguien, pinta abrazos; si siente curiosidad, pinta puertas a mundos desconocidos; si quiere jugar, pinta amigos que cobran vida.</p>
+              <p>A su lado está siempre su compañero inseparable: Fuzzle, un peluche de pájaro esponjoso que, aunque suave y abrazable, parece tener mente propia. Juntos son un dúo travieso e inseparable: LoLo pinta, y Fuzzle comenta, observa y a veces cuela sus propias ideas disparatadas en los lienzos.</p>
+              <p>El mundo de LoLo está lleno de travesuras inocentes: saltar bajo la lluvia hasta sentirse una rana, hablar con mariposas que solo él entiende, o esconderse en la montaña de libros de su abuela imaginando que son peldaños hacia otro planeta. Con cada pincelada crea un portal, y con cada sueño encuentra un nuevo destino.</p>
+              <p>LoLo no solo pinta mundos: pinta la forma en que quiere vivirlos. Porque para él, la vida no es un lugar donde estar, sino una aventura que imaginar.</p>
             </div>
-            <button type="button" class="nar-command nar-command--lolo" data-lightbox-open="reader-lolo-sheet">
-              <span class="nar-command__excerpt">Cada charco es un océano&hellip;</span>
-              <span class="nar-command__dare">&hellip;lleno de secretos. ¿Quieres asomarte a su cuaderno de bocetos?</span>
-              <span class="sr-only">— leer la ficha completa del personaje</span>
-            </button>
+            </div>
           </div>
           <figcaption class="lolo-plate__caption">
             <span class="lolo-plate__index">02</span>
@@ -731,124 +813,6 @@
     </section>
 
   </main>
-
-  <div class="nar-reader" id="reader-marquise-letter" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Cerrar"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-letter-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Cerrar">&times;</button>
-      <p class="nar-reader__eyebrow">Universo de personajes I · Marquise of Croac</p>
-      <h3 class="nar-reader__title" id="reader-marquise-letter-title">Carta desde el pantano</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Ahh&mdash; veo que estás cautivada por mi magnificencia. Has demostrado ser digna de mi grandeza. Muy bien&hellip; continúa.</p>
-        <p class="nar-reader__salutation">Mis queridos,</p>
-        <p>Permítanme el placer, o la desgracia, según su mediocre fortuna, de presentarme: soy The Marquise of Croac, aristócrata anfibia. ¿Quién necesita joyas cuando ya brilla con esta intensidad?</p>
-        <p>Luciérnagas y barro, y todo el pantano es mi salón de baile. Arañas de luz vivas, sapos que cantan en coro solo para mí. Las aguas parecen más claras cuando reflejan mi imagen. Nacida con pestañas postizas, y el escándalo con una postura impecable.</p>
-        <p>Mi vida es un desfile perpetuo: vestidos imposibles, peinados que desafían la gravedad y frases que, francamente, deberían bordarse en las paredes de un palacio&hellip; si existiera un palacio digno de mí.</p>
-        <p>Así que, si alguna vez se atreven a entrar en mi dominio, recuerden inclinarse, torpemente vale, y preparen los oídos: porque mi voz, dulce, afilada, inolvidable, siempre resonará más alto que la suya.</p>
-        <p class="nar-reader__signoff">Sinceramente,<br>en tinta púrpura y perfume de nenúfar</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader" id="reader-marquise-profile" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Cerrar"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-profile-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Cerrar">&times;</button>
-      <p class="nar-reader__eyebrow">Universo de personajes I · Marquise of Croac</p>
-      <h3 class="nar-reader__title" id="reader-marquise-profile-title">Destacado de personaje</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Así que. Deseas saber qué me hace&hellip; magnífica. Sabia elección. Lee con cuidado &mdash; no habrá repetición.</p>
-        <p><strong>Especie.</strong> Aristócrata anfibia, realeza autoproclamada del pantano.</p>
-        <p><strong>Residencia.</strong> Un palacio de nenúfar, adornado con libélulas y perfumado de algas.</p>
-        <p><strong>Personalidad.</strong> Sarcástica, dramática, vanidosa, aguda, deliciosamente insoportable.</p>
-        <p class="nar-reader__label">Citas notables</p>
-        <ul class="nar-reader__quotes">
-          <li>&ldquo;El pantano es mi escenario, y yo soy la única protagonista.&rdquo;</li>
-          <li>&ldquo;Cariño, si no puedes brillar, al menos haz ruido al caer.&rdquo;</li>
-          <li>&ldquo;Si me necesitas, estaré ocupada siendo inolvidable.&rdquo;</li>
-          <li>&ldquo;El croar más alto será siempre el mío.&rdquo;</li>
-          <li>&ldquo;La modestia es un lujo que simplemente no voy a permitirme.&rdquo;</li>
-        </ul>
-        <p class="nar-reader__label">Fortalezas</p>
-        <p>Convierte el barro en un escenario. Puede silenciar todo un pantano con una ceja alzada. Amor propio inquebrantable, y una colección impresionante de pelucas.</p>
-        <p class="nar-reader__label">Debilidades</p>
-        <p>No tolera la mediocridad. Propensa a desmayarse si el aplauso no basta.</p>
-        <p class="nar-reader__label">Legado</p>
-        <p>The Marquise of Croac no es solo una rana; es el acontecimiento. Una sátira viva envuelta en seda, un recordatorio de que incluso en el pantano más lodoso se puede reinar con estilo, sarcasmo y vanidad sin disculpas.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader" id="reader-marquise-memoirs" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Cerrar"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-memoirs-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Cerrar">&times;</button>
-      <p class="nar-reader__eyebrow">Universo de personajes I · Marquise of Croac</p>
-      <h3 class="nar-reader__title" id="reader-marquise-memoirs-title">Memorias de la Marquise of Croac</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Ahh, mis memorias. Pocos tienen permiso de acercarse tanto a la grandeza. Pasa la página, querida &mdash; si puedes seguirme el ritmo.</p>
-        <p>&ldquo;Queridas criaturas de aguas turbias y alas frágiles, os concedo el honor de mis memorias. Un legado escrito en barro fino y perfumado de nenúfares, para que aprendáis de mí y, con suerte, os queráis un poco más. Porque si yo, con estas patas regias y este cutis de pantano, me considero divina&hellip; ¿qué excusa os queda?&rdquo;</p>
-        <p class="nar-reader__label">Verdades eternas</p>
-        <ul class="nar-reader__quotes">
-          <li>&ldquo;El barro solo ensucia si no sabes pavonearte sobre él.&rdquo;</li>
-          <li>&ldquo;La envidia no es más que un mosquito: pequeño, molesto y fácil de aplastar con mi abanico.&rdquo;</li>
-          <li>&ldquo;Un croar bien entonado puede abatir más que mil discursos.&rdquo;</li>
-          <li>&ldquo;Nunca llego tarde. El pantano empieza cuando yo llego.&rdquo;</li>
-          <li>&ldquo;Si tu reflejo en el agua no te adora, cambia de estanque.&rdquo;</li>
-          <li>&ldquo;La humildad está sobrevalorada; prefiero la honestidad de mi magnificencia.&rdquo;</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader" id="reader-marquise-court" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Cerrar"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-marquise-court-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Cerrar">&times;</button>
-      <p class="nar-reader__eyebrow">Universo de personajes I · Marquise of Croac</p>
-      <h3 class="nar-reader__title" id="reader-marquise-court-title">La corte del pantano</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">¿Te atreves a entrar en mi corte sin invitación? Muy bien &mdash; ya que estás aquí, arrodíllate y escucha con atención.</p>
-        <p>Me llaman extravagante, dramática, insoportable&hellip; y yo lo llamo existir simplemente a un nivel más alto de gracia. Soy la Marquise soberana, icono de moda del pantano, y la única razón por la que los mosquitos se molestan en brillar de noche.</p>
-        <p>¿Mi palacio? Este pantano, decorado por libélulas y perfumado de algas. ¿Mi trono? Un nenúfar perfectamente elegido, por supuesto.</p>
-        <p>Ah, los campesinos croan, saltan, chapotean&hellip; pero alguien debe darle glamour a este charco, ¿y quién mejor que yo?</p>
-        <p>&ldquo;¿Aplaudís? ¿O croáis por costumbre?&rdquo; pregunté una vez a mis súbditos. Silencio. Porque cuando habla la Marquise, el pantano escucha.</p>
-        <p>¿Respeto? Oh, no: bastará con la adoración.</p>
-        <p>Sí, he montado un pez como si fuera un caballo. Sí, llevo pelucas más altas que los juncos y más pesadas que la conciencia de una rana. Y sí, todo me queda fabuloso, sobre todo la tragedia.</p>
-        <p>Recordad mis palabras, pequeños renacuajos de la mediocridad: nada es eterno, ni siquiera las flores del nenúfar&hellip; excepto mi elegancia.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader nar-reader--lolo" id="reader-lolo-highlights" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Cerrar"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-lolo-highlights-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Cerrar">&times;</button>
-      <p class="nar-reader__eyebrow">Universo de personajes II · LoLo &amp; Fuzzle</p>
-      <h3 class="nar-reader__title" id="reader-lolo-highlights-title">Destacados de personaje</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">¡Yay, viniste! Fuzzle también saluda &mdash; es el peluche escondido detrás del pincel. Aquí está nuestra historia&hellip;</p>
-        <p>LoLo es un pintor de sueños: cada pincelada abre un mundo, cada sueño se vuelve un destino. Vive con alegría, inocencia y travesura, y convierte los sentimientos en viajes mágicos. Fuzzle, su peluche de pájaro, es su mejor amigo ingenioso, travieso e inseparable.</p>
-        <p>Su mundo es caprichoso: la lluvia se vuelve un patio de juegos, los libros se vuelven escaleras, las nubes se vuelven castillos. Juntos demuestran que la imaginación puede pintar la realidad con asombro.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nar-reader nar-reader--lolo" id="reader-lolo-sheet" hidden>
-    <button type="button" class="nar-reader__backdrop" data-lightbox-close aria-label="Cerrar"></button>
-    <div class="nar-reader__panel" role="dialog" aria-modal="true" aria-labelledby="reader-lolo-sheet-title">
-      <button type="button" class="nar-reader__close" data-lightbox-close aria-label="Cerrar">&times;</button>
-      <p class="nar-reader__eyebrow">Universo de personajes II · LoLo &amp; Fuzzle</p>
-      <h3 class="nar-reader__title" id="reader-lolo-sheet-title">Hoja de personaje</h3>
-      <div class="nar-reader__body">
-        <p class="nar-reader__preamble">Shhh, entra en silencio &mdash; Fuzzle aún decide si confía en ti. Vale, dice que puedes quedarte. Aquí está todo sobre nosotros&hellip;</p>
-        <p>LoLo vive con la alegría y el asombro de un niño que nunca deja de maravillarse. Para él, cada día es una nueva aventura; cada nube parece un castillo, y cada charco es un océano lleno de secretos. Su mayor poder está en la imaginación: pinta lo que sueña y sueña lo que pinta. Con sus pinceles convierte los sentimientos en viajes; si extraña a alguien, pinta abrazos; si siente curiosidad, pinta puertas a mundos desconocidos; si quiere jugar, pinta amigos que cobran vida.</p>
-        <p>A su lado está siempre su compañero inseparable: Fuzzle, un peluche de pájaro esponjoso que, aunque suave y abrazable, parece tener mente propia. Juntos son un dúo travieso e inseparable: LoLo pinta, y Fuzzle comenta, observa y a veces cuela sus propias ideas disparatadas en los lienzos.</p>
-        <p>El mundo de LoLo está lleno de travesuras inocentes: saltar bajo la lluvia hasta sentirse una rana, hablar con mariposas que solo él entiende, o esconderse en la montaña de libros de su abuela imaginando que son peldaños hacia otro planeta. Con cada pincelada crea un portal, y con cada sueño encuentra un nuevo destino.</p>
-        <p>LoLo no solo pinta mundos: pinta la forma en que quiere vivirlos. Porque para él, la vida no es un lugar donde estar, sino una aventura que imaginar.</p>
-      </div>
-    </div>
-  </div>
 
   <div class="nar-lightbox" id="nar-lightbox" hidden>
     <button type="button" class="nar-lightbox__backdrop" data-lightbox-close aria-label="Cerrar ilustración a tamaño completo"></button>
