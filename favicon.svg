@@ -1,0 +1,23 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- offset sticker shadow blob -->
+  <path d="M 256 40
+           C 360 40, 460 90, 468 200
+           C 476 300, 430 380, 340 440
+           C 250 490, 130 470, 70 380
+           C 20 300, 40 180, 120 100
+           C 160 60, 210 40, 256 40 Z"
+        fill="#1a1a1a" transform="translate(14,14)"/>
+
+  <!-- main blob background -->
+  <path d="M 256 40
+           C 360 40, 460 90, 468 200
+           C 476 300, 430 380, 340 440
+           C 250 490, 130 470, 70 380
+           C 20 300, 40 180, 120 100
+           C 160 60, 210 40, 256 40 Z"
+        fill="#F4A6B7"/>
+
+  <!-- monogram L -->
+  <text x="256" y="330" font-family="Georgia, 'Times New Roman', serif" font-size="290"
+        font-weight="700" fill="#1a1a1a" text-anchor="middle">L</text>
+</svg>
