@@ -5,7 +5,7 @@
   <!-- Home -->
   <url>
     <loc>https://lissampuero.com/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/"/>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/nl/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/"/>
@@ -25,7 +25,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/es/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/"/>
@@ -37,7 +37,7 @@
   <!-- About -->
   <url>
     <loc>https://lissampuero.com/about/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/about/"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/nl/about/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/about/"/>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/es/about/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/about/"/>
@@ -69,7 +69,7 @@
   <!-- Services -->
   <url>
     <loc>https://lissampuero.com/services/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/services/"/>
@@ -79,7 +79,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/nl/services/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/services/"/>
@@ -89,7 +89,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/es/services/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/services/"/>
@@ -101,7 +101,7 @@
   <!-- Portfolio — Editorial -->
   <url>
     <loc>https://lissampuero.com/portfolio/editorial/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/portfolio/editorial/"/>
@@ -111,7 +111,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/nl/portfolio/editorial/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/portfolio/editorial/"/>
@@ -121,7 +121,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/es/portfolio/editorial/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/portfolio/editorial/"/>
@@ -133,7 +133,7 @@
   <!-- Portfolio — Narrative -->
   <url>
     <loc>https://lissampuero.com/portfolio/narrative/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/portfolio/narrative/"/>
@@ -143,7 +143,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/nl/portfolio/narrative/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/portfolio/narrative/"/>
@@ -153,7 +153,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/es/portfolio/narrative/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/portfolio/narrative/"/>
@@ -165,7 +165,7 @@
   <!-- Portfolio — Stationery -->
   <url>
     <loc>https://lissampuero.com/portfolio/stationery/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/portfolio/stationery/"/>
@@ -175,7 +175,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/nl/portfolio/stationery/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/portfolio/stationery/"/>
@@ -185,7 +185,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/es/portfolio/stationery/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/portfolio/stationery/"/>
@@ -197,7 +197,7 @@
   <!-- Contact -->
   <url>
     <loc>https://lissampuero.com/contact/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/contact/"/>
@@ -207,7 +207,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/nl/contact/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/contact/"/>
@@ -217,7 +217,7 @@
   </url>
   <url>
     <loc>https://lissampuero.com/es/contact/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://lissampuero.com/contact/"/>
