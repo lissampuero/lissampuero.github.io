@@ -7,6 +7,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+ICON_DIR = "assets/brand"
 
 
 def favicon_prefix(html_path: Path) -> str:
@@ -16,13 +17,13 @@ def favicon_prefix(html_path: Path) -> str:
 
 def favicon_block(prefix: str) -> str:
     p = prefix
-    return f"""  <link rel="icon" href="{p}liss-icon.svg" type="image/svg+xml">
-  <link rel="icon" type="image/png" sizes="48x48" href="{p}liss-icon-48.png">
-  <link rel="icon" href="{p}liss-icon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="{p}liss-icon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="{p}liss-icon-16.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="{p}liss-icon-96.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="{p}liss-apple-touch.png">
+    b = f"{p}{ICON_DIR}/"
+    return f"""  <link rel="icon" href="{b}liss-stamp.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="48x48" href="{b}liss-stamp-48.png">
+  <link rel="icon" href="{b}liss-stamp.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="{b}liss-stamp-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{b}liss-stamp-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{b}liss-stamp-180.png">
   <link rel="manifest" href="{p}site.webmanifest">
   <meta name="msapplication-TileColor" content="#d6338f">
   <meta name="msapplication-config" content="{p}browserconfig.xml">
@@ -47,7 +48,7 @@ def main() -> None:
         if "node_modules" in path.parts:
             continue
         text = path.read_text(encoding="utf-8")
-        if "favicon" not in text and "liss-icon" not in text:
+        if "favicon" not in text and "liss-" not in text:
             continue
         block = favicon_block(favicon_prefix(path))
         new_text, n = PATTERN.subn(block + "\n", text, count=1)

@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/liss-mstile-150.png"/>
+            <square150x150logo src="/assets/brand/liss-stamp-192.png"/>
             <TileColor>#d6338f</TileColor>
         </tile>
     </msapplication>
