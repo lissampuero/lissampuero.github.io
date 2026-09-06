@@ -7,7 +7,7 @@
   border: none;
   box-shadow: none;
   margin-top: 0;
-  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(3.5rem, 7vw, 5.5rem);
 }
 
 .hm-selected-gallery__header {
