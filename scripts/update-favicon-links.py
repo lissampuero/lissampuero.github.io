@@ -8,13 +8,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-FAVICON_BLOCK = """  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+FAVICON_VERSION = "20260906f"
+
+FAVICON_BLOCK = f"""  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v={FAVICON_VERSION}">
+  <link rel="icon" href="/favicon.ico?v={FAVICON_VERSION}" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v={FAVICON_VERSION}">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v={FAVICON_VERSION}">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v={FAVICON_VERSION}">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v={FAVICON_VERSION}">
+  <link rel="manifest" href="/site.webmanifest?v={FAVICON_VERSION}">
   <meta name="msapplication-TileColor" content="#d6338f">
   <meta name="msapplication-config" content="/browserconfig.xml">
   <meta name="theme-color" content="#d6338f">"""
@@ -24,7 +26,7 @@ PATTERN = re.compile(
     r"(?:  <link rel=\"icon\"[^>]+>\n)*"
     r"  <link rel=\"apple-touch-icon\"[^>]+>\n"
     r"(?:  <link rel=\"icon\" href=\"/favicon\.ico\">?\n)?"
-    r"(?:  <link rel=\"manifest\" href=\"/site\.webmanifest\">?\n)?"
+    r"(?:  <link rel=\"manifest\" href=\"/site\.webmanifest(?:\?v=[^\"]+)?\">?\n)?"
     r"(?:  <meta name=\"msapplication-TileColor\"[^>]+>\n)?"
     r"(?:  <meta name=\"msapplication-config\"[^>]+>\n)?"
     r"(?:  <meta name=\"theme-color\"[^>]+>\n)?",
