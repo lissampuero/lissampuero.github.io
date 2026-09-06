@@ -7,7 +7,6 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FAVICON_VERSION = "20260906h"
 
 
 def favicon_prefix(html_path: Path) -> str:
@@ -17,14 +16,14 @@ def favicon_prefix(html_path: Path) -> str:
 
 def favicon_block(prefix: str) -> str:
     p = prefix
-    return f"""  <link rel="icon" href="{p}favicon.svg?v={FAVICON_VERSION}" type="image/svg+xml">
-  <link rel="icon" type="image/png" sizes="48x48" href="{p}favicon-48x48.png?v={FAVICON_VERSION}">
-  <link rel="icon" href="{p}favicon.ico?v={FAVICON_VERSION}" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="{p}favicon-32x32.png?v={FAVICON_VERSION}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{p}favicon-16x16.png?v={FAVICON_VERSION}">
-  <link rel="icon" type="image/png" sizes="96x96" href="{p}favicon-96x96.png?v={FAVICON_VERSION}">
-  <link rel="apple-touch-icon" sizes="180x180" href="{p}apple-touch-icon.png?v={FAVICON_VERSION}">
-  <link rel="manifest" href="{p}site.webmanifest?v={FAVICON_VERSION}">
+    return f"""  <link rel="icon" href="{p}liss-icon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="48x48" href="{p}liss-icon-48.png">
+  <link rel="icon" href="{p}liss-icon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="{p}liss-icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{p}liss-icon-16.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{p}liss-icon-96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{p}liss-apple-touch.png">
+  <link rel="manifest" href="{p}site.webmanifest">
   <meta name="msapplication-TileColor" content="#d6338f">
   <meta name="msapplication-config" content="{p}browserconfig.xml">
   <meta name="theme-color" content="#d6338f">"""
@@ -48,7 +47,7 @@ def main() -> None:
         if "node_modules" in path.parts:
             continue
         text = path.read_text(encoding="utf-8")
-        if "favicon.ico" not in text and "favicon.svg" not in text:
+        if "favicon" not in text and "liss-icon" not in text:
             continue
         block = favicon_block(favicon_prefix(path))
         new_text, n = PATTERN.subn(block + "\n", text, count=1)
