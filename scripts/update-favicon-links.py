@@ -8,9 +8,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-FAVICON_VERSION = "20260906f"
+FAVICON_VERSION = "20260906g"
 
-FAVICON_BLOCK = f"""  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v={FAVICON_VERSION}">
+FAVICON_BLOCK = f"""  <link rel="icon" href="/favicon.svg?v={FAVICON_VERSION}" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v={FAVICON_VERSION}">
   <link rel="icon" href="/favicon.ico?v={FAVICON_VERSION}" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v={FAVICON_VERSION}">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v={FAVICON_VERSION}">
