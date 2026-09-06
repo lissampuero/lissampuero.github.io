@@ -78,10 +78,10 @@
     "@type": "OfferCatalog",
     "name": "Studio services",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Editorial" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Narrative" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Collaborations & classic art" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Editorial & Book Design" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Character Design & Worldbuilding" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding, Commercial & Licensing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Live Painting & Traditional Fine Art" } }
     ]
   },
   "breadcrumb": {
@@ -193,25 +193,29 @@
     <div class="svc-band-inner">
       <div class="svc-categories-grid">
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Editorial</h2>
-          <p class="svc-category__desc">For publishers, authors &amp; editorial projects.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Editorial &amp; Book Design</span>
+          <span class="svc-category__desc">For publishing houses, independent authors &amp; literary projects.</span>
+          <span class="svc-category__deliverables">Children's books, cover design, full page layout &amp; typography.</span>
+        </button>
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Narrative</h2>
-          <p class="svc-category__desc">For stories, characters &amp; imaginative worlds.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Character Design &amp; Worldbuilding</span>
+          <span class="svc-category__desc">For stories, animation, IP licensing &amp; narrative projects.</span>
+          <span class="svc-category__deliverables">Concept art, character sheets, turnarounds &amp; visual bibles.</span>
+        </button>
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Commercial</h2>
-          <p class="svc-category__desc">For brands, packaging &amp; creative campaigns.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Branding, Commercial &amp; Licensing</span>
+          <span class="svc-category__desc">For brands, creative agencies, packaging &amp; surface design.</span>
+          <span class="svc-category__deliverables">Packaging illustration, pattern design, stationery &amp; campaign visuals.</span>
+        </button>
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Collaborations &amp; Classic Art</h2>
-          <p class="svc-category__desc">Traditional paintings &amp; murals.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Live Painting &amp; Traditional Fine Art</span>
+          <span class="svc-category__desc">For events, commissions, galleries &amp; spatial collaborations.</span>
+          <span class="svc-category__deliverables">Original gouache/watercolor pieces, live art performances &amp; murals.</span>
+        </button>
 
       </div>
     </div>
@@ -246,7 +250,7 @@
       <p class="svc-cta-kicker">Ready to begin?</p>
       <h2 class="svc-cta-title">Tell me about your project</h2>
       <p class="svc-cta-line">
-        Drop a line for quotes, timelines, or an exploratory call.
+        Whether you are an editor, an independent author, or a brand, let's discuss your timeline, scope, and budget.
         Slots book fast.
       </p>
 
@@ -324,6 +328,16 @@
   </div>
 </footer>
 
+<div class="svc-deliverables-popup" id="svc-deliverables-popup" hidden>
+  <button type="button" class="svc-deliverables-popup__backdrop" data-deliverables-close aria-label="Close key deliverables"></button>
+  <div class="svc-deliverables-popup__panel" role="dialog" aria-modal="true" aria-labelledby="svc-deliverables-title">
+    <button type="button" class="svc-deliverables-popup__close" data-deliverables-close aria-label="Close">&times;</button>
+    <p class="svc-deliverables-popup__kicker">Key deliverables</p>
+    <h3 class="svc-deliverables-popup__title" id="svc-deliverables-title"></h3>
+    <p class="svc-deliverables-popup__text"></p>
+  </div>
+</div>
+
 <div class="svc-lightbox" id="svc-lightbox" hidden>
   <button type="button" class="svc-lightbox__backdrop" data-lightbox-close aria-label="Close full-size illustration"></button>
   <div class="svc-lightbox__panel" role="dialog" aria-modal="true" aria-label="Liss Ampuero studio illustration, full size">
@@ -333,6 +347,7 @@
 </div>
 
 <script src="../shared/js/services-contact.js?v=20260823" defer></script>
+<script src="js/services-deliverables.js" defer></script>
 <script src="js/services-lightbox.js" defer></script>
 <script src="../shared/site-nav.js?v=20260823" defer></script>
 <script src="../shared/site-analytics.js?v=20260823" defer></script>

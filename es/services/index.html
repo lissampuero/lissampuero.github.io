@@ -70,10 +70,10 @@
     "@type": "OfferCatalog",
     "name": "Servicios del estudio",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Editorial" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Narrativo" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Comercial" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Colaboraciones y arte clásico" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño editorial y de libros" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño de personajes y construcción de mundos" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding, comercial y licencias" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintura en vivo y bellas artes tradicionales" } }
     ]
   },
   "breadcrumb": {
@@ -184,25 +184,29 @@
     <div class="svc-band-inner">
       <div class="svc-categories-grid">
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Editorial</h2>
-          <p class="svc-category__desc">Para editoriales, autores y publicaciones.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Diseño Editorial y de Libros</span>
+          <span class="svc-category__desc">Para editoriales, autores independientes y proyectos literarios.</span>
+          <span class="svc-category__deliverables">Libros infantiles, diseño de portadas, maquetación completa y tipografía.</span>
+        </button>
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Narrativa</h2>
-          <p class="svc-category__desc">Para historias, personajes y mundos imaginativos.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Diseño de Personajes y Construcción de Mundos</span>
+          <span class="svc-category__desc">Para historias, animación, licencias de IP y proyectos narrativos.</span>
+          <span class="svc-category__deliverables">Concept art, character sheets, turnarounds y visual bibles.</span>
+        </button>
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Comercial</h2>
-          <p class="svc-category__desc">Para marcas, packaging y campañas creativas.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Branding, Comercial y Licencias</span>
+          <span class="svc-category__desc">Para marcas, agencias creativas, packaging y surface design.</span>
+          <span class="svc-category__deliverables">Ilustración de packaging, diseño de patrones, papelería y visuales de campaña.</span>
+        </button>
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Colaboraciones y arte clásico</h2>
-          <p class="svc-category__desc">Pintura tradicional y murales.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Pintura en Vivo y Bellas Artes Tradicionales</span>
+          <span class="svc-category__desc">Para eventos, encargos, galerías y colaboraciones espaciales.</span>
+          <span class="svc-category__deliverables">Piezas originales en gouache/acuarela, actuaciones de arte en vivo y murales.</span>
+        </button>
 
       </div>
     </div>
@@ -234,7 +238,7 @@
       <p class="svc-cta-kicker">¿Empezamos?</p>
       <h2 class="svc-cta-title">Cuéntame sobre tu proyecto</h2>
       <p class="svc-cta-line">
-        Escríbeme para presupuestos, plazos de entrega o una llamada exploratoria.
+        Ya seas editor, autor independiente o marca, hablemos de plazos, alcance y presupuesto.
         Las plazas se llenan rápido.
       </p>
 
@@ -312,6 +316,16 @@
   </div>
 </footer>
 
+<div class="svc-deliverables-popup" id="svc-deliverables-popup" hidden>
+  <button type="button" class="svc-deliverables-popup__backdrop" data-deliverables-close aria-label="Cerrar entregables clave"></button>
+  <div class="svc-deliverables-popup__panel" role="dialog" aria-modal="true" aria-labelledby="svc-deliverables-title">
+    <button type="button" class="svc-deliverables-popup__close" data-deliverables-close aria-label="Cerrar">&times;</button>
+    <p class="svc-deliverables-popup__kicker">Entregables clave</p>
+    <h3 class="svc-deliverables-popup__title" id="svc-deliverables-title"></h3>
+    <p class="svc-deliverables-popup__text"></p>
+  </div>
+</div>
+
 <div class="svc-lightbox" id="svc-lightbox" hidden>
   <button type="button" class="svc-lightbox__backdrop" data-lightbox-close aria-label="Cerrar ilustración a tamaño completo"></button>
   <div class="svc-lightbox__panel" role="dialog" aria-modal="true" aria-label="Ilustración del estudio de Liss Ampuero, tamaño completo">
@@ -320,6 +334,7 @@
   </div>
 </div>
 
+<script src="../../services/js/services-deliverables.js" defer></script>
 <script src="../../services/js/services-lightbox.js" defer></script>
 <script src="../../shared/js/services-contact.js?v=20260823" defer></script>
 <script src="../../shared/site-nav.js?v=20260823" defer></script>

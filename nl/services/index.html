@@ -69,10 +69,10 @@
     "@type": "OfferCatalog",
     "name": "Studiodiensten",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Redactioneel" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Verhalend" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercieel" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Samenwerkingen & klassieke kunst" } }
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Redactioneel & boekdesign" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Karakterontwerp & wereldopbouw" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding, commercieel & licensing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Live painting & traditionele beeldende kunst" } }
     ]
   },
   "serviceType": ["Prentenboekillustratie", "Redactionele lay-out", "Personage-ontwerp", "Merkillustratie", "Packaging", "Mode-illustratie", "Artdirectie"],
@@ -184,25 +184,29 @@
     <div class="svc-band-inner">
       <div class="svc-categories-grid">
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Redactioneel</h2>
-          <p class="svc-category__desc">Voor uitgevers, auteurs &amp; redactionele projecten.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Redactioneel &amp; Boekdesign</span>
+          <span class="svc-category__desc">Voor uitgeverijen, onafhankelijke auteurs &amp; literaire projecten.</span>
+          <span class="svc-category__deliverables">Prentenboeken, coverdesign, volledige pagina-opmaak &amp; typografie.</span>
+        </button>
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Verhalend</h2>
-          <p class="svc-category__desc">Voor verhalen, personages &amp; fantasierijke werelden.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Karakterontwerp &amp; Wereldopbouw</span>
+          <span class="svc-category__desc">Voor verhalen, animatie, IP-licenties &amp; narratieve projecten.</span>
+          <span class="svc-category__deliverables">Concept art, character sheets, turnarounds &amp; visuele bibles.</span>
+        </button>
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Commercieel</h2>
-          <p class="svc-category__desc">Voor merken, verpakkingen &amp; creatieve campagnes.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Branding, Commercieel &amp; Licensing</span>
+          <span class="svc-category__desc">Voor merken, creatieve agencies, packaging &amp; surface design.</span>
+          <span class="svc-category__deliverables">Packaging-illustratie, patroonontwerp, stationery &amp; campagnebeelden.</span>
+        </button>
 
-        <div class="svc-category">
-          <h2 class="svc-category__title">Samenwerkingen &amp; klassieke kunst</h2>
-          <p class="svc-category__desc">Traditionele schilderkunst &amp; muurschilderingen.</p>
-        </div>
+        <button type="button" class="svc-category" data-deliverables-trigger aria-haspopup="dialog" aria-expanded="false">
+          <span class="svc-category__title">Live Painting &amp; Traditionele Beeldende Kunst</span>
+          <span class="svc-category__desc">Voor events, opdrachten, galeries &amp; ruimtelijke samenwerkingen.</span>
+          <span class="svc-category__deliverables">Originele gouache-/aquarelwerken, live art performances &amp; muurschilderingen.</span>
+        </button>
 
       </div>
     </div>
@@ -234,8 +238,8 @@
       <p class="svc-cta-kicker">Klaar om te beginnen?</p>
       <h2 class="svc-cta-title">Vertel me over je project</h2>
       <p class="svc-cta-line">
-        Stuur een bericht voor offertes, timing of een
-        vrijblijvend gesprek. Plaatsen raken snel volzet.
+        Of je nu redacteur, onafhankelijk auteur of merk bent — laten we je timing, scope en budget bespreken.
+        Plaatsen raken snel volzet.
       </p>
 
       <div class="svc-cta-buttons">
@@ -312,6 +316,16 @@
   </div>
 </footer>
 
+<div class="svc-deliverables-popup" id="svc-deliverables-popup" hidden>
+  <button type="button" class="svc-deliverables-popup__backdrop" data-deliverables-close aria-label="Sluit kernleveringen"></button>
+  <div class="svc-deliverables-popup__panel" role="dialog" aria-modal="true" aria-labelledby="svc-deliverables-title">
+    <button type="button" class="svc-deliverables-popup__close" data-deliverables-close aria-label="Sluiten">&times;</button>
+    <p class="svc-deliverables-popup__kicker">Kernleveringen</p>
+    <h3 class="svc-deliverables-popup__title" id="svc-deliverables-title"></h3>
+    <p class="svc-deliverables-popup__text"></p>
+  </div>
+</div>
+
 <div class="svc-lightbox" id="svc-lightbox" hidden>
   <button type="button" class="svc-lightbox__backdrop" data-lightbox-close aria-label="Sluit illustratie op volledige grootte"></button>
   <div class="svc-lightbox__panel" role="dialog" aria-modal="true" aria-label="Studio-illustratie van Liss Ampuero, volledige grootte">
@@ -320,6 +334,7 @@
   </div>
 </div>
 
+<script src="../../services/js/services-deliverables.js" defer></script>
 <script src="../../services/js/services-lightbox.js" defer></script>
 <script src="../../shared/js/services-contact.js?v=20260823" defer></script>
 <script src="../../shared/site-nav.js?v=20260823" defer></script>
