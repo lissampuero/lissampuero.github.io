@@ -25,7 +25,7 @@ def favicon_block() -> str:
   <meta name="msapplication-config" content="/browserconfig.xml">
   <meta name="theme-color" content="#d6338f">
   <script>
-  (function(){var i="/favicon-2026-32.png",l=document.querySelector('link[rel~="icon"]');if(!l||l.href.indexOf("favicon-2026-32")===-1){l=document.createElement("link");l.rel="icon";l.type="image/png";l.href=i;document.head.appendChild(l);}else{l.href=i;}})();
+  (function(){var s="/favicon-2026-32.png?"+Date.now();document.querySelectorAll('link[rel*="icon"]').forEach(function(n){n.remove();});["icon","shortcut icon"].forEach(function(r){var l=document.createElement("link");l.rel=r;l.type="image/png";l.sizes="32x32";l.href=s;document.head.appendChild(l);});})();
   </script>"""
 
 
@@ -38,7 +38,7 @@ PATTERN = re.compile(
     r"(?:  <meta name=\"msapplication-config\"[^>]+>\n)?"
     r"(?:  <meta name=\"theme-color\"[^>]+>\n)?"
     r"(?:  <script>\n"
-    r"  \(function\(\)\{var i=\"/favicon-2026-32\.png\"[^\n]+\n"
+    r"  \(function\(\)\{var [^\n]+\n"
     r"  </script>\n)?",
     re.MULTILINE,
 )
