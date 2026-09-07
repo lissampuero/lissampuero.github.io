@@ -4,17 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" href="data:image/png;base64,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">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-2026-32.png">
+  <link rel="shortcut icon" type="image/png" href="/favicon-2026-32.png">
+  <link rel="icon" href="/favicon-2026.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-2026-16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-2026-48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-2026.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#d6338f">
   <meta name="msapplication-config" content="/browserconfig.xml">
   <meta name="theme-color" content="#d6338f">
+  <script>
+  (function(){var i="/favicon-2026-32.png",l=document.querySelector('link[rel~="icon"]');if(!l||l.href.indexOf("favicon-2026-32")===-1){l=document.createElement("link");l.rel="icon";l.type="image/png";l.href=i;document.head.appendChild(l);}else{l.href=i;}})();
+  </script>
 <title>Message sent | Liss Ampuero</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
