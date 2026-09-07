@@ -7,19 +7,17 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FAVICON_VERSION = "20260906b"
 
 
 def favicon_block() -> str:
-    v = FAVICON_VERSION
-    return f"""  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/liss-stamp-32.png?v={v}">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/liss-stamp-16.png?v={v}">
-  <link rel="icon" href="/favicon.ico?v={v}" sizes="any">
-  <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/liss-stamp-48.png?v={v}">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v={v}">
-  <link rel="manifest" href="/site.webmanifest?v={v}">
+    return """  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/tab-icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/tab-icon-16.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/tab-icon-48.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#d6338f">
-  <meta name="msapplication-config" content="/browserconfig.xml?v={v}">
+  <meta name="msapplication-config" content="/browserconfig.xml">
   <meta name="theme-color" content="#d6338f">"""
 
 
